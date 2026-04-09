@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TELOS · 人才看板</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal:     #0C2E32;
+  --teal-lt:  #0F3A3F;
+  --teal-md:  #14464C;
+  --amber:    #E8962A;
+  --amber-lt: #F5B458;
+  --amber-gl: #FAD878;
+  --parchment:#F1E6C4;
+  --eng:      #1E4D2B;
+  --eng-lt:   #2A6B3A;
+  --eng-bg:   #0F2E18;
+  --pm:       #4D3A00;
+  --pm-lt:    #A06800;
+  --pm-bg:    #2A2000;
+  --both:     #2D1A4D;
+  --both-lt:  #6B3DAA;
+  --both-bg:  #1A0E2E;
+  --text:     rgba(255,255,255,0.85);
+  --text-dim: rgba(255,255,255,0.38);
+  --text-mid: rgba(255,255,255,0.58);
+  --border:   rgba(255,255,255,0.07);
+  --card-bg:  #0F3A3F;
+  --card-hover: #144048;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif; min-height:100vh; }
+
+/* ── Header ── */
+.header {
+  background: linear-gradient(135deg, #081E21 0%, var(--teal) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 32px 20px;
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(12px);
+}
+.header-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; }
+.brand { display:flex; align-items:center; gap:16px; }
+.brand-logo { display:flex; align-items:center; gap:10px; }
+.brand-name {
+  font-family:'Cormorant Garant',serif; font-style:italic; font-weight:300;
+  font-size:22px; color:var(--amber); letter-spacing:0.04em;
+}
+.brand-divider { width:1px; height:20px; background:var(--border); }
+.brand-sub { font-size:11px; color:var(--text-dim); letter-spacing:0.12em; text-transform:uppercase; }
+.updated { font-size:10px; color:var(--text-dim); }
+
+/* Stats bar */
+.stats { display:flex; gap:6px; flex-wrap:wrap; }
+.stat {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius:6px; padding:8px 14px;
+  display:flex; flex-direction:column; gap:2px; min-width:90px;
+}
+.stat-n { font-size:20px; font-weight:600; color:var(--amber-lt); line-height:1; }
+.stat-l { font-size:9px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.1em; margin-top:2px; }
+.stat.accent { border-color:rgba(232,150,42,0.3); background:rgba(232,150,42,0.06); }
+.stat.voice-stat .stat-n { color:#6CD97E; }
+
+/* ── Filters ── */
+.filters {
+  padding: 14px 32px;
+  background: rgba(8,30,33,0.8);
+  border-bottom: 1px solid var(--border);
+  display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+}
+.search-wrap { position:relative; flex:1; min-width:180px; max-width:300px; }
+.search-wrap input {
+  width:100%; background:rgba(255,255,255,0.06); border:1px solid var(--border);
+  border-radius:6px; padding:8px 12px 8px 34px; color:var(--text);
+  font-size:13px; font-family:'Inter',sans-serif; outline:none;
+  transition: border-color .2s;
+}
+.search-wrap input:focus { border-color:rgba(232,150,42,0.4); }
+.search-wrap input::placeholder { color:var(--text-dim); }
+.search-icon { position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:0.4; font-size:13px; }
+
+.filter-group { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.filter-label { font-size:10px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.1em; white-space:nowrap; }
+.chip {
+  padding:5px 12px; border-radius:20px; font-size:11px; font-weight:500; cursor:pointer;
+  border:1px solid var(--border); background:rgba(255,255,255,0.04);
+  color:var(--text-mid); transition:all .15s; white-space:nowrap; user-select:none;
+}
+.chip:hover { background:rgba(255,255,255,0.08); }
+.chip.active { color:#fff; border-color:transparent; }
+.chip.all.active    { background:rgba(255,255,255,0.15); }
+.chip.eng.active    { background:var(--eng-lt); border-color:var(--eng-lt); }
+.chip.pm.active     { background:var(--pm-lt);  border-color:var(--pm-lt); }
+.chip.both.active   { background:var(--both-lt);border-color:var(--both-lt); }
+.chip.voice-f.active{ background:#1A7A2E; border-color:#1A7A2E; }
+.chip.new-f.active  { background:rgba(232,150,42,0.5); border-color:var(--amber); color:#fff; }
+.chip.acad.active   { background:rgba(255,80,80,0.3); border-color:rgba(255,80,80,0.4); }
+
+/* ── Grid ── */
+.grid-wrap { padding:24px 32px 48px; }
+.grid-info { font-size:11px; color:var(--text-dim); margin-bottom:16px; letter-spacing:0.05em; }
+.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap:14px; }
+.empty { text-align:center; padding:80px 20px; color:var(--text-dim); font-size:13px; }
+
+/* ── Card ── */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius:10px; padding:18px 20px;
+  cursor:pointer; transition:all .18s;
+  display:flex; flex-direction:column; gap:12px;
+  position:relative;
+}
+.card:hover { background:var(--card-hover); border-color:rgba(232,150,42,0.2); transform:translateY(-1px); }
+.card.academic-card { opacity:0.65; }
+.card.academic-card:hover { opacity:0.85; }
+
+/* card header */
+.card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+.card-name { font-size:14px; font-weight:600; color:var(--text); line-height:1.3; }
+.card-name-sub { font-size:11px; color:var(--text-dim); margin-top:2px; }
+.badges { display:flex; gap:6px; align-items:center; flex-shrink:0; }
+
+/* role badge */
+.role-badge {
+  font-size:9px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;
+  padding:3px 8px; border-radius:4px; white-space:nowrap;
+}
+.role-badge.eng  { background:var(--eng-bg); color:#6CD97E; border:1px solid rgba(50,180,80,0.25); }
+.role-badge.pm   { background:var(--pm-bg);  color:#F5B458; border:1px solid rgba(200,130,0,0.25); }
+.role-badge.both { background:var(--both-bg);color:#B57FEA; border:1px solid rgba(130,80,200,0.25); }
+.role-badge.acad { background:rgba(180,0,0,0.15); color:#FF8080; border:1px solid rgba(180,0,0,0.2); font-size:8px; }
+
+/* score dots */
+.score-dots { display:flex; gap:3px; }
+.dot { width:7px; height:7px; border-radius:50%; }
+.dot.on  { background:var(--amber); }
+.dot.off { background:rgba(255,255,255,0.1); }
+
+/* card meta */
+.card-meta { display:flex; flex-direction:column; gap:4px; }
+.meta-row { display:flex; align-items:center; gap:6px; font-size:11px; color:var(--text-dim); }
+.meta-icon { width:14px; text-align:center; opacity:0.5; font-size:11px; }
+.meta-val { color:var(--text-mid); }
+.meta-val.accent { color:var(--amber-lt); }
+
+/* skills tags */
+.skills { display:flex; flex-wrap:wrap; gap:4px; }
+.skill-tag {
+  font-size:9px; padding:2px 7px; border-radius:3px;
+  background:rgba(255,255,255,0.06); color:var(--text-dim);
+  border:1px solid rgba(255,255,255,0.08); white-space:nowrap;
+}
+.skill-tag.voice { background:rgba(50,180,80,0.12); color:#6CD97E; border-color:rgba(50,180,80,0.2); }
+
+/* card footer */
+.card-foot { display:flex; justify-content:space-between; align-items:center; margin-top:2px; }
+.platforms { display:flex; gap:8px; align-items:center; }
+.platform-link {
+  font-size:10px; color:var(--text-dim); text-decoration:none;
+  background:rgba(255,255,255,0.05); border:1px solid var(--border);
+  padding:3px 8px; border-radius:4px; transition:all .15s; display:flex; gap:4px; align-items:center;
+}
+.platform-link:hover { background:rgba(255,255,255,0.1); color:var(--text); }
+.platform-link.xhs { color:#FF5E7A; border-color:rgba(255,94,122,0.25); background:rgba(255,94,122,0.07); }
+.platform-link.xhs:hover { background:rgba(255,94,122,0.15); }
+.voice-badge {
+  font-size:9px; padding:3px 8px; border-radius:4px;
+  background:rgba(50,180,80,0.12); color:#6CD97E;
+  border:1px solid rgba(50,180,80,0.2); white-space:nowrap;
+}
+
+/* status button */
+.status-btn {
+  font-size:10px; font-weight:500; padding:4px 10px; border-radius:5px;
+  border:1px solid; cursor:pointer; transition:all .15s; white-space:nowrap;
+  font-family:'Inter',sans-serif;
+}
+.status-btn.new      { border-color:rgba(232,150,42,0.3); color:var(--amber-lt); background:rgba(232,150,42,0.08); }
+.status-btn.contacted{ border-color:rgba(100,160,255,0.3); color:#82AAFF; background:rgba(100,160,255,0.08); }
+.status-btn.replied  { border-color:rgba(50,200,100,0.3); color:#6CD97E; background:rgba(50,200,100,0.08); }
+.status-btn.pass     { border-color:rgba(180,80,80,0.3); color:#FF8080; background:rgba(180,80,80,0.08); }
+.status-btn:hover { opacity:0.8; }
+
+/* notes */
+.card-notes { font-size:10px; color:var(--text-dim); line-height:1.6; border-top:1px solid var(--border); padding-top:10px; }
+
+/* academic warning */
+.acad-warning {
+  font-size:9px; color:#FF8080; background:rgba(180,0,0,0.1);
+  border:1px solid rgba(180,0,0,0.2); border-radius:4px;
+  padding:4px 8px; display:flex; align-items:center; gap:4px;
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  display:none; position:fixed; inset:0; background:rgba(6,20,22,0.85);
+  z-index:200; backdrop-filter:blur(6px); align-items:center; justify-content:center;
+}
+.modal-overlay.open { display:flex; }
+.modal {
+  background:#0D3238; border:1px solid rgba(232,150,42,0.2);
+  border-radius:14px; width:90%; max-width:600px; max-height:88vh;
+  overflow-y:auto; padding:28px; position:relative;
+}
+.modal-close {
+  position:absolute; top:16px; right:16px; background:rgba(255,255,255,0.07);
+  border:1px solid var(--border); border-radius:6px; padding:4px 10px;
+  color:var(--text-dim); cursor:pointer; font-size:12px; font-family:'Inter',sans-serif;
+}
+.modal-close:hover { background:rgba(255,255,255,0.12); }
+.modal-title { font-size:18px; font-weight:600; color:var(--text); margin-bottom:4px; }
+.modal-sub   { font-size:12px; color:var(--text-dim); margin-bottom:20px; }
+.modal-section { margin-bottom:18px; }
+.modal-section-title { font-size:9px; text-transform:uppercase; letter-spacing:0.16em; color:var(--amber); margin-bottom:8px; }
+.modal-field { font-size:12px; color:var(--text-mid); line-height:1.7; }
+.modal-link  { color:var(--amber-lt); text-decoration:none; }
+.modal-link:hover { text-decoration:underline; }
+.modal-actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:20px; }
+.modal-btn {
+  padding:8px 16px; border-radius:6px; font-size:12px; font-weight:500;
+  cursor:pointer; font-family:'Inter',sans-serif; border:1px solid;
+  text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+}
+.modal-btn.primary { background:var(--amber); color:#0C2E32; border-color:var(--amber); }
+.modal-btn.primary:hover { background:var(--amber-lt); }
+.modal-btn.sec { background:rgba(255,255,255,0.05); color:var(--text-mid); border-color:var(--border); }
+.modal-btn.sec:hover { background:rgba(255,255,255,0.1); }
+
+/* note editor */
+.note-editor {
+  width:100%; background:rgba(255,255,255,0.04); border:1px solid var(--border);
+  border-radius:6px; padding:10px; color:var(--text); font-size:12px;
+  font-family:'Inter',sans-serif; resize:vertical; min-height:70px; outline:none;
+  transition: border-color .2s;
+}
+.note-editor:focus { border-color:rgba(232,150,42,0.4); }
+.note-save {
+  margin-top:6px; padding:5px 12px; background:rgba(232,150,42,0.15);
+  border:1px solid rgba(232,150,42,0.3); border-radius:5px;
+  color:var(--amber-lt); font-size:11px; cursor:pointer; font-family:'Inter',sans-serif;
+}
+.note-save:hover { background:rgba(232,150,42,0.25); }
+
+/* ── Priority ── */
+.priority-btn {
+  width:28px; height:28px; border-radius:6px; border:1px solid var(--border);
+  background:rgba(255,255,255,0.04); cursor:pointer; font-size:14px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s; flex-shrink:0; line-height:1;
+}
+.priority-btn:hover { background:rgba(250,216,120,0.15); border-color:rgba(250,216,120,0.3); }
+.priority-btn.on { background:rgba(250,216,120,0.18); border-color:rgba(250,216,120,0.45); }
+.priority-btn.on::before { content:'⭐'; }
+.priority-btn.off::before { content:'☆'; opacity:0.45; }
+
+/* Priority panel */
+.priority-panel {
+  margin: 20px 32px 0;
+  background: rgba(250,216,120,0.05);
+  border: 1px solid rgba(250,216,120,0.2);
+  border-radius: 10px; overflow:hidden;
+}
+.priority-panel-head {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 12px 18px; cursor:pointer; user-select:none;
+  border-bottom: 1px solid rgba(250,216,120,0.12);
+}
+.priority-panel-head:hover { background:rgba(250,216,120,0.05); }
+.priority-panel-title {
+  font-size:12px; font-weight:600; color:var(--amber-lt);
+  letter-spacing:0.06em; display:flex; align-items:center; gap:8px;
+}
+.priority-count-badge {
+  background:var(--amber); color:#0C2E32; border-radius:10px;
+  padding:1px 7px; font-size:10px; font-weight:700;
+}
+.priority-collapse-icon { font-size:10px; color:var(--text-dim); transition:transform .2s; }
+.priority-collapse-icon.open { transform:rotate(180deg); }
+.priority-list { padding:12px 18px; display:flex; flex-direction:column; gap:8px; }
+.priority-item {
+  display:flex; align-items:center; gap:12px; padding:10px 14px;
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);
+  border-radius:8px; transition:all .15s; cursor:pointer;
+}
+.priority-item:hover { background:rgba(255,255,255,0.08); border-color:rgba(232,150,42,0.2); }
+.priority-item-name { font-size:13px; font-weight:600; color:var(--text); flex:1; }
+.priority-item-meta { font-size:11px; color:var(--text-dim); flex:2; }
+.priority-item-status { flex-shrink:0; }
+.priority-item-remove {
+  flex-shrink:0; font-size:12px; color:var(--text-dim); cursor:pointer;
+  padding:2px 6px; border-radius:4px; border:1px solid transparent;
+  transition:all .15s; background:none;
+}
+.priority-item-remove:hover { color:#FF8080; border-color:rgba(255,80,80,0.3); background:rgba(255,80,80,0.07); }
+.priority-empty { font-size:12px; color:var(--text-dim); padding:8px 0; text-align:center; }
+
+/* Modal priority row */
+.modal-priority-row {
+  display:flex; align-items:center; gap:10px; padding:10px 14px;
+  background:rgba(250,216,120,0.06); border:1px solid rgba(250,216,120,0.18);
+  border-radius:8px; margin-bottom:16px;
+}
+.modal-priority-label { font-size:12px; color:var(--amber-lt); flex:1; font-weight:500; }
+.modal-priority-btn {
+  padding:5px 14px; border-radius:6px; border:1px solid; cursor:pointer;
+  font-size:11px; font-weight:600; font-family:'Inter',sans-serif; transition:all .15s;
+}
+.modal-priority-btn.on  { background:rgba(250,216,120,0.2); border-color:var(--amber-gl); color:var(--amber-gl); }
+.modal-priority-btn.off { background:rgba(255,255,255,0.05); border-color:var(--border); color:var(--text-dim); }
+.modal-priority-btn:hover { opacity:0.8; }
+
+/* scrollbar */
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:rgba(255,255,255,0.1); border-radius:3px; }
+
+/* ── NEW badge ─────────────────────────────────────────────────────────── */
+.new-badge {
+  position:absolute; top:-1px; right:-1px;
+  background: linear-gradient(135deg, #E8962A, #FAD878);
+  color: #0C2E32; font-size:8px; font-weight:800;
+  padding:2px 7px; border-radius:0 10px 0 8px;
+  letter-spacing:0.12em; line-height:1.6;
+  box-shadow: 0 1px 6px rgba(232,150,42,0.4);
+  z-index:2; pointer-events:none;
+}
+
+/* ── Swim Lanes ─────────────────────────────────────────────────────────── */
+.lanes-wrap { padding: 16px 32px 48px; display:flex; flex-direction:column; gap:20px; }
+
+.lane { border-radius:12px; overflow:hidden; border:1px solid var(--border); }
+.lane.tier-s { border-color:rgba(255,100,80,0.3); }
+.lane.tier-a { border-color:rgba(232,150,42,0.28); }
+.lane.tier-b { border-color:rgba(100,160,255,0.2); }
+.lane.tier-c { border-color:rgba(255,255,255,0.08); }
+
+.lane-header {
+  display:flex; align-items:center; gap:14px; padding:14px 20px;
+  cursor:pointer; user-select:none; transition:background .15s;
+}
+.lane-header:hover { background:rgba(255,255,255,0.03); }
+.lane.tier-s .lane-header { background:rgba(255,80,60,0.07); }
+.lane.tier-a .lane-header { background:rgba(232,150,42,0.07); }
+.lane.tier-b .lane-header { background:rgba(100,160,255,0.05); }
+.lane.tier-c .lane-header { background:rgba(255,255,255,0.03); }
+
+.lane-icon  { font-size:18px; flex-shrink:0; }
+.lane-title { font-size:14px; font-weight:700; letter-spacing:0.03em; }
+.lane.tier-s .lane-title { color:#FF8070; }
+.lane.tier-a .lane-title { color:var(--amber-lt); }
+.lane.tier-b .lane-title { color:#82AAFF; }
+.lane.tier-c .lane-title { color:var(--text-dim); }
+
+.lane-desc  { font-size:11px; color:var(--text-dim); flex:1; }
+.lane-count {
+  font-size:11px; font-weight:700; padding:2px 10px; border-radius:20px;
+  flex-shrink:0;
+}
+.lane.tier-s .lane-count { background:rgba(255,80,60,0.18); color:#FF8070; }
+.lane.tier-a .lane-count { background:rgba(232,150,42,0.18); color:var(--amber-gl); }
+.lane.tier-b .lane-count { background:rgba(100,160,255,0.15); color:#82AAFF; }
+.lane.tier-c .lane-count { background:rgba(255,255,255,0.08); color:var(--text-dim); }
+
+.lane-chevron { font-size:11px; color:var(--text-dim); transition:transform .2s; }
+.lane-chevron.collapsed { transform:rotate(-90deg); }
+
+.lane-body { padding:0 16px 16px; }
+.lane-body.collapsed { display:none; }
+
+/* ── Tier badge on card ─────────────────────────────────────────────────── */
+.tier-pip {
+  width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:3px;
+}
+.tier-pip.s { background:#FF8070; box-shadow:0 0 5px rgba(255,80,60,0.6); }
+.tier-pip.a { background:var(--amber); box-shadow:0 0 5px rgba(232,150,42,0.5); }
+.tier-pip.b { background:#82AAFF; box-shadow:0 0 5px rgba(100,160,255,0.4); }
+.tier-pip.c { background:rgba(255,255,255,0.2); }
+
+/* ── Partner badge ──────────────────────────────────────────────────────── */
+.partner-badge {
+  font-size:9px; font-weight:700; padding:2px 8px; border-radius:4px;
+  background: linear-gradient(135deg, rgba(180,100,255,0.2), rgba(100,160,255,0.15));
+  color:#C09DFF; border:1px solid rgba(160,100,255,0.35);
+  letter-spacing:0.06em; white-space:nowrap;
+}
+.card.partner-card { box-shadow: 0 0 0 1px rgba(160,100,255,0.2), inset 0 0 24px rgba(160,100,255,0.03); }
+.chip.partner-f.active { background:rgba(160,100,255,0.25); border-color:rgba(160,100,255,0.5); color:#C09DFF; }
+
+/* ── Contact list in modal ───────────────────────────────────────────────── */
+.contact-list { display:flex; flex-direction:column; gap:6px; }
+.contact-row  { display:flex; align-items:center; gap:10px; padding:7px 10px;
+                background:rgba(255,255,255,0.04); border:1px solid var(--border);
+                border-radius:6px; }
+.contact-icon  { font-size:14px; flex-shrink:0; width:20px; text-align:center; }
+.contact-label { font-size:10px; color:var(--text-dim); width:64px; flex-shrink:0;
+                 letter-spacing:0.05em; text-transform:uppercase; }
+.contact-value { font-size:12px; flex:1; display:flex; align-items:center; gap:6px; }
+.copy-btn { background:none; border:1px solid var(--border); border-radius:4px;
+            color:var(--text-dim); cursor:pointer; font-size:10px; padding:1px 5px;
+            transition:all .15s; flex-shrink:0; }
+.copy-btn:hover { background:rgba(255,255,255,0.1); color:var(--text); }
+
+/* ── Dimension role badges ───────────────────────────────────────────────── */
+.dim-badges { display:flex; gap:4px; flex-wrap:wrap; align-items:center; }
+.db { font-size:8px; font-weight:700; letter-spacing:0.07em; padding:2px 6px;
+      border-radius:3px; white-space:nowrap; }
+.db.eng  { background:var(--eng-bg); color:#6CD97E; border:1px solid rgba(50,180,80,0.3); }
+.db.pm   { background:var(--pm-bg);  color:#F5B458; border:1px solid rgba(200,130,0,0.3); }
+.db.algo { background:rgba(100,60,200,0.18); color:#B57FEA; border:1px solid rgba(130,80,220,0.35); }
+.db.three { background:linear-gradient(90deg,rgba(50,180,80,0.15),rgba(100,60,200,0.2));
+            color:#C09DFF; border:1px solid rgba(130,80,220,0.4); }
+
+/* Dimension filter chips */
+.chip.eng-d.active  { background:var(--eng-lt); border-color:var(--eng-lt); color:#fff; }
+.chip.pm-d.active   { background:var(--pm-lt);  border-color:var(--pm-lt);  color:#fff; }
+.chip.algo-d.active { background:rgba(130,80,220,0.6); border-color:rgba(130,80,220,0.8); color:#fff; }
+.chip.combo.active  { background:rgba(100,100,255,0.2); border-color:rgba(130,80,220,0.5); color:#C09DFF; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-top">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg width="28" height="20" viewBox="0 0 176 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hpk" x1="36" y1="5" x2="36" y2="59" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FAD878"/><stop offset="50%" stop-color="#F5B458"/><stop offset="100%" stop-color="#E8962A" stop-opacity=".5"/>
+            </linearGradient>
+            <linearGradient id="hmd" x1="36" y1="12" x2="36" y2="52" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#F5B458" stop-opacity=".88"/><stop offset="100%" stop-color="#E8962A" stop-opacity=".4"/>
+            </linearGradient>
+            <linearGradient id="hsd" x1="36" y1="19" x2="36" y2="45" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#E8962A" stop-opacity=".65"/><stop offset="100%" stop-color="#E8962A" stop-opacity=".3"/>
+            </linearGradient>
+            <radialGradient id="hgl" cx="36" cy="32" r="34" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FAD878" stop-opacity=".22"/><stop offset="100%" stop-color="#FAD878" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="36" cy="32" rx="34" ry="30" fill="url(#hgl)"/>
+          <line x1="36" y1="5"  x2="36" y2="59" stroke="url(#hpk)" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="47" y1="12" x2="47" y2="52" stroke="url(#hmd)" stroke-width="2.6" stroke-linecap="round" stroke-opacity=".8"/>
+          <line x1="58" y1="19" x2="58" y2="45" stroke="url(#hsd)" stroke-width="2.2" stroke-linecap="round" stroke-opacity=".52"/>
+          <line x1="69" y1="24" x2="69" y2="40" stroke="url(#hsd)" stroke-width="1.8" stroke-linecap="round" stroke-opacity=".28"/>
+          <line x1="25" y1="12" x2="25" y2="52" stroke="url(#hmd)" stroke-width="2.6" stroke-linecap="round" stroke-opacity=".8"/>
+          <line x1="14" y1="19" x2="14" y2="45" stroke="url(#hsd)" stroke-width="2.2" stroke-linecap="round" stroke-opacity=".52"/>
+          <line x1="3"  y1="24" x2="3"  y2="40" stroke="url(#hsd)" stroke-width="1.8" stroke-linecap="round" stroke-opacity=".28"/>
+          <circle cx="36" cy="32" r="10" fill="#FAD878" fill-opacity=".22"/>
+          <circle cx="36" cy="32" r="3.5" fill="#FAD878"/>
+          <text x="74" y="43" font-family="'Cormorant Garant',Georgia,serif" font-style="italic" font-weight="300" font-size="34" fill="#E8962A" letter-spacing="3">telos</text>
+        </svg>
+      </div>
+      <div class="brand-divider"></div>
+      <div class="brand-sub">人才看板</div>
+    </div>
+    <div class="updated" id="updated-time">—</div>
+  </div>
+  <div class="stats" id="stats-bar"></div>
+</div>
+
+<!-- Filters -->
+<div class="filters">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="搜索姓名、公司、技能…" oninput="applyFilters()">
+  </div>
+  <div class="brand-divider" style="height:28px"></div>
+  <div class="filter-group">
+    <span class="filter-label">维度</span>
+    <span class="chip all active" data-dim="all"   onclick="setDim(this)">全部</span>
+    <span class="chip eng-d"      data-dim="eng"   onclick="setDim(this)">🔧 工程</span>
+    <span class="chip pm-d"       data-dim="pm"    onclick="setDim(this)">🎯 产品</span>
+    <span class="chip algo-d"     data-dim="algo"  onclick="setDim(this)">🧬 算法</span>
+    <span class="chip combo"      data-dim="two"   onclick="setDim(this)">两项兼备</span>
+    <span class="chip combo"      data-dim="three" onclick="setDim(this)">三项兼备</span>
+  </div>
+  <div class="brand-divider" style="height:28px"></div>
+  <div class="filter-group">
+    <span class="filter-label">筛选</span>
+    <span class="chip voice-f"   data-filter="voice"    onclick="toggleFilter(this)">🎙 语音</span>
+    <span class="chip new-f"     data-filter="new"      onclick="toggleFilter(this)">🆕 未联系</span>
+    <span class="chip partner-f" data-filter="partner"  onclick="toggleFilter(this)">🤝 合伙人候选</span>
+    <span class="chip new-f"     data-filter="priority" onclick="toggleFilter(this)">⭐ 仅优先</span>
+  </div>
+</div>
+
+<!-- Priority Panel -->
+<div class="priority-panel" id="priority-panel" style="display:none">
+  <div class="priority-panel-head" onclick="togglePriorityPanel()">
+    <div class="priority-panel-title">
+      ⭐ 优先跟进列表
+      <span class="priority-count-badge" id="priority-count-badge">0</span>
+    </div>
+    <span class="priority-collapse-icon open" id="priority-collapse-icon">▼</span>
+  </div>
+  <div class="priority-list" id="priority-list"></div>
+</div>
+
+<!-- Swim Lanes -->
+<div class="lanes-wrap" id="lanes-wrap"></div>
+<div class="empty" id="empty" style="display:none;text-align:center;padding:80px 20px;color:var(--text-dim);font-size:13px">没有符合条件的候选人</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal" id="modal-inner">
+    <button class="modal-close" onclick="closeModal()">✕ 关闭</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+// ── Data (replaced daily by search script) ────────────────────────────────
+const LEADS_DATA = {"meta":{"last_updated":"2026-04-09","total":35,"version":1},"leads":[{"id":"chen-zhang-actuy","name":"章晨 / Chen Zhang","role":"工程·算法","score":5,"location":"北京","current":"FAIR (Meta) Research Engineer","bg":"ex-ByteDance 大语音模型 / AI Avatar；TikTok/抖音/剪映/火山引擎大规模部署","skills":["TTS","ASR","大语音模型","多模态Agent","LLM推理","ByteDance"],"voice":true,"xiaohongshu":null,"github":"https://actuy.github.io/","website":"https://actuy.github.io/","contact":"见个人主页","source":"web_search","platform":"web","notes":"MegaTTS3 / Muzic 主要贡献者；语音+Agent双修；字节系；建议优先联系","is_academic":false,"date_found":"2026-04-04","tier":"S","partner_potential":true,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"zhihao-du","name":"杜志浩 / Zhihao Du","role":"工程·算法","score":5,"location":"杭州/北京","current":"Alibaba SpeechLab@通义","bg":"CosyVoice 核心贡献者；FunASR 生态；Tongyi 语音大模型","skills":["TTS","ASR","Voice Cloning","多语言合成","模型训练","Alibaba"],"voice":true,"xiaohongshu":null,"github":"https://github.com/ZhihaoDU","website":"https://zhihaodu.github.io/","contact":"Email: neo.dzh@alibaba-inc.com; GitHub: ZhihaoDU; 见个人主页","source":"web_search","platform":"web","notes":"CosyVoice / FunASR 作者之一；阿里系；语音技术深度强","is_academic":false,"date_found":"2026-04-04","tier":"B","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":true,"email":"neo.dzh@alibaba-inc.com","twitter":"","wechat":""},{"id":"jingcheng-pang","name":"庞竟成 / Jing-Cheng Pang","role":"算法","score":4,"location":"北京","current":"Huawei TopMinds 高级AI研究员","bg":"南京大学LAMDA组博士 2025届；Domain Agent RL；大模型强化学习","skills":["RL","Domain Agent","LLM","SFT","RLHF","Huawei"],"voice":false,"xiaohongshu":null,"github":"https://github.com/lafmdp","website":"https://jingchengpang.github.io/","contact":"GitHub: lafmdp; 个人主页: jingchengpang.github.io; LinkedIn available","source":"web_search","platform":"web","notes":"华为TopMinds；RL+Agent方向深；2025届刚毕业可能有流动意愿","is_academic":false,"date_found":"2026-04-04","tier":"C","partner_potential":false,"is_eng":false,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"ten-anexpn","name":"anexpn (TEN Framework)","role":"Harness Eng","score":5,"location":"中国","current":"TEN-framework 核心贡献者","bg":"TEN Framework — 开源实时语音AI Agent框架；C/Go/Python全栈","skills":["Voice Agent","实时推理","WebRTC","LLM Orchestration","C++"],"voice":true,"xiaohongshu":null,"github":"https://github.com/anexpn","website":"","contact":"GitHub: anexpn; Team email: developer@ten.ai","source":"github","platform":"github","notes":"实时多模态语音Agent框架核心开发；工程能力强；需识别具体账号后直接联系","is_academic":false,"date_found":"2026-04-04","tier":"A","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":false,"email":"developer@ten.ai","twitter":"","wechat":""},{"id":"ten-halajohn","name":"halajohn (TEN Framework)","role":"Harness Eng","score":5,"location":"台湾（Agora Chief Architect）","current":"Agora - Chief Architect","bg":"TEN Framework贡献者；Agora首席架构师；台湾；GitHub: halajohn","skills":["Voice Agent","实时AI","低延迟推理","RTC"],"voice":true,"xiaohongshu":null,"github":"https://github.com/halajohn","website":"","contact":"GitHub: halajohn; X: @wei_hu_tw; LinkedIn: in/huyuehwei","source":"github","platform":"github","notes":"同TEN团队；语音Agent实战经验","is_academic":false,"date_found":"2026-04-04","tier":"A","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":false,"email":"","twitter":"wei_hu_tw","wechat":""},{"id":"dify-pm","name":"Dify 产品负责人（待识别）","role":"Model PM","score":5,"location":"北京","current":"LangGenius / Dify","bg":"ex-腾讯云；主导 Dify 产品 0-1；114k stars 开源项目产品方","skills":["AI产品","Agent workflow","RAG","LLM平台","0-1产品"],"voice":false,"xiaohongshu":null,"github":"https://github.com/langgenius","website":"https://dify.ai","contact":"LinkedIn / Dify 官网","source":"web_search","platform":"web","notes":"需进一步识别具体 PM 姓名；从 LinkedIn 搜 Dify + Product Manager","is_academic":false,"date_found":"2026-04-04","tier":"A","partner_potential":false,"is_eng":false,"is_pm":true,"is_algo":false,"email":"","twitter":"","wechat":""},{"id":"metagpt-pm","name":"洪思睿 / Sirui Hong (MetaGPT)","role":"产品·算法","score":5,"location":"中国","current":"DeepWisdom / MetaGPT","bg":"MetaGPT 第一作者；多Agent框架0-1；OpenManus 3小时复现Manus","skills":["Multi-Agent","LLM产品","框架设计","开源运营"],"voice":false,"xiaohongshu":null,"github":"https://github.com/stellaHSR","website":"","contact":"GitHub: stellaHSR; 见fuzhi.ai / DeepWisdom官方联系","source":"web_search","platform":"web","notes":"学术偏重但有产品直觉；OpenManus病毒式传播说明有用户sense","is_academic":false,"date_found":"2026-04-04","tier":"A","partner_potential":true,"is_eng":false,"is_pm":true,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"liyupi","name":"程序员鱼皮 / liyupi","role":"工程·产品","score":4,"location":"上海","current":"独立开发者 / 教育创作者","bg":"GitHub 21k followers；AI/编程社区影响力大；B站/公众号大V","skills":["AI应用开发","社区运营","产品感","Java","Python"],"voice":false,"xiaohongshu":"https://www.xiaohongshu.com/user/profile/5dc69dbe0000000001004ac0","github":"https://github.com/liyupi","website":"","contact":"GitHub: liyupi; X: @yupi996; 小红书见链接","source":"github","platform":"github","notes":"社区影响力强；适合AI产品推广角色；直接做技术PM有待验证","is_academic":false,"date_found":"2026-04-04","tier":"B","partner_potential":false,"is_eng":true,"is_pm":true,"is_algo":false,"email":"","twitter":"yupi996","wechat":""},{"id":"gh-yuekaizhang","name":"Yuekai Zhang / 张岳凯","role":"Harness Eng","score":5,"location":"上海","current":"NVIDIA Shanghai - Speech AI Engineer","bg":"语音AI工程师，专注语音模型训练与部署；Spark-TTS / FunASR 核心贡献者；ASR benchmarking和推理优化","skills":["TTS","ASR","Speech AI","NVIDIA Triton","LLM部署","vLLM"],"voice":true,"xiaohongshu":null,"github":"https://github.com/yuekaizhang","website":"","contact":"Email: zhangyuekai@foxmail.com; WeChat: ykzhang2020; GitHub: yuekaizhang","source":"web_search","platform":"github","notes":"Spark-TTS & FunASR贡献者；NVIDIA Speech AI工程师；语音训练+推理部署双修；上海","is_academic":false,"date_found":"2026-04-05","tier":"A","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":false,"email":"zhangyuekai@foxmail.com","twitter":"","wechat":"ykzhang2020"},{"id":"gh-pandamq","name":"Mingqi Jiang / 江明琦","role":"Harness Eng","score":5,"location":"中国（待确认）","current":"SparkAudio - TTS Engineer","bg":"CosyVoice & Spark-TTS贡献者；专注语音合成；SparkAudio成员","skills":["TTS","Voice Synthesis","CosyVoice","Spark-TTS","Pitch Detection"],"voice":true,"xiaohongshu":null,"github":"https://github.com/pandamq","website":"","contact":"GitHub: pandamq","source":"web_search","platform":"github","notes":"SparkAudio团队成员；CosyVoice & Spark-TTS双项目贡献；TTS工程实力强","is_academic":false,"date_found":"2026-04-05","tier":"C","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":false,"email":"","twitter":"","wechat":""},{"id":"gh-weedge","name":"weedge","role":"Harness Eng","score":5,"location":"中国","current":"独立开发者 / Open Source Builder","bg":"开发achatbot开源对话AI框架（支持语音+多模态）；baby-llm实验；全栈AI独立开发者","skills":["Voice Agent","LLM","Multimodal","ASR/TTS集成","分布式系统","Go/Python"],"voice":true,"xiaohongshu":null,"github":"https://github.com/weedge","website":"https://weedge.github.io","contact":"GitHub: weedge","source":"web_search","platform":"github","notes":"achatbot作者：开源语音+多模态AI Agent框架；Spark-TTS Triton后端贡献者；中国独立开发者","is_academic":false,"date_found":"2026-04-05","tier":"A","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":false,"email":"","twitter":"","wechat":""},{"id":"gh-jintao-huang","name":"Jintao Huang / 黄锦涛","role":"工程·算法","score":4,"location":"杭州","current":"ModelScope / Alibaba","bg":"ms-swift核心维护者（600+ LLM SFT/RLHF/GRPO框架）；USTC硕士；Alibaba ModelScope工程师","skills":["SFT","RLHF","GRPO","LLM Fine-tuning","Qwen","ModelScope"],"voice":false,"xiaohongshu":null,"github":"https://github.com/Jintao-Huang","website":"","contact":"GitHub: Jintao-Huang","source":"web_search","platform":"github","notes":"ms-swift首席贡献者；支持600+ LLM的全套训练框架；阿里系；LLM训练工程实力顶级","is_academic":false,"date_found":"2026-04-05","tier":"C","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"gh-hjh0119","name":"jinghanhu / hjh0119","role":"工程·算法","score":4,"location":"杭州","current":"ModelScope / Alibaba","bg":"ms-swift核心贡献者；Megatron-Core集成、DPO/RLHF训练优化；Qwen3贡献者","skills":["SFT","DPO","RLHF","Megatron","LLM训练","Qwen"],"voice":false,"xiaohongshu":null,"github":"https://github.com/hjh0119","website":"","contact":"GitHub: hjh0119","source":"web_search","platform":"github","notes":"ms-swift重要贡献者；专注Megatron+DPO/RLHF优化；阿里系；LLM大规模训练经验","is_academic":false,"date_found":"2026-04-05","tier":"C","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"gh-xinshengwang","name":"Xinsheng Wang / 王新盛","role":"工程·算法","score":5,"location":"香港","current":"HKUST（Postdoc）/ ex Research Scientist@miHoYo","bg":"Spark-TTS 创始作者（11k stars）；SoulX-Podcast / SoulX-Singer 作者；专注语音合成与歌唱合成；XJTU+NWPU博士，miHoYo产业经验","skills":["TTS","Voice Synthesis","Singing Synthesis","ASR","LLM-based Speech"],"voice":true,"xiaohongshu":null,"github":"https://github.com/xinshengwang","website":"https://xinshengwang.github.io/","contact":"GitHub: xinshengwang; X: @XinshengWang1; 见个人主页","source":"web_search","platform":"github","notes":"Spark-TTS（11k stars）主创；ex miHoYo Research Scientist；学术背景+产业合作；语音合成顶尖水平","is_academic":false,"date_found":"2026-04-06","tier":"B","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"XinshengWang1","wechat":""},{"id":"gh-hijkzzz","name":"Jian Hu / 胡健","role":"工程·算法","score":5,"location":"上海","current":"NVIDIA Senior Research Engineer","bg":"OpenRLHF 创始人（9.3k stars）；RLHF/DAPO/REINFORCE++框架；LLM对齐训练基础设施专家；曾入读HKUST(GZ)博士","skills":["RLHF","GRPO","LLM Training","Ray","vLLM","Reinforcement Learning"],"voice":false,"xiaohongshu":null,"github":"https://github.com/hijkzzz","website":"https://hijkzzz.notion.site","contact":"Email: janhu9527@gmail.com; GitHub: hijkzzz; Notion: hijkzzz.notion.site","source":"web_search","platform":"github","notes":"OpenRLHF作者（9.3k stars）；NVIDIA Shanghai；RLHF基础设施顶级专家；LLM对齐训练方向","is_academic":false,"date_found":"2026-04-06","tier":"B","partner_potential":true,"is_eng":true,"is_pm":false,"is_algo":true,"email":"janhu9527@gmail.com","twitter":"","wechat":""},{"id":"gh-cyfyifanchen","name":"Elliot Chen / cyfyifanchen","role":"工程·产品","score":5,"location":"上海","current":"EverMind AI / TEN-framework 核心贡献者","bg":"TEN-framework（10.4k stars）核心开发者；EverOS 记忆型Agent OS创始人（3.6k stars）；实时多模态语音AI Agent框架工程师","skills":["Voice Agent","LLM Agent","Memory OS","实时AI","WebRTC","Agent框架"],"voice":true,"xiaohongshu":null,"github":"https://github.com/cyfyifanchen","website":"https://cyfyifanchen.com","contact":"GitHub: cyfyifanchen; X: @elliotchen200","source":"web_search","platform":"github","notes":"TEN-framework和EverOS双项目贡献；实时语音AI Agent全栈；上海；技术产品双修","is_academic":false,"date_found":"2026-04-06","tier":"S","partner_potential":true,"is_eng":true,"is_pm":true,"is_algo":false,"email":"","twitter":"elliotchen200","wechat":""},{"id":"gh-kaituoxu","name":"Kaituo Xu / 许开拓","role":"工程·算法","score":5,"location":"北京","current":"小红书 Super Intelligence Team - Speech Engineer","bg":"FireRedASR / FireRedASR2S / FireRedVAD 作者；工业级Mandarin ASR SOTA；小红书超级智能团队语音负责人","skills":["ASR","VAD","Speech Recognition","LLM Integration","Mandarin ASR"],"voice":true,"xiaohongshu":null,"github":"https://github.com/kaituoxu","website":"","contact":"GitHub: kaituoxu","source":"web_search","platform":"github","notes":"FireRedASR作者（小红书超级智能组）；工业级ASR SOTA；语音+LLM集成；北京","is_academic":false,"date_found":"2026-04-06","tier":"S","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"gh-hiyouga","name":"Yaowei Zheng / hiyouga","role":"工程·算法","score":4,"location":"北京","current":"Millennium Science School","bg":"LlamaFactory 主创（69.6k stars，ACL 2024）；EasyR1 多模态RL框架；100+ LLM统一微调工具；北京","skills":["LLM Fine-tuning","RLHF","RL Training","LlamaFactory","EasyR1","Qwen"],"voice":false,"xiaohongshu":null,"github":"https://github.com/hiyouga","website":"","contact":"GitHub: hiyouga; X: @llamafactory_ai; HuggingFace: hiyouga","source":"web_search","platform":"github","notes":"LlamaFactory作者（69.6k stars）；EasyR1 RL框架；统一LLM微调生态构建者；北京；6.3k GitHub followers","is_academic":false,"date_found":"2026-04-07","tier":"B","partner_potential":true,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"llamafactory_ai","wechat":""},{"id":"gh-wangrongsheng","name":"王荣胜 / Rongsheng Wang","role":"Model PM","score":5,"location":"深圳","current":"独立研究者 / Open Source Builder","bg":"awesome-LLM-resources（8k stars）；ChatPaper（19.4k stars）；医疗多模态LLM；深圳","skills":["LLM Resources","Multimodal LLM","Medical AI","RAG","Agent"],"voice":false,"xiaohongshu":"https://www.xiaohongshu.com/user/profile/5fa2663000000000010068e2","github":"https://github.com/WangRongsheng","website":"https://w-r-s.github.io/","contact":"GitHub: WangRongsheng; X: @RongshengWang; 小红书见链接","source":"web_search","platform":"github","notes":"awesome-LLM-resources作者；ChatPaper（19.4k stars）；有小红书账号；深圳独立开发者；LLM资源整合+产品感","is_academic":false,"date_found":"2026-04-07","tier":"B","partner_potential":false,"is_eng":false,"is_pm":true,"is_algo":false,"email":"","twitter":"RongshengWang","wechat":""},{"id":"gh-lauragpt","name":"Zhifu Gao / 高志富","role":"工程·算法","score":5,"location":"杭州（Alibaba）","current":"Alibaba Tongyi SpeechLab","bg":"FunASR / CosyVoice / SenseVoice / FunClip 核心贡献者；工业级多语言ASR+TTS+情感识别；Alibaba","skills":["TTS","ASR","CosyVoice","FunASR","SenseVoice","emotion2vec","Alibaba"],"voice":true,"xiaohongshu":null,"github":"https://github.com/LauraGPT","website":"","contact":"GitHub: LauraGPT","source":"web_search","platform":"github","notes":"FunASR+CosyVoice+SenseVoice作者；Alibaba Tongyi语音团队；工业级语音全栈；发现于FunAudioLLM组织","is_academic":false,"date_found":"2026-04-08","tier":"B","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"gh-hecheng0625","name":"Yuancheng Wang / 王远程","role":"算法","score":5,"location":"深圳（CUHK-SZ）","current":"PhD@CUHK(SZ) / ex-intern Meta Superintelligence Labs","bg":"Amphion核心领导者；NaturalSpeech 3 / MaskGCT(ICLR 2025) / TaDiCodec(NeurIPS 2025)作者；ex MSRA+ByteDance实习；主动求职中","skills":["TTS","NaturalSpeech","MaskGCT","Amphion","Diffusion TTS","Meta","ByteDance"],"voice":true,"xiaohongshu":null,"github":"https://github.com/HeCheng0625","website":"https://hecheng0625.github.io/","contact":"GitHub: HeCheng0625; 个人主页: hecheng0625.github.io; 主动求职中 — 可通过GitHub联系","source":"web_search","platform":"github","notes":"学术背景+产业合作；ICLR 2025 MaskGCT作者；ex Meta+MSRA+ByteDance实习；Actively seeking full-time；CUHK-SZ","is_academic":true,"date_found":"2026-04-08","tier":"S","partner_potential":false,"is_eng":false,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"gh-liusongxiang","name":"Songxiang Liu / 刘颂湘","role":"工程·算法","score":5,"location":"北京（Moonshot AI）","current":"Moonshot AI (Kimi) - Speech LLM Engineer","bg":"Kimi-Audio作者；LongCat-Flash-Omni主创（560B-A27B Omni模型）；ex Tencent AI Lab / miHoYo / Meituan；语音+多模态LLM全栈","skills":["TTS","ASR","Omni LLM","Voice Conversion","Audio Foundation Model","Kimi","Moonshot AI"],"voice":true,"xiaohongshu":null,"github":"https://github.com/liusongxiang","website":"https://liusongxiang.github.io/","contact":"Email: songxiangliu.cuhk@gmail.com; GitHub: liusongxiang; 见个人主页","source":"web_search","platform":"github","notes":"Kimi-Audio主要作者；LongCat-Flash-Omni(560B-A27B)；ex Tencent/miHoYo/Meituan；语音LLM顶尖工程师；北京","is_academic":false,"date_found":"2026-04-08","tier":"A","partner_potential":true,"is_eng":true,"is_pm":false,"is_algo":true,"email":"songxiangliu.cuhk@gmail.com","twitter":"","wechat":""},{"id":"gh-davdgao","name":"Dawei Gao / DavdGao","role":"Harness Eng","score":4,"location":"北京","current":"Alibaba Tongyi - AgentScope核心工程师","bg":"AgentScope（23.1k stars）核心开发者；FederatedScope联邦学习框架贡献者；Tongyi/Alibaba北京","skills":["LLM Agent","AgentScope","Multi-Agent","Federated Learning","Python","Alibaba"],"voice":false,"xiaohongshu":null,"github":"https://github.com/DavdGao","website":"https://davdgao.github.io/","contact":"GitHub: DavdGao; X: @daweigaooooo","source":"web_search","platform":"github","notes":"AgentScope(23.1k stars)核心贡献者；Alibaba Tongyi Beijing；Agent框架工程实力强","is_academic":false,"date_found":"2026-04-08","tier":"C","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":false,"email":"","twitter":"daweigaooooo","wechat":""},{"id":"gh-rayrayraykk","name":"Weirui Kuang / 邝蔚睿","role":"Harness Eng","score":4,"location":"杭州","current":"Alibaba Group - LLM/Agent工程师","bg":"AgentScope（23.1k stars）+ CoPaw（14.8k stars）重要贡献者；联邦学习+图学习+LLM应用；Alibaba杭州","skills":["LLM Agent","AgentScope","CoPaw","Federated Learning","Graph Learning","Alibaba"],"voice":false,"xiaohongshu":null,"github":"https://github.com/rayrayraykk","website":"https://weiruikuang.com","contact":"GitHub: rayrayraykk; Email: weiruikuang@gmail.com","source":"web_search","platform":"github","notes":"AgentScope+CoPaw双项目贡献；Alibaba杭州；LLM Agent工程实力；联系邮箱公开","is_academic":false,"date_found":"2026-04-08","tier":"C","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":false,"email":"weiruikuang@gmail.com","twitter":"","wechat":""},{"id":"gh-lmxue","name":"Liumeng Xue / 薛流猛","role":"算法","score":5,"location":"香港（HKUST）","current":"Postdoc@HKUST / Co-founder of Amphion (OpenMMLab)","bg":"Amphion（9.7k stars）联合创始人；Spark-TTS贡献者；专注音频/音乐/语音生成；NWPU ASLP博士","skills":["TTS","Speech Generation","Audio Synthesis","Amphion","Music Generation"],"voice":true,"xiaohongshu":null,"github":"https://github.com/lmxue","website":"https://lmxue.github.io/","contact":"GitHub: lmxue; X: @lmxue_; 见个人主页","source":"web_search","platform":"github","notes":"学术背景+产业合作；Amphion(9.7k stars)联合创始人(OpenMMLab工业项目)；Spark-TTS贡献者；语音生成技术深厚","is_academic":true,"date_found":"2026-04-08","tier":"B","partner_potential":false,"is_eng":false,"is_pm":false,"is_algo":true,"email":"","twitter":"lmxue_","wechat":""},{"id":"xl-shichunliu","name":"Shichun Liu / 刘世春","role":"算法","score":3,"location":"上海（复旦大学）","current":"本科研究员 @ Fudan University","bg":"\"Memory in the Age of AI Agents\" survey 第一作者（1.7k stars）；LLM Agent记忆机制；NAACL 2024 Self-Demos作者；LLMEval-1贡献者","skills":["Agent Memory","LLM","RAG","Survey Research","Fudan"],"voice":false,"xiaohongshu":null,"github":"https://github.com/Shichun-Liu","website":"https://shichun-liu.github.io/","contact":"GitHub: Shichun-Liu; Email: liusc2020@gmail.com","source":"xlsx","platform":"github","notes":"Agent Memory方向；NAACL 2024论文；本科背景但有早期研究潜力；Agent理论基础扎实","is_academic":true,"tier":"C","partner_potential":false,"date_found":"2026-04-04","is_eng":false,"is_pm":false,"is_algo":true,"email":"liusc2020@gmail.com","twitter":"","wechat":""},{"id":"xl-chenqian","name":"钱忱 / Chen Qian","role":"产品·算法","score":4,"location":"上海（SJTU）","current":"SJTU 助理教授 / ex Tencent Tech Elite","bg":"THUNLP博士后；MetaGPT核心作者；Internet of Agents作者；ChatDev (ACL 2024)；ICLR 2025 Multi-Agent Scaling；Tencent Tech Elite经历","skills":["Multi-Agent","LLM Agents","框架设计","Agent协作","ChatDev","MetaGPT"],"voice":false,"xiaohongshu":null,"github":"https://github.com/qianc62","website":"https://qianc62.github.io/","contact":"Email: qianc62@gmail.com; X: @qianc62; GitHub: qianc62; 个人主页: qianc62.github.io","source":"xlsx","platform":"github","notes":"学术背景+产业合作；MetaGPT/IoA/ChatDev核心；ex Tencent Tech Elite；ICLR 2025；招募难度高但Multi-Agent顶级专家","is_academic":true,"tier":"B","partner_potential":false,"date_found":"2026-04-04","is_eng":false,"is_pm":true,"is_algo":true,"email":"qianc62@gmail.com","twitter":"qianc62","wechat":""},{"id":"gh-geekan","name":"Alexander Wu / geekan","role":"Both","score":5,"location":"Palo Alto (Beijing origin)","current":"MetaGPT Founder","bg":"Multi-agent framework creator (MetaGPT 66.8k★); AI software company visionary; prolific open-source contributor","skills":["Multi-Agent","LLM Agents","Agent Framework","System Design","Software Engineering"],"voice":false,"xiaohongshu":null,"github":"https://github.com/geekan","website":"","contact":"GitHub: geekan; Discord: alexanderwu_","source":"web_search","platform":"github","notes":"MetaGPT creator (66.8k★); Multi-agent framework design; Industry→Academy potential; 3.5k followers","is_academic":false,"date_found":"2026-04-09","tier":"B","partner_potential":true,"is_eng":true,"is_pm":true,"is_algo":false,"email":"","twitter":"","wechat":""},{"id":"gh-arvinxx","name":"Arvin Xu / arvinxx","role":"Both","score":4,"location":"Unknown","current":"LobeHub Design Engineer / Ant Design Contributor","bg":"Design Engineer at LobeHub (74.9k★); Major contributor to Ant Design (97.8k★); AIGC UI/UX expert; 2.1k followers","skills":["Design Systems","UI/UX","React","AIGC","Agent Frameworks","AI Chat"],"voice":false,"xiaohongshu":null,"github":"https://github.com/arvinxx","website":"","contact":"GitHub: arvinxx","source":"web_search","platform":"github","notes":"LobeHub core team (74.9k★); Design engineer + agent systems; Multi-modal AI frameworks","is_academic":false,"date_found":"2026-04-09","tier":"B","partner_potential":true,"is_eng":true,"is_pm":true,"is_algo":false,"email":"","twitter":"","wechat":""},{"id":"gh-ymcui","name":"Yiming Cui / ymcui","role":"Harness Eng","score":4,"location":"Beijing","current":"NLP Researcher / Chinese LLM Expert","bg":"Chinese-LLaMA-Alpaca creator (19k★ + 7.2k★); Chinese-BERT-wwm (10.2k★); Pre-trained LM specialist; 3.7k followers","skills":["Chinese LLM","Pre-training","Fine-tuning","LLaMA","RLHF","NLP"],"voice":false,"xiaohongshu":null,"github":"https://github.com/ymcui","website":"","contact":"GitHub: ymcui","source":"web_search","platform":"github","notes":"Chinese LLM ecosystem leader; Beijing-based; Major 19k★ project; LLaMA fine-tuning expert","is_academic":false,"date_found":"2026-04-09","tier":"B","partner_potential":true,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"gh-1850298154","name":"Yuteng Zhao / 1850298154","role":"Harness Eng","score":3,"location":"Beijing","current":"Peking University AI & Agent Systems Engineer","bg":"Specializes in agent architectures (ReAct, Multi-Agent, Data Agent, Plan Agent); PKU-based; 131 repos; focuses on intelligent system design","skills":["Agent Architectures","ReAct","Multi-Agent Systems","Data Engineering","LLM"],"voice":false,"xiaohongshu":null,"github":"https://github.com/1850298154","website":"https://www.pku.edu.cn","contact":"GitHub: 1850298154","source":"web_search","platform":"github","notes":"PKU-based agent systems engineer; Beijing location; 131 repos; ReAct/Multi-Agent specialist","is_academic":true,"date_found":"2026-04-09","tier":"C","partner_potential":false,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"gh-jenqyang","name":"Zhengyang Hou / Jenqyang","role":"Both","score":3,"location":"Hangzhou","current":"Founder/Indie Hacker - Full-stack AI Engineer","bg":"Awesome-AI-Agents creator (1.1k★); LLM-Powered-RAG-System (219★); Full-stack engineer; Startup founder","skills":["LLM Agents","RAG Systems","Full-stack","Startup","AI Architecture"],"voice":false,"xiaohongshu":null,"github":"https://github.com/Jenqyang","website":"https://youraiscroll.com","contact":"GitHub: Jenqyang; Website: youraiscroll.com, CodeZap.co","source":"web_search","platform":"github","notes":"Indie hacker/founder status; Agent framework curator; Hangzhou-based; Full-stack approach","is_academic":false,"date_found":"2026-04-09","tier":"C","partner_potential":false,"is_eng":true,"is_pm":true,"is_algo":false,"email":"","twitter":"","wechat":""},{"id":"org-spark-audio","name":"Spark Audio Team","role":"Harness Eng","score":4,"location":"Unknown","current":"Spark-TTS Project Lead Org","bg":"Spark-TTS creator (10.9k★, LLM-based TTS); Voice cloning & speech generation; Zero-shot voice synthesis; Contact: sparkaudio.ai@gmail.com","skills":["TTS","LLM-based Speech","Voice Cloning","Speech Synthesis","Audio Generation"],"voice":true,"xiaohongshu":null,"github":"https://github.com/SparkAudio","website":"sparkaudio.ai","contact":"sparkaudio.ai@gmail.com; Key members: lmxue, xinshengwang, pandamq","source":"web_search","platform":"github","notes":"Spark-TTS lead (10.9k★); LLM-native TTS; Voice cloning focus; 192 followers","is_academic":false,"date_found":"2026-04-09","tier":"B","partner_potential":true,"is_eng":true,"is_pm":false,"is_algo":true,"email":"","twitter":"","wechat":""},{"id":"org-lobehub","name":"LobeHub Team","role":"Both","score":4,"location":"Unknown","current":"LobeHub Org - Agent Teammate Platform","bg":"LobeHub (74.9k★) - Agent collaboration platform; lobe-chat agent framework; Multi-agent team design; 3.5k followers","skills":["Agent Platforms","Multi-agent Collaboration","AI Chat","UI/UX","Deployment"],"voice":false,"xiaohongshu":null,"github":"https://github.com/lobehub","website":"https://lobehub.com","contact":"hello@lobehub.com; Discord: https://discord.gg/lobehub","source":"web_search","platform":"github","notes":"LobeHub core platform (74.9k★); Agent teammates focus; Multi-agent collab leader","is_academic":false,"date_found":"2026-04-09","tier":"B","partner_potential":true,"is_eng":true,"is_pm":true,"is_algo":false,"email":"","twitter":"","wechat":""},{"id":"org-agentscope-ai","name":"AgentScope Team","role":"Both","score":4,"location":"China (Alibaba)","current":"AgentScope - Production-Ready Multi-Agent Framework","bg":"AgentScope (23.2k★) by Alibaba; Multi-agent application framework; Realtime voice agent support; Production-grade infrastructure","skills":["Multi-Agent","Production Frameworks","Voice Agents","Deployment","Observability"],"voice":true,"xiaohongshu":null,"github":"https://github.com/agentscope-ai","website":"https://agentscope.app","contact":"agentscope.team@gmail.com","source":"web_search","platform":"github","notes":"Alibaba AgentScope (23.2k★); Production multi-agent framework; Voice agent capabilities; China-based","is_academic":false,"date_found":"2026-04-09","tier":"B","partner_potential":true,"is_eng":true,"is_pm":true,"is_algo":false,"email":"","twitter":"","wechat":""}]};
+
+// ── State ─────────────────────────────────────────────────────────────────
+const STATUS_CYCLE = ['new','contacted','replied','pass'];
+const STATUS_LABEL = { new:'🆕 新线索', contacted:'📨 已联系', replied:'💬 已回复', pass:'❌ 不合适' };
+let activeDim = 'all';
+let activeFilters = new Set();
+let openId = null;
+let priorityPanelOpen = true;
+
+function getStatus(id) { return localStorage.getItem('telos_status_'+id) || 'new'; }
+function setStatus(id, s) { localStorage.setItem('telos_status_'+id, s); }
+function getNote(id) { return localStorage.getItem('telos_note_'+id) || ''; }
+function setNote(id, n) { localStorage.setItem('telos_note_'+id, n); }
+
+// ── Priority ───────────────────────────────────────────────────────────────
+function getPriority(id) { return localStorage.getItem('telos_priority_'+id) === '1'; }
+function setPriority(id, v) { localStorage.setItem('telos_priority_'+id, v ? '1' : '0'); }
+function togglePriority(id, e) {
+  if(e) e.stopPropagation();
+  setPriority(id, !getPriority(id));
+  renderAll(); renderStats(); renderPriorityPanel();
+  if(openId === id) refreshModalPriorityBtn(id);
+}
+function togglePriorityPanel() {
+  priorityPanelOpen = !priorityPanelOpen;
+  document.getElementById('priority-list').style.display = priorityPanelOpen ? '' : 'none';
+  const icon = document.getElementById('priority-collapse-icon');
+  if(priorityPanelOpen) icon.classList.add('open'); else icon.classList.remove('open');
+}
+function renderPriorityPanel() {
+  const priorityLeads = LEADS_DATA.leads.filter(l => getPriority(l.id));
+  const panel = document.getElementById('priority-panel');
+  const list  = document.getElementById('priority-list');
+  const badge = document.getElementById('priority-count-badge');
+  badge.textContent = priorityLeads.length;
+  if(!priorityLeads.length) { panel.style.display = 'none'; return; }
+  panel.style.display = '';
+  list.style.display = priorityPanelOpen ? '' : 'none';
+  list.innerHTML = priorityLeads.map(lead => {
+    const st = getStatus(lead.id);
+    const stLabel = STATUS_LABEL[st];
+    return `<div class="priority-item" onclick="openModal('${lead.id}')">
+      <div style="font-size:18px;flex-shrink:0">${lead.voice ? '🎙' : '🧠'}</div>
+      <div class="priority-item-name">${lead.name.split(' / ')[0]}</div>
+      <div class="priority-item-meta">${lead.current} · ${lead.location}</div>
+      <div class="priority-item-status"><span class="status-btn ${st}" style="font-size:9px;padding:3px 8px">${stLabel}</span></div>
+      <button class="priority-item-remove" onclick="togglePriority('${lead.id}',event)" title="取消优先">✕</button>
+    </div>`;
+  }).join('');
+}
+function refreshModalPriorityBtn(id) {
+  const btn = document.getElementById('modal-priority-toggle');
+  if(!btn) return;
+  const on = getPriority(id);
+  btn.className = 'modal-priority-btn ' + (on ? 'on' : 'off');
+  btn.textContent = on ? '⭐ 已标记优先' : '☆ 标记为优先跟进';
+}
+
+function cycleStatus(id, e) {
+  e.stopPropagation();
+  const cur = STATUS_CYCLE.indexOf(getStatus(id));
+  const next = STATUS_CYCLE[(cur+1) % STATUS_CYCLE.length];
+  setStatus(id, next);
+  renderAll(); renderPriorityPanel();
+  if(openId === id) openModal(id);
+}
+
+// ── Filters ───────────────────────────────────────────────────────────────
+function setDim(el) {
+  document.querySelectorAll('[data-dim]').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  activeDim = el.dataset.dim;
+  applyFilters();
+}
+function toggleFilter(el) {
+  const f = el.dataset.filter;
+  if(activeFilters.has(f)) { activeFilters.delete(f); el.classList.remove('active'); }
+  else { activeFilters.add(f); el.classList.add('active'); }
+  applyFilters();
+}
+function matchesFilters(lead) {
+  const q = document.getElementById('search-input').value.toLowerCase();
+  if(q) {
+    const hay = [lead.name, lead.current, lead.bg, lead.skills.join(' '), lead.location, lead.role].join(' ').toLowerCase();
+    if(!hay.includes(q)) return false;
+  }
+  // Dimension filter
+  const dimCount = (lead.is_eng?1:0)+(lead.is_pm?1:0)+(lead.is_algo?1:0);
+  if(activeDim === 'eng'   && !lead.is_eng)  return false;
+  if(activeDim === 'pm'    && !lead.is_pm)   return false;
+  if(activeDim === 'algo'  && !lead.is_algo) return false;
+  if(activeDim === 'two'   && dimCount < 2)  return false;
+  if(activeDim === 'three' && dimCount < 3)  return false;
+  if(activeFilters.has('voice')   && !lead.voice) return false;
+  if(activeFilters.has('new')     && getStatus(lead.id) !== 'new') return false;
+  if(activeFilters.has('priority')&& !getPriority(lead.id)) return false;
+  if(activeFilters.has('partner') && !lead.partner_potential) return false;
+  // Academic shown by default (removed explicit acad toggle)
+  return true;
+}
+
+// ── Render ─────────────────────────────────────────────────────────────────
+// roleClass removed — using dimBadgesHTML
+function scoreHTML(n) {
+  return Array.from({length:5},(_,i)=>`<div class="dot ${i<n?'on':'off'}"></div>`).join('');
+}
+function dimBadgesHTML(lead) {
+  const dims = [];
+  if(lead.is_eng)  dims.push('<span class="db eng">工程</span>');
+  if(lead.is_pm)   dims.push('<span class="db pm">产品</span>');
+  if(lead.is_algo) dims.push('<span class="db algo">算法</span>');
+  if(dims.length === 3) return '<span class="db three">三项兼备</span>';
+  return dims.join('');
+}
+function renderCard(lead) {
+  const st = getStatus(lead.id);
+  const stLabel = STATUS_LABEL[st];
+  const note = getNote(lead.id) || lead.notes;
+  const isPriority = getPriority(lead.id);
+  const isNewLead = isNew(lead);
+
+  const skillsHTML = lead.skills.map(s => {
+    const isVoice = ['TTS','ASR','Voice','语音','Speech','voice','tts','asr'].some(v=>s.toLowerCase().includes(v.toLowerCase()));
+    return `<span class="skill-tag ${isVoice?'voice':''}">${s}</span>`;
+  }).join('');
+
+  const platforms = [];
+  if(lead.github) platforms.push(`<a class="platform-link" href="${lead.github}" target="_blank" onclick="event.stopPropagation()">⌥ GitHub</a>`);
+  if(lead.xiaohongshu) platforms.push(`<a class="platform-link xhs" href="${lead.xiaohongshu}" target="_blank" onclick="event.stopPropagation()">📕 小红书</a>`);
+
+  const voiceBadge = lead.voice ? `<span class="voice-badge">🎙 语音</span>` : '';
+  const partnerBadge = lead.partner_potential ? `<span class="partner-badge">🤝 合伙人候选</span>` : '';
+  const acadWarn = lead.is_academic ? `<div class="acad-warning">🎓 学术背景，招募难度较高</div>` : '';
+  const noteSnip = note.length > 60 ? note.slice(0,60)+'…' : note;
+  const newBadge = isNewLead ? `<div class="new-badge">NEW</div>` : '';
+  const tierPip  = `<div class="tier-pip ${(lead.tier||'c').toLowerCase()}" title="优先级 ${lead.tier}"></div>`;
+
+  return `
+  <div class="card ${lead.is_academic?'academic-card':''} ${isPriority?'priority-card':''} ${lead.partner_potential?'partner-card':''}" onclick="openModal('${lead.id}')" style="${isPriority?'border-color:rgba(250,216,120,0.35);':''}${lead.partner_potential?'border-color:rgba(160,100,255,0.35);':''}">
+    ${newBadge}
+    <div class="card-head">
+      <div style="display:flex;align-items:flex-start;gap:7px;flex:1;min-width:0">
+        ${tierPip}
+        <div style="min-width:0">
+          <div class="card-name">${lead.name.split(' / ')[0]}</div>
+          <div class="card-name-sub">${(lead.name.split(' / ')[1]||'')}</div>
+        </div>
+      </div>
+      <div class="badges">
+        ${lead.is_academic ? '<span style="font-size:10px" title="学术背景">🎓</span>' : ''}
+        <div class="dim-badges">${dimBadgesHTML(lead)}</div>
+        <div class="score-dots">${scoreHTML(lead.score)}</div>
+        <button class="priority-btn ${isPriority?'on':'off'}" onclick="togglePriority('${lead.id}',event)" title="${isPriority?'取消优先跟进':'标记为优先跟进'}"></button>
+      </div>
+    </div>
+    <div class="card-meta">
+      <div class="meta-row"><span class="meta-icon">📍</span><span class="meta-val">${lead.location}</span></div>
+      <div class="meta-row"><span class="meta-icon">🏢</span><span class="meta-val accent">${lead.current}</span></div>
+    </div>
+    <div class="skills">${skillsHTML}</div>
+    ${acadWarn}
+    <div class="card-notes">${noteSnip}</div>
+    <div class="card-foot">
+      <div class="platforms">${partnerBadge}${voiceBadge}${platforms.join('')}</div>
+      <button class="status-btn ${st}" onclick="cycleStatus('${lead.id}',event)">${stLabel}</button>
+    </div>
+  </div>`;
+}
+
+// ── Tier config ───────────────────────────────────────────────────────────
+const TIER_CONFIG = {
+  S: { icon:'🔥', label:'S — 立刻出手', desc:'技能完美契合 · 有可联系信号 · 优先级最高', cls:'tier-s' },
+  A: { icon:'🎯', label:'A — 本周外联', desc:'强匹配 · 适合现在冷接触', cls:'tier-a' },
+  B: { icon:'🕐', label:'B — 定期热身', desc:'有潜力但壁垒较高（大厂 / 海外 / 学术）', cls:'tier-b' },
+  C: { icon:'📋', label:'C — 储备观察', desc:'背景相关 · 暂不紧迫', cls:'tier-c' },
+};
+const LANE_ORDER = ['S','A','B','C'];
+const laneCollapsed = { S:false, A:false, B:false, C:true };
+
+// Compute the latest date_found across all leads
+const LATEST_DATE = LEADS_DATA.leads.reduce((max,l)=> l.date_found > max ? l.date_found : max, '');
+function isNew(lead) { return lead.date_found === LATEST_DATE; }
+
+function toggleLane(tier) {
+  laneCollapsed[tier] = !laneCollapsed[tier];
+  const body = document.getElementById('lane-body-'+tier);
+  const chev = document.getElementById('lane-chev-'+tier);
+  if(body) body.classList.toggle('collapsed', laneCollapsed[tier]);
+  if(chev) chev.classList.toggle('collapsed', laneCollapsed[tier]);
+}
+
+function renderAll() {
+  const leads = LEADS_DATA.leads;
+  const visible = leads.filter(matchesFilters);
+  const wrap  = document.getElementById('lanes-wrap');
+  const empty = document.getElementById('empty');
+
+  if(!visible.length) { wrap.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display='none';
+
+  // Group by tier; 'pass' leads always drop to C
+  const byTier = { S:[], A:[], B:[], C:[] };
+  visible.sort((a,b)=> b.score-a.score || (isNew(b)?1:0)-(isNew(a)?1:0))
+         .forEach(l => {
+           const effectiveTier = (getStatus(l.id) === 'pass') ? 'C' : (l.tier || 'C');
+           (byTier[effectiveTier] = byTier[effectiveTier]||[]).push(l);
+         });
+
+  wrap.innerHTML = LANE_ORDER.map(tier => {
+    const group = byTier[tier] || [];
+    if(!group.length) return '';
+    const cfg = TIER_CONFIG[tier];
+    const collapsed = laneCollapsed[tier];
+    return `
+    <div class="lane ${cfg.cls}">
+      <div class="lane-header" onclick="toggleLane('${tier}')">
+        <span class="lane-icon">${cfg.icon}</span>
+        <div style="flex:1">
+          <div class="lane-title">${cfg.label}</div>
+          <div class="lane-desc">${cfg.desc}</div>
+        </div>
+        <span class="lane-count">${group.length} 人</span>
+        <span class="lane-chevron ${collapsed?'collapsed':''}" id="lane-chev-${tier}">▼</span>
+      </div>
+      <div class="lane-body ${collapsed?'collapsed':''}" id="lane-body-${tier}">
+        <div class="grid">${group.map(renderCard).join('')}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  renderPriorityPanel();
+}
+
+function applyFilters() { renderAll(); }
+
+// ── Modal ─────────────────────────────────────────────────────────────────
+function openModal(id) {
+  openId = id;
+  const lead = LEADS_DATA.leads.find(l => l.id === id);
+  if (!lead) return;
+  const st = getStatus(id);
+  const note = getNote(id) || lead.notes;
+  const isPriority = getPriority(id);
+
+  // Build contact rows
+  function contactRow(icon, label, value, href, extra) {
+    if (!value) return '';
+    const inner = href
+      ? `<a class="modal-link" href="${href}" target="_blank">${value}</a>`
+      : `<span style="color:var(--text)">${value}</span>`;
+    const copyBtn = `<button class="copy-btn" onclick="copyText('${value.replace(/'/g,"\\'")}',this)" title="复制">⧉</button>`;
+    return `<div class="contact-row">
+      <span class="contact-icon">${icon}</span>
+      <span class="contact-label">${label}</span>
+      <span class="contact-value">${inner}${copyBtn}</span>
+      ${extra||''}
+    </div>`;
+  }
+
+  // Parse structured contact fields
+  const email    = lead.email    || (lead.contact && lead.contact.match(/[\w.+-]+@[\w.-]+\.\w+/)||[])[0] || '';
+  const twitter  = lead.twitter  || (lead.contact && lead.contact.match(/@([\w]+)/)||[])[1] || '';
+  const wechat   = lead.wechat   || (lead.contact && lead.contact.match(/WeChat:\s*([\S]+)/i)||[])[1] || '';
+  const xhs      = lead.xiaohongshu || '';
+  const github   = lead.github   || '';
+  const website  = lead.website  || '';
+
+  const contactHTML = [
+    contactRow('📧', '邮箱',     email,   email   ? 'mailto:'+email    : '', ''),
+    contactRow('𝕏',  'X / Twitter', twitter ? '@'+twitter : '', twitter ? 'https://x.com/'+twitter : '', ''),
+    contactRow('📕', '小红书',   xhs,     xhs,     ''),
+    contactRow('⌥',  'GitHub',   github,  github,  ''),
+    contactRow('🌐', '个人主页', website, website, ''),
+    contactRow('💬', 'WeChat',   wechat,  '',      ''),
+    // fallback: if contact is a free-text note and nothing else parsed
+    (!email && !twitter && !xhs && !wechat && lead.contact && lead.contact !== '见个人主页')
+      ? `<div class="contact-row"><span class="contact-icon">📌</span><span class="contact-label">备注</span><span class="contact-value" style="color:var(--text-mid)">${lead.contact}</span></div>`
+      : '',
+  ].filter(Boolean).join('');
+
+  const noContact = !email && !twitter && !xhs && !wechat && (!github || github.includes('/graphs/')) && !website;
+
+  document.getElementById('modal-content').innerHTML = `
+    <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:6px">
+      <div style="flex:1">
+        <div class="modal-title">${lead.name}</div>
+        <div class="modal-sub">${lead.current} · ${lead.location}</div>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center;flex-shrink:0">
+        <div class="dim-badges">${dimBadgesHTML(lead)}</div>
+        <div class="score-dots">${scoreHTML(lead.score)}</div>
+      </div>
+    </div>
+
+    <div class="modal-priority-row">
+      <div class="modal-priority-label">⭐ 优先跟进</div>
+      <button class="modal-priority-btn ${isPriority?'on':'off'}" id="modal-priority-toggle"
+        onclick="togglePriority('${id}', event)">${isPriority ? '⭐ 已标记优先' : '☆ 标记为优先跟进'}</button>
+    </div>
+
+    ${lead.is_academic ? '<div class="acad-warning" style="margin-bottom:14px">🎓 当前为学术岗位，招募难度较高</div>' : ''}
+    ${lead.partner_potential ? '<div style="margin-bottom:14px;padding:10px 14px;background:linear-gradient(135deg,rgba(180,100,255,0.1),rgba(100,160,255,0.08));border:1px solid rgba(160,100,255,0.3);border-radius:8px;font-size:12px;color:#C09DFF">🤝 <strong>合伙人候选</strong> — 综合能力突出，可考虑以合伙人身份洽谈</div>' : ''}
+
+    <div class="modal-section">
+      <div class="modal-section-title">背景</div>
+      <div class="modal-field" style="line-height:1.7">${lead.bg}</div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">核心技能</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px">${lead.skills.map(s=>`<span class="skill-tag">${s}</span>`).join('')}</div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">联系方式</div>
+      ${noContact
+        ? `<div style="color:var(--text-dim);font-size:12px;padding:8px 0">⚠️ 暂无直接联系方式，建议通过 GitHub 个人主页或论文邮箱查找</div>`
+        : `<div class="contact-list">${contactHTML}</div>`}
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">备注 / 跟进记录</div>
+      <textarea class="note-editor" id="modal-note" rows="4">${note}</textarea>
+      <button class="note-save" onclick="saveNote('${id}')">保存备注</button>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">跟进状态</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        ${STATUS_CYCLE.map(s => `<button class="status-btn ${s}" style="${st===s?'outline:2px solid currentColor;outline-offset:2px':''}"
+          onclick="setStatusModal('${id}','${s}')">${STATUS_LABEL[s]}</button>`).join('')}
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      ${github && !github.includes('/graphs/') ? `<a class="modal-btn primary" href="${github}" target="_blank">查看主页 →</a>` : ''}
+      ${xhs    ? `<a class="modal-btn sec" href="${xhs}" target="_blank">📕 小红书</a>` : ''}
+      ${email  ? `<a class="modal-btn sec" href="mailto:${email}">📧 发邮件</a>` : ''}
+      ${twitter? `<a class="modal-btn sec" href="https://x.com/${twitter}" target="_blank">𝕏 私信</a>` : ''}
+      <button class="modal-btn sec" onclick="copyAllContact('${id}')">📋 复制全部联系信息</button>
+    </div>
+  `;
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modal')) {
+    document.getElementById('modal').classList.remove('open');
+    openId = null;
+    renderAll(); renderStats();
+  }
+}
+function saveNote(id) {
+  const v = document.getElementById('modal-note').value;
+  setNote(id, v);
+  const btn = document.querySelector('.note-save');
+  btn.textContent = '✓ 已保存';
+  setTimeout(() => btn.textContent = '保存备注', 1500);
+}
+function setStatusModal(id, s) {
+  setStatus(id, s);
+  openModal(id);
+  renderStats();
+}
+function copyText(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✓';
+    setTimeout(() => btn.textContent = orig, 1200);
+  });
+}
+function copyAllContact(id) {
+  const lead = LEADS_DATA.leads.find(l => l.id === id);
+  if (!lead) return;
+  const email   = lead.email   || (lead.contact && lead.contact.match(/[\w.+-]+@[\w.-]+\.\w+/)||[])[0] || '';
+  const twitter = lead.twitter || (lead.contact && lead.contact.match(/@([\w]+)/)||[])[1] || '';
+  const wechat  = lead.wechat  || (lead.contact && lead.contact.match(/WeChat:\s*([\S]+)/i)||[])[1] || '';
+  const parts = [
+    lead.name,
+    lead.current + ' · ' + lead.location,
+    lead.github  ? 'GitHub: ' + lead.github : '',
+    email        ? 'Email: '  + email       : '',
+    twitter      ? 'X: @'     + twitter     : '',
+    lead.xiaohongshu ? '小红书: ' + lead.xiaohongshu : '',
+    wechat       ? 'WeChat: ' + wechat      : '',
+  ].filter(Boolean).join('\n');
+  navigator.clipboard.writeText(parts).then(() => alert('已复制联系信息'));
+}
+function jumpToPriority() {
+  const panel = document.getElementById('priority-panel');
+  if (!panel || panel.style.display === 'none') return;
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (!priorityPanelOpen) togglePriorityPanel();
+}
+
+// ── Stats bar ─────────────────────────────────────────────────────────────
+function renderStats() {
+  const leads = LEADS_DATA.leads;
+  const total = leads.length;
+  const voice = leads.filter(l=>l.voice).length;
+  const newToday = leads.filter(l=>isNew(l)).length;
+  const partnerCount = leads.filter(l=>l.partner_potential).length;
+  const priorityCount = leads.filter(l=>getPriority(l.id)).length;
+  const newOnes = leads.filter(l=>getStatus(l.id)==='new').length;
+  const contacted = leads.filter(l=>getStatus(l.id)==='contacted').length;
+  const replied = leads.filter(l=>getStatus(l.id)==='replied').length;
+  const tierS = leads.filter(l=>l.tier==='S').length;
+  document.getElementById('stats-bar').innerHTML = `
+    <div class="stat accent"><span class="stat-n">${total}</span><span class="stat-l">总线索</span></div>
+    <div class="stat" style="border-color:rgba(255,80,60,0.3);background:rgba(255,80,60,0.06)">
+      <span class="stat-n" style="color:#FF8070">${tierS}</span><span class="stat-l">🔥 立刻出手</span>
+    </div>
+    <div class="stat voice-stat"><span class="stat-n">${voice}</span><span class="stat-l">🎙 语音专家</span></div>
+    <div class="stat" style="border-color:rgba(160,100,255,0.3);background:rgba(160,100,255,0.05)">
+      <span class="stat-n" style="color:#C09DFF">${partnerCount}</span><span class="stat-l">🤝 合伙人候选</span>
+    </div>
+    <div class="stat" style="border-color:rgba(232,150,42,0.3)">
+      <span class="stat-n" style="color:var(--amber-gl)">${newToday}</span><span class="stat-l">✨ 今日新增</span>
+    </div>
+    <div class="stat" style="cursor:pointer;border-color:rgba(250,216,120,${priorityCount?'0.35':'0.1'})" onclick="jumpToPriority()">
+      <span class="stat-n" style="color:var(--amber-gl)">${priorityCount}</span>
+      <span class="stat-l">⭐ 优先跟进</span>
+    </div>
+    <div class="stat"><span class="stat-n" style="color:var(--amber-lt)">${newOnes}</span><span class="stat-l">未联系</span></div>
+    <div class="stat"><span class="stat-n" style="color:#82AAFF">${contacted}</span><span class="stat-l">已联系</span></div>
+    <div class="stat"><span class="stat-n" style="color:#6CD97E">${replied}</span><span class="stat-l">已回复</span></div>
+  `;
+  document.getElementById('updated-time').textContent = '更新于 ' + LEADS_DATA.meta.last_updated;
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────
+renderStats(); renderAll(); renderPriorityPanel();
+
+</script>
+</body>
+</html>
