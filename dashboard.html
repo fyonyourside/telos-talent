@@ -553,26 +553,64 @@ function showSaveStatus(msg,type){
   if(type==='ok') setTimeout(function(){el.textContent='';el.className='save-status';},4000);
 }
 
+// Cache SHA in memory — fetched once on load, updated after each write
+var _cachedSha = null;
+
+function fetchAndCacheSha(token, base, hdrs) {
+  return fetch(base+'?ref='+GH_BRANCH, {headers:hdrs, cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error('SHA fetch '+r.status); return r.json(); })
+    .then(function(info){ _cachedSha = info.sha; return _cachedSha; });
+}
+
 function flushToGitHub(){
   var token=getGHToken();
   if(!token){showSaveStatus('⚙️ 请配置 Token','warn');return;}
   showSaveStatus('⏳ 同步中...','saving');
   var base='https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_PATH;
   var hdrs={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'};
-  fetch(base+'?ref='+GH_BRANCH,{headers:hdrs})
-    .then(function(r){if(!r.ok)throw new Error('SHA '+r.status);return r.json();})
-    .then(function(info){
+
+  // Use cached SHA if available, otherwise fetch fresh
+  var shaPromise = _cachedSha
+    ? Promise.resolve(_cachedSha)
+    : fetchAndCacheSha(token, base, hdrs);
+
+  shaPromise
+    .then(function(sha){
       var body=JSON.stringify(LEADS_DATA,null,2);
       var enc=btoa(unescape(encodeURIComponent(body)));
       return fetch(base,{method:'PUT',headers:hdrs,
-        body:JSON.stringify({message:'chore: update lead status',content:enc,sha:info.sha,branch:GH_BRANCH})});
+        body:JSON.stringify({message:'chore: update lead status',content:enc,sha:sha,branch:GH_BRANCH})});
     })
     .then(function(r){
-      if(!r.ok)return r.json().then(function(e){throw new Error(e.message||r.status);});
-      showSaveStatus('✓ 已同步，刷新可见','ok');
+      if(!r.ok){
+        return r.json().then(function(e){
+          // SHA mismatch — clear cache and retry once with fresh SHA
+          if(r.status===409 || (e.message&&e.message.indexOf('does not match')>=0)){
+            _cachedSha = null;
+            showSaveStatus('↺ SHA 已过期，重试中...','saving');
+            return flushToGitHub();
+          }
+          throw new Error(e.message||r.status);
+        });
+      }
+      // Success — update cached SHA from response
+      return r.json().then(function(data){
+        if(data.content && data.content.sha) _cachedSha = data.content.sha;
+        showSaveStatus('✓ 已同步，刷新可见','ok');
+      });
     })
-    .catch(function(e){showSaveStatus('✗ '+e.message,'err');});
+    .catch(function(e){showSaveStatus('✗ '+e.message,'err'); console.error('[telos]',e);});
 }
+
+// Pre-fetch SHA when token is available (so first save is instant)
+function prefetchSha(){
+  var token=getGHToken();
+  if(!token||_cachedSha) return;
+  var base='https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_PATH;
+  var hdrs={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'};
+  fetchAndCacheSha(token, base, hdrs).catch(function(){});
+}
+setTimeout(prefetchSha, 2000);
 
 function scheduleSave(){clearTimeout(_st);_st=setTimeout(flushToGitHub,1200);}
 
@@ -996,7 +1034,35 @@ function renderStats() {
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────
-renderStats(); renderAll(); renderPriorityPanel();
+// On load: fetch live leads.json from GitHub Pages, fall back to embedded data
+(function initDashboard(){
+  var liveUrl = 'https://raw.githubusercontent.com/fyonyourside/telos-talent/gh-pages/leads.json?_=' + Date.now();
+  fetch(liveUrl, {cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function(data){
+      // Merge live state (status/priority/note) into LEADS_DATA
+      var liveMap = {};
+      data.leads.forEach(function(l){ liveMap[l.id] = l; });
+      LEADS_DATA.leads.forEach(function(l){
+        var live = liveMap[l.id];
+        if(live){
+          if(live.status)   l.status   = live.status;
+          if(live.priority) l.priority = live.priority;
+          if(live.note)     l.note     = live.note;
+        }
+      });
+      // Also add any new leads from live that aren't in embedded data
+      data.leads.forEach(function(l){
+        if(!leadsIndex[l.id]){ LEADS_DATA.leads.push(l); leadsIndex[l.id]=l; }
+      });
+      LEADS_DATA.meta.last_updated = data.meta.last_updated;
+    })
+    .catch(function(){ /* use embedded data as-is */ })
+    .finally(function(){
+      renderStats(); renderAll(); renderPriorityPanel();
+      prefetchSha();
+    });
+})();
 
 
 // Token modal
