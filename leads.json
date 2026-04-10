@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-04-09",
-    "total": 35,
+    "last_updated": "2026-04-10",
+    "total": 42,
     "version": 1
   },
   "leads": [
@@ -38,7 +38,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "zhihao-du",
@@ -73,7 +76,10 @@
       "is_algo": true,
       "email": "neo.dzh@alibaba-inc.com",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "jingcheng-pang",
@@ -108,7 +114,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "ten-anexpn",
@@ -142,7 +151,10 @@
       "is_algo": false,
       "email": "developer@ten.ai",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "ten-halajohn",
@@ -175,7 +187,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "wei_hu_tw",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "dify-pm",
@@ -209,7 +224,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "metagpt-pm",
@@ -242,7 +260,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "liyupi",
@@ -276,7 +297,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "yupi996",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-yuekaizhang",
@@ -311,7 +335,10 @@
       "is_algo": false,
       "email": "zhangyuekai@foxmail.com",
       "twitter": "",
-      "wechat": "ykzhang2020"
+      "wechat": "ykzhang2020",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-pandamq",
@@ -345,7 +372,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-weedge",
@@ -380,7 +410,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-jintao-huang",
@@ -415,7 +448,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-hjh0119",
@@ -450,7 +486,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-xinshengwang",
@@ -484,7 +523,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "XinshengWang1",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-hijkzzz",
@@ -519,7 +561,10 @@
       "is_algo": true,
       "email": "janhu9527@gmail.com",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-cyfyifanchen",
@@ -554,7 +599,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "elliotchen200",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-kaituoxu",
@@ -588,7 +636,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-hiyouga",
@@ -623,7 +674,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "llamafactory_ai",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-wangrongsheng",
@@ -657,7 +711,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "RongshengWang",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-lauragpt",
@@ -693,7 +750,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-hecheng0625",
@@ -729,7 +789,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-liusongxiang",
@@ -765,7 +828,10 @@
       "is_algo": true,
       "email": "songxiangliu.cuhk@gmail.com",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-davdgao",
@@ -800,7 +866,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "daweigaooooo",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-rayrayraykk",
@@ -835,7 +904,10 @@
       "is_algo": false,
       "email": "weiruikuang@gmail.com",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-lmxue",
@@ -869,7 +941,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "lmxue_",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "xl-shichunliu",
@@ -903,7 +978,10 @@
       "is_algo": true,
       "email": "liusc2020@gmail.com",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "xl-chenqian",
@@ -938,7 +1016,10 @@
       "is_algo": true,
       "email": "qianc62@gmail.com",
       "twitter": "qianc62",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-geekan",
@@ -972,7 +1053,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-arvinxx",
@@ -1007,7 +1091,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-ymcui",
@@ -1042,7 +1129,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-1850298154",
@@ -1076,7 +1166,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "gh-jenqyang",
@@ -1110,7 +1203,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "org-spark-audio",
@@ -1144,7 +1240,10 @@
       "is_algo": true,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "org-lobehub",
@@ -1178,7 +1277,10 @@
       "is_algo": false,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     },
     {
       "id": "org-agentscope-ai",
@@ -1212,7 +1314,270 @@
       "is_algo": false,
       "email": "",
       "twitter": "",
-      "wechat": ""
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "sparkaudio",
+      "name": "SparkAudio Team",
+      "role": "Audio/TTS Research",
+      "score": 4,
+      "location": "Unknown",
+      "current": "SparkAudio",
+      "bg": "Creator of Spark-TTS (10.9k★) - LLM-based streaming TTS; VoxBox large-scale speech corpus",
+      "skills": [
+        "TTS",
+        "LLM",
+        "Voice Synthesis",
+        "Streaming Audio",
+        "Audio Generation"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/SparkAudio",
+      "website": "https://sparkaudio.ai",
+      "contact": "sparkaudio.ai@gmail.com",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "Spark-TTS is innovative LLM-to-audio streaming system; Active development 2025",
+      "is_academic": false,
+      "date_found": "2026-04-10",
+      "tier": "B",
+      "partner_potential": true,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": true,
+      "email": "sparkaudio.ai@gmail.com",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "funaudillm",
+      "name": "FunAudioLLM",
+      "role": "Audio LLM",
+      "score": 5,
+      "location": "Alibaba Tongyi Lab, China",
+      "current": "Alibaba Tongyi Lab",
+      "bg": "CosyVoice (20.4k★) multi-lingual TTS; SenseVoice (7.9k★) speech understanding; Fun-Music, ThinkSound, Fun-Audio-Chat",
+      "skills": [
+        "TTS",
+        "ASR",
+        "Voice Understanding",
+        "Audio LLM",
+        "Multi-lingual"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/FunAudioLLM",
+      "website": "https://funaudio.github.io",
+      "contact": "Organization email through GitHub",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "Alibaba's comprehensive voice AI stack; CosyVoice is industry-leading TTS; Major contributor ecosystem",
+      "is_academic": false,
+      "date_found": "2026-04-10",
+      "tier": "S",
+      "partner_potential": true,
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": true,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "fireredteam",
+      "name": "FireRedTeam",
+      "role": "Audio/Video AI",
+      "score": 4,
+      "location": "Beijing, China",
+      "current": "Xiaohongshu Super Intelligence Lab",
+      "bg": "FireRedASR (1.8k★) industrial Mandarin ASR; FireRedTTS2 streaming TTS; Multi-modal generation",
+      "skills": [
+        "ASR",
+        "TTS",
+        "Mandarin",
+        "Video Editing",
+        "Voice Activity Detection"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/FireRedTeam",
+      "website": "https://fireredteam.github.io",
+      "contact": "GitHub organization",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "Xiaohongshu Super Intelligence department; Strong in Mandarin speech; Video + Audio AI integration",
+      "is_academic": false,
+      "date_found": "2026-04-10",
+      "tier": "A",
+      "partner_potential": true,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": true,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "openrlhf",
+      "name": "OpenRLHF Team",
+      "role": "RLHF Framework",
+      "score": 4,
+      "location": "China (implied from contributors)",
+      "current": "OpenRLHF Organization",
+      "bg": "OpenRLHF (9.3k★) - RLHF framework for LLM alignment; Ray-based distributed training",
+      "skills": [
+        "RLHF",
+        "LLM",
+        "Reinforcement Learning",
+        "Distributed Training",
+        "Model Alignment"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/OpenRLHF",
+      "website": "https://openrlhf.org",
+      "contact": "janhu9527@gmail.com",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "Core RLHF infrastructure; PPO, GRPO, REINFORCE++ implementations; Strong framework design",
+      "is_academic": false,
+      "date_found": "2026-04-10",
+      "tier": "A",
+      "partner_potential": true,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": true,
+      "email": "janhu9527@gmail.com",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "hiyouga",
+      "name": "Yaowei Zheng (hiyouga)",
+      "role": "Engineer/Framework Developer",
+      "score": 5,
+      "location": "Beijing, China",
+      "current": "Millennium Science School",
+      "bg": "LlamaFactory (69.8k★) unified LLM fine-tuning; EasyR1 (4.8k★) multimodal RL training; ChatGLM tuning",
+      "skills": [
+        "LLM",
+        "Fine-tuning",
+        "RLHF",
+        "Multi-modal",
+        "LLMs & VLMs",
+        "Framework Design"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/hiyouga",
+      "website": null,
+      "contact": "Twitter: @llamafactory_ai; Hugging Face: hiyouga",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "LlamaFactory is most-starred LLM fine-tuning framework; 6.3k followers; Beijing-based; Active maintainer",
+      "is_academic": false,
+      "date_found": "2026-04-10",
+      "tier": "S",
+      "partner_potential": true,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": true,
+      "email": "",
+      "twitter": "llamafactory_ai",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "agentscope",
+      "name": "AgentScope Team",
+      "role": "Multi-Agent Framework",
+      "score": 4,
+      "location": "Alibaba, China",
+      "current": "Alibaba",
+      "bg": "AgentScope (23.3k★) production-ready agent framework; CoPaw (14.9k★) AI assistant; HiClaw (4k★) multi-agent coordination",
+      "skills": [
+        "Multi-Agent",
+        "LLM",
+        "Agent Framework",
+        "Voice Agent",
+        "Observability"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/agentscope-ai",
+      "website": "https://agentscope.app",
+      "contact": "agentscope.team@gmail.com",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "Alibaba's production agent framework; 2.2k followers; Built-in voice agent support",
+      "is_academic": false,
+      "date_found": "2026-04-10",
+      "tier": "A",
+      "partner_potential": true,
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "agentscope.team@gmail.com",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "glm-asr",
+      "name": "GLM-ASR Team",
+      "role": "ASR Research",
+      "score": 3,
+      "location": "China",
+      "current": "ZAI Organization",
+      "bg": "GLM-ASR-Nano (1.5B params) - robust speech recognition; Outperforms Whisper on benchmarks",
+      "skills": [
+        "ASR",
+        "Speech Recognition",
+        "Mandarin",
+        "Model Compression",
+        "Speech Understanding"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/zai-org/GLM-ASR",
+      "website": null,
+      "contact": "GitHub organization",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "GLM series alignment; Compact ASR model; Competitive benchmarks vs Whisper",
+      "is_academic": false,
+      "date_found": "2026-04-10",
+      "tier": "B",
+      "partner_potential": false,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": true,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     }
   ]
 }
