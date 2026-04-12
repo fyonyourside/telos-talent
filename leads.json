@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-04-11",
-    "total": 47,
+    "last_updated": "2026-04-12",
+    "total": 49,
     "version": 1
   },
   "leads": [
@@ -1769,6 +1769,90 @@
       "status": "new",
       "priority": false,
       "note": ""
+    },
+    {
+      "id": "gh-sengxian",
+      "name": "Aohan Zeng / 曾昭晗",
+      "github_url": "https://github.com/Sengxian",
+      "location": "Beijing, China",
+      "company": "Zhipu.ai / Tsinghua University",
+      "tier": "A",
+      "skills": [
+        "LLM",
+        "Speech synthesis",
+        "GLM",
+        "Agent abilities",
+        "Multi-agent"
+      ],
+      "key_projects": [
+        {
+          "name": "GLM-4-Voice",
+          "stars": "N/A"
+        },
+        {
+          "name": "GLM-4",
+          "stars": "N/A"
+        },
+        {
+          "name": "AgentTuning",
+          "stars": "N/A"
+        }
+      ],
+      "contact": {
+        "email": "",
+        "twitter": "",
+        "wechat": ""
+      },
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": true,
+      "partner_potential": true,
+      "date_found": "2026-04-12",
+      "notes": "Co-author of GLM-4-Voice (speech synthesis); 285 GitHub followers; Tsinghua DCST; part of Zhipu.ai team; strong voice AI experience",
+      "role": "工程·算法",
+      "bg": "Zhipu.ai / Tsinghua University DCST; GLM series author"
+    },
+    {
+      "id": "gh-duzx16",
+      "name": "Zhengxiao Du / 杜正晓",
+      "github_url": "https://github.com/duzx16",
+      "location": "Beijing, China",
+      "company": "Zhipu.ai / Tsinghua University",
+      "tier": "S",
+      "skills": [
+        "LLM",
+        "Pre-training",
+        "GLM",
+        "Speech synthesis",
+        "NLP"
+      ],
+      "key_projects": [
+        {
+          "name": "GLM",
+          "stars": "N/A"
+        },
+        {
+          "name": "GLM-4-Voice",
+          "stars": "N/A"
+        },
+        {
+          "name": "SciGLM",
+          "stars": "N/A"
+        }
+      ],
+      "contact": {
+        "email": "",
+        "twitter": "",
+        "wechat": ""
+      },
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": true,
+      "partner_potential": true,
+      "date_found": "2026-04-12",
+      "notes": "Lead author of GLM (ICLR 2023), GLM-4-Voice; PhD from Tsinghua 2025; co-leading base model group at Zhipu.ai; major contributor to foundational LLM work",
+      "role": "工程·算法",
+      "bg": "Tsinghua University DCST PhD 2025; Zhipu.ai base model group lead; GLM series founding author"
     }
   ]
 }
