@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_updated": "2026-04-16",
-    "total": 74,
+    "total": 65,
     "version": 1
   },
   "leads": [
@@ -2642,7 +2642,7 @@
       "email": "1029713857@sjtu.edu.cn",
       "twitter": "",
       "wechat": "",
-      "status": "contacted",
+      "status": "replied",
       "priority": true,
       "note": ""
     },
