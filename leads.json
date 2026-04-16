@@ -2568,8 +2568,8 @@
       "email": "",
       "twitter": "",
       "wechat": "",
-      "status": "new",
-      "priority": false,
+      "status": "contacted",
+      "priority": true,
       "note": ""
     },
     {
