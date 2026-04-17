@@ -2156,7 +2156,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
@@ -2271,7 +2271,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
