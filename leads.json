@@ -2493,8 +2493,8 @@
       "email": "",
       "twitter": "",
       "wechat": "",
-      "status": "new",
-      "priority": true,
+      "status": "pass",
+      "priority": false,
       "note": ""
     },
     {
