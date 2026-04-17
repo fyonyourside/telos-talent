@@ -78,7 +78,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
@@ -525,7 +525,7 @@
       "twitter": "XinshengWang1",
       "wechat": "",
       "status": "pass",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
