@@ -1613,7 +1613,7 @@
       "email": "",
       "twitter": "",
       "wechat": "",
-      "status": "replied",
+      "status": "pass",
       "priority": false,
       "note": ""
     },
@@ -2308,7 +2308,7 @@
       "email": "chenyuanzhe@bytedance.com",
       "twitter": "",
       "wechat": "",
-      "status": "replied",
+      "status": "pass",
       "priority": false,
       "note": ""
     },
