@@ -3415,7 +3415,7 @@
       "twitter": "",
       "wechat": "GiantPandaCV（公众号）",
       "status": "new",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
