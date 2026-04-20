@@ -184,7 +184,8 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
 .status-btn.new      { border-color:rgba(232,150,42,0.3); color:var(--amber-lt); background:rgba(232,150,42,0.08); }
 .status-btn.contacted{ border-color:rgba(100,160,255,0.3); color:#82AAFF; background:rgba(100,160,255,0.08); }
 .status-btn.replied  { border-color:rgba(50,200,100,0.3); color:#6CD97E; background:rgba(50,200,100,0.08); }
-.status-btn.pass     { border-color:rgba(180,80,80,0.3); color:#FF8080; background:rgba(180,80,80,0.08); }
+.status-btn.pass      { border-color:rgba(180,80,80,0.3); color:#FF8080; background:rgba(180,80,80,0.08); }
+.status-btn.converted { border-color:rgba(130,210,130,0.4); color:#89DDAA; background:rgba(130,210,130,0.10); }
 .status-btn:hover { opacity:0.8; }
 
 /* notes */
@@ -508,6 +509,7 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
     <span class="chip new-f"     data-filter="new"      onclick="toggleFilter(this)">🆕 未联系</span>
     <span class="chip partner-f" data-filter="partner"  onclick="toggleFilter(this)">🤝 合伙人候选</span>
     <span class="chip new-f"     data-filter="priority" onclick="toggleFilter(this)">⭐ 仅优先</span>
+    <span class="chip partner-f" data-filter="converted" onclick="toggleFilter(this)">🎉 已转化</span>
   </div>
 </div>
 
@@ -3954,7 +3956,7 @@ const LEADS_DATA = {
       "twitter": "",
       "wechat": "GiantPandaCV（公众号）",
       "status": "new",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -3998,8 +4000,8 @@ const LEADS_DATA = {
   ]
 };
 
-const STATUS_CYCLE = ['new','contacted','replied','pass'];
-const STATUS_LABEL = { new:'🆕 新线索', contacted:'📨 已联系', replied:'💬 已回复', pass:'❌ 不合适' };
+const STATUS_CYCLE = ['new','contacted','replied','pass','converted'];
+const STATUS_LABEL = { new:'🆕 新线索', contacted:'📨 已联系', replied:'💬 已回复', pass:'❌ 不合适', converted:'🎉 已转化' };
 let activeDim = 'all';
 let activeFilters = new Set();
 let openId = null;
@@ -4138,10 +4140,11 @@ function matchesFilters(lead) {
   if(activeDim === 'algo'  && !lead.is_algo) return false;
   if(activeDim === 'two'   && dimCount < 2)  return false;
   if(activeDim === 'three' && dimCount < 3)  return false;
-  if(activeFilters.has('voice')   && !lead.voice) return false;
-  if(activeFilters.has('new')     && getStatus(lead.id) !== 'new') return false;
-  if(activeFilters.has('priority')&& !getPriority(lead.id)) return false;
-  if(activeFilters.has('partner') && !lead.partner_potential) return false;
+  if(activeFilters.has('voice')    && !lead.voice) return false;
+  if(activeFilters.has('new')      && getStatus(lead.id) !== 'new') return false;
+  if(activeFilters.has('priority') && !getPriority(lead.id)) return false;
+  if(activeFilters.has('partner')  && !lead.partner_potential) return false;
+  if(activeFilters.has('converted')&& getStatus(lead.id) !== 'converted') return false;
   // Academic shown by default (removed explicit acad toggle)
   return true;
 }

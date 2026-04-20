@@ -337,7 +337,7 @@
       "twitter": "",
       "wechat": "ykzhang2020",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -525,7 +525,7 @@
       "twitter": "XinshengWang1",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2156,7 +2156,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2271,7 +2271,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2494,7 +2494,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2531,7 +2531,7 @@
       "twitter": "zshbleaker",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
