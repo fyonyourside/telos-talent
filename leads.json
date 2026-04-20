@@ -78,7 +78,7 @@
       "twitter": "",
       "wechat": "",
       "status": "converted",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -337,7 +337,7 @@
       "twitter": "",
       "wechat": "ykzhang2020",
       "status": "converted",
-      "priority": false,
+      "priority": true,
       "note": "Spark-TTS & FunASR贡献者；NVIDIA Speech AI工程师；语音训练+推理部署双修；上海\n方浩：\n1. 合作领域：人才介绍、背调，开源模型和技术方案测评"
     },
     {
@@ -374,7 +374,7 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -525,7 +525,7 @@
       "twitter": "XinshengWang1",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -1653,7 +1653,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2156,7 +2156,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2271,7 +2271,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2494,7 +2494,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2531,7 +2531,7 @@
       "twitter": "zshbleaker",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2643,7 +2643,7 @@
       "twitter": "",
       "wechat": "",
       "status": "converted",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2716,7 +2716,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
