@@ -78,7 +78,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -337,7 +337,7 @@
       "twitter": "",
       "wechat": "ykzhang2020",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -525,7 +525,7 @@
       "twitter": "XinshengWang1",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2156,7 +2156,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2271,7 +2271,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2494,7 +2494,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2531,7 +2531,7 @@
       "twitter": "zshbleaker",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2605,7 +2605,7 @@
       "email": "",
       "twitter": "",
       "wechat": "",
-      "status": "replied",
+      "status": "pass",
       "priority": false,
       "note": ""
     },
@@ -2643,7 +2643,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2716,7 +2716,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -3415,7 +3415,7 @@
       "twitter": "",
       "wechat": "GiantPandaCV（公众号）",
       "status": "new",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
@@ -3453,7 +3453,7 @@
       "twitter": "",
       "wechat": "",
       "status": "new",
-      "priority": true,
+      "priority": false,
       "note": ""
     }
   ]
