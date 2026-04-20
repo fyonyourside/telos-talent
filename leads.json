@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-04-17",
-    "total": 90,
+    "last_updated": "2026-04-20",
+    "total": 92,
     "version": 1
   },
   "leads": [
@@ -78,7 +78,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -337,7 +337,7 @@
       "twitter": "",
       "wechat": "ykzhang2020",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -374,7 +374,7 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -525,7 +525,7 @@
       "twitter": "XinshengWang1",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -980,7 +980,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2156,7 +2156,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2271,7 +2271,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2308,7 +2308,7 @@
       "email": "chenyuanzhe@bytedance.com",
       "twitter": "",
       "wechat": "",
-      "status": "new",
+      "status": "replied",
       "priority": false,
       "note": ""
     },
@@ -2494,7 +2494,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2531,7 +2531,7 @@
       "twitter": "zshbleaker",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2643,7 +2643,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2716,7 +2716,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -3377,6 +3377,82 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "gh-bbuf",
+      "name": "张晓宇 / Xiaoyu Zhang (BBuf)",
+      "role": "工程",
+      "score": 4,
+      "location": "成都",
+      "current": "SkyworkAI (Core Dev @SGLang)",
+      "bg": "SGLang核心贡献者；LLM推理优化/CUDA工程专家；GiantPandaCV技术账号作者；前百度Paddle、ColossalAI；Chengdu-based",
+      "skills": [
+        "LLM推理",
+        "CUDA优化",
+        "模型服务",
+        "高性能计算",
+        "SkyworkAI",
+        "SGLang"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/BBuf",
+      "website": "https://www.giantpandacv.com",
+      "contact": "GitHub: BBuf; WeChat公众号: GiantPandaCV; 网站: giantpandacv.com",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "SGLang（400k+ GPU使用）核心开发者；SkyworkAI工程师；CUDA/LLM推理基础设施专家；GiantPandaCV公众号作者（2.3k GitHub followers）；成都大陆。LLM推理方向极强，非语音专向但基础设施能力顶级",
+      "is_academic": false,
+      "date_found": "2026-04-20",
+      "tier": "A",
+      "partner_potential": false,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": false,
+      "email": "",
+      "twitter": "",
+      "wechat": "GiantPandaCV（公众号）",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "gh-yfyeung",
+      "name": "杨亦凡 / Yifan Yang (yfyeung)",
+      "role": "算法",
+      "score": 4,
+      "location": "上海",
+      "current": "SJTU X-LANCE（博士）+ Alibaba Qwen Omni Team（实习，2026.03）",
+      "bg": "SLAM-LLM核心贡献者；语音LLM/TTS/ASR研究；前腾讯-Hunyuan、Microsoft实习；SJTU/Qwen Omni",
+      "skills": [
+        "TTS",
+        "ASR",
+        "语音LLM",
+        "多模态",
+        "语音合成",
+        "SJTU"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/yfyeung",
+      "website": "https://yfyeung.github.io",
+      "contact": "GitHub: yfyeung; 主页: yfyeung.github.io; LinkedIn: in/yifan-yang-290ba624b",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "SJTU X-LANCE博士生，专研语音语言处理；2026.03起在阿里通义Qwen Omni Team实习；前腾讯Hunyuan、Microsoft实习；SLAM-LLM主要贡献者；10+ top conf论文。仍在读博但产业经验强",
+      "is_academic": true,
+      "date_found": "2026-04-20",
+      "tier": "B",
+      "partner_potential": false,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": true,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
       "priority": false,
       "note": ""
     }
