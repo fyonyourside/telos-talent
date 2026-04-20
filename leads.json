@@ -2383,7 +2383,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
