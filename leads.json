@@ -563,7 +563,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
@@ -2383,7 +2383,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": true,
+      "priority": false,
       "note": "年底正式招聘"
     },
     {
