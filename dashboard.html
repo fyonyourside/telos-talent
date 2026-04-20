@@ -881,7 +881,7 @@ const LEADS_DATA = {
       "wechat": "ykzhang2020",
       "status": "converted",
       "priority": true,
-      "note": "Spark-TTS & FunASR贡献者；NVIDIA Speech AI工程师；语音训练+推理部署双修；上海\n方浩：\n1. 合作领域：人才介绍、背调，开源模型和技术方案测评"
+      "note": "Spark-TTS & FunASRè´¡ç®èï¼NVIDIA Speech AIå·¥ç¨å¸ï¼è¯­é³è®­ç»+æ¨çé¨ç½²åä¿®ï¼ä¸æµ·\næ¹æµ©ï¼\n1. åä½é¢åï¼äººæä»ç»ãèè°ï¼å¼æºæ¨¡ååææ¯æ¹æ¡æµè¯"
     },
     {
       "id": "gh-pandamq",
@@ -3150,7 +3150,7 @@ const LEADS_DATA = {
       "wechat": "",
       "status": "converted",
       "priority": false,
-      "note": ""
+      "note": "SLAM-LLM + emotion2vec 作者；QwenLM + ByteDance-Seed + DAMO + MSRA 复合背景；506 followers；在读博士但产业经验丰富，满足筛选条件\n合作benchmark"
     },
     {
       "id": "gh-cwx-worst-one",
@@ -3701,7 +3701,7 @@ const LEADS_DATA = {
       "wechat": "",
       "status": "replied",
       "priority": true,
-      "note": "WeNet + Fun-ASR 两大 ASR 体系核心贡献者；文本处理/归一化/G2P 全链路能力；北京；email 公开可直接联系；中国 ASR 圈代表工程师之一\n约了杭州见面"
+      "note": "WeNet + Fun-ASR ä¸¤å¤§ ASR ä½ç³»æ ¸å¿è´¡ç®èï¼ææ¬å¤ç/å½ä¸å/G2P å¨é¾è·¯è½åï¼åäº¬ï¼email å¬å¼å¯ç´æ¥èç³»ï¼ä¸­å½ ASR åä»£è¡¨å·¥ç¨å¸ä¹ä¸\nçº¦äºæ­å·è§é¢"
     },
     {
       "id": "gh-aopstudio",
@@ -4534,8 +4534,10 @@ function renderStats() {
     })
     .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function(info){
-      // GitHub API returns content as base64
-      var raw = atob(info.content.replace(/\n/g,''));
+      // GitHub API returns UTF-8 content as base64
+      // Must reverse btoa(unescape(encodeURIComponent(str))) used in flushToGitHub
+      var b64 = info.content.replace(/\n/g,'');
+      var raw = decodeURIComponent(escape(atob(b64)));
       var data = JSON.parse(raw);
       mergeAndRender(data);
     })
