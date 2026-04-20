@@ -2607,7 +2607,7 @@
       "wechat": "",
       "status": "converted",
       "priority": false,
-      "note": "SLAM-LLM + emotion2vec ä½èï¼QwenLM + ByteDance-Seed + DAMO + MSRA å¤åèæ¯ï¼506 followersï¼å¨è¯»åå£«ä½äº§ä¸ç»éªä¸°å¯ï¼æ»¡è¶³ç­éæ¡ä»¶\nåä½benchmark"
+      "note": "benchamark合作，qwen-audio和豆包audio顾问"
     },
     {
       "id": "gh-cwx-worst-one",
