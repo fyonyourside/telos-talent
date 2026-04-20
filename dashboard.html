@@ -97,9 +97,11 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
 .chip.eng.active    { background:var(--eng-lt); border-color:var(--eng-lt); }
 .chip.pm.active     { background:var(--pm-lt);  border-color:var(--pm-lt); }
 .chip.both.active   { background:var(--both-lt);border-color:var(--both-lt); }
-.chip.voice-f.active{ background:#1A7A2E; border-color:#1A7A2E; }
-.chip.new-f.active  { background:rgba(232,150,42,0.5); border-color:var(--amber); color:#fff; }
-.chip.acad.active   { background:rgba(255,80,80,0.3); border-color:rgba(255,80,80,0.4); }
+.chip.voice-f.active    { background:#1A7A2E; border-color:#1A7A2E; }
+.chip.new-f.active      { background:rgba(232,150,42,0.5); border-color:var(--amber); color:#fff; }
+.chip.converted-f       { border-color:rgba(130,210,130,0.3); color:#89DDAA; }
+.chip.converted-f.active{ background:rgba(130,210,130,0.25); border-color:rgba(130,210,130,0.6); color:#89DDAA; }
+.chip.acad.active       { background:rgba(255,80,80,0.3); border-color:rgba(255,80,80,0.4); }
 
 /* ── Grid ── */
 .grid-wrap { padding:24px 32px 48px; }
@@ -509,7 +511,7 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
     <span class="chip new-f"     data-filter="new"      onclick="toggleFilter(this)">🆕 未联系</span>
     <span class="chip partner-f" data-filter="partner"  onclick="toggleFilter(this)">🤝 合伙人候选</span>
     <span class="chip new-f"     data-filter="priority" onclick="toggleFilter(this)">⭐ 仅优先</span>
-    <span class="chip partner-f" data-filter="converted" onclick="toggleFilter(this)">🎉 已转化</span>
+    <span class="chip converted-f" data-filter="converted" onclick="toggleFilter(this)">🎉 已转化</span>
   </div>
 </div>
 
@@ -3146,7 +3148,7 @@ const LEADS_DATA = {
       "email": "",
       "twitter": "",
       "wechat": "",
-      "status": "replied",
+      "status": "pass",
       "priority": false,
       "note": ""
     },
@@ -4479,34 +4481,62 @@ function renderStats() {
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────
-// On load: fetch live leads.json from GitHub Pages, fall back to embedded data
+// On load: fetch live leads.json via GitHub API (bypasses CDN cache), fall back to embedded data
 (function initDashboard(){
-  var liveUrl = 'https://raw.githubusercontent.com/fyonyourside/telos-talent/gh-pages/leads.json?_=' + Date.now();
-  fetch(liveUrl, {cache:'no-store'})
-    .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
-    .then(function(data){
-      // Merge live state (status/priority/note) into LEADS_DATA
-      var liveMap = {};
-      data.leads.forEach(function(l){ liveMap[l.id] = l; });
-      LEADS_DATA.leads.forEach(function(l){
-        var live = liveMap[l.id];
-        if(live){
-          if('status'   in live) l.status   = live.status;
-          if('priority' in live) l.priority = live.priority;
-          if('note'     in live) l.note     = live.note;
-        }
-      });
-      // Also add any new leads from live that aren't in embedded data
-      data.leads.forEach(function(l){
-        if(!leadsIndex[l.id]){ LEADS_DATA.leads.push(l); leadsIndex[l.id]=l; }
-      });
-      LEADS_DATA.meta.last_updated = data.meta.last_updated;
-    })
-    .catch(function(){ /* use embedded data as-is */ })
-    .finally(function(){
-      renderStats(); renderAll(); renderPriorityPanel();
-      prefetchSha();
+  var token = getGHToken();
+  var apiUrl = 'https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO +
+               '/contents/' + GH_PATH + '?ref=' + GH_BRANCH + '&_=' + Date.now();
+
+  function mergeAndRender(data) {
+    var liveMap = {};
+    data.leads.forEach(function(l){ liveMap[l.id] = l; });
+    LEADS_DATA.leads.forEach(function(l){
+      var live = liveMap[l.id];
+      if(live){
+        if('status'   in live) l.status   = live.status;
+        if('priority' in live) l.priority = live.priority;
+        if('note'     in live) l.note     = live.note;
+      }
     });
+    // Also add any new leads from live that aren't in embedded data
+    data.leads.forEach(function(l){
+      if(!leadsIndex[l.id]){ LEADS_DATA.leads.push(l); leadsIndex[l.id]=l; }
+    });
+    LEADS_DATA.meta.last_updated = data.meta.last_updated;
+  }
+
+  function finish(){ renderStats(); renderAll(); renderPriorityPanel(); prefetchSha(); }
+
+  if(token) {
+    // Use GitHub API — always returns fresh data, no CDN cache
+    fetch(apiUrl, {
+      headers: {'Authorization':'Bearer '+token, 'Accept':'application/vnd.github+json'},
+      cache: 'no-store'
+    })
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function(info){
+      // GitHub API returns content as base64
+      var raw = atob(info.content.replace(/\n/g,''));
+      var data = JSON.parse(raw);
+      mergeAndRender(data);
+    })
+    .catch(function(e){
+      // API failed — fall back to raw CDN (best-effort)
+      console.warn('[telos] API fetch failed, falling back to raw CDN:', e);
+      return fetch('https://raw.githubusercontent.com/'+GH_OWNER+'/'+GH_REPO+'/'+GH_BRANCH+'/'+GH_PATH+'?_='+Date.now(), {cache:'no-store'})
+        .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function(data){ mergeAndRender(data); })
+        .catch(function(){});
+    })
+    .finally(finish);
+  } else {
+    // No token — use raw CDN as fallback
+    fetch('https://raw.githubusercontent.com/'+GH_OWNER+'/'+GH_REPO+'/'+GH_BRANCH+'/'+GH_PATH+'?_='+Date.now(), {cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function(data){ mergeAndRender(data); })
+    .catch(function(){})
+    .finally(finish);
+  }
 })();
 
 
