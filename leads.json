@@ -306,7 +306,7 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
