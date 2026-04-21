@@ -1,10 +1,11 @@
 {
   "meta": {
     "last_updated": "2026-04-20",
-    "total": 91,
+    "total": 90,
     "version": 1,
     "deleted_ids": [
-      "dify-pm"
+      "dify-pm",
+      "gh-diyuyi-agora"
     ]
   },
   "leads": [
@@ -2795,43 +2796,6 @@
       "status": "pass",
       "priority": false,
       "note": ""
-    },
-    {
-      "id": "gh-diyuyi-agora",
-      "name": "diyuyi-agora (Agora)",
-      "role": "算法 Eng",
-      "score": 6,
-      "location": "中国（Agora）",
-      "current": "Agora.io",
-      "bg": "Agora 工程师；TEN Framework 活跃贡献者（Websocket 异常处理、Holding Mode、Azure ASR Language ID）",
-      "skills": [
-        "Voice Agent",
-        "ASR",
-        "Real-time",
-        "Agora",
-        "TEN Framework"
-      ],
-      "voice": true,
-      "xiaohongshu": null,
-      "github": "https://github.com/diyuyi-agora",
-      "website": "",
-      "contact": "GitHub: diyuyi-agora",
-      "source": "github",
-      "platform": "github",
-      "notes": "handle 直接含 'agora'，Agora 内部 TEN Framework 团队成员；ASR/VoiceAgent 工程经验；适合作 Voice Agent eng 候选",
-      "is_academic": false,
-      "date_found": "2026-04-17",
-      "tier": "B",
-      "partner_potential": false,
-      "is_eng": true,
-      "is_pm": false,
-      "is_algo": false,
-      "email": "",
-      "twitter": "",
-      "wechat": "",
-      "status": "pass",
-      "priority": false,
-      "note": "重复了 就是hanhandi"
     },
     {
       "id": "gh-yiminw",
