@@ -1,9 +1,11 @@
 {
   "meta": {
     "last_updated": "2026-04-20",
-    "total": 92,
+    "total": 91,
     "version": 1,
-    "deleted_ids": []
+    "deleted_ids": [
+      "dify-pm"
+    ]
   },
   "leads": [
     {
@@ -191,43 +193,6 @@
       "wechat": "",
       "status": "replied",
       "priority": true,
-      "note": ""
-    },
-    {
-      "id": "dify-pm",
-      "name": "Dify 产品负责人（待识别）",
-      "role": "Model PM",
-      "score": 5,
-      "location": "北京",
-      "current": "LangGenius / Dify",
-      "bg": "ex-腾讯云；主导 Dify 产品 0-1；114k stars 开源项目产品方",
-      "skills": [
-        "AI产品",
-        "Agent workflow",
-        "RAG",
-        "LLM平台",
-        "0-1产品"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/langgenius",
-      "website": "https://dify.ai",
-      "contact": "LinkedIn / Dify 官网",
-      "source": "web_search",
-      "platform": "web",
-      "notes": "需进一步识别具体 PM 姓名；从 LinkedIn 搜 Dify + Product Manager",
-      "is_academic": false,
-      "date_found": "2026-04-04",
-      "tier": "A",
-      "partner_potential": false,
-      "is_eng": false,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "",
-      "twitter": "",
-      "wechat": "",
-      "status": "pass",
-      "priority": false,
       "note": ""
     },
     {
