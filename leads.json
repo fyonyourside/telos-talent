@@ -1,12 +1,13 @@
 {
   "meta": {
     "last_updated": "2026-04-20",
-    "total": 89,
+    "total": 88,
     "version": 1,
     "deleted_ids": [
       "dify-pm",
       "gh-diyuyi-agora",
-      "ten-anexpn"
+      "ten-anexpn",
+      "gh-hiyouga"
     ]
   },
   "leads": [
@@ -569,44 +570,6 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": false,
-      "note": ""
-    },
-    {
-      "id": "gh-hiyouga",
-      "name": "Yaowei Zheng / hiyouga",
-      "role": "工程·算法",
-      "score": 4,
-      "location": "北京",
-      "current": "Millennium Science School",
-      "bg": "LlamaFactory 主创（69.6k stars，ACL 2024）；EasyR1 多模态RL框架；100+ LLM统一微调工具；北京",
-      "skills": [
-        "LLM Fine-tuning",
-        "RLHF",
-        "RL Training",
-        "LlamaFactory",
-        "EasyR1",
-        "Qwen"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/hiyouga",
-      "website": "",
-      "contact": "GitHub: hiyouga; X: @llamafactory_ai; HuggingFace: hiyouga",
-      "source": "web_search",
-      "platform": "github",
-      "notes": "LlamaFactory作者（69.6k stars）；EasyR1 RL框架；统一LLM微调生态构建者；北京；6.3k GitHub followers",
-      "is_academic": false,
-      "date_found": "2026-04-07",
-      "tier": "B",
-      "partner_potential": true,
-      "is_eng": true,
-      "is_pm": false,
-      "is_algo": true,
-      "email": "",
-      "twitter": "llamafactory_ai",
-      "wechat": "",
-      "status": "pass",
       "priority": false,
       "note": ""
     },
