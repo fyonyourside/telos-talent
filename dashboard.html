@@ -562,9 +562,14 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
 const LEADS_DATA = {
   "meta": {
     "last_updated": "2026-04-20",
-    "total": 92,
+    "total": 88,
     "version": 1,
-    "deleted_ids": []
+    "deleted_ids": [
+      "dify-pm",
+      "gh-diyuyi-agora",
+      "gh-hiyouga",
+      "ten-anexpn"
+    ]
   },
   "leads": [
     {
@@ -682,43 +687,6 @@ const LEADS_DATA = {
       "note": ""
     },
     {
-      "id": "ten-anexpn",
-      "name": "anexpn (TEN Framework)",
-      "role": "Harness Eng",
-      "score": 5,
-      "location": "中国",
-      "current": "TEN-framework 核心贡献者",
-      "bg": "TEN Framework — 开源实时语音AI Agent框架；C/Go/Python全栈",
-      "skills": [
-        "Voice Agent",
-        "实时推理",
-        "WebRTC",
-        "LLM Orchestration",
-        "C++"
-      ],
-      "voice": true,
-      "xiaohongshu": null,
-      "github": "https://github.com/anexpn",
-      "website": "",
-      "contact": "GitHub: anexpn; Team email: developer@ten.ai",
-      "source": "github",
-      "platform": "github",
-      "notes": "实时多模态语音Agent框架核心开发；工程能力强；需识别具体账号后直接联系",
-      "is_academic": false,
-      "date_found": "2026-04-04",
-      "tier": "A",
-      "partner_potential": false,
-      "is_eng": true,
-      "is_pm": false,
-      "is_algo": false,
-      "email": "developer@ten.ai",
-      "twitter": "",
-      "wechat": "",
-      "status": "pass",
-      "priority": false,
-      "note": ""
-    },
-    {
       "id": "ten-halajohn",
       "name": "halajohn (TEN Framework)",
       "role": "Harness Eng",
@@ -752,43 +720,6 @@ const LEADS_DATA = {
       "wechat": "",
       "status": "replied",
       "priority": true,
-      "note": ""
-    },
-    {
-      "id": "dify-pm",
-      "name": "Dify 产品负责人（待识别）",
-      "role": "Model PM",
-      "score": 5,
-      "location": "北京",
-      "current": "LangGenius / Dify",
-      "bg": "ex-腾讯云；主导 Dify 产品 0-1；114k stars 开源项目产品方",
-      "skills": [
-        "AI产品",
-        "Agent workflow",
-        "RAG",
-        "LLM平台",
-        "0-1产品"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/langgenius",
-      "website": "https://dify.ai",
-      "contact": "LinkedIn / Dify 官网",
-      "source": "web_search",
-      "platform": "web",
-      "notes": "需进一步识别具体 PM 姓名；从 LinkedIn 搜 Dify + Product Manager",
-      "is_academic": false,
-      "date_found": "2026-04-04",
-      "tier": "A",
-      "partner_potential": false,
-      "is_eng": false,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "",
-      "twitter": "",
-      "wechat": "",
-      "status": "pass",
-      "priority": false,
       "note": ""
     },
     {
@@ -1087,7 +1018,7 @@ const LEADS_DATA = {
       "twitter": "XinshengWang1",
       "wechat": "",
       "status": "pass",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
@@ -1200,44 +1131,6 @@ const LEADS_DATA = {
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": false,
-      "note": ""
-    },
-    {
-      "id": "gh-hiyouga",
-      "name": "Yaowei Zheng / hiyouga",
-      "role": "工程·算法",
-      "score": 4,
-      "location": "北京",
-      "current": "Millennium Science School",
-      "bg": "LlamaFactory 主创（69.6k stars，ACL 2024）；EasyR1 多模态RL框架；100+ LLM统一微调工具；北京",
-      "skills": [
-        "LLM Fine-tuning",
-        "RLHF",
-        "RL Training",
-        "LlamaFactory",
-        "EasyR1",
-        "Qwen"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/hiyouga",
-      "website": "",
-      "contact": "GitHub: hiyouga; X: @llamafactory_ai; HuggingFace: hiyouga",
-      "source": "web_search",
-      "platform": "github",
-      "notes": "LlamaFactory作者（69.6k stars）；EasyR1 RL框架；统一LLM微调生态构建者；北京；6.3k GitHub followers",
-      "is_academic": false,
-      "date_found": "2026-04-07",
-      "tier": "B",
-      "partner_potential": true,
-      "is_eng": true,
-      "is_pm": false,
-      "is_algo": true,
-      "email": "",
-      "twitter": "llamafactory_ai",
-      "wechat": "",
-      "status": "pass",
       "priority": false,
       "note": ""
     },
@@ -2374,7 +2267,8 @@ const LEADS_DATA = {
       "role": "工程·算法",
       "bg": "Zhipu.ai / Tsinghua University DCST; GLM series author",
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "note": ""
     },
     {
       "id": "gh-duzx16",
@@ -2417,7 +2311,9 @@ const LEADS_DATA = {
       "notes": "Lead author of GLM (ICLR 2023), GLM-4-Voice; PhD from Tsinghua 2025; co-leading base model group at Zhipu.ai; major contributor to foundational LLM work",
       "role": "工程·算法",
       "bg": "Tsinghua University DCST PhD 2025; Zhipu.ai base model group lead; GLM series founding author",
-      "status": "pass"
+      "status": "pass",
+      "note": "",
+      "priority": false
     },
     {
       "id": "zhu-han-xiaomi",
@@ -2718,7 +2614,7 @@ const LEADS_DATA = {
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
@@ -2833,7 +2729,7 @@ const LEADS_DATA = {
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
@@ -3391,43 +3287,6 @@ const LEADS_DATA = {
       "status": "pass",
       "priority": false,
       "note": ""
-    },
-    {
-      "id": "gh-diyuyi-agora",
-      "name": "diyuyi-agora (Agora)",
-      "role": "算法 Eng",
-      "score": 6,
-      "location": "中国（Agora）",
-      "current": "Agora.io",
-      "bg": "Agora 工程师；TEN Framework 活跃贡献者（Websocket 异常处理、Holding Mode、Azure ASR Language ID）",
-      "skills": [
-        "Voice Agent",
-        "ASR",
-        "Real-time",
-        "Agora",
-        "TEN Framework"
-      ],
-      "voice": true,
-      "xiaohongshu": null,
-      "github": "https://github.com/diyuyi-agora",
-      "website": "",
-      "contact": "GitHub: diyuyi-agora",
-      "source": "github",
-      "platform": "github",
-      "notes": "handle 直接含 'agora'，Agora 内部 TEN Framework 团队成员；ASR/VoiceAgent 工程经验；适合作 Voice Agent eng 候选",
-      "is_academic": false,
-      "date_found": "2026-04-17",
-      "tier": "B",
-      "partner_potential": false,
-      "is_eng": true,
-      "is_pm": false,
-      "is_algo": false,
-      "email": "",
-      "twitter": "",
-      "wechat": "",
-      "status": "pass",
-      "priority": false,
-      "note": "重复了 就是hanhandi"
     },
     {
       "id": "gh-yiminw",

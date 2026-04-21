@@ -6,8 +6,8 @@
     "deleted_ids": [
       "dify-pm",
       "gh-diyuyi-agora",
-      "ten-anexpn",
-      "gh-hiyouga"
+      "gh-hiyouga",
+      "ten-anexpn"
     ]
   },
   "leads": [
@@ -1706,7 +1706,8 @@
       "role": "工程·算法",
       "bg": "Zhipu.ai / Tsinghua University DCST; GLM series author",
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "note": ""
     },
     {
       "id": "gh-duzx16",
@@ -1749,7 +1750,9 @@
       "notes": "Lead author of GLM (ICLR 2023), GLM-4-Voice; PhD from Tsinghua 2025; co-leading base model group at Zhipu.ai; major contributor to foundational LLM work",
       "role": "工程·算法",
       "bg": "Tsinghua University DCST PhD 2025; Zhipu.ai base model group lead; GLM series founding author",
-      "status": "pass"
+      "status": "pass",
+      "note": "",
+      "priority": false
     },
     {
       "id": "zhu-han-xiaomi",
