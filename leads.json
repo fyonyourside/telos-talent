@@ -3426,8 +3426,8 @@
       "email": "hanlin9908@gmail.com",
       "twitter": "",
       "wechat": "",
-      "status": "new",
-      "priority": false,
+      "status": "contacted",
+      "priority": true,
       "note": ""
     },
     {
