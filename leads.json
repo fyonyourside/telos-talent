@@ -1,11 +1,12 @@
 {
   "meta": {
     "last_updated": "2026-04-20",
-    "total": 90,
+    "total": 89,
     "version": 1,
     "deleted_ids": [
       "dify-pm",
-      "gh-diyuyi-agora"
+      "gh-diyuyi-agora",
+      "ten-anexpn"
     ]
   },
   "leads": [
@@ -120,43 +121,6 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": false,
-      "note": ""
-    },
-    {
-      "id": "ten-anexpn",
-      "name": "anexpn (TEN Framework)",
-      "role": "Harness Eng",
-      "score": 5,
-      "location": "中国",
-      "current": "TEN-framework 核心贡献者",
-      "bg": "TEN Framework — 开源实时语音AI Agent框架；C/Go/Python全栈",
-      "skills": [
-        "Voice Agent",
-        "实时推理",
-        "WebRTC",
-        "LLM Orchestration",
-        "C++"
-      ],
-      "voice": true,
-      "xiaohongshu": null,
-      "github": "https://github.com/anexpn",
-      "website": "",
-      "contact": "GitHub: anexpn; Team email: developer@ten.ai",
-      "source": "github",
-      "platform": "github",
-      "notes": "实时多模态语音Agent框架核心开发；工程能力强；需识别具体账号后直接联系",
-      "is_academic": false,
-      "date_found": "2026-04-04",
-      "tier": "A",
-      "partner_potential": false,
-      "is_eng": true,
-      "is_pm": false,
-      "is_algo": false,
-      "email": "developer@ten.ai",
-      "twitter": "",
-      "wechat": "",
-      "status": "pass",
       "priority": false,
       "note": ""
     },
