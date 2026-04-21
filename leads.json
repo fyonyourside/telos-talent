@@ -2391,7 +2391,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
