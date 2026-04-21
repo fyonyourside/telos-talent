@@ -3388,7 +3388,7 @@
       "email": "",
       "twitter": "",
       "wechat": "",
-      "status": "new",
+      "status": "contacted",
       "priority": true,
       "note": ""
     },
@@ -3463,7 +3463,7 @@
       "email": "zhanghanchen77@gmail.com",
       "twitter": "",
       "wechat": "",
-      "status": "new",
+      "status": "contacted",
       "priority": false,
       "note": ""
     }
