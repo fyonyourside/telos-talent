@@ -3464,7 +3464,7 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": false,
+      "priority": true,
       "note": ""
     }
   ]
