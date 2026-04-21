@@ -2,7 +2,8 @@
   "meta": {
     "last_updated": "2026-04-20",
     "total": 92,
-    "version": 1
+    "version": 1,
+    "deleted_ids": []
   },
   "leads": [
     {
@@ -78,7 +79,7 @@
       "twitter": "",
       "wechat": "",
       "status": "converted",
-      "priority": false,
+      "priority": true,
       "note": "CosyVoice / FunASR 作者之一；阿里系；语音技术深度强\nFunAudio顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业"
     },
     {
@@ -337,7 +338,7 @@
       "twitter": "",
       "wechat": "ykzhang2020",
       "status": "converted",
-      "priority": false,
+      "priority": true,
       "note": "人才推荐和背调，开源方案效果测评"
     },
     {
@@ -374,7 +375,7 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -525,7 +526,7 @@
       "twitter": "XinshengWang1",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -563,7 +564,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -980,7 +981,7 @@
       "twitter": "",
       "wechat": "",
       "status": "converted",
-      "priority": false,
+      "priority": true,
       "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘"
     },
     {
@@ -1653,7 +1654,7 @@
       "twitter": "",
       "wechat": "",
       "status": "converted",
-      "priority": false,
+      "priority": true,
       "note": "外呼应用顾问，偏落地"
     },
     {
@@ -2156,7 +2157,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2271,7 +2272,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2494,7 +2495,7 @@
       "twitter": "",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2531,7 +2532,7 @@
       "twitter": "zshbleaker",
       "wechat": "",
       "status": "pass",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -2643,7 +2644,7 @@
       "twitter": "",
       "wechat": "",
       "status": "converted",
-      "priority": false,
+      "priority": true,
       "note": "上海；SJTU PhD + ByteDance Seed + MSRA；音频/语音领域研究；email 公开可联系；有产业实习背景\n豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach"
     },
     {
@@ -2716,7 +2717,7 @@
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
