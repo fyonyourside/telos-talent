@@ -3351,7 +3351,7 @@
       "twitter": "",
       "wechat": "",
       "status": "new",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
