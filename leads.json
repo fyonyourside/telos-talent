@@ -1,13 +1,14 @@
 {
   "meta": {
     "last_updated": "2026-04-23",
-    "total": 97,
+    "total": 96,
     "version": 1,
     "deleted_ids": [
       "dify-pm",
       "gh-diyuyi-agora",
       "gh-hiyouga",
-      "ten-anexpn"
+      "ten-anexpn",
+      "gh-stellaHSR"
     ]
   },
   "leads": [
@@ -3613,43 +3614,6 @@
       "is_pm": false,
       "is_algo": true,
       "email": "cuijb2000@gmail.com",
-      "twitter": "",
-      "wechat": "",
-      "status": "new",
-      "priority": false,
-      "note": ""
-    },
-    {
-      "id": "gh-stellaHSR",
-      "name": "洪思睿 / Sirui Hong (stellaHSR)",
-      "role": "算法",
-      "score": 4,
-      "location": "深圳",
-      "current": "DeepWisdom (深度赋智) Researcher",
-      "bg": "DeepWisdom 研究员；MetaGPT（67k stars 多智能体框架）核心作者；OpenManus（55k stars 通用 Agent 框架）合作作者；多智能体/Agent 基础设施方向代表性研究人员；209 followers",
-      "skills": [
-        "Multi-Agent",
-        "MetaGPT",
-        "Agent",
-        "LLM Agent",
-        "DeepWisdom"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/stellaHSR",
-      "website": "",
-      "contact": "GitHub: stellaHSR",
-      "source": "web_search",
-      "platform": "github",
-      "notes": "DeepWisdom (MetaGPT 母公司) 核心研究员；Multi-Agent 框架方向代表性人物之一；已有 gh-geekan（创始人吴承霖）作队友；建议作为 A 级候选跟进",
-      "is_academic": false,
-      "date_found": "2026-04-23",
-      "tier": "A",
-      "partner_potential": false,
-      "is_eng": false,
-      "is_pm": false,
-      "is_algo": true,
-      "email": "",
       "twitter": "",
       "wechat": "",
       "status": "new",
