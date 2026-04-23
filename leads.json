@@ -3391,7 +3391,7 @@
       "wechat": "",
       "status": "contacted",
       "priority": true,
-      "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给负责coding模型的学生qinkai，张鑫鹏的前老板"
+      "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent）"
     },
     {
       "id": "gh-starrylyn",
