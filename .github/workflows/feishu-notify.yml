@@ -1,0 +1,48 @@
+name: Feishu Daily Report
+
+# 触发方式：
+#   1. push 到 gh-pages 且 leads.json 变化 + commit 消息以 "Daily update" 开头
+#      → 调度任务写回新数据后自动推送卡片
+#   2. workflow_dispatch（手动在 Actions 页点 Run workflow 测试）
+on:
+  push:
+    branches: [gh-pages]
+    paths:
+      - leads.json   # leads.json 变化时触发，但 job 内部会过滤提交类型
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check trigger
+        id: check
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "手动触发，无条件发送"
+            echo "send=true" >> $GITHUB_OUTPUT
+          else
+            MSG="${{ github.event.head_commit.message }}"
+            echo "Commit: $MSG"
+            # 只有定时任务的 "Daily update YYYY-MM-DD" 提交才发飞书
+            # 浏览器端的 "chore: update lead status" 提交直接跳过
+            if [[ "$MSG" == Daily\ update* ]]; then
+              echo "send=true" >> $GITHUB_OUTPUT
+            else
+              echo "send=false" >> $GITHUB_OUTPUT
+              echo "⏭️ 非每日任务提交，跳过飞书推送"
+            fi
+          fi
+
+      - name: Checkout
+        if: steps.check.outputs.send == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Send Feishu webhook card
+        if: steps.check.outputs.send == 'true'
+        env:
+          FEISHU_WEBHOOK_URL:    ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+        run: python3 .github/scripts/feishu_notify.py
