@@ -3695,7 +3695,7 @@
       "twitter": "",
       "wechat": "",
       "status": "new",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
@@ -3733,7 +3733,7 @@
       "twitter": "",
       "wechat": "",
       "status": "contacted",
-      "priority": false,
+      "priority": true,
       "note": ""
     },
     {
