@@ -3732,7 +3732,7 @@
       "email": "",
       "twitter": "",
       "wechat": "",
-      "status": "new",
+      "status": "contacted",
       "priority": false,
       "note": ""
     },
@@ -3770,7 +3770,7 @@
       "email": "aaron9834@icloud.com",
       "twitter": "",
       "wechat": "",
-      "status": "new",
+      "status": "contacted",
       "priority": false,
       "note": ""
     }
