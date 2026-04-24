@@ -1,14 +1,15 @@
 {
   "meta": {
     "last_updated": "2026-04-24",
-    "total": 101,
+    "total": 100,
     "version": 1,
     "deleted_ids": [
       "dify-pm",
       "gh-diyuyi-agora",
       "gh-hiyouga",
       "gh-stellaHSR",
-      "ten-anexpn"
+      "ten-anexpn",
+      "gh-kimiyoung"
     ]
   },
   "leads": [
@@ -3767,44 +3768,6 @@
       "is_pm": false,
       "is_algo": true,
       "email": "aaron9834@icloud.com",
-      "twitter": "",
-      "wechat": "",
-      "status": "new",
-      "priority": false,
-      "note": ""
-    },
-    {
-      "id": "gh-kimiyoung",
-      "name": "杨植麟 / Zhilin Yang",
-      "role": "创始人·算法",
-      "score": 5,
-      "location": "北京",
-      "current": "Moonshot AI 创始人兼 CEO",
-      "bg": "CMU PhD；ex-Google Brain / Meta；Transformer-XL / XLNet / HotpotQA 作者；Moonshot AI (Kimi) 联合创始人",
-      "skills": [
-        "LLM",
-        "长上下文",
-        "XLNet",
-        "Transformer-XL",
-        "Moonshot",
-        "Kimi"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/kimiyoung",
-      "website": "https://kimiyoung.github.io/",
-      "contact": "见个人主页",
-      "source": "web_search",
-      "platform": "github",
-      "notes": "Moonshot AI 创始人；行业巨头；信息性跟踪目标，非直接招募对象",
-      "is_academic": false,
-      "date_found": "2026-04-24",
-      "tier": "S",
-      "partner_potential": false,
-      "is_eng": false,
-      "is_pm": false,
-      "is_algo": true,
-      "email": "",
       "twitter": "",
       "wechat": "",
       "status": "new",
