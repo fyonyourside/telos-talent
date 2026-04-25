@@ -43,6 +43,10 @@ jobs:
       - name: Send Feishu webhook card
         if: steps.check.outputs.send == 'true'
         env:
-          FEISHU_WEBHOOK_URL:    ${{ secrets.FEISHU_WEBHOOK_URL }}
-          FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+          # 群1（原有）
+          FEISHU_WEBHOOK_URL:      ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK_SECRET:   ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+          # 群2（新增；未在 Secrets 中设置时脚本会自动跳过）
+          FEISHU_WEBHOOK_URL_2:    ${{ secrets.FEISHU_WEBHOOK_URL_2 }}
+          FEISHU_WEBHOOK_SECRET_2: ${{ secrets.FEISHU_WEBHOOK_SECRET_2 }}
         run: python3 .github/scripts/feishu_notify.py

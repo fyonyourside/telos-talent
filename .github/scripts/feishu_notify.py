@@ -8,9 +8,16 @@ Telos 人才库 — 飞书日报推送（GitHub Actions 版 · 自定义机器�
   推上来后触发，从 GitHub 侧调用 Feishu 自定义机器人 webhook。
 
 所需环境变量（从 GitHub Actions Secrets 注入）：
-  FEISHU_WEBHOOK_URL     — 群机器人 webhook URL，形如
-                           https://open.feishu.cn/open-apis/bot/v2/hook/<uuid>
-  FEISHU_WEBHOOK_SECRET  — 机器人"签名校验"开启后的 secret（可选但强烈建议）
+  FEISHU_WEBHOOK_URL       — 群机器人 webhook URL，形如
+                             https://open.feishu.cn/open-apis/bot/v2/hook/<uuid>
+  FEISHU_WEBHOOK_SECRET    — 机器人"签名校验"开启后的 secret（可选但强烈建议）
+
+  FEISHU_WEBHOOK_URL_2     — 第二个群（可选）
+  FEISHU_WEBHOOK_SECRET_2  — 第二个群的签名 secret（可选）
+  FEISHU_WEBHOOK_URL_3 / _SECRET_3 ... 同理，按需加。
+
+  额外控制：
+  FEISHU_DRY_RUN=1         — 只打印目标 webhook 列表，不实际发送（本地干跑）
 """
 import json, os, sys, time, hmac, hashlib, base64, datetime
 import urllib.request, urllib.error
@@ -166,13 +173,39 @@ def post_webhook(url: str, secret: str, card: dict):
     print(f"✅ 飞书卡片已推送，响应: {resp}")
 
 
+def collect_webhooks():
+    """
+    收集所有要推送的 (url, secret, label) 三元组。
+
+    第一组从 FEISHU_WEBHOOK_URL / FEISHU_WEBHOOK_SECRET 读（保持向后兼容）；
+    后续从 FEISHU_WEBHOOK_URL_2 / _SECRET_2、_3 / _SECRET_3 ... 依次读，
+    遇到没设的就停。空 URL 跳过；secret 可空（=不开签名校验）。
+    """
+    targets = []
+    url1 = os.environ.get("FEISHU_WEBHOOK_URL", "").strip()
+    sec1 = os.environ.get("FEISHU_WEBHOOK_SECRET", "").strip()
+    if url1:
+        targets.append((url1, sec1, "群1"))
+
+    i = 2
+    while True:
+        url = os.environ.get(f"FEISHU_WEBHOOK_URL_{i}", "").strip()
+        sec = os.environ.get(f"FEISHU_WEBHOOK_SECRET_{i}", "").strip()
+        if not url:
+            break
+        targets.append((url, sec, f"群{i}"))
+        i += 1
+    return targets
+
+
 def main():
-    url    = os.environ.get("FEISHU_WEBHOOK_URL", "").strip()
-    secret = os.environ.get("FEISHU_WEBHOOK_SECRET", "").strip()
-    if not url:
-        print("❌ 缺少 FEISHU_WEBHOOK_URL 环境变量；"
+    targets = collect_webhooks()
+    if not targets:
+        print("❌ 没有任何 FEISHU_WEBHOOK_URL[_N] 环境变量；"
               "请在 GitHub repo Settings → Secrets and variables → Actions 中配置")
         sys.exit(1)
+
+    dry_run = os.environ.get("FEISHU_DRY_RUN", "").strip() in ("1", "true", "yes")
 
     with open(LEADS_FILE, encoding="utf-8") as f:
         leads_data = json.load(f)
@@ -181,8 +214,30 @@ def main():
     print("--- 卡片内容预览 ---")
     print(json.dumps(card, ensure_ascii=False, indent=2))
     print("---")
+    print(f"📡 推送目标数：{len(targets)}")
+    for _, _, label in targets:
+        print(f"   • {label}")
 
-    post_webhook(url, secret, card)
+    if dry_run:
+        print("🧪 DRY RUN — 跳过实际推送")
+        return
+
+    failures = []
+    for url, secret, label in targets:
+        try:
+            print(f"→ 推送 {label} ...")
+            post_webhook(url, secret, card)
+        except Exception as e:
+            print(f"⚠️  {label} 推送失败：{e}")
+            failures.append((label, str(e)))
+
+    # 部分失败：打印汇总；只有全部失败才退出非 0
+    if failures:
+        print(f"⚠️  {len(failures)}/{len(targets)} 个群推送失败")
+        for label, err in failures:
+            print(f"   - {label}: {err}")
+        if len(failures) == len(targets):
+            sys.exit(1)
 
 
 if __name__ == "__main__":
