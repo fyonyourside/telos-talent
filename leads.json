@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-04-25",
-    "total": 106,
+    "last_updated": "2026-04-26",
+    "total": 110,
     "version": 1,
     "deleted_ids": [
       "dify-pm",
@@ -3997,6 +3997,106 @@
       "status": "pass",
       "note": "",
       "priority": false
+    },
+    {
+      "id": "gh-vndee",
+      "name": "vndee",
+      "role": "Harness Eng",
+      "score": 4,
+      "location": "Unknown",
+      "current": "Unknown",
+      "bg": "local-talking-llm - A talking LLM that runs locally without internet",
+      "skills": [
+        "LLM",
+        "Voice",
+        "TTS",
+        "Python"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/vndee",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "本地语音 LLM 项目维护者",
+      "is_academic": false,
+      "date_found": "2026-04-26"
+    },
+    {
+      "id": "gh-ranchlai",
+      "name": "ranchlai",
+      "role": "Harness Eng",
+      "score": 4,
+      "location": "China",
+      "current": "Unknown",
+      "bg": "mandarin-tts - 中文普通话 TTS 合成，基于 FastSpeech2",
+      "skills": [
+        "TTS",
+        "Speech",
+        "Chinese",
+        "PyTorch"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/ranchlai",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "中文 TTS 专家",
+      "is_academic": false,
+      "date_found": "2026-04-26"
+    },
+    {
+      "id": "gh-wildminder",
+      "name": "wildminder",
+      "role": "Harness Eng",
+      "score": 3,
+      "location": "Unknown",
+      "current": "Unknown",
+      "bg": "awesome-ai-voice - Open-source TTS, voice cloning, and music generation models 集合",
+      "skills": [
+        "TTS",
+        "Voice",
+        "Voice Clone",
+        "Audio"
+      ],
+      "voice": true,
+      "xiaohongshu": null,
+      "github": "https://github.com/wildminder",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "Voice AI 资源整合者",
+      "is_academic": false,
+      "date_found": "2026-04-26"
+    },
+    {
+      "id": "gh-YYZhang2025",
+      "name": "YYZhang2025",
+      "role": "Model PM",
+      "score": 3,
+      "location": "China",
+      "current": "Unknown",
+      "bg": "LLM-RLHF - LLM 强化学习人类反馈实现",
+      "skills": [
+        "RLHF",
+        "LLM",
+        "RL",
+        "Python"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/YYZhang2025",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "RLHF 专家",
+      "is_academic": false,
+      "date_found": "2026-04-26"
     }
   ]
 }
