@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-04-27T17:02:37.466Z",
+  "last_updated": "2026-04-27T17:03:23.903Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -196,7 +196,6 @@
       "priority": true
     },
     "mannaandpoem-openmanus": {
-      "status": "contacted",
       "priority": true
     },
     "gh-qq547276542": {
