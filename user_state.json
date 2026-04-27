@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-04-27T17:02:28.138Z",
+  "last_updated": "2026-04-27T17:02:37.466Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -271,9 +271,6 @@
     "gh-jenqyang": {
       "status": "pass"
     },
-    "glm-asr": {
-      "status": "pass"
-    },
     "gh-lovemefan": {
       "status": "contacted",
       "priority": true
@@ -319,6 +316,7 @@
     "gh-hiyouga",
     "gh-kimiyoung",
     "gh-stellaHSR",
+    "glm-asr",
     "openrlhf",
     "org-agentscope-ai",
     "org-lobehub",
