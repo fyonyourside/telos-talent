@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-04-27T17:02:14.803Z",
+  "last_updated": "2026-04-27T17:02:24.006Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -184,18 +184,6 @@
     "gh-ymcui": {
       "status": "contacted"
     },
-    "org-agentscope-ai": {
-      "status": "pass"
-    },
-    "sparkaudio": {
-      "status": "pass"
-    },
-    "fireredteam": {
-      "status": "pass"
-    },
-    "openrlhf": {
-      "status": "pass"
-    },
     "agentscope": {
       "status": "pass"
     },
@@ -328,12 +316,16 @@
   },
   "deleted_ids": [
     "dify-pm",
+    "fireredteam",
     "gh-diyuyi-agora",
     "gh-hiyouga",
     "gh-kimiyoung",
     "gh-stellaHSR",
+    "openrlhf",
+    "org-agentscope-ai",
     "org-lobehub",
     "org-spark-audio",
+    "sparkaudio",
     "ten-anexpn"
   ]
 }
