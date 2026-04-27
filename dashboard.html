@@ -1052,9 +1052,9 @@ const LEADS_DATA = {
       "email": "",
       "twitter": "",
       "wechat": "",
-      "status": "contacted",
+      "status": "replied",
       "priority": false,
-      "note": ""
+      "note": "MetaGPT 核心提交者之一；FoundationAgents 组织成员；视觉转 Agent 背景跨度大；82 followers\n王金淋，DeepWisdom暂时不打算换，base深圳/厦门，出差时约见面，保持联系"
     },
     {
       "id": "chen-zhang-actuy",
@@ -1389,7 +1389,7 @@ const LEADS_DATA = {
       "twitter": "",
       "wechat": "",
       "status": "replied",
-      "priority": true,
+      "priority": false,
       "note": ""
     },
     {
@@ -1766,9 +1766,9 @@ const LEADS_DATA = {
       "email": "",
       "twitter": "llamafactory_ai",
       "wechat": "",
-      "status": "replied",
-      "priority": true,
-      "note": ""
+      "status": "pass",
+      "priority": false,
+      "note": "LlamaFactory is most-starred LLM fine-tuning framework; 6.3k followers; Beijing-based; Active maintainer\n已创业"
     },
     {
       "id": "gh-wangzhaode",
@@ -2070,7 +2070,7 @@ const LEADS_DATA = {
       "wechat": "",
       "status": "replied",
       "priority": false,
-      "note": ""
+      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
     },
     {
       "id": "gh-yiminw",
@@ -2331,7 +2331,7 @@ const LEADS_DATA = {
       "wechat": "",
       "status": "replied",
       "priority": true,
-      "note": ""
+      "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊"
     },
     {
       "id": "jingcheng-pang",
@@ -2969,7 +2969,7 @@ const LEADS_DATA = {
       "twitter": "",
       "wechat": "",
       "status": "converted",
-      "priority": true,
+      "priority": false,
       "note": "外呼应用顾问，偏落地"
     },
     {
@@ -3565,8 +3565,8 @@ const LEADS_DATA = {
       "email": "bokesyo2000@gmail.com",
       "twitter": "",
       "wechat": "",
-      "status": "replied",
-      "priority": true,
+      "status": "converted",
+      "priority": false,
       "note": ""
     },
     {
@@ -3603,9 +3603,9 @@ const LEADS_DATA = {
       "email": "caitianchi@modelbest.cn",
       "twitter": "",
       "wechat": "",
-      "status": "contacted",
+      "status": "replied",
       "priority": true,
-      "note": ""
+      "note": "面壁智能推理 infra 工程师；llama.cpp-omni 原作者；在主流 LLM serving 框架提交 MiniCPM-V/O 支持 PR；infra 向候选人，典型端侧多模态部署背景\n五一节后聊"
     },
     {
       "id": "gh-yiranyyu",
@@ -4765,7 +4765,12 @@ function getNote(id)     { var l=leadsIndex[id]; return (l&&l.note)||''; }
 function getPriority(id) { var l=leadsIndex[id]; return !!(l&&l.priority); }
 
 // GitHub API write-back
-var GH_OWNER='fyonyourside', GH_REPO='telos-talent', GH_BRANCH='gh-pages', GH_PATH='leads.json';
+// 写回模式：把 user_state.json（仅 status/note/priority/deleted_ids，~10 KB）作为
+// 同步载荷。原本写回整个 leads.json (~180 KB) 在 Safari 上会触发 "网络连接已中断"，
+// 因为 Safari 对较大的 PUT body 不稳定。改用小载荷绕开该 quirk。
+var GH_OWNER='fyonyourside', GH_REPO='telos-talent', GH_BRANCH='gh-pages';
+var GH_PATH='leads.json';                  // 只读：候选人主数据，由 daily 脚本维护
+var GH_USER_STATE_PATH='user_state.json';  // 可写：用户标记态，浏览器端的唯一 PUT 目标
 var _st=null;
 function getGHToken(){var _t=['ghp_TI7z','vgLbvesUWNPeUigF','3d2MSdpp1Y3Q5wG1'];return localStorage.getItem('telos_gh_token')||_t.join('');}
 
@@ -4775,22 +4780,48 @@ function showSaveStatus(msg,type){
   if(type==='ok') setTimeout(function(){el.textContent='';el.className='save-status';},4000);
 }
 
+// 从 LEADS_DATA 提取当前的用户标记态，构造 user_state.json 载荷
+function buildUserStatePayload(){
+  var defaults={status:'new', note:'', priority:false};
+  var states={};
+  LEADS_DATA.leads.forEach(function(l){
+    var s={};
+    Object.keys(defaults).forEach(function(k){
+      var v=(k in l)?l[k]:defaults[k];
+      if(v!==defaults[k]) s[k]=v;
+    });
+    if(Object.keys(s).length) states[l.id]=s;
+  });
+  var deleted = (LEADS_DATA.meta && LEADS_DATA.meta.deleted_ids) || [];
+  return {
+    version: 1,
+    last_updated: new Date().toISOString(),
+    user_states: states,
+    deleted_ids: deleted.slice().sort()
+  };
+}
+
 function flushToGitHub(onDone){
   var token=getGHToken();
   if(!token){showSaveStatus('⚙️ 请配置 Token','warn'); if(onDone) onDone(false); return;}
   showSaveStatus('⏳ 同步中...','saving');
-  var base='https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_PATH;
+  var base='https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_USER_STATE_PATH;
   var hdrs={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'};
 
-  // Always fetch fresh SHA with timestamp cache-buster (avoids Safari caching stale SHA)
+  // 1) 获取 user_state.json 的最新 SHA。如果文件不存在（首次推送），SHA 留空。
   fetch(base+'?ref='+GH_BRANCH+'&_='+Date.now(), {headers:hdrs, cache:'no-store'})
-    .then(function(r){ if(!r.ok) throw new Error('SHA fetch '+r.status); return r.json(); })
+    .then(function(r){
+      if(r.status===404) return {sha:null};  // 文件不存在，PUT 时不传 sha 即可创建
+      if(!r.ok) throw new Error('SHA fetch '+r.status);
+      return r.json();
+    })
     .then(function(info){
-      var sha = info.sha;
-      var body=JSON.stringify(LEADS_DATA,null,2);
+      var payload=buildUserStatePayload();
+      var body=JSON.stringify(payload,null,2);
       var enc=btoa(unescape(encodeURIComponent(body)));
-      return fetch(base,{method:'PUT',headers:hdrs,
-        body:JSON.stringify({message:'chore: update lead status',content:enc,sha:sha,branch:GH_BRANCH})});
+      var put={message:'chore: update user state',content:enc,branch:GH_BRANCH};
+      if(info.sha) put.sha=info.sha;
+      return fetch(base,{method:'PUT',headers:hdrs,body:JSON.stringify(put)});
     })
     .then(function(r){
       if(!r.ok){
@@ -5279,85 +5310,115 @@ function renderStats() {
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────
-// On load: fetch live leads.json via GitHub API (bypasses CDN cache), fall back to embedded data
+// On load: 并行拉取 leads.json（候选人主数据）和 user_state.json（用户标记态）
+//   - leads.json 由 daily 脚本维护，可能比内嵌的 LEADS_DATA 更新
+//   - user_state.json 是浏览器端的真实标记态权威，叠加到 LEADS_DATA 之上
 (function initDashboard(){
   var token = getGHToken();
-  var apiUrl = 'https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO +
-               '/contents/' + GH_PATH + '?ref=' + GH_BRANCH + '&_=' + Date.now();
 
-  function mergeAndRender(data) {
-    var liveMap = {};
-    data.leads.forEach(function(l){ liveMap[l.id] = l; });
+  function apiContentUrl(path){
+    return 'https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+path+'?ref='+GH_BRANCH+'&_='+Date.now();
+  }
+  function rawUrl(path){
+    return 'https://raw.githubusercontent.com/'+GH_OWNER+'/'+GH_REPO+'/'+GH_BRANCH+'/'+path+'?_='+Date.now();
+  }
+  function decodeApiContent(info){
+    var b64 = info.content.replace(/\n/g,'');
+    return decodeURIComponent(escape(atob(b64)));
+  }
 
-    // 合并远端 deleted_ids（权威删除列表）
-    var remoteDeleted = (data.meta && data.meta.deleted_ids) || [];
+  function fetchJson(path){
+    if(token){
+      return fetch(apiContentUrl(path), {
+        headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'},
+        cache:'no-store'
+      }).then(function(r){
+        if(r.status===404) return null;
+        if(!r.ok) throw new Error('fetch '+path+' '+r.status);
+        return r.json().then(function(info){ return JSON.parse(decodeApiContent(info)); });
+      }).catch(function(e){
+        console.warn('[telos] API fetch '+path+' failed, falling back to raw:', e);
+        return fetch(rawUrl(path), {cache:'no-store'})
+          .then(function(r){ return r.ok ? r.json() : (r.status===404 ? null : Promise.reject(r.status)); })
+          .catch(function(){ return null; });
+      });
+    }else{
+      return fetch(rawUrl(path), {cache:'no-store'})
+        .then(function(r){ return r.ok ? r.json() : (r.status===404 ? null : Promise.reject(r.status)); })
+        .catch(function(){ return null; });
+    }
+  }
+
+  function applyDeletedIds(deleted){
     if(!LEADS_DATA.meta.deleted_ids) LEADS_DATA.meta.deleted_ids = [];
-    remoteDeleted.forEach(function(id){
+    (deleted||[]).forEach(function(id){
       if(LEADS_DATA.meta.deleted_ids.indexOf(id) === -1) LEADS_DATA.meta.deleted_ids.push(id);
     });
     var deletedSet = {};
     LEADS_DATA.meta.deleted_ids.forEach(function(id){ deletedSet[id] = true; });
-
     // 从本地数据中移除已删除的条目
     LEADS_DATA.leads = LEADS_DATA.leads.filter(function(l){
       if(deletedSet[l.id]){ delete leadsIndex[l.id]; return false; }
       return true;
     });
+    return deletedSet;
+  }
 
-    LEADS_DATA.leads.forEach(function(l){
-      var live = liveMap[l.id];
-      if(live){
-        // 如果页面上有未同步的修改（_pendingSave），跳过合并以保留用户当前操作
-        if(!_pendingSave){
-          if('status'   in live) l.status   = live.status;
-          if('priority' in live) l.priority = live.priority;
-          if('note'     in live) l.note     = live.note;
-        }
+  function mergeLeadsCanonical(data, deletedSet){
+    if(!data) return;
+    // 合并远端 leads.json 中的候选人主数据（不覆盖用户标记字段）
+    data.leads.forEach(function(live){
+      if(deletedSet[live.id]) return;
+      var local = leadsIndex[live.id];
+      if(local){
+        // 已有：用 live 的非状态字段覆盖（保留浏览器端可能正在编辑的 status/note/priority）
+        Object.keys(live).forEach(function(k){
+          if(k==='status'||k==='note'||k==='priority') return;
+          local[k] = live[k];
+        });
+      }else{
+        LEADS_DATA.leads.push(live);
+        leadsIndex[live.id] = live;
       }
     });
-    // Also add any new leads from live that aren't in embedded data（但跳过已删除的）
-    data.leads.forEach(function(l){
-      if(deletedSet[l.id]) return;
-      if(!leadsIndex[l.id]){ LEADS_DATA.leads.push(l); leadsIndex[l.id]=l; }
-    });
-    LEADS_DATA.meta.last_updated = data.meta.last_updated;
+    if(data.meta){
+      LEADS_DATA.meta.last_updated = data.meta.last_updated || LEADS_DATA.meta.last_updated;
+    }
     LEADS_DATA.meta.total = LEADS_DATA.leads.length;
+  }
+
+  function applyUserState(us){
+    // user_state.json 是用户标记态权威。如果浏览器端正在编辑（_pendingSave），跳过覆盖。
+    if(!us || _pendingSave) return;
+    var states = us.user_states || {};
+    LEADS_DATA.leads.forEach(function(l){
+      var s = states[l.id];
+      // 默认值清零（即使 user_state 没有该条目，也要重置为默认，
+      // 这样在另一台设备取消标记后，本设备刷新能感知）
+      l.status   = (s && 'status'   in s) ? s.status   : 'new';
+      l.note     = (s && 'note'     in s) ? s.note     : '';
+      l.priority = (s && 'priority' in s) ? s.priority : false;
+    });
   }
 
   function finish(){ renderStats(); renderAll(); renderPriorityPanel(); prefetchSha(); }
 
-  if(token) {
-    // Use GitHub API — always returns fresh data, no CDN cache
-    fetch(apiUrl, {
-      headers: {'Authorization':'Bearer '+token, 'Accept':'application/vnd.github+json'},
-      cache: 'no-store'
-    })
-    .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
-    .then(function(info){
-      // GitHub API returns UTF-8 content as base64
-      // Must reverse btoa(unescape(encodeURIComponent(str))) used in flushToGitHub
-      var b64 = info.content.replace(/\n/g,'');
-      var raw = decodeURIComponent(escape(atob(b64)));
-      var data = JSON.parse(raw);
-      mergeAndRender(data);
-    })
-    .catch(function(e){
-      // API failed — fall back to raw CDN (best-effort)
-      console.warn('[telos] API fetch failed, falling back to raw CDN:', e);
-      return fetch('https://raw.githubusercontent.com/'+GH_OWNER+'/'+GH_REPO+'/'+GH_BRANCH+'/'+GH_PATH+'?_='+Date.now(), {cache:'no-store'})
-        .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
-        .then(function(data){ mergeAndRender(data); })
-        .catch(function(){});
-    })
-    .finally(finish);
-  } else {
-    // No token — use raw CDN as fallback
-    fetch('https://raw.githubusercontent.com/'+GH_OWNER+'/'+GH_REPO+'/'+GH_BRANCH+'/'+GH_PATH+'?_='+Date.now(), {cache:'no-store'})
-    .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
-    .then(function(data){ mergeAndRender(data); })
-    .catch(function(){})
-    .finally(finish);
-  }
+  Promise.all([fetchJson(GH_PATH), fetchJson(GH_USER_STATE_PATH)]).then(function(arr){
+    var leadsData = arr[0];
+    var userState = arr[1];
+    // 1) 先用合并后的删除列表（远端 leads.meta.deleted_ids ∪ user_state.deleted_ids）
+    var deleted = [].concat(
+      (leadsData && leadsData.meta && leadsData.meta.deleted_ids) || [],
+      (userState && userState.deleted_ids) || []
+    );
+    var deletedSet = applyDeletedIds(deleted);
+    // 2) 合并候选人主数据
+    mergeLeadsCanonical(leadsData, deletedSet);
+    // 3) 叠加用户标记态
+    applyUserState(userState);
+  }).catch(function(e){
+    console.warn('[telos] init load error:', e);
+  }).finally(finish);
 })();
 
 
