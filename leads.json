@@ -2408,7 +2408,7 @@
       "twitter": "",
       "wechat": "",
       "status": "converted",
-      "priority": true,
+      "priority": false,
       "note": "外呼应用顾问，偏落地"
     },
     {
