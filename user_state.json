@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-04-27T17:02:24.006Z",
+  "last_updated": "2026-04-27T17:02:28.138Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -184,9 +184,6 @@
     "gh-ymcui": {
       "status": "contacted"
     },
-    "agentscope": {
-      "status": "pass"
-    },
     "gh-shibing624": {
       "status": "converted",
       "note": "外呼应用顾问，偏落地"
@@ -315,6 +312,7 @@
     }
   },
   "deleted_ids": [
+    "agentscope",
     "dify-pm",
     "fireredteam",
     "gh-diyuyi-agora",
