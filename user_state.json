@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-04-27T17:01:41.987Z",
+  "last_updated": "2026-04-27T17:02:14.803Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -184,12 +184,6 @@
     "gh-ymcui": {
       "status": "contacted"
     },
-    "org-spark-audio": {
-      "status": "pass"
-    },
-    "org-lobehub": {
-      "status": "pass"
-    },
     "org-agentscope-ai": {
       "status": "pass"
     },
@@ -338,6 +332,8 @@
     "gh-hiyouga",
     "gh-kimiyoung",
     "gh-stellaHSR",
+    "org-lobehub",
+    "org-spark-audio",
     "ten-anexpn"
   ]
 }
