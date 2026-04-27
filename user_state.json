@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-04-27T16:58:11",
+  "last_updated": "2026-04-27T17:01:41.987Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -40,7 +40,7 @@
       "status": "pass"
     },
     "gh-better629": {
-      "status": "replied",
+      "status": "pass",
       "note": "MetaGPT 核心提交者之一；FoundationAgents 组织成员；视觉转 Agent 背景跨度大；82 followers\n王金淋，DeepWisdom暂时不打算换，base深圳/厦门，出差时约见面，保持联系"
     },
     "chen-zhang-actuy": {
