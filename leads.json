@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-04-26",
-    "total": 110,
+    "last_updated": "2026-04-27",
+    "total": 112,
     "version": 1,
     "deleted_ids": [
       "dify-pm",
@@ -4021,7 +4021,10 @@
       "platform": "github",
       "notes": "本地语音 LLM 项目维护者",
       "is_academic": false,
-      "date_found": "2026-04-26"
+      "date_found": "2026-04-26",
+      "status": "new",
+      "note": "",
+      "priority": false
     },
     {
       "id": "gh-ranchlai",
@@ -4046,7 +4049,10 @@
       "platform": "github",
       "notes": "中文 TTS 专家",
       "is_academic": false,
-      "date_found": "2026-04-26"
+      "date_found": "2026-04-26",
+      "status": "new",
+      "note": "",
+      "priority": false
     },
     {
       "id": "gh-wildminder",
@@ -4071,7 +4077,10 @@
       "platform": "github",
       "notes": "Voice AI 资源整合者",
       "is_academic": false,
-      "date_found": "2026-04-26"
+      "date_found": "2026-04-26",
+      "status": "new",
+      "note": "",
+      "priority": false
     },
     {
       "id": "gh-YYZhang2025",
@@ -4096,7 +4105,84 @@
       "platform": "github",
       "notes": "RLHF 专家",
       "is_academic": false,
-      "date_found": "2026-04-26"
+      "date_found": "2026-04-26",
+      "status": "new",
+      "note": "",
+      "priority": false
+    },
+    {
+      "id": "gh-twz915",
+      "name": "Weizhong Tu / twz915",
+      "role": "工程",
+      "score": 5,
+      "location": "北京",
+      "current": "Alibaba",
+      "bg": "AgentScope (阿里多 Agent 框架) 新晋贡献者；Bio: like coding, all kinds of IT news；98 repos；251 followers",
+      "skills": [
+        "Multi-Agent",
+        "AgentScope",
+        "Python",
+        "工程"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/twz915",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "AgentScope 贡献者；阿里北京工程师；专注偏工程方向，需进一步评估算法/产品能力",
+      "is_academic": false,
+      "date_found": "2026-04-27",
+      "tier": "B",
+      "partner_potential": false,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": false,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
+    },
+    {
+      "id": "gh-Nioolek",
+      "name": "Lingrui Gu / Nioolek",
+      "role": "算法",
+      "score": 4,
+      "location": "上海",
+      "current": "中山大学 (SYSU)",
+      "bg": "AgentScope 新晋贡献者；OpenMMLab 生态贡献者 (mmyolo / mmdetection)；自有 FinetuneLLaVA、PPYOLOE_pytorch 项目；视觉+多模态背景",
+      "skills": [
+        "Multi-Agent",
+        "AgentScope",
+        "LLaVA",
+        "Vision",
+        "MMDetection",
+        "PyTorch"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/Nioolek",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "SYSU 学生背景，疑似 OpenMMLab 实习；视觉+多模态，AgentScope 切入 Multi-Agent；可作为算法实习/初级储备",
+      "is_academic": true,
+      "date_found": "2026-04-27",
+      "tier": "B",
+      "partner_potential": false,
+      "is_eng": false,
+      "is_pm": false,
+      "is_algo": true,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": ""
     }
   ]
 }
