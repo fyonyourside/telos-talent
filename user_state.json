@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-04-30T09:28:55",
+  "last_updated": "2026-04-30T01:43:43.639Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -8,6 +8,9 @@
     },
     "gh-plutoless": {
       "status": "pass"
+    },
+    "gh-xiaoxigua999": {
+      "status": "contacted"
     },
     "gh-sunxilin": {
       "status": "pass"
