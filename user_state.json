@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-07T14:14:52.045Z",
+  "last_updated": "2026-05-07T14:14:57.310Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -248,7 +248,7 @@
       "status": "converted"
     },
     "gh-tc-mb": {
-      "status": "converted",
+      "status": "pass",
       "note": "面壁智能推理 infra 工程师；llama.cpp-omni 原作者；在主流 LLM serving 框架提交 MiniCPM-V/O 支持 PR；infra 向候选人，典型端侧多模态部署背景\nCV推理优化出身，24年加入面壁，汇报给多模态组负责人姚远，对多模走向具身比较有兴趣，感觉在面壁干的还算开心，交个朋友保持交流了"
     },
     "gh-yiranyyu": {
