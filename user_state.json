@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-07T08:09:47",
+  "last_updated": "2026-05-07T12:39:56.936Z",
   "user_states": {
     "gh-wangxiongts": {
       "status": "contacted",
@@ -256,7 +256,7 @@
       "status": "contacted"
     },
     "gh-jzq2000": {
-      "status": "contacted",
+      "status": "replied",
       "priority": true
     },
     "gh-yangdongchao": {
