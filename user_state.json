@@ -1,45 +1,10 @@
 {
   "version": 1,
-  "last_updated": "2026-05-08T13:26:35",
+  "last_updated": "2026-05-08T13:32:29",
   "user_states": {
-    "gh-plutoless": {
-      "status": "pass",
-      "priority": true
-    },
-    "gh-garyzhang99": {
-      "priority": true
-    },
-    "gh-3rd-musketeer": {
-      "status": "pass",
-      "priority": true
-    },
-    "gh-zh794390558-43ee6e6cac35": {
-      "priority": true
-    },
     "gh-jaredforreal": {
       "status": "contacted",
       "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent）",
-      "priority": true
-    },
-    "gh-breakstring-ffa98a18a104": {
-      "priority": true
-    },
-    "gh-lijingbei": {
-      "priority": true
-    },
-    "gh-makerjackie-88e8b18b1095": {
-      "priority": true
-    },
-    "gh-OedoSoldier-b28016adb55f": {
-      "priority": true
-    },
-    "gh-PriesiaMioShirakana-70b86a2f326d": {
-      "priority": true
-    },
-    "gh-RVC-Boss-ecb088cde377": {
-      "priority": true
-    },
-    "gh-tramphero-838da8f31d30": {
       "priority": true
     },
     "gh-liusongxiang": {
@@ -47,89 +12,22 @@
       "note": "Kimi-Audio主要作者；LongCat-Flash-Omni(560B-A27B)；ex Tencent/miHoYo/Meituan；语音LLM顶尖工程师；北京\n目前在美团做龙猫",
       "priority": true
     },
-    "gh-SpenserCai-c05fd99739e4": {
-      "priority": true
-    },
-    "gh-Stardust-minus-0f5962b6d5ec": {
-      "priority": true
-    },
-    "gh-yt605155624-7ec41c4dca21": {
-      "priority": true
-    },
     "gh-yiminw": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-Whale-Dolphin-a12b4d80cd24": {
-      "priority": true
+      "status": "contacted"
     },
     "gh-aluminumbox": {
       "status": "contacted",
       "priority": true
     },
-    "gh-pan-x-c": {
-      "priority": true
-    },
-    "gh-lyblsgo-f25deac7e42f": {
-      "priority": true
-    },
     "gh-yuekaizhang": {
       "status": "converted",
-      "note": "人才推荐和背调，开源方案效果测评",
-      "priority": true
-    },
-    "gh-xieyxclack-cbb611e777cc": {
-      "priority": true
-    },
-    "gh-ylzz1997-cec2a4df0bef": {
-      "priority": true
-    },
-    "gh-ABexit-6cf0a08373af": {
-      "priority": true
-    },
-    "gh-anyvoiceai-7cbcff242aab": {
-      "priority": true
-    },
-    "gh-daymade-834d245af031": {
-      "priority": true
-    },
-    "gh-edgemoorlf-bb6b3b203d5a": {
-      "priority": true
-    },
-    "gh-6drf21e-a5d11a97cd0e": {
-      "priority": true
-    },
-    "gh-hnluo-76dc1994c228": {
-      "priority": true
-    },
-    "gh-innnky-cb5f088a5a84": {
-      "priority": true
-    },
-    "gh-ipfans-8de0794ae50a": {
-      "priority": true
-    },
-    "gh-jmwang66-ff406321a92d": {
-      "priority": true
-    },
-    "gh-libukai-b7f678ff49c8": {
-      "priority": true
-    },
-    "gh-v3ucn-bc9b0cb61b0b": {
-      "priority": true
+      "note": "人才推荐和背调，开源方案效果测评"
     },
     "gh-weedge": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-xxnuo-0f0dc5565b94": {
-      "priority": true
-    },
-    "gh-zzw922cn-155726572903": {
-      "priority": true
+      "status": "contacted"
     },
     "gh-cuiunbo": {
-      "status": "contacted",
-      "priority": true
+      "status": "contacted"
     },
     "gh-zrzrzrzrzrzrzr": {
       "status": "replied",
@@ -142,37 +40,24 @@
     },
     "gh-shibing624": {
       "status": "converted",
-      "note": "外呼应用顾问，偏落地",
-      "priority": true
+      "note": "外呼应用顾问，偏落地"
     },
     "zhihao-du": {
       "status": "converted",
-      "note": "FunAudio模型使用顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业",
-      "priority": true
+      "note": "FunAudio模型使用顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业"
     },
     "gh-yfyeung": {
       "status": "replied",
       "note": "约了上海和子阳一起吃饭",
       "priority": true
     },
-    "gh-zombieyang-7d26d3dd5a4c": {
-      "priority": true
-    },
     "gh-Zain-Jiang": {
       "status": "converted",
-      "note": "博五，今年六月毕业，延毕一年帮导师做项目，年底正式招聘",
-      "priority": true
+      "note": "博五，今年六月毕业，延毕一年帮导师做项目，年底正式招聘"
     },
     "gh-alanswift": {
       "status": "replied",
       "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊",
-      "priority": true
-    },
-    "gh-wangzhaode": {
-      "status": "pass",
-      "priority": true
-    },
-    "gh-wangrongsheng": {
       "priority": true
     },
     "chen-zhang-actuy": {
@@ -183,88 +68,23 @@
       "status": "contacted",
       "priority": true
     },
-    "gh-tc-mb": {
-      "status": "pass",
-      "note": "面壁智能推理 infra 工程师；llama.cpp-omni 原作者；在主流 LLM serving 框架提交 MiniCPM-V/O 支持 PR；infra 向候选人，典型端侧多模态部署背景\nCV推理优化出身，24年加入面壁，汇报给多模态组负责人姚远，对多模走向具身比较有兴趣，感觉在面壁干的还算开心，交个朋友保持交流了",
-      "priority": true
-    },
-    "gh-tan-xu": {
-      "status": "pass",
-      "priority": true
-    },
     "gh-starrylyn": {
       "status": "contacted",
       "priority": true
     },
-    "gh-AnyaCoder-f2c953d5bdbd": {
-      "priority": true
-    },
     "gh-qq547276542": {
-      "status": "replied",
-      "priority": true
+      "status": "replied"
     },
     "gh-jzq2000": {
       "status": "replied",
       "priority": true
     },
-    "gh-limafang-78f9d03b62fb": {
-      "priority": true
-    },
-    "gh-bowenliang123-811014a44990": {
-      "priority": true
-    },
-    "gh-Ccapton-7d0e5a64e757": {
-      "priority": true
-    },
-    "gh-yaosenJ-da28c6c95be3": {
-      "priority": true
-    },
-    "gh-JINO-ROHIT-541a3a0c2656": {
-      "priority": true
-    },
-    "gh-iamjoel-f9ef4b8c46d0": {
-      "priority": true
-    },
-    "gh-JohnJyong-fe7382561452": {
-      "priority": true
-    },
-    "gh-KPatr1ck-de0f8efc658f": {
-      "priority": true
-    },
-    "gh-KakaruHayate-35d6b9b85be9": {
-      "priority": true
-    },
-    "gh-longcw-3f308206746b": {
-      "priority": true
-    },
-    "gh-iflamed-4f96fc8c7fd0": {
-      "priority": true
-    },
-    "gh-PoTaTo-Mika-b790b760cada": {
-      "priority": true
-    },
-    "gh-lishengzxc": {
-      "priority": true
-    },
-    "gh-Susieji-0e93ce7d2e83": {
-      "priority": true
-    },
-    "gh-tyanz-6c283aafbaff": {
-      "priority": true
-    },
-    "gh-Wendong-Fan-44db5bb8c5ab": {
+    "gh-cyfyifanchen": {
+      "status": "contacted",
       "priority": true
     },
     "gh-wangxiongts": {
       "status": "contacted",
-      "priority": true
-    },
-    "gh-SmileGoat-3911638a3727": {
-      "priority": true
-    },
-    "hiyouga": {
-      "status": "pass",
-      "note": "LlamaFactory is most-starred LLM fine-tuning framework; 6.3k followers; Beijing-based; Active maintainer\n已创业",
       "priority": true
     },
     "gh-hecheng0625": {
@@ -272,68 +92,29 @@
       "priority": true
     },
     "gh-aopstudio": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-duzx16": {
-      "status": "pass",
-      "priority": true
-    },
-    "gh-zzhangpurdue": {
-      "priority": true
+      "status": "contacted"
     },
     "gh-lauragpt": {
       "status": "contacted",
-      "priority": true
-    },
-    "gh-frozentearz-5472076b93dd": {
       "priority": true
     },
     "ten-halajohn": {
       "status": "replied",
       "priority": true
     },
-    "gh-hexisyztem-cd7ce14b2d80": {
-      "priority": true
-    },
-    "gh-wishhyt-b54d8bebb02f": {
-      "priority": true
-    },
-    "gh-liaochenliang": {
-      "status": "pass",
-      "priority": true
-    },
     "gh-lovemefan": {
       "status": "contacted",
       "priority": true
     },
-    "gh-ranchlai": {
-      "priority": true
-    },
-    "gh-takatost-2ecc1c2739c0": {
-      "priority": true
-    },
-    "gh-wuzhiping-4b29df21e8ca": {
-      "priority": true
-    },
-    "gh-HarderThenHarder-900345d050af": {
-      "priority": true
-    },
     "jingcheng-pang": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-aaronz345": {
-      "status": "pass",
-      "priority": true
+      "status": "contacted"
     },
     "gh-bbuf": {
       "status": "contacted",
       "priority": true
     },
     "gh-ldzhangyx": {
-      "status": "contacted",
-      "priority": true
+      "status": "contacted"
     },
     "gh-pengzhendong": {
       "status": "replied",
@@ -344,37 +125,24 @@
       "status": "contacted",
       "priority": true
     },
-    "gh-sengxian": {
-      "status": "pass"
-    },
     "gh-kaituoxu": {
       "status": "contacted"
     },
+    "gh-lmxue": {
+      "status": "replied",
+      "note": "学术背景+产业合作；Amphion(9.7k stars)联合创始人(OpenMMLab工业项目)；Spark-TTS贡献者；语音生成技术深厚\n五一前后苏州见面",
+      "priority": true
+    },
     "gh-pandamq": {
       "status": "contacted"
-    },
-    "gh-zshbleaker": {
-      "status": "pass"
     },
     "gh-cwx-worst-one": {
       "status": "converted",
       "note": "豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach"
     },
-    "gh-xinshengwang": {
-      "status": "pass"
-    },
     "gh-ddlBoJack": {
       "status": "converted",
       "note": "benchamark合作，qwen-audio和豆包audio顾问"
-    },
-    "gh-qiuyanli1990": {
-      "status": "pass"
-    },
-    "gh-sunxilin": {
-      "status": "pass"
-    },
-    "gh-wangclnlp-49eb53b0831b": {
-      "priority": true
     },
     "gh-xiaoxigua999": {
       "status": "contacted"
@@ -415,9 +183,6 @@
       "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
       "priority": true
     },
-    "gh-alex-xinlu": {
-      "status": "pass"
-    },
     "gh-hanhandi": {
       "status": "replied",
       "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
@@ -425,20 +190,17 @@
     "gh-voidking": {
       "status": "contacted"
     },
-    "metagpt-pm": {
-      "status": "pass"
-    },
     "gh-jiangjiechen": {
       "status": "contacted"
     },
-    "gh-arvinxx": {
-      "status": "pass"
+    "gh-XiangJinyu": {
+      "status": "contacted"
     },
     "gh-davdgao": {
       "status": "contacted"
     },
-    "gh-cyfyifanchen": {
-      "status": "contacted"
+    "gh-hijkzzz": {
+      "status": "replied"
     },
     "gh-rayrayraykk": {
       "status": "contacted"
@@ -446,61 +208,106 @@
     "gh-ymcui": {
       "status": "contacted"
     },
-    "gh-wenbindu": {
-      "status": "pass"
-    },
     "gh-yerfor": {
       "status": "contacted"
     },
-    "gh-lengyue233": {
-      "status": "pass"
+    "mannaandpoem-openmanus": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-PeterSH6": {
+      "status": "contacted",
+      "priority": true
     },
     "xl-chenqian": {
       "status": "replied"
     },
-    "gh-smilexin": {
-      "status": "pass"
-    },
-    "gh-lmxue": {
-      "status": "replied",
-      "note": "学术背景+产业合作；Amphion(9.7k stars)联合创始人(OpenMMLab工业项目)；Spark-TTS贡献者；语音生成技术深厚\n五一前后苏州见面"
-    },
     "gh-arthasking123": {
       "status": "replied"
-    },
-    "gh-better629": {
-      "status": "pass",
-      "note": "MetaGPT 核心提交者之一；FoundationAgents 组织成员；视觉转 Agent 背景跨度大；82 followers\n王金淋，DeepWisdom暂时不打算换，base深圳/厦门，出差时约见面，保持联系"
     },
     "gh-garylin2099": {
       "status": "contacted"
     },
-    "gh-jenqyang": {
-      "status": "pass"
-    },
     "gh-chujiezheng": {
       "status": "contacted"
     },
-    "gh-XiangJinyu": {
-      "status": "contacted"
-    },
-    "gh-hijkzzz": {
-      "status": "replied"
-    },
-    "mannaandpoem-openmanus": {
-      "status": "contacted"
-    },
-    "gh-PeterSH6": {
+    "gh-didiforgithub": {
       "status": "contacted"
     },
     "gh-geekan": {
       "status": "pass"
     },
+    "gh-sengxian": {
+      "status": "pass"
+    },
+    "gh-arvinxx": {
+      "status": "pass"
+    },
+    "gh-smilexin": {
+      "status": "pass"
+    },
+    "gh-plutoless": {
+      "status": "pass"
+    },
     "funaudillm": {
       "status": "pass"
     },
-    "gh-didiforgithub": {
-      "status": "contacted"
+    "gh-3rd-musketeer": {
+      "status": "pass"
+    },
+    "gh-zshbleaker": {
+      "status": "pass"
+    },
+    "gh-alex-xinlu": {
+      "status": "pass"
+    },
+    "gh-xinshengwang": {
+      "status": "pass"
+    },
+    "hiyouga": {
+      "status": "pass",
+      "note": "LlamaFactory is most-starred LLM fine-tuning framework; 6.3k followers; Beijing-based; Active maintainer\n已创业"
+    },
+    "gh-duzx16": {
+      "status": "pass"
+    },
+    "gh-jenqyang": {
+      "status": "pass"
+    },
+    "gh-better629": {
+      "status": "pass",
+      "note": "MetaGPT 核心提交者之一；FoundationAgents 组织成员；视觉转 Agent 背景跨度大；82 followers\n王金淋，DeepWisdom暂时不打算换，base深圳/厦门，出差时约见面，保持联系"
+    },
+    "gh-wenbindu": {
+      "status": "pass"
+    },
+    "gh-liaochenliang": {
+      "status": "pass"
+    },
+    "gh-qiuyanli1990": {
+      "status": "pass"
+    },
+    "gh-sunxilin": {
+      "status": "pass"
+    },
+    "gh-lengyue233": {
+      "status": "pass"
+    },
+    "gh-aaronz345": {
+      "status": "pass"
+    },
+    "metagpt-pm": {
+      "status": "pass"
+    },
+    "gh-wangzhaode": {
+      "status": "pass"
+    },
+    "gh-tc-mb": {
+      "status": "pass",
+      "note": "面壁智能推理 infra 工程师；llama.cpp-omni 原作者；在主流 LLM serving 框架提交 MiniCPM-V/O 支持 PR；infra 向候选人，典型端侧多模态部署背景\nCV推理优化出身，24年加入面壁，汇报给多模态组负责人姚远，对多模走向具身比较有兴趣，感觉在面壁干的还算开心，交个朋友保持交流了"
+    },
+    "gh-tan-xu": {
+      "status": "pass"
     }
   },
   "deleted_ids": [
