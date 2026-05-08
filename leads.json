@@ -826,13 +826,29 @@
       "org_account_signal": false,
       "zhihu": "https://www.zhihu.com/people/fdl-72",
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email 228921959@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、知乎、GitHub 主页。未找到/未公开：X / Twitter、小红书、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：228921959@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:ASR-LLM-TTS: 228921959@qq.com",
         "zhihu: https://www.zhihu.com/people/fdl-72"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "zhihu",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-zzw922cn-155726572903",
@@ -1726,12 +1742,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email a2983352531@outlook.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：a2983352531@outlook.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:TopVenuePapers: a2983352531@outlook.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-qq547276542",
@@ -1845,12 +1877,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email juzeqian@mail.ustc.edu.cn.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：juzeqian@mail.ustc.edu.cn。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "readme_email:MoonCast: juzeqian@mail.ustc.edu.cn"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-zh794390558-43ee6e6cac35",
@@ -2094,12 +2142,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email wangsihan1995@gmail.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：wangsihan1995@gmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:sd-webui-image-sequence-toolkit: wangsihan1995@gmail.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-PriesiaMioShirakana-70b86a2f326d",
@@ -2143,13 +2207,31 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, personal website, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email 1751842477@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页、个人主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：1751842477@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:DragonianVoice: 1751842477@qq.com",
         "readme_email:PriesiaMioShirakana: shirakanamio@foxmail.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-RVC-Boss-ecb088cde377",
@@ -2193,15 +2275,31 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "manual_needed",
-      "contact_research_summary": "Checked GitHub profile, GPT-SoVITS/RVC public pages, README/search results, and public web. No email, Zhihu, Xiaohongshu, or LinkedIn found. Discord/community channel is visible; GitHub issues are possible but not ideal for recruiting.",
-      "contact_next_step": "HR should manually search LinkedIn/Chinese platforms and ask for warm intro. If appropriate, use project Discord/community or GitHub issue only as a last resort.",
+      "contact_research_summary": "公开渠道未找到直接触达方式，需要人工补充。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：GitHub 主页。未找到/未公开：邮箱、X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "公开渠道暂未找到直接联系方式；建议 HR 手动搜 LinkedIn、脉脉、小红书、知乎，并优先找共同关系 warm intro。GitHub issue/项目社区只作为最后手段。",
       "contact_sources": [
         "github: https://github.com/RVC-Boss",
         "repo: https://github.com/RVC-Boss/GPT-SoVITS",
         "repo: https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI",
         "discord: https://discord.gg/HcsmBBGyVk"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "github"
+      ],
+      "contact_missing_channels": [
+        "email",
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-tramphero-838da8f31d30",
@@ -2310,12 +2408,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email spensercai@gmail.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：spensercai@gmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:DRat: spensercai@gmail.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-lyblsgo-f25deac7e42f",
@@ -2359,13 +2473,29 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email wucong.lyb@alibaba-inc.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：wucong.lyb@alibaba-inc.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:FunASR: wucong.lyb@alibaba-inc.com",
         "commit_email:Nutch_Templates: lyblsgo@163.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-Yuan-ManX-bd9874b5e731",
@@ -2476,14 +2606,32 @@
       "org_account_signal": false,
       "google_scholar": "https://scholar.google.com.hk/citations?user=fhWk0gEAAAAJ&amp;hl=zh-CN",
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, personal website, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email yuexiang.xyx@alibaba-inc.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、Google Scholar、GitHub 主页、个人主页。未找到/未公开：小红书、知乎、LinkedIn。",
+      "contact_next_step": "建议 HR 优先发邮件：yuexiang.xyx@alibaba-inc.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "website_email: yuexiang.xyx@alibaba-inc.com",
         "google_scholar: https://scholar.google.com.hk/citations?user=fhWk0gEAAAAJ&amp;hl=zh-CN",
         "twitter: https://x.com/agentscope_ai"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "google_scholar",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "xiaohongshu",
+        "zhihu",
+        "linkedin"
+      ]
     },
     {
       "id": "gh-ylzz1997-cec2a4df0bef",
@@ -2594,12 +2742,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email 3284494602@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：3284494602@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "readme_email:Barkify: 3284494602@qq.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-daymade-834d245af031",
@@ -2642,13 +2806,31 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, personal website, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email daymadev89@gmail.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、GitHub 主页、个人主页。未找到/未公开：小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：daymadev89@gmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:Twitter-Block-Porn: daymadev89@gmail.com",
         "twitter: https://twitter.com/i/lists/1677334530754248706"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-edgemoorlf-bb6b3b203d5a",
@@ -2690,12 +2872,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email fang_liang@hotmail.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：fang_liang@hotmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:traderclaw: fang_liang@hotmail.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-6drf21e-a5d11a97cd0e",
@@ -2713,7 +2911,7 @@
       "xiaohongshu": null,
       "github": "https://github.com/6drf21e",
       "website": "",
-      "contact": "git@github.com",
+      "contact": "nir311@163.com",
       "source": "repo_contributor: 2noise/ChatTTS",
       "platform": "github",
       "notes": "GitHub followers: 57 | repos: 24 | 加入时间: 2017-06 | source: repo_contributor: 2noise/ChatTTS",
@@ -2737,13 +2935,29 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email git@github.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：git@github.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "readme_email:ChatTTS_colab: git@github.com",
         "commit_email:ChatTTS_colab: nir311@163.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-hnluo-76dc1994c228",
@@ -2851,12 +3065,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email xiyiji508@gmail.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：xiyiji508@gmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:so-vits-svc: xiyiji508@gmail.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-ipfans-8de0794ae50a",
@@ -3232,12 +3462,31 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, personal website, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email alexcheery5@gmail.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页、个人主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：alexcheery5@gmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
-        "commit_email:open-coreui: alexcheery5@gmail.com"
+        "commit_email:open-coreui: alexcheery5@gmail.com",
+        "commit_email:VibeGo: alexcheery5@gmail.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-zombieyang-7d26d3dd5a4c",
@@ -3688,13 +3937,29 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email 277887774@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：277887774@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "readme_email:realme_agent: 277887774@qq.com",
         "commit_email:realme_agent: 2654765335@qq.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-JINO-ROHIT-541a3a0c2656",
@@ -3868,12 +4133,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email 718720800@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：718720800@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:ai-local-concierge: 718720800@qq.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-KPatr1ck-de0f8efc658f",
@@ -3915,12 +4196,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email 109694228@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：109694228@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:zmk-config-charybdis-mini-wireless: 109694228@qq.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-KakaruHayate-35d6b9b85be9",
@@ -3964,12 +4261,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email kakaru.hk@hotmail.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：kakaru.hk@hotmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:OnnxSlim: kakaru.hk@hotmail.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-longcw-3f308206746b",
@@ -4082,15 +4395,33 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, personal website, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email newbing@caitun.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、GitHub 主页、个人主页。未找到/未公开：小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：newbing@caitun.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "website_email: newbing@caitun.com",
         "website_email: bd@caitun.com",
         "commit_email:hono-react-ssr-shadcn-ui: iflamed@gmail.com",
         "twitter: https://x.com/dotcopilot_ai"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-PoTaTo-Mika-b790b760cada",
@@ -4203,13 +4534,31 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, personal website, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email 306009337@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、GitHub 主页、个人主页。未找到/未公开：小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：306009337@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:CoPaw: 306009337@qq.com",
         "twitter: https://x.com/Fried_rice"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-Susieji-0e93ce7d2e83",
@@ -4252,12 +4601,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 2 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email shujie.ji@intel.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 2 repo READMEs、public commits from top 2 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：shujie.ji@intel.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:CosyVoiceTTS-skill: shujie.ji@intel.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 2 repo READMEs",
+        "public commits from top 2 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-tyanz-6c283aafbaff",
@@ -4369,13 +4734,29 @@
       "org_account_signal": false,
       "zhihu": "https://www.zhihu.com/people/zhang-shi-tou-88-98/posts",
       "contact_research_status": "social_dm_available",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: social_dm_available.",
-      "contact_next_step": "HR can follow/DM via zhihu, twitter.",
+      "contact_research_summary": "未找到邮箱，但有可私信社媒。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：X / Twitter、知乎、GitHub 主页。未找到/未公开：邮箱、小红书、LinkedIn、Google Scholar。",
+      "contact_next_step": "未找到邮箱，建议 HR 通过 知乎、X / Twitter 私信；同时手动搜 LinkedIn/脉脉/小红书补充二次路径。",
       "contact_sources": [
         "zhihu: https://www.zhihu.com/people/zhang-shi-tou-88-98/posts",
         "twitter: https://twitter.com/CamelAIOrg"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "twitter",
+        "zhihu",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "email",
+        "xiaohongshu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-wangxiongts",
@@ -4486,12 +4867,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email goat.zhou@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：goat.zhou@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:SpeechRecognizer: goat.zhou@qq.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-hecheng0625",
@@ -5140,13 +5537,29 @@
       "org_account_signal": false,
       "email": "ranchlai@163.com",
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email ranchlai@163.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：ranchlai@163.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:mandarin-tts: ranchlai@163.com",
         "commit_email:mandarin-tts: ranchlai@hotmail.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-takatost-2ecc1c2739c0",
@@ -5189,13 +5602,29 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email takatost@gmail.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、GitHub 主页。未找到/未公开：小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：takatost@gmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:ngx_lua_php_queue: takatost@gmail.com",
         "twitter: https://twitter.com/langchainai"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-wuzhiping-4b29df21e8ca",
@@ -5239,12 +5668,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "social_dm_available",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: social_dm_available.",
-      "contact_next_step": "HR can follow/DM via twitter.",
+      "contact_research_summary": "未找到邮箱，但有可私信社媒。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：X / Twitter、GitHub 主页。未找到/未公开：邮箱、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "未找到邮箱，建议 HR 通过 X / Twitter 私信；同时手动搜 LinkedIn/脉脉/小红书补充二次路径。",
       "contact_sources": [
         "twitter: https://x.com/GoogleCloudTech/article/2033953579824758855"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "twitter",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "email",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-HarderThenHarder-900345d050af",
@@ -5289,13 +5734,31 @@
       "org_account_signal": false,
       "zhihu": "https://www.zhihu.com/people/who-u",
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, personal website, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email 1414463123@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、知乎、GitHub 主页、个人主页。未找到/未公开：X / Twitter、小红书、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：1414463123@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:transformers_tasks: 1414463123@qq.com",
         "zhihu: https://www.zhihu.com/people/who-u"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "zhihu",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "jingcheng-pang",
@@ -9300,12 +9763,28 @@
       "research_updated": "",
       "org_account_signal": false,
       "contact_research_status": "email_found",
-      "contact_research_summary": "Checked GitHub profile, top 3 repo READMEs. Result: email_found.",
-      "contact_next_step": "HR can email chenglong1119@qq.com.",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：chenglong1119@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
       "contact_sources": [
         "commit_email:MSRL: chenglong1119@qq.com"
       ],
-      "contact_research_updated": "2026-05-08"
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ]
     },
     {
       "id": "gh-wildminder",
