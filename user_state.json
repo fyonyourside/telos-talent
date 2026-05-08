@@ -1,9 +1,10 @@
 {
   "version": 1,
-  "last_updated": "2026-05-08T13:22:27",
+  "last_updated": "2026-05-08T13:26:35",
   "user_states": {
     "gh-plutoless": {
-      "status": "pass"
+      "status": "pass",
+      "priority": true
     },
     "gh-garyzhang99": {
       "priority": true
