@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-08T14:22:08",
+  "last_updated": "2026-05-08T08:10:07.142Z",
   "user_states": {
     "gh-jaredforreal": {
       "status": "contacted",
@@ -92,7 +92,7 @@
       "priority": true
     },
     "gh-aopstudio": {
-      "status": "contacted"
+      "status": "replied"
     },
     "gh-lauragpt": {
       "status": "contacted",
