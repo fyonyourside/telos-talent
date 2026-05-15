@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-08T08:10:07.142Z",
+  "last_updated": "2026-05-15T17:21:44",
   "user_states": {
     "gh-jaredforreal": {
       "status": "contacted",
@@ -12,16 +12,37 @@
       "note": "Kimi-Audio主要作者；LongCat-Flash-Omni(560B-A27B)；ex Tencent/miHoYo/Meituan；语音LLM顶尖工程师；北京\n目前在美团做龙猫",
       "priority": true
     },
-    "gh-yiminw": {
-      "status": "contacted"
+    "gh-cwx-worst-one": {
+      "status": "converted",
+      "note": "豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach"
     },
     "gh-aluminumbox": {
       "status": "contacted",
       "priority": true
     },
+    "gh-wangxiongts": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-hecheng0625": {
+      "status": "replied",
+      "priority": true
+    },
     "gh-yuekaizhang": {
       "status": "converted",
       "note": "人才推荐和背调，开源方案效果测评"
+    },
+    "gh-lauragpt": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-ddlBoJack": {
+      "status": "converted",
+      "note": "benchamark合作，qwen-audio和豆包audio顾问"
+    },
+    "gh-lovemefan": {
+      "status": "contacted",
+      "priority": true
     },
     "gh-cuiunbo": {
       "status": "contacted"
@@ -31,8 +52,9 @@
       "note": "汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent），在勤锴手下scope挺大的\n约了5月11号之后见面聊",
       "priority": true
     },
-    "gh-zhc7": {
-      "status": "contacted",
+    "gh-pengzhendong": {
+      "status": "replied",
+      "note": "约了杭州见面",
       "priority": true
     },
     "gh-shibing624": {
@@ -65,71 +87,16 @@
       "status": "contacted",
       "priority": true
     },
-    "gh-starrylyn": {
-      "status": "contacted",
-      "priority": true
-    },
     "gh-qq547276542": {
       "status": "replied"
-    },
-    "gh-jzq2000": {
-      "status": "replied",
-      "priority": true
     },
     "gh-weedge": {
       "status": "contacted"
     },
-    "gh-cyfyifanchen": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-wangxiongts": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-hecheng0625": {
-      "status": "replied",
-      "priority": true
-    },
-    "gh-aopstudio": {
-      "status": "replied"
-    },
-    "gh-lauragpt": {
-      "status": "contacted",
-      "priority": true
-    },
-    "ten-halajohn": {
-      "status": "replied",
-      "priority": true
-    },
-    "gh-lovemefan": {
-      "status": "contacted",
-      "priority": true
-    },
     "jingcheng-pang": {
       "status": "contacted"
     },
-    "gh-bbuf": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-ldzhangyx": {
-      "status": "contacted"
-    },
-    "gh-pengzhendong": {
-      "status": "replied",
-      "note": "约了杭州见面",
-      "priority": true
-    },
     "gh-yangdongchao": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-vermouth1992": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-bluemotional": {
       "status": "contacted",
       "priority": true
     },
@@ -144,30 +111,16 @@
       "note": "学术背景+产业合作；Amphion(9.7k stars)联合创始人(OpenMMLab工业项目)；Spark-TTS贡献者；语音生成技术深厚\n五一前后苏州见面",
       "priority": true
     },
-    "gh-pandamq": {
-      "status": "contacted"
-    },
-    "xl-shichunliu": {
-      "status": "converted",
-      "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
-      "priority": true
-    },
-    "gh-hanhandi": {
-      "status": "replied",
-      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
-    },
-    "gh-xiaoxigua999": {
-      "status": "contacted"
-    },
-    "gh-yiranyyu": {
-      "status": "contacted"
+    "gh-aopstudio": {
+      "status": "replied"
     },
     "gh-csukuangfj": {
       "status": "contacted",
       "priority": true
     },
-    "gh-voidking": {
-      "status": "contacted"
+    "gh-zhc7": {
+      "status": "contacted",
+      "priority": true
     },
     "gh-bokesyo": {
       "status": "converted"
@@ -177,6 +130,32 @@
       "priority": true
     },
     "kedreamix-linly": {
+      "status": "contacted"
+    },
+    "gh-vermouth1992": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-bluemotional": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-pandamq": {
+      "status": "contacted"
+    },
+    "xl-shichunliu": {
+      "status": "converted",
+      "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
+      "priority": true
+    },
+    "gh-voidking": {
+      "status": "contacted"
+    },
+    "gh-bbuf": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-ldzhangyx": {
       "status": "contacted"
     },
     "gh-jiangjiechen": {
@@ -194,12 +173,6 @@
     "gh-hijkzzz": {
       "status": "replied"
     },
-    "gh-rayrayraykk": {
-      "status": "contacted"
-    },
-    "gh-ymcui": {
-      "status": "contacted"
-    },
     "gh-yerfor": {
       "status": "contacted"
     },
@@ -211,28 +184,55 @@
       "status": "contacted",
       "priority": true
     },
+    "gh-chujiezheng": {
+      "status": "contacted"
+    },
     "xl-chenqian": {
       "status": "replied"
     },
-    "gh-cwx-worst-one": {
-      "status": "converted",
-      "note": "豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach"
+    "gh-rayrayraykk": {
+      "status": "contacted"
     },
     "gh-arthasking123": {
       "status": "replied"
     },
-    "gh-ddlBoJack": {
-      "status": "converted",
-      "note": "benchamark合作，qwen-audio和豆包audio顾问"
-    },
     "gh-garylin2099": {
-      "status": "contacted"
-    },
-    "gh-chujiezheng": {
       "status": "contacted"
     },
     "gh-didiforgithub": {
       "status": "contacted"
+    },
+    "gh-xiaoxigua999": {
+      "status": "contacted"
+    },
+    "gh-ymcui": {
+      "status": "contacted"
+    },
+    "gh-cyfyifanchen": {
+      "status": "contacted",
+      "priority": true
+    },
+    "ten-halajohn": {
+      "status": "replied",
+      "priority": true
+    },
+    "gh-starrylyn": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-jzq2000": {
+      "status": "replied",
+      "priority": true
+    },
+    "gh-yiminw": {
+      "status": "contacted"
+    },
+    "gh-yiranyyu": {
+      "status": "contacted"
+    },
+    "gh-hanhandi": {
+      "status": "replied",
+      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
     },
     "gh-geekan": {
       "status": "pass"
