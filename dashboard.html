@@ -16301,6 +16301,8 @@ function setCustomName(id, name) {
   if(!leadsIndex[id]) return;
   leadsIndex[id].custom_name = String(name || '').trim();
   scheduleSave();
+  renderAll();
+  renderPriorityPanel();
 }
 function setTalentTrackManual(id, track) {
   if(!leadsIndex[id]) return;
