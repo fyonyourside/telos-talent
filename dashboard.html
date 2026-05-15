@@ -123,6 +123,52 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
 .card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
 .card-name { font-size:14px; font-weight:600; color:var(--text); line-height:1.3; }
 .card-name-sub { font-size:11px; color:var(--text-dim); margin-top:2px; }
+.card-name-edit {
+  width:100%; max-width:160px; font-size:14px; font-weight:600; color:var(--text);
+  background:rgba(0,0,0,0.25); border:1px solid transparent; border-radius:6px;
+  padding:2px 6px; line-height:1.3;
+}
+.card-name-edit:focus { outline:none; border-color:rgba(232,150,42,0.45); background:rgba(0,0,0,0.35); }
+.track-select {
+  margin-top:4px; font-size:10px; padding:2px 6px; border-radius:6px;
+  background:rgba(0,0,0,0.3); border:1px solid var(--border); color:var(--text-mid);
+  max-width:100%;
+}
+.track-select:focus { outline:none; border-color:rgba(232,150,42,0.4); }
+.modal-name-edit, .modal-track-select {
+  width:100%; margin-top:6px; font-size:13px; padding:6px 8px; border-radius:8px;
+  background:rgba(0,0,0,0.25); border:1px solid var(--border); color:var(--text);
+}
+.modal-field-label { font-size:10px; color:var(--text-dim); margin-bottom:4px; letter-spacing:0.04em; }
+
+.archive-wrap {
+  margin: 0 20px 28px; border:1px solid var(--border); border-radius:12px;
+  background:rgba(0,0,0,0.15); overflow:hidden;
+}
+.archive-header {
+  display:flex; align-items:center; gap:10px; padding:12px 16px; cursor:pointer;
+  user-select:none; color:var(--text-mid); font-size:13px;
+}
+.archive-header:hover { background:rgba(255,255,255,0.03); }
+.archive-summary { margin-left:auto; font-size:11px; color:var(--text-dim); }
+.archive-chev { font-size:10px; color:var(--text-dim); transition:transform .2s; }
+.archive-chev.open { transform:rotate(90deg); }
+.archive-body { display:none; padding:0 12px 12px; }
+.archive-body.open { display:block; }
+.archive-section { margin-top:8px; }
+.archive-section-title {
+  font-size:11px; font-weight:600; color:var(--text-dim); padding:8px 4px 6px;
+  letter-spacing:0.06em;
+}
+.archive-list { display:flex; flex-direction:column; gap:4px; max-height:280px; overflow-y:auto; }
+.archive-row {
+  display:flex; align-items:center; gap:8px; padding:8px 10px; border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06); cursor:pointer; font-size:12px;
+}
+.archive-row:hover { background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.1); }
+.archive-row-name { font-weight:600; color:var(--text); flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.archive-row-meta { font-size:10px; color:var(--text-dim); flex-shrink:0; }
+.archive-row-st { font-size:10px; flex-shrink:0; opacity:0.85; }
 .badges { display:flex; gap:6px; align-items:center; flex-shrink:0; }
 
 /* score dots */
@@ -566,7 +612,6 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
     <span class="chip voice-f"   data-filter="voice"    onclick="toggleFilter(this)">🎙 语音</span>
     <span class="chip new-f"     data-filter="new"      onclick="toggleFilter(this)">🆕 未联系</span>
     <span class="chip new-f"     data-filter="priority" onclick="toggleFilter(this)">⭐ 仅优先</span>
-    <span class="chip converted-f" data-filter="converted" onclick="toggleFilter(this)">🎉 已转化</span>
   </div>
 </div>
 
@@ -584,6 +629,23 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
 
 <!-- Swim Lanes -->
 <div class="lanes-wrap" id="lanes-wrap"></div>
+<div class="archive-wrap" id="archive-wrap" style="display:none">
+  <div class="archive-header" onclick="toggleArchive()">
+    <span>📦 暂不跟进</span>
+    <span class="archive-summary" id="archive-summary"></span>
+    <span class="archive-chev" id="archive-chev">▶</span>
+  </div>
+  <div class="archive-body" id="archive-body">
+    <div class="archive-section">
+      <div class="archive-section-title">🎉 已转化</div>
+      <div class="archive-list" id="archive-converted"></div>
+    </div>
+    <div class="archive-section">
+      <div class="archive-section-title">❌ 不合适</div>
+      <div class="archive-list" id="archive-pass"></div>
+    </div>
+  </div>
+</div>
 <div class="empty" id="empty" style="display:none;text-align:center;padding:80px 20px;color:var(--text-dim);font-size:13px">没有符合条件的候选人</div>
 
 <!-- Modal -->
@@ -695,7 +757,153 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 1
+      "track_rank": 1,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-lishengzxc",
+      "name": "Sheng Li / 李升 (lishengzxc)",
+      "role": "Harness Eng",
+      "score": 10,
+      "location": "上海",
+      "current": "Alibaba (AgentScope)",
+      "bg": "AgentScope-Runtime / agentscope-spark-design / QwenPaw 贡献者；阿里通义 Agent 平台前端/SDK 工程",
+      "skills": [
+        "AgentScope",
+        "Agent SDK",
+        "前端",
+        "Multi-Agent",
+        "Alibaba",
+        "QwenPaw"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/lishengzxc",
+      "website": "https://lishengcn.cn",
+      "contact": "306009337@qq.com",
+      "source": "github_search",
+      "platform": "github",
+      "notes": "阿里 AgentScope 团队工程师；agentscope-runtime/QwenPaw 多个产品线贡献者；上海",
+      "is_academic": false,
+      "date_found": "2026-04-25",
+      "tier": "A",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "306009337@qq.com",
+      "twitter": "https://x.com/Fried_rice",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "contact_research_status": "email_found",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、GitHub 主页、个人主页。未找到/未公开：小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：306009337@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
+      "contact_sources": [
+        "commit_email:CoPaw: 306009337@qq.com",
+        "twitter: https://x.com/Fried_rice"
+      ],
+      "contact_research_updated": "2026-05-08",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ],
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 2,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-bowenliang123-811014a44990",
+      "name": "Bowen Liang",
+      "role": "Harness Eng",
+      "score": 9,
+      "tier": "A",
+      "location": "Guangzhou, China",
+      "current": "AIA, pre Standard Chartered, Guangfa Securities, @apache",
+      "bg": "梁博文, Apache Kyuubi PMC member, Contributor to Dify. | Repos: agentscope(⭐0) | hermes-agent(⭐0) | simple-icons(⭐0) | QwenPaw(⭐0)",
+      "skills": [
+        "Agent",
+        "RAG"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/bowenliang123",
+      "website": "",
+      "contact": "liang.bowen.123@qq.com",
+      "source": "repo_contributor: langgenius/dify",
+      "platform": "github",
+      "notes": "GitHub followers: 153 | repos: 71 | 加入时间: 2012-07 | source: repo_contributor: langgenius/dify",
+      "is_academic": false,
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "date_found": "2026-04-30",
+      "followers": 153,
+      "email": "liang.bowen.123@qq.com",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "note": "",
+      "priority": false,
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "contact_research_status": "email_found",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "twitter",
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ],
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：liang.bowen.123@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
+      "contact_sources": [
+        "github_email: liang.bowen.123@qq.com"
+      ],
+      "contact_research_updated": "2026-05-08",
+      "talent_track": "harness_eng",
+      "is_fde": false,
+      "track_rank": 3,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-longcw-3f308206746b",
@@ -768,7 +976,84 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 2
+      "track_rank": 4,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-twz915",
+      "name": "Weizhong Tu / twz915",
+      "role": "Harness Eng",
+      "score": 9,
+      "location": "北京",
+      "current": "Alibaba",
+      "bg": "AgentScope (阿里多 Agent 框架) 新晋贡献者；Bio: like coding, all kinds of IT news；98 repos；251 followers",
+      "skills": [
+        "Multi-Agent",
+        "AgentScope",
+        "Python",
+        "工程"
+      ],
+      "voice": false,
+      "xiaohongshu": "https://www.xiaohongshu.com/user/profile/691c18db0000000037032be9",
+      "github": "https://github.com/twz915",
+      "website": "https://www.zqxt.cn",
+      "contact": "twz915@qq.com",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "AgentScope 贡献者；阿里北京工程师；专注偏工程方向，需进一步评估算法/产品能力",
+      "is_academic": false,
+      "date_found": "2026-04-27",
+      "tier": "A",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "twz915@qq.com",
+      "twitter": "https://x.com/agentscope_ai",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "contact_research_status": "email_found",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "xiaohongshu",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ],
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、小红书、GitHub 主页、个人主页。未找到/未公开：知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：twz915@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
+      "contact_sources": [
+        "github_email: twz915@qq.com",
+        "commit_email:zqxt: tuweizhong@163.com",
+        "xiaohongshu: https://www.xiaohongshu.com/user/profile/691c18db0000000037032be9",
+        "twitter: https://x.com/agentscope_ai"
+      ],
+      "contact_research_updated": "2026-05-08",
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 5,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Wendong-Fan-44db5bb8c5ab",
@@ -837,7 +1122,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 3
+      "track_rank": 6,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-c121914yu-ce43a1d0047b",
@@ -912,7 +1199,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 4
+      "track_rank": 7,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-orange-crow-c593ac0b5b16",
@@ -979,74 +1268,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 5
-    },
-    {
-      "id": "gh-bowenliang123-811014a44990",
-      "name": "Bowen Liang",
-      "role": "Harness Eng",
-      "score": 8,
-      "tier": "A",
-      "location": "Guangzhou, China",
-      "current": "AIA, pre Standard Chartered, Guangfa Securities, @apache",
-      "bg": "梁博文, Apache Kyuubi PMC member, Contributor to Dify. | Repos: agentscope(⭐0) | hermes-agent(⭐0) | simple-icons(⭐0) | QwenPaw(⭐0)",
-      "skills": [
-        "Agent",
-        "RAG"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/bowenliang123",
-      "website": "",
-      "contact": "liang.bowen.123@qq.com",
-      "source": "repo_contributor: langgenius/dify",
-      "platform": "github",
-      "notes": "GitHub followers: 153 | repos: 71 | 加入时间: 2012-07 | source: repo_contributor: langgenius/dify",
-      "is_academic": false,
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "date_found": "2026-04-30",
-      "followers": 153,
-      "email": "liang.bowen.123@qq.com",
-      "twitter": "",
-      "wechat": "",
-      "status": "new",
-      "note": "",
-      "priority": false,
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "contact_research_status": "email_found",
-      "contact_checked_paths": [
-        "GitHub profile",
-        "top 3 repo READMEs",
-        "public commits from top 3 repos"
-      ],
-      "contact_found_channels": [
-        "email",
-        "github"
-      ],
-      "contact_missing_channels": [
-        "twitter",
-        "xiaohongshu",
-        "zhihu",
-        "linkedin",
-        "google_scholar"
-      ],
-      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
-      "contact_next_step": "建议 HR 优先发邮件：liang.bowen.123@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
-      "contact_sources": [
-        "github_email: liang.bowen.123@qq.com"
-      ],
-      "contact_research_updated": "2026-05-08",
-      "talent_track": "harness_eng",
-      "is_fde": false,
-      "track_rank": 6
+      "track_rank": 8,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-crazywoola-48c55e5786e6",
@@ -1112,7 +1336,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 7
+      "track_rank": 9,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lightaime-2398720cbbdd",
@@ -1183,7 +1409,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 8
+      "track_rank": 10,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-bluemotional",
@@ -1252,7 +1480,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 9
+      "track_rank": 11,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-KevinHuSh-d0de876ecb42",
@@ -1320,7 +1550,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 10
+      "track_rank": 12,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-pitt-liang",
@@ -1389,7 +1621,54 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 11
+      "track_rank": 13,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-Lynnooo-ee6523c550e7",
+      "name": "Lynnooo",
+      "role": "Harness Eng",
+      "talent_track": "pm",
+      "is_fde": false,
+      "score": 8,
+      "tier": "A",
+      "location": "",
+      "current": "GitHub: Lynnooo",
+      "bg": " | Repos: Multi-Agents(⭐0) | TencentOS-tiny(⭐0)",
+      "skills": [
+        "Agent"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/Lynnooo",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "repo_contributor: Lynnooo/Multi-Agents",
+      "platform": "github",
+      "notes": "GitHub followers: 0 | repos: 2 | 加入时间: 2021-07 | source: repo_contributor: Lynnooo/Multi-Agents",
+      "is_academic": false,
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; PM/model-to-product/benchmark-iteration signal",
+      "availability_risk": "",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "founder_signal": false,
+      "date_found": "2026-05-15",
+      "followers": 0,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "note": "",
+      "priority": false,
+      "org_account_signal": false,
+      "track_rank": 14,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zjrwtx-aeb2edb0834c",
@@ -1453,7 +1732,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 12
+      "track_rank": 15,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-MubahsirHassan-5d21fbd06ebe",
@@ -1520,7 +1801,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 13
+      "track_rank": 16,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Nikita-Etinger-d2a7368b67e5",
@@ -1585,7 +1868,88 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 14
+      "track_rank": 17,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-Osier-Yi-fc97b61542ce",
+      "name": "Osier-Yi",
+      "role": "Harness Eng",
+      "score": 8,
+      "tier": "A",
+      "location": "",
+      "current": "GitHub: Osier-Yi",
+      "bg": "Liuyi Yao | Repos: CoPaw(⭐1) | agentscope-samples(⭐0) | agentscope-runtime(⭐0) | PromptScope(⭐0)",
+      "skills": [
+        "Agent",
+        "Runtime"
+      ],
+      "voice": false,
+      "xiaohongshu": "https://www.xiaohongshu.com/user/profile/691c18db0000000037032be9",
+      "github": "https://github.com/Osier-Yi",
+      "website": "https://osier-yi.github.io./",
+      "contact": "liuyiyao@buffalo.edu",
+      "source": "repo_contributor: agentscope-ai/agentscope",
+      "platform": "github",
+      "notes": "GitHub followers: 54 | repos: 11 | 加入时间: 2014-07 | source: repo_contributor: agentscope-ai/agentscope",
+      "is_academic": false,
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "date_found": "2026-04-30",
+      "followers": 54,
+      "email": "liuyiyao@buffalo.edu",
+      "twitter": "https://x.com/agentscope_ai",
+      "wechat": "",
+      "status": "new",
+      "note": "",
+      "priority": false,
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "linkedin": "https://www.linkedin.com/in/liuyi-yao-93b775115/",
+      "google_scholar": "https://scholar.google.com/citations?hl=en&user=0c5is-gAAAAJ",
+      "contact_research_status": "email_found",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "xiaohongshu",
+        "linkedin",
+        "google_scholar",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "zhihu"
+      ],
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、小红书、LinkedIn、Google Scholar、GitHub 主页、个人主页。未找到/未公开：知乎。",
+      "contact_next_step": "建议 HR 优先发邮件：liuyiyao@buffalo.edu。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
+      "contact_sources": [
+        "website_email: liuyiyao@buffalo.edu",
+        "commit_email:CoPaw: yly287738@alibaba-inc.com",
+        "commit_email:FederatedScope: njuyaoliuyi@gmail.com",
+        "linkedin: https://www.linkedin.com/in/liuyi-yao-93b775115/",
+        "google_scholar: https://scholar.google.com/citations?hl=en&user=0c5is-gAAAAJ",
+        "xiaohongshu: https://www.xiaohongshu.com/user/profile/691c18db0000000037032be9",
+        "twitter: https://x.com/agentscope_ai"
+      ],
+      "contact_research_updated": "2026-05-08",
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 18,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Leirunlin-070833b8a3a0",
@@ -1657,7 +2021,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 15
+      "track_rank": 19,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-xqvvu-684bb8fa7484",
@@ -1724,7 +2090,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 16
+      "track_rank": 20,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-myhloli-a0a7b7f61568",
@@ -1793,7 +2161,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 17
+      "track_rank": 21,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zhangyingerjelly-4c299093da6a",
@@ -1863,7 +2233,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 18
+      "track_rank": 22,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yongtenglei-73ef97038c4b",
@@ -1931,7 +2303,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 19
+      "track_rank": 23,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-cuiyuebing-b5c1bc7b2e66",
@@ -1998,7 +2372,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 20
+      "track_rank": 24,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zhenruzhang-51de556ee8e0",
@@ -2065,7 +2441,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 21
+      "track_rank": 25,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yuzhichang-dca4689822cd",
@@ -2133,7 +2511,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 22
+      "track_rank": 26,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-cike8899-aee0fc9c9ec3",
@@ -2205,7 +2585,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 23
+      "track_rank": 27,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-hanhandi",
@@ -2277,7 +2659,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 24
+      "track_rank": 28,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-hugsun",
@@ -2350,7 +2734,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 25
+      "track_rank": 29,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-idontwanttosayaword-bc5b9a312d89",
@@ -2417,7 +2803,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 26
+      "track_rank": 30,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-qbc2016-76712ac19263",
@@ -2485,7 +2873,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 27
+      "track_rank": 31,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-sunshinexcode-cbdd423f6a05",
@@ -2554,7 +2944,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 28
+      "track_rank": 32,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-SunXiaoXiang-b900ab77332d",
@@ -2623,7 +3015,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 29
+      "track_rank": 33,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-tomasliu-agora-767e1f7bd6cd",
@@ -2689,7 +3083,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 30
+      "track_rank": 34,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ye7love7-e8db70280d89",
@@ -2756,7 +3152,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 31
+      "track_rank": 35,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zhijianma-0270b37c2a3a",
@@ -2825,7 +3223,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 32
+      "track_rank": 36,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-voidking",
@@ -2898,7 +3298,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 33
+      "track_rank": 37,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-bbuf",
@@ -2972,7 +3374,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 34
+      "track_rank": 38,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ldzhangyx",
@@ -3051,7 +3455,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 35
+      "track_rank": 39,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-jiangjiechen",
@@ -3127,7 +3533,137 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 36
+      "track_rank": 40,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-XiangJinyu",
+      "name": "项金宇 / Jinyu Xiang",
+      "role": "Harness Eng",
+      "score": 8,
+      "location": "中国（具体城市未确认）",
+      "current": "Karis 联合创始人 / Agent Universe 研究负责人",
+      "bg": "OpenManus核心作者(55k stars)；AFlow ICLR 2025 Oral；MetaGPT团队；2024阿里全球数学竞赛AI赛道第2名",
+      "skills": [
+        "Multi-Agent",
+        "LLM Agent",
+        "工作流自动化",
+        "MetaGPT",
+        "OpenManus"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/XiangJinyu",
+      "website": "https://xiangjinyu.github.io/",
+      "contact": "xiangjy2001@gmail.com",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "OpenManus联合创始人；AFlow ICLR Oral；MetaGPT团队；现创业Karis；技术+产品双修",
+      "is_academic": false,
+      "date_found": "2026-04-15",
+      "tier": "A",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "xiangjy2001@gmail.com",
+      "twitter": "@CosmoJinyu",
+      "wechat": "",
+      "status": "contacted",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "zhihu": "https://www.zhihu.com/people/-qw-28",
+      "google_scholar": "https://scholar.google.com/citations?user=NJv62qoAAAAJ&hl=en",
+      "contact_research_status": "email_found",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "personal website",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "zhihu",
+        "google_scholar",
+        "github",
+        "website"
+      ],
+      "contact_missing_channels": [
+        "xiaohongshu",
+        "linkedin"
+      ],
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、知乎、Google Scholar、GitHub 主页、个人主页。未找到/未公开：小红书、LinkedIn。",
+      "contact_next_step": "建议 HR 优先发邮件：xiangjy2001@gmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
+      "contact_sources": [
+        "website_email: xiangjy2001@gmail.com",
+        "commit_email:agent-harness-spec: 1376193973@qq.com",
+        "zhihu: https://www.zhihu.com/people/-qw-28",
+        "google_scholar: https://scholar.google.com/citations?user=NJv62qoAAAAJ&hl=en",
+        "twitter: https://twitter.com/CosmoJinyu"
+      ],
+      "contact_research_updated": "2026-05-08",
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 41,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-davdgao",
+      "name": "Dawei Gao / DavdGao",
+      "role": "Harness Eng",
+      "score": 7,
+      "location": "北京",
+      "current": "Alibaba Tongyi - AgentScope核心工程师",
+      "bg": "AgentScope（23.1k stars）核心开发者；FederatedScope联邦学习框架贡献者；Tongyi/Alibaba北京",
+      "skills": [
+        "LLM Agent",
+        "AgentScope",
+        "Multi-Agent",
+        "Federated Learning",
+        "Python",
+        "Alibaba"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/DavdGao",
+      "website": "https://davdgao.github.io/",
+      "contact": "GitHub: DavdGao; X: @daweigaooooo",
+      "source": "web_search",
+      "platform": "github",
+      "notes": "AgentScope(23.1k stars)核心贡献者；Alibaba Tongyi Beijing；Agent框架工程实力强",
+      "is_academic": false,
+      "date_found": "2026-04-08",
+      "tier": "B",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "",
+      "twitter": "daweigaooooo",
+      "wechat": "",
+      "status": "contacted",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 42,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-GoldWaterFall-2efdca89c827",
@@ -3170,7 +3706,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 37
+      "track_rank": 43,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-leeroo-coder-f95377201a81",
@@ -3214,7 +3752,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 38
+      "track_rank": 44,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-1850298154",
@@ -3260,39 +3800,138 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 39
+      "track_rank": 45,
+      "custom_name": "",
+      "track_manual": false
     },
     {
-      "id": "liyupi",
-      "name": "程序员鱼皮 / liyupi",
+      "id": "gh-didiforgithub",
+      "name": "张佳怡 / Jiayi Zhang",
       "role": "Harness Eng",
       "score": 7,
-      "location": "上海",
-      "current": "独立开发者 / 教育创作者",
-      "bg": "GitHub 21k followers；AI/编程社区影响力大；B站/公众号大V",
+      "location": "广州",
+      "current": "HKUST(GZ)",
+      "bg": "MetaGPT / OpenManus / AFlow 核心贡献者；Multi-Agent框架；ICLR2025 Oral",
       "skills": [
-        "AI应用开发",
-        "社区运营",
-        "产品感",
-        "Java",
-        "Python"
+        "Multi-Agent",
+        "LLM",
+        "Workflow自动化",
+        "AFlow",
+        "MetaGPT"
       ],
       "voice": false,
-      "xiaohongshu": "https://www.xiaohongshu.com/user/profile/5dc69dbe0000000001004ac0",
-      "github": "https://github.com/liyupi",
-      "website": "",
-      "contact": "GitHub: liyupi; X: @yupi996; 小红书见链接",
-      "source": "github",
+      "xiaohongshu": null,
+      "github": "https://github.com/didiforgithub",
+      "website": "https://didiforgithub.github.io/",
+      "contact": "Twitter: @didiforx；GitHub: didiforgithub",
+      "source": "web_search",
       "platform": "github",
-      "notes": "社区影响力强；适合AI产品推广角色；直接做技术PM有待验证",
-      "is_academic": false,
-      "date_found": "2026-04-04",
+      "notes": "AFlow(ICLR2025 Oral)第一作者；MetaGPT/OpenManus核心贡献者；香港科技大学广州在读；学术为主但开源影响力强",
+      "is_academic": true,
+      "date_found": "2026-04-14",
       "tier": "B",
       "is_eng": true,
       "is_pm": true,
       "is_algo": false,
       "email": "",
-      "twitter": "yupi996",
+      "twitter": "@didiforx",
+      "wechat": "",
+      "status": "contacted",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 46,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "xl-chenqian",
+      "name": "钱忱 / Chen Qian",
+      "role": "Harness Eng",
+      "score": 7,
+      "location": "上海（SJTU）",
+      "current": "SJTU 助理教授 / ex Tencent Tech Elite",
+      "bg": "THUNLP博士后；MetaGPT核心作者；Internet of Agents作者；ChatDev (ACL 2024)；ICLR 2025 Multi-Agent Scaling；Tencent Tech Elite经历",
+      "skills": [
+        "Multi-Agent",
+        "LLM Agents",
+        "框架设计",
+        "Agent协作",
+        "ChatDev",
+        "MetaGPT"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/qianc62",
+      "website": "https://qianc62.github.io/",
+      "contact": "Email: qianc62@gmail.com; X: @qianc62; GitHub: qianc62; 个人主页: qianc62.github.io",
+      "source": "xlsx",
+      "platform": "github",
+      "notes": "学术背景+产业合作；MetaGPT/IoA/ChatDev核心；ex Tencent Tech Elite；ICLR 2025；招募难度高但Multi-Agent顶级专家",
+      "is_academic": true,
+      "tier": "B",
+      "date_found": "2026-04-04",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "qianc62@gmail.com",
+      "twitter": "qianc62",
+      "wechat": "",
+      "status": "replied",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 47,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-shenchucheng",
+      "name": "Chucheng Shen / 沈楚成",
+      "role": "Harness Eng",
+      "score": 6,
+      "location": "中国",
+      "current": "DeepWisdom (MetaGPT)",
+      "bg": "MetaGPT 长期核心贡献者（48 仓库）；DeepWisdom 工程团队",
+      "skills": [
+        "Multi-Agent",
+        "MetaGPT",
+        "LLM Agent",
+        "Python",
+        "DeepWisdom"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/shenchucheng",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "github_search",
+      "platform": "github",
+      "notes": "DeepWisdom (MetaGPT 母公司) 工程师；MetaGPT 核心维护者之一；多智能体框架长期贡献者",
+      "is_academic": false,
+      "date_found": "2026-04-25",
+      "tier": "B",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "",
+      "twitter": "",
       "wechat": "",
       "status": "new",
       "priority": false,
@@ -3304,9 +3943,11 @@ const LEADS_DATA = {
       "research_urls": [],
       "research_updated": "",
       "org_account_signal": false,
-      "talent_track": "harness_eng",
+      "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 40
+      "track_rank": 48,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-dmitrii-khizbullin-fa5fb06833ce",
@@ -3349,7 +3990,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 41
+      "track_rank": 49,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-alcholiclg",
@@ -3394,7 +4037,104 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 42
+      "track_rank": 50,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-luohh5",
+      "name": "Haohao Luo / 罗浩浩 (Luohh5)",
+      "role": "Harness Eng",
+      "score": 6,
+      "location": "广州",
+      "current": "Sun Yat-sen University (中山大学)",
+      "bg": "中山大学；AgentScope 贡献者；广东",
+      "skills": [
+        "Agent",
+        "AgentScope",
+        "Multi-Agent",
+        "LLM"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/Luohh5",
+      "website": "",
+      "contact": "GitHub: Luohh5",
+      "source": "github_search",
+      "platform": "github",
+      "notes": "中山大学；AgentScope 仓库贡献者；学术派但有 AgentScope 实战经验",
+      "is_academic": true,
+      "date_found": "2026-04-28",
+      "tier": "B",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 51,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-huangweitao",
+      "name": "Huang Weitao / 黄伟韬 (huangweitao)",
+      "role": "Harness Eng",
+      "score": 6,
+      "location": "中国",
+      "current": "DeepWisdom (MetaGPT) — fuzhi.ai",
+      "bg": "DeepWisdom (MetaGPT 母公司) 核心工程师；MetaGPT 仓库 #4 贡献者（182 commits）；Multi-Agent 框架核心",
+      "skills": [
+        "Multi-Agent",
+        "MetaGPT",
+        "LLM Agent",
+        "DeepWisdom",
+        "Python"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/huangweitao",
+      "website": "",
+      "contact": "huangweitao@fuzhi.ai",
+      "source": "github_search",
+      "platform": "github",
+      "notes": "DeepWisdom 核心工程师（fuzhi.ai 域名）；MetaGPT 主要维护者之一；182 次提交；建议联系",
+      "is_academic": false,
+      "date_found": "2026-04-28",
+      "tier": "B",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "huangweitao@fuzhi.ai",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 52,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wangyoucao577-d3bfba4de33d",
@@ -3437,7 +4177,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 43
+      "track_rank": 53,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-KJ-Huang-sz-9303fccccb73",
@@ -3481,7 +4223,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 44
+      "track_rank": 54,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-papayalove-3a36509afb68",
@@ -3525,7 +4269,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 45
+      "track_rank": 55,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-y149604146-27de33f0c190",
@@ -3568,7 +4314,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 46
+      "track_rank": 56,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-rayrayraykk",
@@ -3615,7 +4363,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 47
+      "track_rank": 57,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wangxingjun778",
@@ -3662,7 +4412,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 48
+      "track_rank": 58,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Vincentwei1021-35c6264adda3",
@@ -3706,7 +4458,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 49
+      "track_rank": 59,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-bsbds-0fecdcade907",
@@ -3749,7 +4503,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 50
+      "track_rank": 60,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-YingchaoX-94fa6ea1f98a",
@@ -3793,7 +4549,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 51
+      "track_rank": 61,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-arthasking123",
@@ -3838,7 +4596,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 52
+      "track_rank": 62,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-shczhen-13a23ab03f35",
@@ -3881,7 +4641,56 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 53
+      "track_rank": 63,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "gh-garylin2099",
+      "name": "garylin2099 (MetaGPT)",
+      "role": "Harness Eng",
+      "score": 6,
+      "location": "中国（FoundationAgents）",
+      "current": "FoundationAgents / MetaGPT 团队",
+      "bg": "MetaGPT 贡献者；LangChain 贡献者；54 followers",
+      "skills": [
+        "Multi-Agent",
+        "LLM",
+        "MetaGPT",
+        "LangChain"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/garylin2099",
+      "website": "",
+      "contact": "GitHub: garylin2099",
+      "source": "github",
+      "platform": "github",
+      "notes": "MetaGPT 常驻提交者；个人信息最少但提交量稳定；待进一步确认身份",
+      "is_academic": false,
+      "date_found": "2026-04-17",
+      "tier": "B",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "contacted",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 64,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-seehi-79d7b487ce79",
@@ -3925,7 +4734,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 54
+      "track_rank": 65,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-van-gogh-619e13a8ab04",
@@ -3968,7 +4779,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 55
+      "track_rank": 66,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-x54-729-ce3db6e7be5e",
@@ -4012,7 +4825,57 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 56
+      "track_rank": 67,
+      "custom_name": "",
+      "track_manual": false
+    },
+    {
+      "id": "liyupi",
+      "name": "程序员鱼皮 / liyupi",
+      "role": "Harness Eng",
+      "score": 6,
+      "location": "上海",
+      "current": "独立开发者 / 教育创作者",
+      "bg": "GitHub 21k followers；AI/编程社区影响力大；B站/公众号大V",
+      "skills": [
+        "AI应用开发",
+        "社区运营",
+        "产品感",
+        "Java",
+        "Python"
+      ],
+      "voice": false,
+      "xiaohongshu": "https://www.xiaohongshu.com/user/profile/5dc69dbe0000000001004ac0",
+      "github": "https://github.com/liyupi",
+      "website": "",
+      "contact": "GitHub: liyupi; X: @yupi996; 小红书见链接",
+      "source": "github",
+      "platform": "github",
+      "notes": "社区影响力强；适合AI产品推广角色；直接做技术PM有待验证",
+      "is_academic": false,
+      "date_found": "2026-04-04",
+      "tier": "B",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "",
+      "twitter": "yupi996",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "harness_eng",
+      "is_fde": false,
+      "track_rank": 68,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-tuhahaha",
@@ -4057,7 +4920,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 57
+      "track_rank": 69,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-dividez-47fe3dfbdd60",
@@ -4101,7 +4966,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 58
+      "track_rank": 70,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Mishuni-819fc8d0ff0f",
@@ -4144,7 +5011,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 59
+      "track_rank": 71,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Lynx-1221-2a7821de4e0e",
@@ -4188,7 +5057,9 @@ const LEADS_DATA = {
       "note": "",
       "priority": false,
       "org_account_signal": false,
-      "track_rank": 60
+      "track_rank": 72,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Rusullhu-ae791dcff147",
@@ -4231,7 +5102,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 61
+      "track_rank": 73,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yangapku",
@@ -4278,7 +5151,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 62
+      "track_rank": 74,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-toolazytoname-8521e6deadcf",
@@ -4322,7 +5197,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 63
+      "track_rank": 75,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Patrickill-62fb28c58941",
@@ -4366,7 +5243,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 64
+      "track_rank": 76,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-artificialzeng",
@@ -4413,7 +5292,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 65
+      "track_rank": 77,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-geekan",
@@ -4459,7 +5340,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 66
+      "track_rank": 78,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-arvinxx",
@@ -4506,7 +5389,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 67
+      "track_rank": 79,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-smilexin",
@@ -4551,7 +5436,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 68
+      "track_rank": 80,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zshbleaker",
@@ -4597,7 +5484,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 69
+      "track_rank": 81,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-alex-xinlu",
@@ -4643,7 +5532,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 70
+      "track_rank": 82,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-better629",
@@ -4688,7 +5579,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 71
+      "track_rank": 83,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wenbindu",
@@ -4733,7 +5626,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 72
+      "track_rank": 84,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-qiuyanli1990",
@@ -4779,7 +5674,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 73
+      "track_rank": 85,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-sunxilin",
@@ -4825,7 +5722,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 74
+      "track_rank": 86,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-liusongxiang",
@@ -4902,7 +5801,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 1
+      "track_rank": 1,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Stardust-minus-0f5962b6d5ec",
@@ -4972,7 +5873,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 2
+      "track_rank": 2,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yt605155624-7ec41c4dca21",
@@ -5045,7 +5948,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 3
+      "track_rank": 3,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-aluminumbox",
@@ -5114,7 +6019,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 4
+      "track_rank": 4,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yuekaizhang",
@@ -5189,7 +6096,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 5
+      "track_rank": 5,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-shibing624",
@@ -5275,7 +6184,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 6
+      "track_rank": 6,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "zhihao-du",
@@ -5348,7 +6259,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 7
+      "track_rank": 7,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yfyeung",
@@ -5424,7 +6337,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 8
+      "track_rank": 8,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Zain-Jiang",
@@ -5493,7 +6408,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 9
+      "track_rank": 9,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-alanswift",
@@ -5569,7 +6486,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 10
+      "track_rank": 10,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "chen-zhang-actuy",
@@ -5642,7 +6561,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 11
+      "track_rank": 11,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-jishengpeng",
@@ -5717,7 +6638,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 12
+      "track_rank": 12,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-starrylyn",
@@ -5790,7 +6713,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 13
+      "track_rank": 13,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-AnyaCoder-f2c953d5bdbd",
@@ -5856,7 +6781,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 14
+      "track_rank": 14,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-qq547276542",
@@ -5927,7 +6854,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 15
+      "track_rank": 15,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-jzq2000",
@@ -5997,7 +6926,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 16
+      "track_rank": 16,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zh794390558-43ee6e6cac35",
@@ -6070,7 +7001,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 17
+      "track_rank": 17,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-breakstring-ffa98a18a104",
@@ -6141,7 +7074,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 18
+      "track_rank": 18,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-PriesiaMioShirakana-70b86a2f326d",
@@ -6212,7 +7147,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 19
+      "track_rank": 19,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-RVC-Boss-ecb088cde377",
@@ -6283,7 +7220,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 20
+      "track_rank": 20,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-tramphero-838da8f31d30",
@@ -6351,7 +7290,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 21
+      "track_rank": 21,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-SpenserCai-c05fd99739e4",
@@ -6419,7 +7360,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 22
+      "track_rank": 22,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yiminw",
@@ -6490,7 +7433,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 23
+      "track_rank": 23,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-xieyxclack-cbb611e777cc",
@@ -6563,7 +7508,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 24
+      "track_rank": 24,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ylzz1997-cec2a4df0bef",
@@ -6632,7 +7579,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 25
+      "track_rank": 25,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-anyvoiceai-7cbcff242aab",
@@ -6701,7 +7650,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 26
+      "track_rank": 26,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-innnky-cb5f088a5a84",
@@ -6769,7 +7720,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 27
+      "track_rank": 27,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-v3ucn-bc9b0cb61b0b",
@@ -6838,7 +7791,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 28
+      "track_rank": 28,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-weedge",
@@ -6911,7 +7866,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 29
+      "track_rank": 29,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-HarderThenHarder-900345d050af",
@@ -6983,7 +7940,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 30
+      "track_rank": 30,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "jingcheng-pang",
@@ -7060,7 +8019,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 31
+      "track_rank": 31,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zrzrzrzrzrzrzr",
@@ -7133,7 +8094,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 32
+      "track_rank": 32,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-limafang-78f9d03b62fb",
@@ -7200,7 +8163,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 33
+      "track_rank": 33,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Whale-Dolphin-a12b4d80cd24",
@@ -7272,7 +8237,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 34
+      "track_rank": 34,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wangxiongts",
@@ -7344,7 +8311,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 35
+      "track_rank": 35,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-pan-x-c",
@@ -7414,7 +8383,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 36
+      "track_rank": 36,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Yuan-ManX-bd9874b5e731",
@@ -7483,7 +8454,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 37
+      "track_rank": 37,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-hecheng0625",
@@ -7558,7 +8531,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 38
+      "track_rank": 38,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lauragpt",
@@ -7629,7 +8604,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 39
+      "track_rank": 39,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ABexit-6cf0a08373af",
@@ -7702,7 +8679,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 40
+      "track_rank": 40,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-daymade-834d245af031",
@@ -7772,7 +8751,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 41
+      "track_rank": 41,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-6drf21e-a5d11a97cd0e",
@@ -7839,7 +8820,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 42
+      "track_rank": 42,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ipfans-8de0794ae50a",
@@ -7908,7 +8891,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 43
+      "track_rank": 43,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-hjh0119",
@@ -7979,7 +8964,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 44
+      "track_rank": 44,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lovemefan",
@@ -8051,7 +9038,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 45
+      "track_rank": 45,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wangclnlp-49eb53b0831b",
@@ -8120,7 +9109,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 46
+      "track_rank": 46,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-xiaoxigua999",
@@ -8192,7 +9183,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 47
+      "track_rank": 47,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-xxnuo-0f0dc5565b94",
@@ -8262,7 +9255,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 48
+      "track_rank": 48,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-pengzhendong",
@@ -8337,7 +9332,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 49
+      "track_rank": 49,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yangdongchao",
@@ -8412,7 +9409,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 50
+      "track_rank": 50,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wangrongsheng",
@@ -8490,7 +9489,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 51
+      "track_rank": 51,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-0xCAFEBABE0-a8d7b1795fb1",
@@ -8562,7 +9563,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 52
+      "track_rank": 52,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Ccapton-7d0e5a64e757",
@@ -8630,7 +9633,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 53
+      "track_rank": 53,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-vermouth1992",
@@ -8711,7 +9716,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 54
+      "track_rank": 54,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Xiao-Cai185-96cc2e389c7d",
@@ -8776,7 +9783,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 55
+      "track_rank": 55,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-LinightKira-749f4a53f363",
@@ -8842,7 +9851,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-11",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 56
+      "track_rank": 56,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-JINO-ROHIT-541a3a0c2656",
@@ -8910,7 +9921,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 57
+      "track_rank": 57,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-jjjymmm",
@@ -8983,7 +9996,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 58
+      "track_rank": 58,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-JinHai-CN-2679f0d71463",
@@ -9052,7 +10067,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 59
+      "track_rank": 59,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-jintao-huang",
@@ -9122,7 +10139,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 60
+      "track_rank": 60,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-KPatr1ck-de0f8efc658f",
@@ -9188,7 +10207,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 61
+      "track_rank": 61,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-kaituoxu",
@@ -9260,7 +10281,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 62
+      "track_rank": 62,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-KakaruHayate-35d6b9b85be9",
@@ -9328,7 +10351,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 63
+      "track_rank": 63,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-KamioRinn-4d353a7ebc35",
@@ -9395,7 +10420,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 64
+      "track_rank": 64,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-gpt-dance-3473a8d47138",
@@ -9466,7 +10493,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 65
+      "track_rank": 65,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Nioolek",
@@ -9538,7 +10567,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 66
+      "track_rank": 66,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lmxue",
@@ -9616,7 +10647,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 67
+      "track_rank": 67,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Lizerui9926-677a5ebdc0d6",
@@ -9684,7 +10717,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-11",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 68
+      "track_rank": 68,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-pandamq",
@@ -9753,7 +10788,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 69
+      "track_rank": 69,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-iflamed-4f96fc8c7fd0",
@@ -9825,7 +10862,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 70
+      "track_rank": 70,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-OedoSoldier-b28016adb55f",
@@ -9891,7 +10930,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 71
+      "track_rank": 71,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-PoTaTo-Mika-b790b760cada",
@@ -9961,7 +11002,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 72
+      "track_rank": 72,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-r1ckshi",
@@ -10032,7 +11075,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 73
+      "track_rank": 73,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-shuaibai623",
@@ -10101,7 +11146,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 74
+      "track_rank": 74,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ChasonJiang-0aecf93e222e",
@@ -10167,7 +11214,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 75
+      "track_rank": 75,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Woody-Hu-7b22c3a1b987",
@@ -10234,7 +11283,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 76
+      "track_rank": 76,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Susieji-0e93ce7d2e83",
@@ -10301,7 +11352,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 77
+      "track_rank": 77,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-tyanz-6c283aafbaff",
@@ -10372,7 +11425,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 78
+      "track_rank": 78,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Timtimtimchen-eedc4beaf838",
@@ -10439,7 +11494,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 79
+      "track_rank": 79,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-di-osc",
@@ -10507,7 +11564,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 80
+      "track_rank": 80,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-XXXXRT666-278435fd2ec8",
@@ -10574,7 +11633,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 81
+      "track_rank": 81,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lyblsgo-f25deac7e42f",
@@ -10643,7 +11704,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 82
+      "track_rank": 82,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-SmileGoat-3911638a3727",
@@ -10709,7 +11772,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 83
+      "track_rank": 83,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-elissopp-de3c248fb94a",
@@ -10770,7 +11835,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 84
+      "track_rank": 84,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-aopstudio",
@@ -10841,7 +11908,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 85
+      "track_rank": 85,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zzhangpurdue",
@@ -10914,7 +11983,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 86
+      "track_rank": 86,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-edgemoorlf-bb6b3b203d5a",
@@ -10980,7 +12051,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 87
+      "track_rank": 87,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-frozentearz-5472076b93dd",
@@ -11048,7 +12121,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 88
+      "track_rank": 88,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-hexisyztem-cd7ce14b2d80",
@@ -11115,7 +12190,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 89
+      "track_rank": 89,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-hnluo-76dc1994c228",
@@ -11182,7 +12259,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 90
+      "track_rank": 90,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wishhyt-b54d8bebb02f",
@@ -11251,7 +12330,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 91
+      "track_rank": 91,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-kingki663-0aaecfa87920",
@@ -11320,7 +12401,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 92
+      "track_rank": 92,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-jmwang66-ff406321a92d",
@@ -11387,7 +12470,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 93
+      "track_rank": 93,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ranchlai",
@@ -11454,7 +12539,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 94
+      "track_rank": 94,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-takatost-2ecc1c2739c0",
@@ -11522,7 +12609,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 95
+      "track_rank": 95,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-tastelikefeet",
@@ -11592,7 +12681,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 96
+      "track_rank": 96,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-vndee",
@@ -11665,7 +12756,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 97
+      "track_rank": 97,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wildminder",
@@ -11731,7 +12824,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 98
+      "track_rank": 98,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wuzhiping-4b29df21e8ca",
@@ -11799,7 +12894,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 99
+      "track_rank": 99,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yiboyasss-0ce8bb645a7b",
@@ -11867,7 +12964,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 100
+      "track_rank": 100,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yiranyyu",
@@ -11938,7 +13037,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 101
+      "track_rank": 101,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-csukuangfj",
@@ -12009,7 +13110,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 102
+      "track_rank": 102,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-cuiunbo",
@@ -12080,7 +13183,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 103
+      "track_rank": 103,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zhc7",
@@ -12155,7 +13260,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 104
+      "track_rank": 104,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-bokesyo",
@@ -12229,7 +13336,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 105
+      "track_rank": 105,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "zhu-han-xiaomi",
@@ -12301,7 +13410,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 106
+      "track_rank": 106,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zombieyang-7d26d3dd5a4c",
@@ -12370,7 +13481,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 107
+      "track_rank": 107,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "kedreamix-linly",
@@ -12443,7 +13556,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 108
+      "track_rank": 108,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lich99-dca8ded5188a",
@@ -12489,7 +13604,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 109
+      "track_rank": 109,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-qinxuye-ae2a09a9d2f4",
@@ -12533,7 +13650,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 110
+      "track_rank": 110,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-dongzhang2001",
@@ -12578,7 +13697,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 111
+      "track_rank": 111,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lengff123-23dabac88663",
@@ -12621,7 +13742,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 112
+      "track_rank": 112,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-fuyuwei01-1284d1367909",
@@ -12668,7 +13791,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 113
+      "track_rank": 113,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-hijkzzz",
@@ -12715,7 +13840,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 114
+      "track_rank": 114,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-leng-yue-a15728089334",
@@ -12761,7 +13888,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 115
+      "track_rank": 115,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-jklj077",
@@ -12807,7 +13936,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 116
+      "track_rank": 116,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ymcui",
@@ -12854,7 +13985,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 117
+      "track_rank": 117,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yerfor",
@@ -12900,7 +14033,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 118
+      "track_rank": 118,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "mannaandpoem-openmanus",
@@ -12947,7 +14082,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 119
+      "track_rank": 119,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-PeterSH6",
@@ -12994,7 +14131,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 120
+      "track_rank": 120,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-makerjackie-88e8b18b1095",
@@ -13061,7 +14200,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 121
+      "track_rank": 121,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-cwx-worst-one",
@@ -13107,7 +14248,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 122
+      "track_rank": 122,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-YYZhang2025",
@@ -13149,7 +14292,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 123
+      "track_rank": 123,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lymdlut",
@@ -13194,7 +14339,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 124
+      "track_rank": 124,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-ddlBoJack",
@@ -13240,7 +14387,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 125
+      "track_rank": 125,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zzw922cn-155726572903",
@@ -13308,7 +14457,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 126
+      "track_rank": 126,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-chujiezheng",
@@ -13355,7 +14506,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 127
+      "track_rank": 127,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-sengxian",
@@ -13411,7 +14564,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 128
+      "track_rank": 128,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-3rd-musketeer",
@@ -13459,7 +14614,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 129
+      "track_rank": 129,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-xinshengwang",
@@ -13505,7 +14662,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 130
+      "track_rank": 130,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "hiyouga",
@@ -13552,7 +14711,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 131
+      "track_rank": 131,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-duzx16",
@@ -13618,7 +14779,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 132
+      "track_rank": 132,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-liaochenliang",
@@ -13664,7 +14827,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 133
+      "track_rank": 133,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lengyue233",
@@ -13710,7 +14875,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 134
+      "track_rank": 134,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-aaronz345",
@@ -13757,7 +14924,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 135
+      "track_rank": 135,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-wangzhaode",
@@ -13804,7 +14973,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 136
+      "track_rank": 136,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-tc-mb",
@@ -13851,7 +15022,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 137
+      "track_rank": 137,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-tan-xu",
@@ -13899,7 +15072,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 138
+      "track_rank": 138,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-garyzhang99",
@@ -13969,7 +15144,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "fde",
       "is_fde": true,
-      "track_rank": 1
+      "track_rank": 1,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-libukai-b7f678ff49c8",
@@ -14039,7 +15216,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "fde",
       "is_fde": true,
-      "track_rank": 2
+      "track_rank": 2,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-lijingbei",
@@ -14088,7 +15267,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "fde",
       "is_fde": true,
-      "track_rank": 3
+      "track_rank": 3,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-cyfyifanchen",
@@ -14163,7 +15344,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 1
+      "track_rank": 1,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "ten-halajohn",
@@ -14231,7 +15414,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 2
+      "track_rank": 2,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-JohnJyong-fe7382561452",
@@ -14297,7 +15482,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 3
+      "track_rank": 3,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-yaosenJ-da28c6c95be3",
@@ -14367,7 +15554,9 @@ const LEADS_DATA = {
       ],
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 4
+      "track_rank": 4,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-iamjoel-f9ef4b8c46d0",
@@ -14437,80 +15626,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 5
-    },
-    {
-      "id": "gh-lishengzxc",
-      "name": "Sheng Li / 李升 (lishengzxc)",
-      "role": "Model & Agent PM",
-      "score": 9,
-      "location": "上海",
-      "current": "Alibaba (AgentScope)",
-      "bg": "AgentScope-Runtime / agentscope-spark-design / QwenPaw 贡献者；阿里通义 Agent 平台前端/SDK 工程",
-      "skills": [
-        "AgentScope",
-        "Agent SDK",
-        "前端",
-        "Multi-Agent",
-        "Alibaba",
-        "QwenPaw"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/lishengzxc",
-      "website": "https://lishengcn.cn",
-      "contact": "306009337@qq.com",
-      "source": "github_search",
-      "platform": "github",
-      "notes": "阿里 AgentScope 团队工程师；agentscope-runtime/QwenPaw 多个产品线贡献者；上海",
-      "is_academic": false,
-      "date_found": "2026-04-25",
-      "tier": "A",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "306009337@qq.com",
-      "twitter": "https://x.com/Fried_rice",
-      "wechat": "",
-      "status": "new",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "contact_research_status": "email_found",
-      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、GitHub 主页、个人主页。未找到/未公开：小红书、知乎、LinkedIn、Google Scholar。",
-      "contact_next_step": "建议 HR 优先发邮件：306009337@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
-      "contact_sources": [
-        "commit_email:CoPaw: 306009337@qq.com",
-        "twitter: https://x.com/Fried_rice"
-      ],
-      "contact_research_updated": "2026-05-08",
-      "contact_checked_paths": [
-        "GitHub profile",
-        "personal website",
-        "top 3 repo READMEs",
-        "public commits from top 3 repos"
-      ],
-      "contact_found_channels": [
-        "email",
-        "twitter",
-        "github",
-        "website"
-      ],
-      "contact_missing_channels": [
-        "xiaohongshu",
-        "zhihu",
-        "linkedin",
-        "google_scholar"
-      ],
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 6
+      "track_rank": 5,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-asiroliu-65646ffb6d19",
@@ -14577,50 +15695,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-11",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 7
-    },
-    {
-      "id": "gh-Lynnooo-ee6523c550e7",
-      "name": "Lynnooo",
-      "role": "Model & Agent PM",
-      "talent_track": "pm",
-      "is_fde": false,
-      "score": 8,
-      "tier": "A",
-      "location": "",
-      "current": "GitHub: Lynnooo",
-      "bg": " | Repos: Multi-Agents(⭐0) | TencentOS-tiny(⭐0)",
-      "skills": [
-        "Agent"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/Lynnooo",
-      "website": "",
-      "contact": "见 GitHub 主页",
-      "source": "repo_contributor: Lynnooo/Multi-Agents",
-      "platform": "github",
-      "notes": "GitHub followers: 0 | repos: 2 | 加入时间: 2021-07 | source: repo_contributor: Lynnooo/Multi-Agents",
-      "is_academic": false,
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "availability_risk": "",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "founder_signal": false,
-      "date_found": "2026-05-15",
-      "followers": 0,
-      "email": "",
-      "twitter": "",
-      "wechat": "",
-      "status": "new",
-      "note": "",
-      "priority": false,
-      "org_account_signal": false,
-      "track_rank": 8
+      "track_rank": 6,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-Maplemx-b71b636154d6",
@@ -14663,7 +15740,9 @@ const LEADS_DATA = {
       "note": "",
       "priority": false,
       "org_account_signal": false,
-      "track_rank": 9
+      "track_rank": 7,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-faithfulinlove",
@@ -14735,84 +15814,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 10
-    },
-    {
-      "id": "gh-Osier-Yi-fc97b61542ce",
-      "name": "Osier-Yi",
-      "role": "Model & Agent PM",
-      "score": 8,
-      "tier": "A",
-      "location": "",
-      "current": "GitHub: Osier-Yi",
-      "bg": "Liuyi Yao | Repos: CoPaw(⭐1) | agentscope-samples(⭐0) | agentscope-runtime(⭐0) | PromptScope(⭐0)",
-      "skills": [
-        "Agent",
-        "Runtime"
-      ],
-      "voice": false,
-      "xiaohongshu": "https://www.xiaohongshu.com/user/profile/691c18db0000000037032be9",
-      "github": "https://github.com/Osier-Yi",
-      "website": "https://osier-yi.github.io./",
-      "contact": "liuyiyao@buffalo.edu",
-      "source": "repo_contributor: agentscope-ai/agentscope",
-      "platform": "github",
-      "notes": "GitHub followers: 54 | repos: 11 | 加入时间: 2014-07 | source: repo_contributor: agentscope-ai/agentscope",
-      "is_academic": false,
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "date_found": "2026-04-30",
-      "followers": 54,
-      "email": "liuyiyao@buffalo.edu",
-      "twitter": "https://x.com/agentscope_ai",
-      "wechat": "",
-      "status": "new",
-      "note": "",
-      "priority": false,
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "linkedin": "https://www.linkedin.com/in/liuyi-yao-93b775115/",
-      "google_scholar": "https://scholar.google.com/citations?hl=en&user=0c5is-gAAAAJ",
-      "contact_research_status": "email_found",
-      "contact_checked_paths": [
-        "GitHub profile",
-        "personal website",
-        "top 3 repo READMEs",
-        "public commits from top 3 repos"
-      ],
-      "contact_found_channels": [
-        "email",
-        "twitter",
-        "xiaohongshu",
-        "linkedin",
-        "google_scholar",
-        "github",
-        "website"
-      ],
-      "contact_missing_channels": [
-        "zhihu"
-      ],
-      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、小红书、LinkedIn、Google Scholar、GitHub 主页、个人主页。未找到/未公开：知乎。",
-      "contact_next_step": "建议 HR 优先发邮件：liuyiyao@buffalo.edu。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
-      "contact_sources": [
-        "website_email: liuyiyao@buffalo.edu",
-        "commit_email:CoPaw: yly287738@alibaba-inc.com",
-        "commit_email:FederatedScope: njuyaoliuyi@gmail.com",
-        "linkedin: https://www.linkedin.com/in/liuyi-yao-93b775115/",
-        "google_scholar: https://scholar.google.com/citations?hl=en&user=0c5is-gAAAAJ",
-        "xiaohongshu: https://www.xiaohongshu.com/user/profile/691c18db0000000037032be9",
-        "twitter: https://x.com/agentscope_ai"
-      ],
-      "contact_research_updated": "2026-05-08",
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 11
+      "track_rank": 8,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "xl-shichunliu",
@@ -14886,7 +15890,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 12
+      "track_rank": 9,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-fengju0213-0eb6b6df6570",
@@ -14953,80 +15959,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 13
-    },
-    {
-      "id": "gh-twz915",
-      "name": "Weizhong Tu / twz915",
-      "role": "Model & Agent PM",
-      "score": 8,
-      "location": "北京",
-      "current": "Alibaba",
-      "bg": "AgentScope (阿里多 Agent 框架) 新晋贡献者；Bio: like coding, all kinds of IT news；98 repos；251 followers",
-      "skills": [
-        "Multi-Agent",
-        "AgentScope",
-        "Python",
-        "工程"
-      ],
-      "voice": false,
-      "xiaohongshu": "https://www.xiaohongshu.com/user/profile/691c18db0000000037032be9",
-      "github": "https://github.com/twz915",
-      "website": "https://www.zqxt.cn",
-      "contact": "twz915@qq.com",
-      "source": "web_search",
-      "platform": "github",
-      "notes": "AgentScope 贡献者；阿里北京工程师；专注偏工程方向，需进一步评估算法/产品能力",
-      "is_academic": false,
-      "date_found": "2026-04-27",
-      "tier": "A",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "twz915@qq.com",
-      "twitter": "https://x.com/agentscope_ai",
-      "wechat": "",
-      "status": "new",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "contact_research_status": "email_found",
-      "contact_checked_paths": [
-        "GitHub profile",
-        "personal website",
-        "top 3 repo READMEs",
-        "public commits from top 3 repos"
-      ],
-      "contact_found_channels": [
-        "email",
-        "twitter",
-        "xiaohongshu",
-        "github",
-        "website"
-      ],
-      "contact_missing_channels": [
-        "zhihu",
-        "linkedin",
-        "google_scholar"
-      ],
-      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、小红书、GitHub 主页、个人主页。未找到/未公开：知乎、LinkedIn、Google Scholar。",
-      "contact_next_step": "建议 HR 优先发邮件：twz915@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
-      "contact_sources": [
-        "github_email: twz915@qq.com",
-        "commit_email:zqxt: tuweizhong@163.com",
-        "xiaohongshu: https://www.xiaohongshu.com/user/profile/691c18db0000000037032be9",
-        "twitter: https://x.com/agentscope_ai"
-      ],
-      "contact_research_updated": "2026-05-08",
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 14
+      "track_rank": 10,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-zehuichen123",
@@ -15103,406 +16038,9 @@ const LEADS_DATA = {
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 15
-    },
-    {
-      "id": "gh-XiangJinyu",
-      "name": "项金宇 / Jinyu Xiang",
-      "role": "Model & Agent PM",
-      "score": 8,
-      "location": "中国（具体城市未确认）",
-      "current": "Karis 联合创始人 / Agent Universe 研究负责人",
-      "bg": "OpenManus核心作者(55k stars)；AFlow ICLR 2025 Oral；MetaGPT团队；2024阿里全球数学竞赛AI赛道第2名",
-      "skills": [
-        "Multi-Agent",
-        "LLM Agent",
-        "工作流自动化",
-        "MetaGPT",
-        "OpenManus"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/XiangJinyu",
-      "website": "https://xiangjinyu.github.io/",
-      "contact": "xiangjy2001@gmail.com",
-      "source": "web_search",
-      "platform": "github",
-      "notes": "OpenManus联合创始人；AFlow ICLR Oral；MetaGPT团队；现创业Karis；技术+产品双修",
-      "is_academic": false,
-      "date_found": "2026-04-15",
-      "tier": "A",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "xiangjy2001@gmail.com",
-      "twitter": "@CosmoJinyu",
-      "wechat": "",
-      "status": "contacted",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "zhihu": "https://www.zhihu.com/people/-qw-28",
-      "google_scholar": "https://scholar.google.com/citations?user=NJv62qoAAAAJ&hl=en",
-      "contact_research_status": "email_found",
-      "contact_checked_paths": [
-        "GitHub profile",
-        "personal website",
-        "top 3 repo READMEs",
-        "public commits from top 3 repos"
-      ],
-      "contact_found_channels": [
-        "email",
-        "twitter",
-        "zhihu",
-        "google_scholar",
-        "github",
-        "website"
-      ],
-      "contact_missing_channels": [
-        "xiaohongshu",
-        "linkedin"
-      ],
-      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、personal website、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、知乎、Google Scholar、GitHub 主页、个人主页。未找到/未公开：小红书、LinkedIn。",
-      "contact_next_step": "建议 HR 优先发邮件：xiangjy2001@gmail.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
-      "contact_sources": [
-        "website_email: xiangjy2001@gmail.com",
-        "commit_email:agent-harness-spec: 1376193973@qq.com",
-        "zhihu: https://www.zhihu.com/people/-qw-28",
-        "google_scholar: https://scholar.google.com/citations?user=NJv62qoAAAAJ&hl=en",
-        "twitter: https://twitter.com/CosmoJinyu"
-      ],
-      "contact_research_updated": "2026-05-08",
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 16
-    },
-    {
-      "id": "gh-davdgao",
-      "name": "Dawei Gao / DavdGao",
-      "role": "Model & Agent PM",
-      "score": 6,
-      "location": "北京",
-      "current": "Alibaba Tongyi - AgentScope核心工程师",
-      "bg": "AgentScope（23.1k stars）核心开发者；FederatedScope联邦学习框架贡献者；Tongyi/Alibaba北京",
-      "skills": [
-        "LLM Agent",
-        "AgentScope",
-        "Multi-Agent",
-        "Federated Learning",
-        "Python",
-        "Alibaba"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/DavdGao",
-      "website": "https://davdgao.github.io/",
-      "contact": "GitHub: DavdGao; X: @daweigaooooo",
-      "source": "web_search",
-      "platform": "github",
-      "notes": "AgentScope(23.1k stars)核心贡献者；Alibaba Tongyi Beijing；Agent框架工程实力强",
-      "is_academic": false,
-      "date_found": "2026-04-08",
-      "tier": "B",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "",
-      "twitter": "daweigaooooo",
-      "wechat": "",
-      "status": "contacted",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 17
-    },
-    {
-      "id": "gh-didiforgithub",
-      "name": "张佳怡 / Jiayi Zhang",
-      "role": "Model & Agent PM",
-      "score": 6,
-      "location": "广州",
-      "current": "HKUST(GZ)",
-      "bg": "MetaGPT / OpenManus / AFlow 核心贡献者；Multi-Agent框架；ICLR2025 Oral",
-      "skills": [
-        "Multi-Agent",
-        "LLM",
-        "Workflow自动化",
-        "AFlow",
-        "MetaGPT"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/didiforgithub",
-      "website": "https://didiforgithub.github.io/",
-      "contact": "Twitter: @didiforx；GitHub: didiforgithub",
-      "source": "web_search",
-      "platform": "github",
-      "notes": "AFlow(ICLR2025 Oral)第一作者；MetaGPT/OpenManus核心贡献者；香港科技大学广州在读；学术为主但开源影响力强",
-      "is_academic": true,
-      "date_found": "2026-04-14",
-      "tier": "B",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "",
-      "twitter": "@didiforx",
-      "wechat": "",
-      "status": "contacted",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 18
-    },
-    {
-      "id": "xl-chenqian",
-      "name": "钱忱 / Chen Qian",
-      "role": "Model & Agent PM",
-      "score": 6,
-      "location": "上海（SJTU）",
-      "current": "SJTU 助理教授 / ex Tencent Tech Elite",
-      "bg": "THUNLP博士后；MetaGPT核心作者；Internet of Agents作者；ChatDev (ACL 2024)；ICLR 2025 Multi-Agent Scaling；Tencent Tech Elite经历",
-      "skills": [
-        "Multi-Agent",
-        "LLM Agents",
-        "框架设计",
-        "Agent协作",
-        "ChatDev",
-        "MetaGPT"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/qianc62",
-      "website": "https://qianc62.github.io/",
-      "contact": "Email: qianc62@gmail.com; X: @qianc62; GitHub: qianc62; 个人主页: qianc62.github.io",
-      "source": "xlsx",
-      "platform": "github",
-      "notes": "学术背景+产业合作；MetaGPT/IoA/ChatDev核心；ex Tencent Tech Elite；ICLR 2025；招募难度高但Multi-Agent顶级专家",
-      "is_academic": true,
-      "tier": "B",
-      "date_found": "2026-04-04",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "qianc62@gmail.com",
-      "twitter": "qianc62",
-      "wechat": "",
-      "status": "replied",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; model company or strong AI org signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 19
-    },
-    {
-      "id": "gh-shenchucheng",
-      "name": "Chucheng Shen / 沈楚成",
-      "role": "Model & Agent PM",
-      "score": 5,
-      "location": "中国",
-      "current": "DeepWisdom (MetaGPT)",
-      "bg": "MetaGPT 长期核心贡献者（48 仓库）；DeepWisdom 工程团队",
-      "skills": [
-        "Multi-Agent",
-        "MetaGPT",
-        "LLM Agent",
-        "Python",
-        "DeepWisdom"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/shenchucheng",
-      "website": "",
-      "contact": "见 GitHub 主页",
-      "source": "github_search",
-      "platform": "github",
-      "notes": "DeepWisdom (MetaGPT 母公司) 工程师；MetaGPT 核心维护者之一；多智能体框架长期贡献者",
-      "is_academic": false,
-      "date_found": "2026-04-25",
-      "tier": "B",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "",
-      "twitter": "",
-      "wechat": "",
-      "status": "new",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 20
-    },
-    {
-      "id": "gh-luohh5",
-      "name": "Haohao Luo / 罗浩浩 (Luohh5)",
-      "role": "Model & Agent PM",
-      "score": 5,
-      "location": "广州",
-      "current": "Sun Yat-sen University (中山大学)",
-      "bg": "中山大学；AgentScope 贡献者；广东",
-      "skills": [
-        "Agent",
-        "AgentScope",
-        "Multi-Agent",
-        "LLM"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/Luohh5",
-      "website": "",
-      "contact": "GitHub: Luohh5",
-      "source": "github_search",
-      "platform": "github",
-      "notes": "中山大学；AgentScope 仓库贡献者；学术派但有 AgentScope 实战经验",
-      "is_academic": true,
-      "date_found": "2026-04-28",
-      "tier": "B",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "",
-      "twitter": "",
-      "wechat": "",
-      "status": "new",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 21
-    },
-    {
-      "id": "gh-huangweitao",
-      "name": "Huang Weitao / 黄伟韬 (huangweitao)",
-      "role": "Model & Agent PM",
-      "score": 5,
-      "location": "中国",
-      "current": "DeepWisdom (MetaGPT) — fuzhi.ai",
-      "bg": "DeepWisdom (MetaGPT 母公司) 核心工程师；MetaGPT 仓库 #4 贡献者（182 commits）；Multi-Agent 框架核心",
-      "skills": [
-        "Multi-Agent",
-        "MetaGPT",
-        "LLM Agent",
-        "DeepWisdom",
-        "Python"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/huangweitao",
-      "website": "",
-      "contact": "huangweitao@fuzhi.ai",
-      "source": "github_search",
-      "platform": "github",
-      "notes": "DeepWisdom 核心工程师（fuzhi.ai 域名）；MetaGPT 主要维护者之一；182 次提交；建议联系",
-      "is_academic": false,
-      "date_found": "2026-04-28",
-      "tier": "B",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "huangweitao@fuzhi.ai",
-      "twitter": "",
-      "wechat": "",
-      "status": "new",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 22
-    },
-    {
-      "id": "gh-garylin2099",
-      "name": "garylin2099 (MetaGPT)",
-      "role": "Model & Agent PM",
-      "score": 5,
-      "location": "中国（FoundationAgents）",
-      "current": "FoundationAgents / MetaGPT 团队",
-      "bg": "MetaGPT 贡献者；LangChain 贡献者；54 followers",
-      "skills": [
-        "Multi-Agent",
-        "LLM",
-        "MetaGPT",
-        "LangChain"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/garylin2099",
-      "website": "",
-      "contact": "GitHub: garylin2099",
-      "source": "github",
-      "platform": "github",
-      "notes": "MetaGPT 常驻提交者；个人信息最少但提交量稳定；待进一步确认身份",
-      "is_academic": false,
-      "date_found": "2026-04-17",
-      "tier": "B",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "",
-      "twitter": "",
-      "wechat": "",
-      "status": "contacted",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; Model & Agent PM: 0-1 agent design + eval system + data labeling/iteration loop + agent automation; applied/B2B product experience preferred—not roleplay/C-end",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 23
+      "track_rank": 11,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-plutoless",
@@ -15552,7 +16090,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 24
+      "track_rank": 12,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "gh-jenqyang",
@@ -15598,7 +16138,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 25
+      "track_rank": 13,
+      "custom_name": "",
+      "track_manual": false
     },
     {
       "id": "metagpt-pm",
@@ -15643,7 +16185,9 @@ const LEADS_DATA = {
       "org_account_signal": false,
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 26
+      "track_rank": 14,
+      "custom_name": "",
+      "track_manual": false
     }
   ]
 };
@@ -15652,6 +16196,7 @@ const STATUS_LABEL = { new:'🆕 新线索', contacted:'📨 已联系', replied
 const TRACK_LABEL = { harness_eng:'Harness 工程', research_eng:'Research 算法/语音', fde:'FDE 交付/客户侧', pm:'模型&Agent PM' };
 let activeTrack = 'all';
 let activeFilters = new Set();
+let archiveOpen = false;
 let openId = null;
 let priorityPanelOpen = true;
 
@@ -15682,12 +16227,14 @@ function showSaveStatus(msg,type){
 
 // 从 LEADS_DATA 提取当前的用户标记态，构造 user_state.json 载荷
 function buildUserStatePayload(){
-  var defaults={status:'new', note:'', priority:false};
+  var defaults={status:'new', note:'', priority:false, custom_name:'', talent_track:'', track_manual:false};
   var states={};
   LEADS_DATA.leads.forEach(function(l){
     var s={};
     Object.keys(defaults).forEach(function(k){
       var v=(k in l)?l[k]:defaults[k];
+      if(k==='talent_track' && !l.track_manual) return;
+      if(k==='custom_name' && !(String(v||'').trim())) return;
       if(v!==defaults[k]) s[k]=v;
     });
     if(Object.keys(s).length) states[l.id]=s;
@@ -15750,13 +16297,36 @@ function scheduleSave(){
 function setStatus(id,s){if(leadsIndex[id]){leadsIndex[id].status=s;scheduleSave();}}
 function setNote(id,n){if(leadsIndex[id]){leadsIndex[id].note=n;scheduleSave();}}
 function setPriority(id,v){if(leadsIndex[id]){leadsIndex[id].priority=v;scheduleSave();}}
+function setCustomName(id, name) {
+  if(!leadsIndex[id]) return;
+  leadsIndex[id].custom_name = String(name || '').trim();
+  scheduleSave();
+}
+function setTalentTrackManual(id, track) {
+  if(!leadsIndex[id]) return;
+  leadsIndex[id].talent_track = track;
+  leadsIndex[id].track_manual = true;
+  scheduleSave();
+  renderAll();
+}
+function getDisplayName(lead) {
+  var c = lead.custom_name;
+  if(c && String(c).trim()) return String(c).trim();
+  return lead.name || '';
+}
+function getDisplayNamePrimary(lead) {
+  return getDisplayName(lead).split(' / ')[0];
+}
+function escAttr(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+}
 
 // ── Delete (hard remove, tracked via meta.deleted_ids so it won't come back) ──
 function deleteLead(id, e) {
   if(e) e.stopPropagation();
   const lead = leadsIndex[id];
   if(!lead) return;
-  const displayName = (lead.name || id).split(' / ')[0];
+  const displayName = getDisplayNamePrimary(lead) || id;
   if(!confirm('确定彻底删除【' + displayName + '】?\n\n该候选人将从看板和数据库永久移除，未来自动搜索也不会再添加进来。')) return;
 
   // 1. 从 LEADS_DATA.leads 移除
@@ -15813,7 +16383,7 @@ function renderPriorityPanel() {
     const stLabel = STATUS_LABEL[st];
     return `<div class="priority-item" onclick="openModal('${lead.id}')">
       <div style="font-size:18px;flex-shrink:0">${lead.voice ? '🎙' : '🧠'}</div>
-      <div class="priority-item-name">${lead.name.split(' / ')[0]}</div>
+      <div class="priority-item-name">${getDisplayNamePrimary(lead)}</div>
       <div class="priority-item-meta">${TRACK_LABEL[getTalentTrack(lead)] || ''} · ${lead.current} · ${lead.location}</div>
       <div class="priority-item-status"><span class="status-btn ${st}" style="font-size:9px;padding:3px 8px">${stLabel}</span></div>
       <button class="priority-item-remove" onclick="togglePriority('${lead.id}',event)" title="取消优先">✕</button>
@@ -15845,6 +16415,10 @@ function setTrack(el) {
   applyFilters();
 }
 function getTalentTrack(lead) {
+  if (lead.track_manual && lead.talent_track) {
+    const manual = lead.talent_track;
+    return manual === 'general' ? 'harness_eng' : manual;
+  }
   const tt = lead.talent_track;
   if (tt && tt !== 'general') return tt;
   if (tt === 'general') return 'harness_eng';
@@ -15858,7 +16432,20 @@ function trackBadgeHTML(lead) {
   const tt = getTalentTrack(lead);
   const cls = { harness_eng:'track-h', research_eng:'track-r', fde:'track-f', pm:'track-p', general:'track-g' }[tt] || 'track-g';
   const label = TRACK_LABEL[tt] || tt;
-  return `<span class="track-badge ${cls}" title="岗位分类">${label}</span>`;
+  const manual = lead.track_manual ? ' · 手动' : '';
+  return `<span class="track-badge ${cls}" title="岗位分类">${label}${manual}</span>`;
+}
+function trackSelectHTML(lead, extraCls) {
+  const tt = getTalentTrack(lead);
+  const opts = TRACK_LANE_ORDER.map(function(k) {
+    const sel = k === tt ? ' selected' : '';
+    return '<option value="'+k+'"'+sel+'>'+(TRACK_LABEL[k] || k)+'</option>';
+  }).join('');
+  return '<select class="track-select '+(extraCls||'')+'" onclick="event.stopPropagation()" onchange="setTalentTrackManual(\''+lead.id+'\', this.value)">'+opts+'</select>';
+}
+function isArchivedStatus(id) {
+  const st = getStatus(id);
+  return st === 'pass' || st === 'converted';
 }
 function toggleFilter(el) {
   const f = el.dataset.filter;
@@ -15870,7 +16457,7 @@ function matchesFilters(lead) {
   const q = document.getElementById('search-input').value.toLowerCase();
   if(q) {
     const tt = getTalentTrack(lead);
-    const hay = [lead.name, lead.current, lead.bg, lead.skills.join(' '), lead.location, lead.role,
+    const hay = [getDisplayName(lead), lead.name, lead.current, lead.bg, lead.skills.join(' '), lead.location, lead.role,
       TRACK_LABEL[tt] || '', tt].join(' ').toLowerCase();
     if(!hay.includes(q)) return false;
   }
@@ -15878,8 +16465,6 @@ function matchesFilters(lead) {
   if(activeFilters.has('voice')    && !lead.voice) return false;
   if(activeFilters.has('new')      && getStatus(lead.id) !== 'new') return false;
   if(activeFilters.has('priority') && !getPriority(lead.id)) return false;
-  if(activeFilters.has('converted')&& getStatus(lead.id) !== 'converted') return false;
-  // Academic shown by default (removed explicit acad toggle)
   return true;
 }
 
@@ -15916,9 +16501,9 @@ function renderCard(lead) {
       <div style="display:flex;align-items:flex-start;gap:7px;flex:1;min-width:0">
         ${tierPip}
         <div style="min-width:0">
-          <div class="card-name">${lead.name.split(' / ')[0]}${lead.track_rank ? `<span class="track-rank">#${lead.track_rank}</span>` : ''}</div>
-          <div class="card-name-sub">${(lead.name.split(' / ')[1]||'')}</div>
-          <div style="margin-top:4px">${trackBadgeHTML(lead)}</div>
+          <input class="card-name-edit" value="${escAttr(getDisplayNamePrimary(lead))}" title="可编辑显示姓名" onclick="event.stopPropagation()" onchange="setCustomName('${lead.id}', this.value)" />
+          <div class="card-name-sub">${(getDisplayName(lead).split(' / ')[1]||'')}</div>
+          <div style="margin-top:4px">${trackSelectHTML(lead)}</div>
         </div>
       </div>
       <div class="badges">
@@ -16008,16 +16593,63 @@ function toggleLane(track) {
   if(chev) chev.classList.toggle('collapsed', laneCollapsed[track]);
 }
 
+
+function escHtml(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function renderArchiveRow(lead) {
+  const name = escHtml(getDisplayNamePrimary(lead));
+  const tt = TRACK_LABEL[getTalentTrack(lead)] || '';
+  const st = STATUS_LABEL[getStatus(lead.id)] || '';
+  return `<div class="archive-row" onclick="openModal('${lead.id}')">
+    <span class="archive-row-name">${name}</span>
+    <span class="archive-row-meta">${tt}</span>
+    <span class="archive-row-st">${st}</span>
+  </div>`;
+}
+function toggleArchive() {
+  archiveOpen = !archiveOpen;
+  const body = document.getElementById('archive-body');
+  const chev = document.getElementById('archive-chev');
+  if(body) body.classList.toggle('open', archiveOpen);
+  if(chev) chev.classList.toggle('open', archiveOpen);
+}
+function renderArchiveSection(archived) {
+  const wrap = document.getElementById('archive-wrap');
+  if(!wrap) return;
+  const converted = archived.filter(l => getStatus(l.id) === 'converted');
+  const passed = archived.filter(l => getStatus(l.id) === 'pass');
+  const total = converted.length + passed.length;
+  if(!total) { wrap.style.display = 'none'; return; }
+  wrap.style.display = '';
+  const summary = document.getElementById('archive-summary');
+  if(summary) summary.textContent = `已转化 ${converted.length} · 不合适 ${passed.length}`;
+  const listC = document.getElementById('archive-converted');
+  const listP = document.getElementById('archive-pass');
+  if(listC) listC.innerHTML = converted.length
+    ? converted.map(renderArchiveRow).join('')
+    : '<div style="padding:8px 10px;font-size:11px;color:var(--text-dim)">暂无</div>';
+  if(listP) listP.innerHTML = passed.length
+    ? passed.map(renderArchiveRow).join('')
+    : '<div style="padding:8px 10px;font-size:11px;color:var(--text-dim)">暂无</div>';
+}
+
 function renderAll() {
-  const visible = LEADS_DATA.leads.filter(matchesFilters);
+  const filtered = LEADS_DATA.leads.filter(matchesFilters);
+  const active = filtered.filter(l => !isArchivedStatus(l.id));
+  const archived = filtered.filter(l => isArchivedStatus(l.id));
   const wrap  = document.getElementById('lanes-wrap');
   const empty = document.getElementById('empty');
 
-  if(!visible.length) { wrap.innerHTML=''; empty.style.display='block'; return; }
-  empty.style.display='none';
+  if(!active.length) {
+    wrap.innerHTML = '';
+    empty.style.display = archived.length ? 'none' : 'block';
+  } else {
+    empty.style.display = 'none';
+  }
 
   const byTrack = {};
-  visible.forEach(l => {
+  active.forEach(l => {
     const tt = getTalentTrack(l);
     (byTrack[tt] = byTrack[tt] || []).push(l);
   });
@@ -16051,6 +16683,7 @@ function renderAll() {
     </div>`;
   }).join('');
 
+  renderArchiveSection(archived);
   renderPriorityPanel();
 }
 
@@ -16143,9 +16776,13 @@ function openModal(id) {
   document.getElementById('modal-content').innerHTML = `
     <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:6px">
       <div style="flex:1">
-        <div class="modal-title">${lead.name}</div>
+        <input class="modal-name-edit" id="modal-name-input" value="${escAttr(getDisplayName(lead))}" placeholder="显示姓名" onchange="setCustomName('${id}', this.value)" />
         <div class="modal-sub">${lead.current} · ${lead.location}</div>
-        <div style="font-size:11px;color:#9DBDFF;margin-bottom:10px;line-height:1.5">${trackBadgeHTML(lead)}<span style="color:var(--text-dim);margin:0 6px">·</span><span style="color:var(--text-mid)">${(lead.role||'').replace(/</g,'')}</span></div>
+        <div class="modal-field" style="margin-top:8px">
+          <div class="modal-field-label">岗位泳道</div>
+          ${trackSelectHTML(lead, 'modal-track-select')}
+        </div>
+        <div style="font-size:11px;color:var(--text-mid);margin-bottom:10px;line-height:1.5">${(lead.role||'').replace(/</g,'')}</div>
       </div>
       <div style="display:flex;gap:6px;align-items:center;flex-shrink:0">
         <div class="score-dots">${scoreHTML(lead.score)}</div>
@@ -16359,7 +16996,7 @@ function renderStats() {
       if(local){
         // 已有：用 live 的非状态字段覆盖（保留浏览器端可能正在编辑的 status/note/priority）
         Object.keys(live).forEach(function(k){
-          if(k==='status'||k==='note'||k==='priority') return;
+          if(k==='status'||k==='note'||k==='priority'||k==='custom_name'||(k==='talent_track'&&local.track_manual)||k==='track_manual') return;
           local[k] = live[k];
         });
       }else{
@@ -16384,6 +17021,13 @@ function renderStats() {
       l.status   = (s && 'status'   in s) ? s.status   : 'new';
       l.note     = (s && 'note'     in s) ? s.note     : '';
       l.priority = (s && 'priority' in s) ? s.priority : false;
+      l.custom_name = (s && 'custom_name' in s) ? s.custom_name : '';
+      l.track_manual = (s && 'track_manual' in s) ? !!s.track_manual : false;
+      if (s && 'talent_track' in s && s.talent_track) {
+        l.talent_track = s.talent_track;
+      } else if (!l.track_manual) {
+        // keep embedded talent_track from leads.json
+      }
     });
   }
 

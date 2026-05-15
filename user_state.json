@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-15T18:28:16",
+  "last_updated": "2026-05-15T18:35:36",
   "user_states": {
     "gh-jaredforreal": {
       "status": "contacted",
@@ -28,11 +28,26 @@
     "gh-jiangjiechen": {
       "status": "contacted"
     },
+    "gh-XiangJinyu": {
+      "status": "contacted"
+    },
+    "gh-davdgao": {
+      "status": "contacted"
+    },
+    "gh-didiforgithub": {
+      "status": "contacted"
+    },
+    "xl-chenqian": {
+      "status": "replied"
+    },
     "gh-rayrayraykk": {
       "status": "contacted"
     },
     "gh-arthasking123": {
       "status": "replied"
+    },
+    "gh-garylin2099": {
+      "status": "contacted"
     },
     "gh-geekan": {
       "status": "pass"
@@ -280,21 +295,6 @@
       "priority": true
     },
     "gh-zehuichen123": {
-      "status": "contacted"
-    },
-    "gh-XiangJinyu": {
-      "status": "contacted"
-    },
-    "gh-davdgao": {
-      "status": "contacted"
-    },
-    "gh-didiforgithub": {
-      "status": "contacted"
-    },
-    "xl-chenqian": {
-      "status": "replied"
-    },
-    "gh-garylin2099": {
       "status": "contacted"
     },
     "gh-plutoless": {
