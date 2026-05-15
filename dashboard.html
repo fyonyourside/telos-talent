@@ -115,9 +115,32 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
   display:flex; flex-direction:column; gap:12px;
   position:relative;
 }
-.card:hover { background:var(--card-hover); border-color:rgba(232,150,42,0.2); transform:translateY(-1px); }
+.card:hover { transform:translateY(-1px); }
 .card.academic-card { opacity:0.65; }
 .card.academic-card:hover { opacity:0.85; }
+
+/* 卡片背景按 effectiveTier（S/A/B/C）区分，便于档与档交界处辨认 */
+.card.tier-s {
+  background: rgba(255,100,80,0.14);
+  border-color: rgba(255,100,80,0.38);
+}
+.card.tier-s:hover { background: rgba(255,100,80,0.22); border-color: rgba(255,100,80,0.55); }
+.card.tier-a {
+  background: rgba(232,150,42,0.14);
+  border-color: rgba(232,150,42,0.38);
+}
+.card.tier-a:hover { background: rgba(232,150,42,0.22); border-color: rgba(232,150,42,0.55); }
+.card.tier-b {
+  background: rgba(100,160,255,0.12);
+  border-color: rgba(100,160,255,0.32);
+}
+.card.tier-b:hover { background: rgba(100,160,255,0.2); border-color: rgba(100,160,255,0.48); }
+.card.tier-c {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+}
+.card.tier-c:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+.card.priority-card { box-shadow: 0 0 0 1px rgba(250,216,120,0.35); }
 
 /* card header */
 .card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
@@ -482,15 +505,6 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
   background:rgba(232,150,42,0.12); border:1px solid rgba(232,150,42,0.28);
   padding:2px 6px; border-radius:4px; margin-left:6px; vertical-align:middle;
 }
-
-/* ── Tier badge on card ─────────────────────────────────────────────────── */
-.tier-pip {
-  width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:3px;
-}
-.tier-pip.s { background:#FF8070; box-shadow:0 0 5px rgba(255,80,60,0.6); }
-.tier-pip.a { background:var(--amber); box-shadow:0 0 5px rgba(232,150,42,0.5); }
-.tier-pip.b { background:#82AAFF; box-shadow:0 0 5px rgba(100,160,255,0.4); }
-.tier-pip.c { background:rgba(255,255,255,0.2); }
 
 /* ── Contact list in modal ───────────────────────────────────────────────── */
 .contact-list { display:flex; flex-direction:column; gap:6px; }
@@ -16494,23 +16508,19 @@ function renderCard(lead) {
   const acadWarn = lead.is_academic ? `<div class="acad-warning">🎓 学术背景，招募难度较高</div>` : '';
   const noteSnip = note.length > 60 ? note.slice(0,60)+'…' : note;
   const newBadge = isNewLead ? `<div class="new-badge">NEW</div>` : '';
-  const tierPip  = `<div class="tier-pip ${(lead.tier||'c').toLowerCase()}" title="优先级 ${lead.tier}"></div>`;
+  const tierCls = 'tier-' + effectiveTier(lead).toLowerCase();
 
   return `
-  <div class="card ${lead.is_academic?'academic-card':''} ${isPriority?'priority-card':''}" onclick="openModal('${lead.id}')" style="${isPriority?'border-color:rgba(250,216,120,0.35);':''}">
+  <div class="card ${tierCls} ${lead.is_academic?'academic-card':''} ${isPriority?'priority-card':''}" onclick="openModal('${lead.id}')">
     ${newBadge}
     <div class="card-head">
-      <div style="display:flex;align-items:flex-start;gap:7px;flex:1;min-width:0">
-        ${tierPip}
-        <div style="min-width:0">
-          <input class="card-name-edit" value="${escAttr(getDisplayNamePrimary(lead))}" title="可编辑显示姓名" onclick="event.stopPropagation()" onchange="setCustomName('${lead.id}', this.value)" />
-          <div class="card-name-sub">${(getDisplayName(lead).split(' / ')[1]||'')}</div>
-          <div style="margin-top:4px">${trackSelectHTML(lead)}</div>
-        </div>
+      <div style="min-width:0;flex:1">
+        <input class="card-name-edit" value="${escAttr(getDisplayNamePrimary(lead))}" title="可编辑显示姓名" onclick="event.stopPropagation()" onchange="setCustomName('${lead.id}', this.value)" />
+        <div class="card-name-sub">${(getDisplayName(lead).split(' / ')[1]||'')}</div>
+        <div style="margin-top:4px">${trackSelectHTML(lead)}</div>
       </div>
       <div class="badges">
         ${lead.is_academic ? '<span style="font-size:10px" title="学术背景">🎓</span>' : ''}
-        <div class="score-dots">${scoreHTML(lead.score)}</div>
         <button class="priority-btn ${isPriority?'on':'off'}" onclick="togglePriority('${lead.id}',event)" title="${isPriority?'取消优先跟进':'标记为优先跟进'}"></button>
         <button class="delete-btn" onclick="deleteLead('${lead.id}',event)" title="彻底删除（不再出现）">🗑</button>
       </div>
