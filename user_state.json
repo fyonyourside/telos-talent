@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-15T17:21:44",
+  "last_updated": "2026-05-15T18:14:45",
   "user_states": {
     "gh-jaredforreal": {
       "status": "contacted",
@@ -16,33 +16,13 @@
       "status": "converted",
       "note": "豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach"
     },
-    "gh-aluminumbox": {
-      "status": "contacted",
-      "priority": true
-    },
     "gh-wangxiongts": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-hecheng0625": {
-      "status": "replied",
-      "priority": true
-    },
-    "gh-yuekaizhang": {
-      "status": "converted",
-      "note": "人才推荐和背调，开源方案效果测评"
-    },
-    "gh-lauragpt": {
       "status": "contacted",
       "priority": true
     },
     "gh-ddlBoJack": {
       "status": "converted",
       "note": "benchamark合作，qwen-audio和豆包audio顾问"
-    },
-    "gh-lovemefan": {
-      "status": "contacted",
-      "priority": true
     },
     "gh-cuiunbo": {
       "status": "contacted"
@@ -60,35 +40,6 @@
     "gh-shibing624": {
       "status": "converted",
       "note": "外呼应用顾问，偏落地"
-    },
-    "zhihao-du": {
-      "status": "converted",
-      "note": "FunAudio模型使用顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业"
-    },
-    "gh-yfyeung": {
-      "status": "replied",
-      "note": "约了上海和子阳一起吃饭",
-      "priority": true
-    },
-    "gh-Zain-Jiang": {
-      "status": "converted",
-      "note": "博五，今年六月毕业，延毕一年帮导师做项目，年底正式招聘"
-    },
-    "gh-alanswift": {
-      "status": "replied",
-      "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊",
-      "priority": true
-    },
-    "chen-zhang-actuy": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-jishengpeng": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-qq547276542": {
-      "status": "replied"
     },
     "gh-weedge": {
       "status": "contacted"
@@ -114,6 +65,9 @@
     "gh-aopstudio": {
       "status": "replied"
     },
+    "gh-xiaoxigua999": {
+      "status": "contacted"
+    },
     "gh-csukuangfj": {
       "status": "contacted",
       "priority": true
@@ -125,13 +79,6 @@
     "gh-bokesyo": {
       "status": "converted"
     },
-    "zhu-han-xiaomi": {
-      "status": "contacted",
-      "priority": true
-    },
-    "kedreamix-linly": {
-      "status": "contacted"
-    },
     "gh-vermouth1992": {
       "status": "contacted",
       "priority": true
@@ -139,9 +86,6 @@
     "gh-bluemotional": {
       "status": "contacted",
       "priority": true
-    },
-    "gh-pandamq": {
-      "status": "contacted"
     },
     "xl-shichunliu": {
       "status": "converted",
@@ -176,6 +120,9 @@
     "gh-yerfor": {
       "status": "contacted"
     },
+    "gh-didiforgithub": {
+      "status": "contacted"
+    },
     "mannaandpoem-openmanus": {
       "status": "contacted",
       "priority": true
@@ -193,46 +140,14 @@
     "gh-rayrayraykk": {
       "status": "contacted"
     },
+    "gh-ymcui": {
+      "status": "contacted"
+    },
     "gh-arthasking123": {
       "status": "replied"
     },
     "gh-garylin2099": {
       "status": "contacted"
-    },
-    "gh-didiforgithub": {
-      "status": "contacted"
-    },
-    "gh-xiaoxigua999": {
-      "status": "contacted"
-    },
-    "gh-ymcui": {
-      "status": "contacted"
-    },
-    "gh-cyfyifanchen": {
-      "status": "contacted",
-      "priority": true
-    },
-    "ten-halajohn": {
-      "status": "replied",
-      "priority": true
-    },
-    "gh-starrylyn": {
-      "status": "contacted",
-      "priority": true
-    },
-    "gh-jzq2000": {
-      "status": "replied",
-      "priority": true
-    },
-    "gh-yiminw": {
-      "status": "contacted"
-    },
-    "gh-yiranyyu": {
-      "status": "contacted"
-    },
-    "gh-hanhandi": {
-      "status": "replied",
-      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
     },
     "gh-geekan": {
       "status": "pass"
@@ -247,9 +162,6 @@
       "status": "pass"
     },
     "gh-plutoless": {
-      "status": "pass"
-    },
-    "funaudillm": {
       "status": "pass"
     },
     "gh-3rd-musketeer": {
@@ -308,12 +220,99 @@
     },
     "gh-tan-xu": {
       "status": "pass"
+    },
+    "gh-aluminumbox": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-hecheng0625": {
+      "status": "replied",
+      "priority": true
+    },
+    "gh-yuekaizhang": {
+      "status": "converted",
+      "note": "人才推荐和背调，开源方案效果测评"
+    },
+    "gh-lauragpt": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-lovemefan": {
+      "status": "contacted",
+      "priority": true
+    },
+    "zhihao-du": {
+      "status": "converted",
+      "note": "FunAudio模型使用顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业"
+    },
+    "gh-yfyeung": {
+      "status": "replied",
+      "note": "约了上海和子阳一起吃饭",
+      "priority": true
+    },
+    "gh-Zain-Jiang": {
+      "status": "converted",
+      "note": "博五，今年六月毕业，延毕一年帮导师做项目，年底正式招聘"
+    },
+    "gh-alanswift": {
+      "status": "replied",
+      "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊",
+      "priority": true
+    },
+    "chen-zhang-actuy": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-jishengpeng": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-qq547276542": {
+      "status": "replied"
+    },
+    "zhu-han-xiaomi": {
+      "status": "contacted",
+      "priority": true
+    },
+    "kedreamix-linly": {
+      "status": "contacted"
+    },
+    "gh-pandamq": {
+      "status": "contacted"
+    },
+    "gh-cyfyifanchen": {
+      "status": "contacted",
+      "priority": true
+    },
+    "ten-halajohn": {
+      "status": "replied",
+      "priority": true
+    },
+    "gh-starrylyn": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-jzq2000": {
+      "status": "replied",
+      "priority": true
+    },
+    "gh-yiminw": {
+      "status": "contacted"
+    },
+    "gh-yiranyyu": {
+      "status": "contacted"
+    },
+    "gh-hanhandi": {
+      "status": "replied",
+      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
     }
   },
   "deleted_ids": [
     "agentscope",
     "dify-pm",
     "fireredteam",
+    "funaudillm",
+    "gh-SapphireLab-b9e741041ad6",
     "gh-diyuyi-agora",
     "gh-hiyouga",
     "gh-kimiyoung",
