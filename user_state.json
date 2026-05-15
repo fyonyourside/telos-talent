@@ -1,23 +1,18 @@
 {
   "version": 1,
-  "last_updated": "2026-05-15T18:21:41",
+  "last_updated": "2026-05-15T18:27:41",
   "user_states": {
     "gh-jaredforreal": {
       "status": "contacted",
       "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent）",
       "priority": true
     },
-    "ten-halajohn": {
-      "status": "replied",
-      "priority": true
-    },
-    "gh-cyfyifanchen": {
+    "gh-bluemotional": {
       "status": "contacted",
       "priority": true
     },
-    "gh-hanhandi": {
-      "status": "replied",
-      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
+    "gh-voidking": {
+      "status": "contacted"
     },
     "gh-bbuf": {
       "status": "contacted",
@@ -26,41 +21,14 @@
     "gh-ldzhangyx": {
       "status": "contacted"
     },
-    "gh-bluemotional": {
-      "status": "contacted",
-      "priority": true
-    },
-    "xl-shichunliu": {
-      "status": "converted",
-      "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
-      "priority": true
-    },
-    "gh-voidking": {
-      "status": "contacted"
-    },
     "gh-jiangjiechen": {
       "status": "contacted"
-    },
-    "gh-XiangJinyu": {
-      "status": "contacted"
-    },
-    "gh-davdgao": {
-      "status": "contacted"
-    },
-    "gh-arthasking123": {
-      "status": "replied"
-    },
-    "gh-didiforgithub": {
-      "status": "contacted"
-    },
-    "xl-chenqian": {
-      "status": "replied"
     },
     "gh-rayrayraykk": {
       "status": "contacted"
     },
-    "gh-garylin2099": {
-      "status": "contacted"
+    "gh-arthasking123": {
+      "status": "replied"
     },
     "gh-geekan": {
       "status": "pass"
@@ -75,9 +43,6 @@
       "status": "pass"
     },
     "gh-alex-xinlu": {
-      "status": "pass"
-    },
-    "gh-jenqyang": {
       "status": "pass"
     },
     "gh-better629": {
@@ -101,10 +66,6 @@
     "gh-aluminumbox": {
       "status": "contacted",
       "priority": true
-    },
-    "gh-yuekaizhang": {
-      "status": "converted",
-      "note": "人才推荐和背调，开源方案效果测评"
     },
     "gh-shibing624": {
       "status": "converted",
@@ -131,10 +92,6 @@
       "status": "contacted",
       "priority": true
     },
-    "gh-starrylyn": {
-      "status": "contacted",
-      "priority": true
-    },
     "gh-qq547276542": {
       "status": "replied"
     },
@@ -142,19 +99,8 @@
       "status": "replied",
       "priority": true
     },
-    "gh-yiminw": {
-      "status": "contacted"
-    },
     "gh-weedge": {
       "status": "contacted"
-    },
-    "jingcheng-pang": {
-      "status": "contacted"
-    },
-    "gh-zrzrzrzrzrzrzr": {
-      "status": "replied",
-      "note": "汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent），在勤锴手下scope挺大的\n约了5月11号之后见面聊",
-      "priority": true
     },
     "gh-wangxiongts": {
       "status": "contacted",
@@ -172,9 +118,6 @@
       "status": "contacted",
       "priority": true
     },
-    "gh-xiaoxigua999": {
-      "status": "contacted"
-    },
     "gh-pengzhendong": {
       "status": "replied",
       "note": "约了杭州见面",
@@ -187,9 +130,6 @@
     "gh-vermouth1992": {
       "status": "contacted",
       "priority": true
-    },
-    "gh-jintao-huang": {
-      "status": "contacted"
     },
     "gh-kaituoxu": {
       "status": "contacted"
@@ -205,22 +145,13 @@
     "gh-aopstudio": {
       "status": "replied"
     },
-    "gh-yiranyyu": {
-      "status": "contacted"
-    },
     "gh-csukuangfj": {
       "status": "contacted",
       "priority": true
     },
-    "gh-cuiunbo": {
-      "status": "contacted"
-    },
     "gh-zhc7": {
       "status": "contacted",
       "priority": true
-    },
-    "gh-bokesyo": {
-      "status": "converted"
     },
     "zhu-han-xiaomi": {
       "status": "contacted",
@@ -237,10 +168,6 @@
     },
     "gh-yerfor": {
       "status": "contacted"
-    },
-    "mannaandpoem-openmanus": {
-      "status": "contacted",
-      "priority": true
     },
     "gh-PeterSH6": {
       "status": "contacted",
@@ -268,26 +195,76 @@
     "gh-liaochenliang": {
       "status": "pass"
     },
-    "gh-lengyue233": {
-      "status": "pass"
-    },
     "gh-aaronz345": {
       "status": "pass"
     },
     "gh-wangzhaode": {
       "status": "pass"
     },
-    "gh-tc-mb": {
-      "status": "pass",
-      "note": "面壁智能推理 infra 工程师；llama.cpp-omni 原作者；在主流 LLM serving 框架提交 MiniCPM-V/O 支持 PR；infra 向候选人，典型端侧多模态部署背景\nCV推理优化出身，24年加入面壁，汇报给多模态组负责人姚远，对多模走向具身比较有兴趣，感觉在面壁干的还算开心，交个朋友保持交流了"
-    },
     "gh-tan-xu": {
       "status": "pass"
+    },
+    "gh-yuekaizhang": {
+      "status": "converted",
+      "note": "人才推荐和背调，开源方案效果测评"
     },
     "gh-yfyeung": {
       "status": "replied",
       "note": "约了上海和子阳一起吃饭",
       "priority": true
+    },
+    "gh-starrylyn": {
+      "status": "contacted",
+      "priority": true
+    },
+    "gh-yiminw": {
+      "status": "contacted"
+    },
+    "jingcheng-pang": {
+      "status": "contacted"
+    },
+    "gh-zrzrzrzrzrzrzr": {
+      "status": "replied",
+      "note": "汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent），在勤锴手下scope挺大的\n约了5月11号之后见面聊",
+      "priority": true
+    },
+    "gh-xiaoxigua999": {
+      "status": "contacted"
+    },
+    "gh-jintao-huang": {
+      "status": "contacted"
+    },
+    "gh-hanhandi": {
+      "status": "replied",
+      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
+    },
+    "gh-yiranyyu": {
+      "status": "contacted"
+    },
+    "gh-cuiunbo": {
+      "status": "contacted"
+    },
+    "gh-bokesyo": {
+      "status": "converted"
+    },
+    "gh-zehuichen123": {
+      "status": "contacted"
+    },
+    "gh-XiangJinyu": {
+      "status": "contacted"
+    },
+    "gh-davdgao": {
+      "status": "contacted"
+    },
+    "gh-didiforgithub": {
+      "status": "contacted"
+    },
+    "mannaandpoem-openmanus": {
+      "status": "contacted",
+      "priority": true
+    },
+    "xl-chenqian": {
+      "status": "replied"
     },
     "gh-cwx-worst-one": {
       "status": "converted",
@@ -297,13 +274,36 @@
       "status": "converted",
       "note": "benchamark合作，qwen-audio和豆包audio顾问"
     },
-    "gh-zehuichen123": {
+    "gh-garylin2099": {
       "status": "contacted"
     },
     "gh-plutoless": {
       "status": "pass"
     },
+    "gh-lengyue233": {
+      "status": "pass"
+    },
     "metagpt-pm": {
+      "status": "pass"
+    },
+    "gh-tc-mb": {
+      "status": "pass",
+      "note": "面壁智能推理 infra 工程师；llama.cpp-omni 原作者；在主流 LLM serving 框架提交 MiniCPM-V/O 支持 PR；infra 向候选人，典型端侧多模态部署背景\nCV推理优化出身，24年加入面壁，汇报给多模态组负责人姚远，对多模走向具身比较有兴趣，感觉在面壁干的还算开心，交个朋友保持交流了"
+    },
+    "gh-cyfyifanchen": {
+      "status": "contacted",
+      "priority": true
+    },
+    "ten-halajohn": {
+      "status": "replied",
+      "priority": true
+    },
+    "xl-shichunliu": {
+      "status": "converted",
+      "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
+      "priority": true
+    },
+    "gh-jenqyang": {
       "status": "pass"
     }
   },
