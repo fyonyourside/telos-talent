@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-15T18:56:19",
+  "last_updated": "2026-05-15T19:03:12",
   "user_states": {
     "gh-jaredforreal": {
       "status": "contacted",
@@ -23,9 +23,6 @@
       "priority": true
     },
     "gh-ldzhangyx": {
-      "status": "contacted"
-    },
-    "gh-jiangjiechen": {
       "status": "contacted"
     },
     "gh-XiangJinyu": {
@@ -293,6 +290,9 @@
       "status": "converted",
       "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
       "priority": true
+    },
+    "gh-jiangjiechen": {
+      "status": "contacted"
     },
     "gh-zehuichen123": {
       "status": "contacted"
