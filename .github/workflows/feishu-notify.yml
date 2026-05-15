@@ -1,14 +1,14 @@
 name: Feishu Daily Report
 
 # 触发方式：
-#   1. push 到 gh-pages 且 leads.json 变化 + commit 消息以 "Daily update" 开头
-#      → 调度任务写回新数据后自动推送卡片
+#   1. push 到 gh-pages（任意文件变更）+ commit 消息以 "Daily update" 开头
+#      → feishu_sync 推送后 Actions 发飞书卡片（不再用 paths 仅 leads.json，避免只改看板时不触发）
 #   2. workflow_dispatch（手动在 Actions 页点 Run workflow 测试）
 on:
   push:
     branches: [gh-pages]
-    paths:
-      - leads.json   # leads.json 变化时触发，但 job 内部会过滤提交类型
+    # 注意：不要只用 paths: leads.json。feishu_sync 常只改 dashboard.html（LEADS_DATA），
+    # 若 leads 二进制未变，旧配置会导致本 workflow 根本不跑 → 飞书永远旧内容。
   workflow_dispatch:
 
 jobs:
