@@ -194,12 +194,6 @@ body { background:var(--teal); color:var(--text); font-family:'Inter',sans-serif
 .archive-row-st { font-size:10px; flex-shrink:0; opacity:0.85; }
 .badges { display:flex; gap:6px; align-items:center; flex-shrink:0; }
 
-/* score dots */
-.score-dots { display:flex; gap:3px; }
-.dot { width:7px; height:7px; border-radius:50%; }
-.dot.on  { background:var(--amber); }
-.dot.off { background:rgba(255,255,255,0.1); }
-
 /* card meta */
 .card-meta { display:flex; flex-direction:column; gap:4px; }
 .meta-row { display:flex; align-items:center; gap:6px; font-size:11px; color:var(--text-dim); }
@@ -16485,9 +16479,6 @@ function matchesFilters(lead) {
 }
 
 // ── Render ─────────────────────────────────────────────────────────────────
-function scoreHTML(n) {
-  return Array.from({length:5},(_,i)=>`<div class="dot ${i<n?'on':'off'}"></div>`).join('');
-}
 function renderCard(lead) {
   const st = getStatus(lead.id);
   const stLabel = STATUS_LABEL[st];
@@ -16795,6 +16786,7 @@ function openModal(id) {
           ${trackSelectHTML(lead, 'modal-track-select')}
         </div>
         <div style="font-size:11px;color:var(--text-mid);margin-bottom:10px;line-height:1.5">${(lead.role||'').replace(/</g,'')}</div>
+        <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">综合档位：<strong style="color:var(--amber-lt)">${effectiveTier(lead)}</strong></div>
       </div>
     </div>
 
