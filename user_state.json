@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T21:03:00",
+  "last_updated": "2026-05-19T13:05:52.371Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -9,7 +9,8 @@
     "gh-jaredforreal": {
       "status": "contacted",
       "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent）",
-      "priority": true
+      "priority": true,
+      "lane_rank": 10
     },
     "ten-halajohn": {
       "status": "replied",
@@ -21,34 +22,123 @@
     "gh-lishengzxc": {
       "status": "contacted"
     },
+    "gh-bowenliang123-811014a44990": {
+      "lane_rank": 30
+    },
     "gh-twz915": {
       "status": "contacted"
     },
+    "gh-Wendong-Fan-44db5bb8c5ab": {
+      "lane_rank": 40
+    },
+    "gh-c121914yu-ce43a1d0047b": {
+      "lane_rank": 50
+    },
+    "gh-orange-crow-c593ac0b5b16": {
+      "lane_rank": 60
+    },
+    "gh-crazywoola-48c55e5786e6": {
+      "lane_rank": 70
+    },
+    "gh-lightaime-2398720cbbdd": {
+      "lane_rank": 80
+    },
     "gh-bluemotional": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 90
+    },
+    "gh-KevinHuSh-d0de876ecb42": {
+      "lane_rank": 100
+    },
+    "gh-pitt-liang": {
+      "lane_rank": 110
+    },
+    "gh-zjrwtx-aeb2edb0834c": {
+      "lane_rank": 120
+    },
+    "gh-MubahsirHassan-5d21fbd06ebe": {
+      "lane_rank": 130
+    },
+    "gh-Nikita-Etinger-d2a7368b67e5": {
+      "lane_rank": 140
     },
     "gh-Osier-Yi-fc97b61542ce": {
       "status": "contacted"
+    },
+    "gh-Leirunlin-070833b8a3a0": {
+      "lane_rank": 150
+    },
+    "gh-xqvvu-684bb8fa7484": {
+      "lane_rank": 160
     },
     "xl-shichunliu": {
       "status": "converted",
       "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
       "priority": true
     },
+    "gh-myhloli-a0a7b7f61568": {
+      "lane_rank": 170
+    },
+    "gh-zhangyingerjelly-4c299093da6a": {
+      "lane_rank": 180
+    },
+    "gh-yongtenglei-73ef97038c4b": {
+      "lane_rank": 190
+    },
+    "gh-cuiyuebing-b5c1bc7b2e66": {
+      "lane_rank": 200
+    },
+    "gh-zhenruzhang-51de556ee8e0": {
+      "lane_rank": 210
+    },
+    "gh-yuzhichang-dca4689822cd": {
+      "lane_rank": 220
+    },
+    "gh-cike8899-aee0fc9c9ec3": {
+      "lane_rank": 230
+    },
     "gh-hanhandi": {
       "status": "replied",
-      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
+      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历",
+      "lane_rank": 240
+    },
+    "gh-hugsun": {
+      "lane_rank": 250
+    },
+    "gh-idontwanttosayaword-bc5b9a312d89": {
+      "lane_rank": 260
+    },
+    "gh-qbc2016-76712ac19263": {
+      "lane_rank": 270
+    },
+    "gh-sunshinexcode-cbdd423f6a05": {
+      "lane_rank": 280
+    },
+    "gh-SunXiaoXiang-b900ab77332d": {
+      "lane_rank": 290
+    },
+    "gh-tomasliu-agora-767e1f7bd6cd": {
+      "lane_rank": 300
+    },
+    "gh-ye7love7-e8db70280d89": {
+      "lane_rank": 310
+    },
+    "gh-zhijianma-0270b37c2a3a": {
+      "lane_rank": 320
     },
     "gh-voidking": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 330
     },
     "gh-bbuf": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 340
     },
     "gh-ldzhangyx": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 350
     },
     "gh-zehuichen123": {
       "status": "contacted",
@@ -322,11 +412,17 @@
     "gh-iamjoel-f9ef4b8c46d0": {
       "status": "contacted"
     },
+    "gh-longcw-3f308206746b": {
+      "manual_low_priority": true,
+      "lane_rank": 20
+    },
     "gh-Maplemx-b71b636154d6": {
       "status": "contacted"
     },
     "gh-jiangjiechen": {
-      "status": "contacted"
+      "status": "contacted",
+      "manual_low_priority": true,
+      "lane_rank": 10
     }
   },
   "deleted_ids": [
