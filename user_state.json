@@ -1,172 +1,292 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T13:28:47.139Z",
+  "last_updated": "2026-05-19T21:29:07",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "tier": "S"
     },
     "gh-jaredforreal": {
       "status": "contacted",
       "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent）",
       "priority": true,
-      "lane_rank": 10
+      "tier": "S"
     },
     "ten-halajohn": {
       "status": "replied",
       "priority": true,
       "talent_track": "harness_eng",
-      "track_manual": true
-    },
-    "gh-JohnJyong-fe7382561452": {
-      "status": "contacted"
+      "track_manual": true,
+      "tier": "S"
     },
     "gh-lishengzxc": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "A"
     },
     "gh-bowenliang123-811014a44990": {
-      "lane_rank": 30
+      "tier": "A"
+    },
+    "gh-JohnJyong-fe7382561452": {
+      "status": "contacted",
+      "tier": "A"
     },
     "gh-twz915": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "A"
     },
     "gh-Wendong-Fan-44db5bb8c5ab": {
-      "lane_rank": 40
+      "tier": "A"
+    },
+    "liyupi": {
+      "tier": "A"
     },
     "gh-c121914yu-ce43a1d0047b": {
-      "lane_rank": 50
+      "tier": "A"
     },
     "gh-orange-crow-c593ac0b5b16": {
-      "lane_rank": 60
+      "tier": "A"
     },
     "gh-crazywoola-48c55e5786e6": {
-      "lane_rank": 70
+      "tier": "A"
     },
     "gh-lightaime-2398720cbbdd": {
-      "lane_rank": 80
+      "tier": "A"
     },
     "gh-bluemotional": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 110
+      "tier": "A"
+    },
+    "gh-papayalove-3a36509afb68": {
+      "tier": "A"
     },
     "gh-KevinHuSh-d0de876ecb42": {
-      "lane_rank": 90
+      "tier": "A"
     },
     "gh-pitt-liang": {
-      "lane_rank": 100
+      "tier": "A"
+    },
+    "gh-asiroliu-65646ffb6d19": {
+      "tier": "A"
+    },
+    "gh-Lynnooo-ee6523c550e7": {
+      "tier": "A"
     },
     "gh-zjrwtx-aeb2edb0834c": {
-      "lane_rank": 120
+      "tier": "A"
     },
     "gh-MubahsirHassan-5d21fbd06ebe": {
-      "lane_rank": 130
+      "tier": "A"
+    },
+    "gh-faithfulinlove": {
+      "tier": "A"
     },
     "gh-Nikita-Etinger-d2a7368b67e5": {
-      "lane_rank": 140
+      "tier": "A"
     },
     "gh-Osier-Yi-fc97b61542ce": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "A"
     },
     "gh-Leirunlin-070833b8a3a0": {
-      "lane_rank": 150
+      "tier": "A"
     },
     "gh-xqvvu-684bb8fa7484": {
-      "lane_rank": 160
+      "tier": "A"
     },
     "xl-shichunliu": {
       "status": "converted",
       "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
-      "priority": true
+      "priority": true,
+      "tier": "A"
+    },
+    "gh-fengju0213-0eb6b6df6570": {
+      "tier": "A"
     },
     "gh-myhloli-a0a7b7f61568": {
-      "lane_rank": 170
+      "tier": "A"
     },
     "gh-zhangyingerjelly-4c299093da6a": {
-      "lane_rank": 180
+      "tier": "A"
     },
     "gh-yongtenglei-73ef97038c4b": {
-      "lane_rank": 190
+      "tier": "A"
     },
     "gh-cuiyuebing-b5c1bc7b2e66": {
-      "lane_rank": 200
+      "tier": "A"
     },
     "gh-zhenruzhang-51de556ee8e0": {
-      "lane_rank": 210
+      "tier": "A"
     },
     "gh-yuzhichang-dca4689822cd": {
-      "lane_rank": 220
+      "tier": "A"
     },
     "gh-cike8899-aee0fc9c9ec3": {
-      "lane_rank": 230
+      "tier": "A"
     },
     "gh-hanhandi": {
       "status": "replied",
       "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历",
-      "lane_rank": 240
+      "tier": "A"
     },
     "gh-hugsun": {
-      "lane_rank": 250
+      "tier": "A"
     },
     "gh-idontwanttosayaword-bc5b9a312d89": {
-      "lane_rank": 260
+      "tier": "A"
     },
     "gh-qbc2016-76712ac19263": {
-      "lane_rank": 270
+      "tier": "A"
     },
     "gh-sunshinexcode-cbdd423f6a05": {
-      "lane_rank": 280
+      "tier": "A"
     },
     "gh-SunXiaoXiang-b900ab77332d": {
-      "lane_rank": 290
+      "tier": "A"
     },
     "gh-tomasliu-agora-767e1f7bd6cd": {
-      "lane_rank": 300
+      "tier": "A"
     },
     "gh-ye7love7-e8db70280d89": {
-      "lane_rank": 310
+      "tier": "A"
     },
     "gh-zhijianma-0270b37c2a3a": {
-      "lane_rank": 320
+      "tier": "A"
     },
     "gh-voidking": {
       "status": "contacted",
-      "lane_rank": 330
+      "tier": "A"
     },
     "gh-bbuf": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 340
+      "tier": "A"
     },
     "gh-ldzhangyx": {
       "status": "contacted",
-      "lane_rank": 350
+      "tier": "A"
     },
     "gh-zehuichen123": {
       "status": "contacted",
-      "custom_name": "陈泽徽"
+      "custom_name": "陈泽徽",
+      "tier": "A"
     },
     "gh-XiangJinyu": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "A"
     },
     "gh-davdgao": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "B"
+    },
+    "gh-GoldWaterFall-2efdca89c827": {
+      "tier": "B"
+    },
+    "gh-leeroo-coder-f95377201a81": {
+      "tier": "B"
+    },
+    "gh-1850298154": {
+      "tier": "B"
     },
     "gh-didiforgithub": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "B"
     },
     "xl-chenqian": {
       "status": "replied",
+      "tier": "B",
       "manual_low_priority": true
     },
+    "gh-shenchucheng": {
+      "tier": "B"
+    },
+    "gh-dmitrii-khizbullin-fa5fb06833ce": {
+      "tier": "B"
+    },
+    "gh-alcholiclg": {
+      "tier": "B"
+    },
+    "gh-luohh5": {
+      "tier": "B"
+    },
+    "gh-huangweitao": {
+      "tier": "B"
+    },
+    "gh-wangyoucao577-d3bfba4de33d": {
+      "tier": "B"
+    },
+    "gh-KJ-Huang-sz-9303fccccb73": {
+      "tier": "B"
+    },
+    "gh-y149604146-27de33f0c190": {
+      "tier": "B"
+    },
+    "gh-shancw96-9f762f46ede2": {
+      "tier": "B"
+    },
     "gh-rayrayraykk": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "B"
+    },
+    "gh-wangxingjun778": {
+      "tier": "B"
+    },
+    "gh-Vincentwei1021-35c6264adda3": {
+      "tier": "B"
+    },
+    "gh-bsbds-0fecdcade907": {
+      "tier": "B"
+    },
+    "gh-YingchaoX-94fa6ea1f98a": {
+      "tier": "B"
     },
     "gh-arthasking123": {
-      "status": "replied"
+      "status": "replied",
+      "tier": "B"
+    },
+    "gh-shczhen-13a23ab03f35": {
+      "tier": "B"
     },
     "gh-garylin2099": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "B"
+    },
+    "gh-seehi-79d7b487ce79": {
+      "tier": "B"
+    },
+    "gh-van-gogh-619e13a8ab04": {
+      "tier": "B"
+    },
+    "gh-x54-729-ce3db6e7be5e": {
+      "tier": "B"
+    },
+    "gh-tuhahaha": {
+      "tier": "B"
+    },
+    "gh-dividez-47fe3dfbdd60": {
+      "tier": "B"
+    },
+    "gh-Mishuni-819fc8d0ff0f": {
+      "tier": "B"
+    },
+    "gh-Lynx-1221-2a7821de4e0e": {
+      "tier": "B"
+    },
+    "gh-Rusullhu-ae791dcff147": {
+      "tier": "B"
+    },
+    "gh-yangapku": {
+      "tier": "B"
+    },
+    "gh-toolazytoname-8521e6deadcf": {
+      "tier": "B"
+    },
+    "gh-Patrickill-62fb28c58941": {
+      "tier": "B"
+    },
+    "gh-artificialzeng": {
+      "tier": "B"
     },
     "gh-geekan": {
       "status": "pass"
@@ -209,412 +329,457 @@
       "status": "contacted",
       "note": "Kimi-Audio主要作者；LongCat-Flash-Omni(560B-A27B)；ex Tencent/miHoYo/Meituan；语音LLM顶尖工程师；北京\n目前在美团做龙猫",
       "priority": true,
-      "lane_rank": 10
+      "tier": "S"
     },
     "gh-Stardust-minus-0f5962b6d5ec": {
-      "lane_rank": 20
+      "tier": "S"
     },
     "gh-yt605155624-7ec41c4dca21": {
-      "lane_rank": 30
+      "tier": "S"
     },
     "gh-aluminumbox": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 40
+      "tier": "S"
     },
     "gh-yuekaizhang": {
       "status": "converted",
-      "note": "人才推荐和背调，开源方案效果测评"
+      "note": "人才推荐和背调，开源方案效果测评",
+      "tier": "S"
     },
     "gh-shibing624": {
       "status": "converted",
-      "note": "外呼应用顾问，偏落地"
+      "note": "外呼应用顾问，偏落地",
+      "tier": "S"
     },
     "zhihao-du": {
       "status": "converted",
-      "note": "FunAudio模型使用顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业"
+      "note": "FunAudio模型使用顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业",
+      "tier": "S"
     },
     "gh-yfyeung": {
       "status": "replied",
       "note": "约了上海和子阳一起吃饭",
       "priority": true,
-      "lane_rank": 50
+      "tier": "S"
     },
     "gh-Zain-Jiang": {
       "status": "converted",
-      "note": "博五，今年六月毕业，延毕一年帮导师做项目，年底正式招聘"
+      "note": "博五，今年六月毕业，延毕一年帮导师做项目，年底正式招聘",
+      "tier": "S"
     },
     "gh-alanswift": {
       "status": "replied",
       "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊",
       "priority": true,
-      "lane_rank": 60
+      "tier": "S"
     },
     "chen-zhang-actuy": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 70
+      "tier": "S"
     },
     "gh-jishengpeng": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 80
+      "tier": "S"
     },
     "gh-starrylyn": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 90
+      "tier": "S"
     },
     "gh-AnyaCoder-f2c953d5bdbd": {
-      "lane_rank": 100
+      "tier": "S"
     },
     "gh-qq547276542": {
       "status": "replied",
-      "lane_rank": 110
+      "tier": "S"
     },
     "gh-jzq2000": {
       "status": "replied",
       "priority": true,
-      "lane_rank": 120
+      "tier": "S"
     },
     "gh-zh794390558-43ee6e6cac35": {
-      "lane_rank": 10
+      "tier": "A"
     },
     "gh-breakstring-ffa98a18a104": {
-      "lane_rank": 20
+      "tier": "A"
     },
     "gh-PriesiaMioShirakana-70b86a2f326d": {
-      "lane_rank": 30
+      "tier": "A"
     },
     "gh-RVC-Boss-ecb088cde377": {
-      "lane_rank": 40
+      "tier": "A"
     },
     "gh-tramphero-838da8f31d30": {
-      "lane_rank": 50
+      "tier": "A"
     },
     "gh-SpenserCai-c05fd99739e4": {
-      "lane_rank": 60
+      "tier": "A"
     },
     "gh-yiminw": {
       "status": "contacted",
-      "lane_rank": 70
+      "tier": "A"
+    },
+    "gh-Yuan-ManX-bd9874b5e731": {
+      "tier": "A"
     },
     "gh-xieyxclack-cbb611e777cc": {
-      "lane_rank": 80
+      "tier": "A"
     },
     "gh-ylzz1997-cec2a4df0bef": {
-      "lane_rank": 100
+      "tier": "A"
     },
     "gh-anyvoiceai-7cbcff242aab": {
-      "lane_rank": 90
+      "tier": "A"
     },
     "gh-innnky-cb5f088a5a84": {
-      "lane_rank": 110
+      "tier": "A"
     },
     "gh-v3ucn-bc9b0cb61b0b": {
-      "lane_rank": 120
+      "tier": "A"
     },
     "gh-weedge": {
       "status": "contacted",
-      "lane_rank": 130
+      "tier": "A"
     },
     "gh-HarderThenHarder-900345d050af": {
-      "lane_rank": 140
+      "tier": "A"
     },
     "jingcheng-pang": {
       "status": "contacted",
-      "lane_rank": 150
+      "tier": "A"
     },
     "gh-zrzrzrzrzrzrzr": {
       "status": "replied",
       "note": "汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent），在勤锴手下scope挺大的\n约了5月11号之后见面聊",
       "priority": true,
-      "lane_rank": 160
+      "tier": "A"
     },
     "gh-limafang-78f9d03b62fb": {
-      "lane_rank": 170
+      "tier": "A"
     },
     "gh-Whale-Dolphin-a12b4d80cd24": {
-      "lane_rank": 180
+      "tier": "A"
     },
     "gh-wangxiongts": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 190
+      "tier": "A"
     },
     "gh-pan-x-c": {
-      "lane_rank": 200
-    },
-    "gh-Yuan-ManX-bd9874b5e731": {
-      "lane_rank": 210
+      "tier": "A"
     },
     "gh-hecheng0625": {
       "status": "replied",
       "priority": true,
-      "lane_rank": 220
+      "tier": "A"
     },
     "gh-lauragpt": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 230
+      "tier": "A"
     },
     "gh-ABexit-6cf0a08373af": {
-      "lane_rank": 240
+      "tier": "A"
     },
     "gh-daymade-834d245af031": {
-      "lane_rank": 250
+      "tier": "A"
     },
     "gh-6drf21e-a5d11a97cd0e": {
-      "lane_rank": 260
+      "tier": "A"
     },
     "gh-ipfans-8de0794ae50a": {
-      "lane_rank": 270
+      "tier": "A"
     },
     "gh-hjh0119": {
-      "lane_rank": 280
+      "tier": "A"
     },
     "gh-lovemefan": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 290
+      "tier": "A"
     },
     "gh-wangclnlp-49eb53b0831b": {
-      "lane_rank": 300
+      "tier": "A"
     },
     "gh-xiaoxigua999": {
       "status": "contacted",
-      "lane_rank": 310
+      "tier": "A"
     },
     "gh-xxnuo-0f0dc5565b94": {
-      "lane_rank": 320
+      "tier": "A"
     },
     "gh-pengzhendong": {
       "status": "replied",
       "note": "约了杭州见面",
       "priority": true,
-      "lane_rank": 330
+      "tier": "A"
     },
     "gh-yangdongchao": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 340
+      "tier": "A"
     },
     "gh-wangrongsheng": {
-      "lane_rank": 350
+      "tier": "A"
     },
     "gh-0xCAFEBABE0-a8d7b1795fb1": {
-      "lane_rank": 360
+      "tier": "A"
     },
     "gh-Ccapton-7d0e5a64e757": {
-      "lane_rank": 370
+      "tier": "A"
     },
     "gh-vermouth1992": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 380
+      "tier": "A"
     },
     "gh-Xiao-Cai185-96cc2e389c7d": {
-      "lane_rank": 390
+      "tier": "A"
     },
     "gh-LinightKira-749f4a53f363": {
-      "lane_rank": 400
+      "tier": "A"
     },
     "gh-JINO-ROHIT-541a3a0c2656": {
-      "lane_rank": 410
+      "tier": "A"
     },
     "gh-jjjymmm": {
-      "lane_rank": 420
+      "tier": "A"
     },
     "gh-JinHai-CN-2679f0d71463": {
-      "lane_rank": 430
+      "tier": "A"
     },
     "gh-jintao-huang": {
       "status": "contacted",
-      "lane_rank": 440
+      "tier": "A"
     },
     "gh-KPatr1ck-de0f8efc658f": {
-      "lane_rank": 450
+      "tier": "A"
     },
     "gh-kaituoxu": {
       "status": "contacted",
-      "lane_rank": 460
+      "tier": "A"
     },
     "gh-KakaruHayate-35d6b9b85be9": {
-      "lane_rank": 470
+      "tier": "A"
     },
     "gh-KamioRinn-4d353a7ebc35": {
-      "lane_rank": 480
+      "tier": "A"
     },
     "gh-gpt-dance-3473a8d47138": {
-      "lane_rank": 490
+      "tier": "A"
     },
     "gh-Nioolek": {
-      "lane_rank": 500
+      "tier": "A"
     },
     "gh-lmxue": {
       "status": "replied",
       "note": "学术背景+产业合作；Amphion(9.7k stars)联合创始人(OpenMMLab工业项目)；Spark-TTS贡献者；语音生成技术深厚\n五一前后苏州见面",
       "priority": true,
-      "lane_rank": 510
+      "tier": "A"
     },
     "gh-Lizerui9926-677a5ebdc0d6": {
-      "lane_rank": 520
+      "tier": "A"
     },
     "gh-pandamq": {
       "status": "contacted",
-      "lane_rank": 530
+      "tier": "A"
     },
     "gh-iflamed-4f96fc8c7fd0": {
-      "lane_rank": 540
+      "tier": "A"
     },
     "gh-OedoSoldier-b28016adb55f": {
-      "lane_rank": 550
+      "tier": "A"
     },
     "gh-PoTaTo-Mika-b790b760cada": {
-      "lane_rank": 560
+      "tier": "A"
     },
     "gh-r1ckshi": {
-      "lane_rank": 570
+      "tier": "A"
     },
     "gh-shuaibai623": {
-      "lane_rank": 580
+      "tier": "A"
     },
     "gh-ChasonJiang-0aecf93e222e": {
-      "lane_rank": 590
+      "tier": "A"
     },
     "gh-Woody-Hu-7b22c3a1b987": {
-      "lane_rank": 600
+      "tier": "A"
     },
     "gh-Susieji-0e93ce7d2e83": {
-      "lane_rank": 610
+      "tier": "A"
     },
     "gh-tyanz-6c283aafbaff": {
-      "lane_rank": 620
+      "tier": "A"
     },
     "gh-Timtimtimchen-eedc4beaf838": {
-      "lane_rank": 630
+      "tier": "A"
     },
     "gh-di-osc": {
-      "lane_rank": 640
+      "tier": "A"
     },
     "gh-XXXXRT666-278435fd2ec8": {
-      "lane_rank": 650
+      "tier": "A"
     },
     "gh-lyblsgo-f25deac7e42f": {
-      "lane_rank": 660
+      "tier": "A"
     },
     "gh-SmileGoat-3911638a3727": {
-      "lane_rank": 670
+      "tier": "A"
     },
     "gh-elissopp-de3c248fb94a": {
-      "lane_rank": 680
+      "tier": "A"
     },
     "gh-aopstudio": {
       "status": "replied",
-      "lane_rank": 690
+      "tier": "A"
     },
     "gh-zzhangpurdue": {
-      "lane_rank": 700
+      "tier": "A"
     },
     "gh-edgemoorlf-bb6b3b203d5a": {
-      "lane_rank": 710
+      "tier": "A"
     },
     "gh-frozentearz-5472076b93dd": {
-      "lane_rank": 720
+      "tier": "A"
     },
     "gh-hexisyztem-cd7ce14b2d80": {
-      "lane_rank": 730
+      "tier": "A"
     },
     "gh-hnluo-76dc1994c228": {
-      "lane_rank": 740
+      "tier": "A"
     },
     "gh-wishhyt-b54d8bebb02f": {
-      "lane_rank": 750
+      "tier": "A"
     },
     "gh-kingki663-0aaecfa87920": {
-      "lane_rank": 760
+      "tier": "A"
     },
     "gh-jmwang66-ff406321a92d": {
-      "lane_rank": 770
+      "tier": "A"
     },
     "gh-ranchlai": {
-      "lane_rank": 780
+      "tier": "A"
     },
     "gh-takatost-2ecc1c2739c0": {
-      "lane_rank": 790
+      "tier": "A"
     },
     "gh-tastelikefeet": {
-      "lane_rank": 800
+      "tier": "A"
     },
     "gh-vndee": {
-      "lane_rank": 810
+      "tier": "A"
     },
     "gh-wildminder": {
-      "lane_rank": 820
+      "tier": "A"
     },
     "gh-wuzhiping-4b29df21e8ca": {
-      "lane_rank": 830
+      "tier": "A"
     },
     "gh-yiboyasss-0ce8bb645a7b": {
-      "lane_rank": 840
+      "tier": "A"
     },
     "gh-yiranyyu": {
       "status": "contacted",
-      "lane_rank": 850
+      "tier": "A"
     },
     "gh-csukuangfj": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 860
+      "tier": "A"
     },
     "gh-cuiunbo": {
       "status": "contacted",
-      "lane_rank": 870
+      "tier": "A"
     },
     "gh-zhc7": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 880
+      "tier": "A"
     },
     "gh-bokesyo": {
-      "status": "converted"
+      "status": "converted",
+      "tier": "A"
     },
     "zhu-han-xiaomi": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 890
+      "tier": "A"
     },
     "gh-zombieyang-7d26d3dd5a4c": {
-      "lane_rank": 900
+      "tier": "A"
     },
     "kedreamix-linly": {
       "status": "contacted",
-      "lane_rank": 910
+      "tier": "A"
+    },
+    "gh-lich99-dca8ded5188a": {
+      "tier": "B"
+    },
+    "gh-qinxuye-ae2a09a9d2f4": {
+      "tier": "B"
+    },
+    "gh-dongzhang2001": {
+      "tier": "B"
+    },
+    "gh-lengff123-23dabac88663": {
+      "tier": "B"
+    },
+    "gh-fuyuwei01-1284d1367909": {
+      "tier": "B"
     },
     "gh-hijkzzz": {
-      "status": "replied"
+      "status": "replied",
+      "tier": "B"
+    },
+    "gh-leng-yue-a15728089334": {
+      "tier": "B"
+    },
+    "gh-jklj077": {
+      "tier": "B"
     },
     "gh-ymcui": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "B"
     },
     "gh-yerfor": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "B"
     },
     "mannaandpoem-openmanus": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "tier": "B"
     },
     "gh-PeterSH6": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "tier": "B"
+    },
+    "gh-makerjackie-88e8b18b1095": {
+      "tier": "B"
     },
     "gh-cwx-worst-one": {
       "status": "converted",
-      "note": "豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach"
+      "note": "豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach",
+      "tier": "B"
+    },
+    "gh-YYZhang2025": {
+      "tier": "B"
+    },
+    "gh-lymdlut": {
+      "tier": "B"
     },
     "gh-ddlBoJack": {
       "status": "converted",
-      "note": "benchamark合作，qwen-audio和豆包audio顾问"
+      "note": "benchamark合作，qwen-audio和豆包audio顾问",
+      "tier": "B"
+    },
+    "gh-zzw922cn-155726572903": {
+      "tier": "B"
     },
     "gh-chujiezheng": {
       "status": "contacted"
@@ -654,21 +819,33 @@
     "gh-tan-xu": {
       "status": "pass"
     },
+    "gh-garyzhang99": {
+      "tier": "S"
+    },
     "gh-libukai-b7f678ff49c8": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "A"
+    },
+    "gh-lijingbei": {
+      "tier": "B"
     },
     "gh-iamjoel-f9ef4b8c46d0": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "A"
     },
     "gh-longcw-3f308206746b": {
-      "lane_rank": 20
+      "tier": "A"
     },
     "gh-Maplemx-b71b636154d6": {
-      "status": "contacted"
+      "status": "contacted",
+      "tier": "A"
+    },
+    "gh-yaosenJ-da28c6c95be3": {
+      "tier": "A"
     },
     "gh-jiangjiechen": {
       "status": "contacted",
-      "lane_rank": 10
+      "tier": "A"
     }
   },
   "deleted_ids": [
