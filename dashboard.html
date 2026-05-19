@@ -14987,7 +14987,7 @@ const LEADS_DATA = {
       "email": "xiaobuyao@gmail.com",
       "twitter": "https://x.com/libukai",
       "wechat": "",
-      "status": "new",
+      "status": "contacted",
       "note": "",
       "priority": false,
       "founder_signal": false,
@@ -16611,6 +16611,25 @@ const TRACK_LANE_CONFIG = {
   pm: { icon:'🎯', desc:'Model & Agent PM · 0-1 / 测评 / 数据迭代', cls:'track-lane track-p-lane' },
 };
 const laneCollapsed = { harness_eng:false, research_eng:false, fde:false, pm:false };
+var laneScrollTops = {};
+
+function captureLaneScrollTops() {
+  document.querySelectorAll('.lane[data-lane-track]').forEach(function(lane) {
+    var scroll = lane.querySelector('.lane-scroll');
+    if (scroll) laneScrollTops[lane.getAttribute('data-lane-track')] = scroll.scrollTop;
+  });
+}
+
+function restoreLaneScrollTops() {
+  requestAnimationFrame(function() {
+    document.querySelectorAll('.lane[data-lane-track]').forEach(function(lane) {
+      var track = lane.getAttribute('data-lane-track');
+      if (laneScrollTops[track] == null) return;
+      var scroll = lane.querySelector('.lane-scroll');
+      if (scroll) scroll.scrollTop = laneScrollTops[track];
+    });
+  });
+}
 
 function groupByTier(leads) {
   const buckets = { S:[], A:[], B:[], C:[] };
@@ -16707,6 +16726,7 @@ function renderArchiveSection(archived) {
 }
 
 function renderAll() {
+  captureLaneScrollTops();
   const filtered = LEADS_DATA.leads.filter(matchesFilters);
   const active = filtered.filter(l => !isArchivedStatus(l.id));
   const archived = filtered.filter(l => isArchivedStatus(l.id));
@@ -16738,7 +16758,7 @@ function renderAll() {
     const label = TRACK_LABEL[track] || track;
     const topTier = group.length ? effectiveTier(group[0]) : 'C';
     return `
-    <div class="lane ${cfg.cls}">
+    <div class="lane ${cfg.cls}" data-lane-track="${track}">
       <div class="lane-header" onclick="toggleLane('${track}')">
         <span class="lane-icon">${cfg.icon}</span>
         <div style="flex:1;min-width:0">
@@ -16757,6 +16777,7 @@ function renderAll() {
 
   renderArchiveSection(archived);
   renderPriorityPanel();
+  restoreLaneScrollTops();
 }
 
 function applyFilters() { renderAll(); }
