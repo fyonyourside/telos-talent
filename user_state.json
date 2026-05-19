@@ -1,11 +1,22 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T11:56:04.711Z",
+  "last_updated": "2026-05-19T19:57:58",
   "user_states": {
+    "gh-cyfyifanchen": {
+      "status": "contacted",
+      "priority": true
+    },
     "gh-jaredforreal": {
       "status": "contacted",
       "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent）",
       "priority": true
+    },
+    "ten-halajohn": {
+      "status": "replied",
+      "priority": true
+    },
+    "gh-JohnJyong-fe7382561452": {
+      "status": "contacted"
     },
     "gh-lishengzxc": {
       "status": "contacted"
@@ -15,6 +26,11 @@
     },
     "gh-bluemotional": {
       "status": "contacted",
+      "priority": true
+    },
+    "xl-shichunliu": {
+      "status": "converted",
+      "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
       "priority": true
     },
     "gh-hanhandi": {
@@ -29,6 +45,9 @@
       "priority": true
     },
     "gh-ldzhangyx": {
+      "status": "contacted"
+    },
+    "gh-zehuichen123": {
       "status": "contacted"
     },
     "gh-XiangJinyu": {
@@ -61,10 +80,16 @@
     "gh-smilexin": {
       "status": "pass"
     },
+    "gh-plutoless": {
+      "status": "pass"
+    },
     "gh-zshbleaker": {
       "status": "pass"
     },
     "gh-alex-xinlu": {
+      "status": "pass"
+    },
+    "gh-jenqyang": {
       "status": "pass"
     },
     "gh-better629": {
@@ -78,6 +103,9 @@
       "status": "pass"
     },
     "gh-sunxilin": {
+      "status": "pass"
+    },
+    "metagpt-pm": {
       "status": "pass"
     },
     "gh-liusongxiang": {
@@ -287,36 +315,8 @@
     "gh-libukai-b7f678ff49c8": {
       "status": "contacted"
     },
-    "gh-cyfyifanchen": {
-      "status": "contacted",
-      "priority": true
-    },
-    "ten-halajohn": {
-      "status": "replied",
-      "priority": true
-    },
-    "gh-JohnJyong-fe7382561452": {
-      "status": "contacted"
-    },
-    "xl-shichunliu": {
-      "status": "converted",
-      "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
-      "priority": true
-    },
     "gh-jiangjiechen": {
       "status": "contacted"
-    },
-    "gh-zehuichen123": {
-      "status": "contacted"
-    },
-    "gh-plutoless": {
-      "status": "pass"
-    },
-    "gh-jenqyang": {
-      "status": "pass"
-    },
-    "metagpt-pm": {
-      "status": "pass"
     }
   },
   "deleted_ids": [
