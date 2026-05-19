@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T21:17:48",
+  "last_updated": "2026-05-19T21:18:23",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -296,6 +296,9 @@
       "status": "contacted",
       "lane_rank": 70
     },
+    "gh-Yuan-ManX-bd9874b5e731": {
+      "lane_rank": 210
+    },
     "gh-xieyxclack-cbb611e777cc": {
       "lane_rank": 80
     },
@@ -341,9 +344,6 @@
     },
     "gh-pan-x-c": {
       "lane_rank": 200
-    },
-    "gh-Yuan-ManX-bd9874b5e731": {
-      "lane_rank": 210
     },
     "gh-hecheng0625": {
       "status": "replied",
