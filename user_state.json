@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T19:57:58",
+  "last_updated": "2026-05-19T12:38:20.172Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -313,6 +313,9 @@
       "status": "pass"
     },
     "gh-libukai-b7f678ff49c8": {
+      "status": "contacted"
+    },
+    "gh-iamjoel-f9ef4b8c46d0": {
       "status": "contacted"
     },
     "gh-jiangjiechen": {
