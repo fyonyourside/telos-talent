@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T13:06:00.672Z",
+  "last_updated": "2026-05-19T13:06:04.551Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -256,92 +256,319 @@
       "status": "replied",
       "priority": true
     },
+    "gh-zh794390558-43ee6e6cac35": {
+      "lane_rank": 10
+    },
+    "gh-breakstring-ffa98a18a104": {
+      "lane_rank": 20
+    },
+    "gh-PriesiaMioShirakana-70b86a2f326d": {
+      "lane_rank": 30
+    },
+    "gh-RVC-Boss-ecb088cde377": {
+      "lane_rank": 40
+    },
+    "gh-tramphero-838da8f31d30": {
+      "lane_rank": 50
+    },
+    "gh-SpenserCai-c05fd99739e4": {
+      "lane_rank": 60
+    },
     "gh-yiminw": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 70
+    },
+    "gh-xieyxclack-cbb611e777cc": {
+      "lane_rank": 80
+    },
+    "gh-ylzz1997-cec2a4df0bef": {
+      "lane_rank": 100
+    },
+    "gh-anyvoiceai-7cbcff242aab": {
+      "lane_rank": 90
+    },
+    "gh-innnky-cb5f088a5a84": {
+      "lane_rank": 110
+    },
+    "gh-v3ucn-bc9b0cb61b0b": {
+      "lane_rank": 120
     },
     "gh-weedge": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 130
+    },
+    "gh-HarderThenHarder-900345d050af": {
+      "lane_rank": 140
     },
     "jingcheng-pang": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 150
     },
     "gh-zrzrzrzrzrzrzr": {
       "status": "replied",
       "note": "汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent），在勤锴手下scope挺大的\n约了5月11号之后见面聊",
-      "priority": true
+      "priority": true,
+      "lane_rank": 160
+    },
+    "gh-limafang-78f9d03b62fb": {
+      "lane_rank": 170
+    },
+    "gh-Whale-Dolphin-a12b4d80cd24": {
+      "lane_rank": 180
     },
     "gh-wangxiongts": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 190
+    },
+    "gh-pan-x-c": {
+      "lane_rank": 200
+    },
+    "gh-Yuan-ManX-bd9874b5e731": {
+      "lane_rank": 210
     },
     "gh-hecheng0625": {
       "status": "replied",
-      "priority": true
+      "priority": true,
+      "lane_rank": 220
     },
     "gh-lauragpt": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 230
+    },
+    "gh-ABexit-6cf0a08373af": {
+      "lane_rank": 240
+    },
+    "gh-daymade-834d245af031": {
+      "lane_rank": 250
+    },
+    "gh-6drf21e-a5d11a97cd0e": {
+      "lane_rank": 260
+    },
+    "gh-ipfans-8de0794ae50a": {
+      "lane_rank": 270
+    },
+    "gh-hjh0119": {
+      "lane_rank": 280
     },
     "gh-lovemefan": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 290
+    },
+    "gh-wangclnlp-49eb53b0831b": {
+      "lane_rank": 300
     },
     "gh-xiaoxigua999": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 310
+    },
+    "gh-xxnuo-0f0dc5565b94": {
+      "lane_rank": 320
     },
     "gh-pengzhendong": {
       "status": "replied",
       "note": "约了杭州见面",
-      "priority": true
+      "priority": true,
+      "lane_rank": 330
     },
     "gh-yangdongchao": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 340
+    },
+    "gh-wangrongsheng": {
+      "lane_rank": 350
+    },
+    "gh-0xCAFEBABE0-a8d7b1795fb1": {
+      "lane_rank": 360
+    },
+    "gh-Ccapton-7d0e5a64e757": {
+      "lane_rank": 370
     },
     "gh-vermouth1992": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 380
+    },
+    "gh-Xiao-Cai185-96cc2e389c7d": {
+      "lane_rank": 390
+    },
+    "gh-LinightKira-749f4a53f363": {
+      "lane_rank": 400
+    },
+    "gh-JINO-ROHIT-541a3a0c2656": {
+      "lane_rank": 410
+    },
+    "gh-jjjymmm": {
+      "lane_rank": 420
+    },
+    "gh-JinHai-CN-2679f0d71463": {
+      "lane_rank": 430
     },
     "gh-jintao-huang": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 440
+    },
+    "gh-KPatr1ck-de0f8efc658f": {
+      "lane_rank": 450
     },
     "gh-kaituoxu": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 460
+    },
+    "gh-KakaruHayate-35d6b9b85be9": {
+      "lane_rank": 470
+    },
+    "gh-KamioRinn-4d353a7ebc35": {
+      "lane_rank": 480
+    },
+    "gh-gpt-dance-3473a8d47138": {
+      "lane_rank": 490
+    },
+    "gh-Nioolek": {
+      "lane_rank": 500
     },
     "gh-lmxue": {
       "status": "replied",
       "note": "学术背景+产业合作；Amphion(9.7k stars)联合创始人(OpenMMLab工业项目)；Spark-TTS贡献者；语音生成技术深厚\n五一前后苏州见面",
-      "priority": true
+      "priority": true,
+      "lane_rank": 510
+    },
+    "gh-Lizerui9926-677a5ebdc0d6": {
+      "lane_rank": 520
     },
     "gh-pandamq": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 530
+    },
+    "gh-iflamed-4f96fc8c7fd0": {
+      "lane_rank": 540
+    },
+    "gh-OedoSoldier-b28016adb55f": {
+      "lane_rank": 550
+    },
+    "gh-PoTaTo-Mika-b790b760cada": {
+      "lane_rank": 560
+    },
+    "gh-r1ckshi": {
+      "lane_rank": 570
+    },
+    "gh-shuaibai623": {
+      "lane_rank": 580
+    },
+    "gh-ChasonJiang-0aecf93e222e": {
+      "lane_rank": 590
+    },
+    "gh-Woody-Hu-7b22c3a1b987": {
+      "lane_rank": 600
+    },
+    "gh-Susieji-0e93ce7d2e83": {
+      "lane_rank": 610
+    },
+    "gh-tyanz-6c283aafbaff": {
+      "lane_rank": 620
+    },
+    "gh-Timtimtimchen-eedc4beaf838": {
+      "lane_rank": 630
+    },
+    "gh-di-osc": {
+      "lane_rank": 640
+    },
+    "gh-XXXXRT666-278435fd2ec8": {
+      "lane_rank": 650
+    },
+    "gh-lyblsgo-f25deac7e42f": {
+      "lane_rank": 660
+    },
+    "gh-SmileGoat-3911638a3727": {
+      "lane_rank": 670
+    },
+    "gh-elissopp-de3c248fb94a": {
+      "lane_rank": 680
     },
     "gh-aopstudio": {
-      "status": "replied"
+      "status": "replied",
+      "lane_rank": 690
+    },
+    "gh-zzhangpurdue": {
+      "lane_rank": 700
+    },
+    "gh-edgemoorlf-bb6b3b203d5a": {
+      "lane_rank": 710
+    },
+    "gh-frozentearz-5472076b93dd": {
+      "lane_rank": 720
+    },
+    "gh-hexisyztem-cd7ce14b2d80": {
+      "lane_rank": 730
+    },
+    "gh-hnluo-76dc1994c228": {
+      "lane_rank": 740
+    },
+    "gh-wishhyt-b54d8bebb02f": {
+      "lane_rank": 750
+    },
+    "gh-kingki663-0aaecfa87920": {
+      "lane_rank": 760
+    },
+    "gh-jmwang66-ff406321a92d": {
+      "lane_rank": 770
+    },
+    "gh-ranchlai": {
+      "lane_rank": 780
+    },
+    "gh-takatost-2ecc1c2739c0": {
+      "lane_rank": 790
+    },
+    "gh-tastelikefeet": {
+      "lane_rank": 800
+    },
+    "gh-vndee": {
+      "lane_rank": 810
+    },
+    "gh-wildminder": {
+      "lane_rank": 820
+    },
+    "gh-wuzhiping-4b29df21e8ca": {
+      "lane_rank": 830
+    },
+    "gh-yiboyasss-0ce8bb645a7b": {
+      "lane_rank": 840
     },
     "gh-yiranyyu": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 850
     },
     "gh-csukuangfj": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 860
     },
     "gh-cuiunbo": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 870
     },
     "gh-zhc7": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 880
     },
     "gh-bokesyo": {
       "status": "converted"
     },
     "zhu-han-xiaomi": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 890
+    },
+    "gh-zombieyang-7d26d3dd5a4c": {
+      "lane_rank": 900
     },
     "kedreamix-linly": {
-      "status": "contacted"
+      "status": "contacted",
+      "lane_rank": 910
     },
     "gh-hijkzzz": {
       "status": "replied"
