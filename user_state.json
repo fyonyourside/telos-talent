@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T13:28:18.848Z",
+  "last_updated": "2026-05-19T13:28:47.139Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -156,7 +156,8 @@
       "status": "contacted"
     },
     "xl-chenqian": {
-      "status": "replied"
+      "status": "replied",
+      "manual_low_priority": true
     },
     "gh-rayrayraykk": {
       "status": "contacted"
