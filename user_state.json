@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T13:06:14.221Z",
+  "last_updated": "2026-05-19T13:06:31.184Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -666,7 +666,6 @@
     },
     "gh-jiangjiechen": {
       "status": "contacted",
-      "manual_low_priority": true,
       "lane_rank": 10
     }
   },
