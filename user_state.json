@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T13:05:57.848Z",
+  "last_updated": "2026-05-19T13:06:00.672Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -46,13 +46,13 @@
     "gh-bluemotional": {
       "status": "contacted",
       "priority": true,
-      "lane_rank": 100
+      "lane_rank": 110
     },
     "gh-KevinHuSh-d0de876ecb42": {
       "lane_rank": 90
     },
     "gh-pitt-liang": {
-      "lane_rank": 110
+      "lane_rank": 100
     },
     "gh-zjrwtx-aeb2edb0834c": {
       "lane_rank": 120
