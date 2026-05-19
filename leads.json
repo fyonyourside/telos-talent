@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_updated": "2026-05-19",
-    "total": 241,
+    "total": 242,
     "version": 1,
     "deleted_ids": [
       "agentscope",
@@ -20,7 +20,8 @@
       "org-spark-audio",
       "sparkaudio",
       "ten-anexpn"
-    ]
+    ],
+    "pending_feishu_notify": false
   },
   "leads": [
     {
@@ -99,7 +100,8 @@
       "track_rank": 1,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-jaredforreal",
@@ -178,7 +180,9 @@
       "track_rank": 2,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 10
     },
     {
       "id": "ten-halajohn",
@@ -249,76 +253,8 @@
       "track_rank": 3,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
-    },
-    {
-      "id": "gh-JohnJyong-fe7382561452",
-      "name": "Jyong",
-      "role": "Harness Eng",
-      "score": 10,
-      "tier": "A",
-      "location": "SuZhou",
-      "current": "Dify",
-      "bg": "Senior Architect, \r\nResponsible for Dify RAG/Memery module | Repos: ai-local-concierge(⭐0) | group-chat-wiki(⭐0) | monkey-test(⭐0) | echo-native(⭐1)",
-      "skills": [
-        "RAG"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/JohnJyong",
-      "website": "",
-      "contact": "718720800@qq.com",
-      "source": "repo_contributor: langgenius/dify",
-      "platform": "github",
-      "notes": "GitHub followers: 153 | repos: 15 | 加入时间: 2020-12 | source: repo_contributor: langgenius/dify",
-      "is_academic": false,
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "date_found": "2026-04-30",
-      "followers": 153,
-      "email": "718720800@qq.com",
-      "twitter": "",
-      "wechat": "",
-      "status": "contacted",
-      "note": "",
-      "priority": false,
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "contact_research_status": "email_found",
-      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
-      "contact_next_step": "建议 HR 优先发邮件：718720800@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
-      "contact_sources": [
-        "commit_email:ai-local-concierge: 718720800@qq.com"
-      ],
-      "contact_research_updated": "2026-05-08",
-      "contact_checked_paths": [
-        "GitHub profile",
-        "top 3 repo READMEs",
-        "public commits from top 3 repos"
-      ],
-      "contact_found_channels": [
-        "email",
-        "github"
-      ],
-      "contact_missing_channels": [
-        "twitter",
-        "xiaohongshu",
-        "zhihu",
-        "linkedin",
-        "google_scholar"
-      ],
-      "talent_track": "pm",
-      "is_fde": false,
-      "track_rank": 4,
-      "custom_name": "",
-      "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-lishengzxc",
@@ -391,10 +327,11 @@
       ],
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 5,
+      "track_rank": 4,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-bowenliang123-811014a44990",
@@ -461,51 +398,59 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 6,
+      "track_rank": 5,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 30
     },
     {
-      "id": "gh-asiroliu-65646ffb6d19",
-      "name": "Liu An",
+      "id": "gh-JohnJyong-fe7382561452",
+      "name": "Jyong",
       "role": "Harness Eng",
       "score": 9,
       "tier": "A",
-      "location": "shanghai",
-      "current": "infiniFlow",
-      "bg": " | Repos: infinity_tools(⭐0) | evaluate_ragflow(⭐1) | ragflow(⭐0) | AITester(⭐0)",
+      "location": "SuZhou",
+      "current": "Dify",
+      "bg": "Senior Architect, \r\nResponsible for Dify RAG/Memery module | Repos: ai-local-concierge(⭐0) | group-chat-wiki(⭐0) | monkey-test(⭐0) | echo-native(⭐1)",
       "skills": [
         "RAG"
       ],
       "voice": false,
       "xiaohongshu": null,
-      "github": "https://github.com/asiroliu",
+      "github": "https://github.com/JohnJyong",
       "website": "",
-      "contact": "asiro@qq.com",
-      "source": "repo_contributor: uptonking/ragflow-office",
+      "contact": "718720800@qq.com",
+      "source": "repo_contributor: langgenius/dify",
       "platform": "github",
-      "notes": "GitHub followers: 8 | repos: 7 | 加入时间: 2013-06 | source: repo_contributor: uptonking/ragflow-office",
+      "notes": "GitHub followers: 153 | repos: 15 | 加入时间: 2020-12 | source: repo_contributor: langgenius/dify",
       "is_academic": false,
       "is_eng": true,
       "is_pm": true,
       "is_algo": false,
-      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "date_found": "2026-04-30",
+      "followers": 153,
+      "email": "718720800@qq.com",
+      "twitter": "",
+      "wechat": "",
+      "status": "contacted",
+      "note": "",
+      "priority": false,
+      "founder_signal": false,
       "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
       "research_summary": "",
       "research_urls": [],
       "research_updated": "",
-      "founder_signal": false,
-      "date_found": "2026-05-11",
-      "followers": 8,
-      "email": "asiro@qq.com",
-      "twitter": "https://x.com/intent/follow?screen_name=infiniflowai",
-      "wechat": "",
-      "status": "new",
-      "note": "",
-      "priority": false,
       "org_account_signal": false,
       "contact_research_status": "email_found",
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、GitHub 主页。未找到/未公开：X / Twitter、小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：718720800@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
+      "contact_sources": [
+        "commit_email:ai-local-concierge: 718720800@qq.com"
+      ],
+      "contact_research_updated": "2026-05-08",
       "contact_checked_paths": [
         "GitHub profile",
         "top 3 repo READMEs",
@@ -513,28 +458,22 @@
       ],
       "contact_found_channels": [
         "email",
-        "twitter",
         "github"
       ],
       "contact_missing_channels": [
+        "twitter",
         "xiaohongshu",
         "zhihu",
         "linkedin",
         "google_scholar"
       ],
-      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、GitHub 主页。未找到/未公开：小红书、知乎、LinkedIn、Google Scholar。",
-      "contact_next_step": "建议 HR 优先发邮件：asiro@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
-      "contact_sources": [
-        "commit_email:ragflow: asiro@qq.com",
-        "twitter: https://x.com/intent/follow?screen_name=infiniflowai"
-      ],
-      "contact_research_updated": "2026-05-11",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 7,
+      "track_rank": 6,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-twz915",
@@ -607,10 +546,11 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 8,
+      "track_rank": 7,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Wendong-Fan-44db5bb8c5ab",
@@ -679,10 +619,62 @@
       ],
       "talent_track": "harness_eng",
       "is_fde": false,
+      "track_rank": 8,
+      "custom_name": "",
+      "track_manual": false,
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 40
+    },
+    {
+      "id": "liyupi",
+      "name": "程序员鱼皮 / liyupi",
+      "role": "Harness Eng",
+      "score": 9,
+      "location": "上海",
+      "current": "独立开发者 / 教育创作者",
+      "bg": "GitHub 21k followers；AI/编程社区影响力大；B站/公众号大V",
+      "skills": [
+        "AI应用开发",
+        "社区运营",
+        "产品感",
+        "Java",
+        "Python"
+      ],
+      "voice": false,
+      "xiaohongshu": "https://www.xiaohongshu.com/user/profile/5dc69dbe0000000001004ac0",
+      "github": "https://github.com/liyupi",
+      "website": "",
+      "contact": "GitHub: liyupi; X: @yupi996; 小红书见链接",
+      "source": "github",
+      "platform": "github",
+      "notes": "社区影响力强；适合AI产品推广角色；直接做技术PM有待验证",
+      "is_academic": false,
+      "date_found": "2026-04-04",
+      "tier": "A",
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "email": "",
+      "twitter": "yupi996",
+      "wechat": "",
+      "status": "new",
+      "priority": false,
+      "note": "",
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "AI application builder; indie/MVP/full-stack product signal; PM/model-to-product/benchmark-iteration signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "harness_eng",
+      "is_fde": false,
       "track_rank": 9,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": true
     },
     {
       "id": "gh-c121914yu-ce43a1d0047b",
@@ -760,7 +752,9 @@
       "track_rank": 10,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 50
     },
     {
       "id": "gh-orange-crow-c593ac0b5b16",
@@ -830,7 +824,9 @@
       "track_rank": 11,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 60
     },
     {
       "id": "gh-crazywoola-48c55e5786e6",
@@ -899,7 +895,9 @@
       "track_rank": 12,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 70
     },
     {
       "id": "gh-lightaime-2398720cbbdd",
@@ -973,7 +971,9 @@
       "track_rank": 13,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 80
     },
     {
       "id": "gh-bluemotional",
@@ -1045,7 +1045,9 @@
       "track_rank": 14,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 110
     },
     {
       "id": "gh-KevinHuSh-d0de876ecb42",
@@ -1116,7 +1118,9 @@
       "track_rank": 15,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 90
     },
     {
       "id": "gh-pitt-liang",
@@ -1188,7 +1192,80 @@
       "track_rank": 16,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 100
+    },
+    {
+      "id": "gh-asiroliu-65646ffb6d19",
+      "name": "Liu An",
+      "role": "Harness Eng",
+      "score": 8,
+      "tier": "A",
+      "location": "shanghai",
+      "current": "infiniFlow",
+      "bg": " | Repos: infinity_tools(⭐0) | evaluate_ragflow(⭐1) | ragflow(⭐0) | AITester(⭐0)",
+      "skills": [
+        "RAG"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/asiroliu",
+      "website": "",
+      "contact": "asiro@qq.com",
+      "source": "repo_contributor: uptonking/ragflow-office",
+      "platform": "github",
+      "notes": "GitHub followers: 8 | repos: 7 | 加入时间: 2013-06 | source: repo_contributor: uptonking/ragflow-office",
+      "is_academic": false,
+      "is_eng": true,
+      "is_pm": true,
+      "is_algo": false,
+      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "availability_risk": "",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "founder_signal": false,
+      "date_found": "2026-05-11",
+      "followers": 8,
+      "email": "asiro@qq.com",
+      "twitter": "https://x.com/intent/follow?screen_name=infiniflowai",
+      "wechat": "",
+      "status": "new",
+      "note": "",
+      "priority": false,
+      "org_account_signal": false,
+      "contact_research_status": "email_found",
+      "contact_checked_paths": [
+        "GitHub profile",
+        "top 3 repo READMEs",
+        "public commits from top 3 repos"
+      ],
+      "contact_found_channels": [
+        "email",
+        "twitter",
+        "github"
+      ],
+      "contact_missing_channels": [
+        "xiaohongshu",
+        "zhihu",
+        "linkedin",
+        "google_scholar"
+      ],
+      "contact_research_summary": "已找到邮箱，可直接外联。已查：GitHub profile、top 3 repo READMEs、public commits from top 3 repos。找到：邮箱、X / Twitter、GitHub 主页。未找到/未公开：小红书、知乎、LinkedIn、Google Scholar。",
+      "contact_next_step": "建议 HR 优先发邮件：asiro@qq.com。若 3-5 天未回复，再用 GitHub/社媒或内推路径补触达。",
+      "contact_sources": [
+        "commit_email:ragflow: asiro@qq.com",
+        "twitter: https://x.com/intent/follow?screen_name=infiniflowai"
+      ],
+      "contact_research_updated": "2026-05-11",
+      "talent_track": "pm",
+      "is_fde": false,
+      "track_rank": 17,
+      "custom_name": "",
+      "track_manual": false,
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Lynnooo-ee6523c550e7",
@@ -1231,10 +1308,11 @@
       "note": "",
       "priority": false,
       "org_account_signal": false,
-      "track_rank": 17,
+      "track_rank": 18,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-zjrwtx-aeb2edb0834c",
@@ -1298,10 +1376,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 18,
+      "track_rank": 19,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 120
     },
     {
       "id": "gh-MubahsirHassan-5d21fbd06ebe",
@@ -1368,10 +1448,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 19,
+      "track_rank": 20,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 130
     },
     {
       "id": "gh-faithfulinlove",
@@ -1443,10 +1525,11 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 20,
+      "track_rank": 21,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Nikita-Etinger-d2a7368b67e5",
@@ -1511,10 +1594,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 21,
+      "track_rank": 22,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 140
     },
     {
       "id": "gh-Osier-Yi-fc97b61542ce",
@@ -1591,10 +1676,11 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 22,
+      "track_rank": 23,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Leirunlin-070833b8a3a0",
@@ -1666,10 +1752,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 23,
+      "track_rank": 24,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 150
     },
     {
       "id": "gh-xqvvu-684bb8fa7484",
@@ -1736,10 +1824,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 24,
+      "track_rank": 25,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 160
     },
     {
       "id": "xl-shichunliu",
@@ -1813,10 +1903,11 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 25,
+      "track_rank": 26,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-fengju0213-0eb6b6df6570",
@@ -1840,7 +1931,7 @@
       "notes": "GitHub followers: 71 | repos: 5 | 加入时间: 2024-04 | source: repo_contributor: camel-ai/camel",
       "is_academic": false,
       "is_eng": true,
-      "is_pm": true,
+      "is_pm": false,
       "is_algo": false,
       "date_found": "2026-04-30",
       "followers": 71,
@@ -1852,7 +1943,7 @@
       "priority": false,
       "founder_signal": false,
       "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
+      "priority_reason": "core engineering/runtime/harness signal",
       "research_summary": "",
       "research_urls": [],
       "research_updated": "",
@@ -1883,10 +1974,11 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 26,
+      "track_rank": 27,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-myhloli-a0a7b7f61568",
@@ -1955,10 +2047,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 27,
+      "track_rank": 28,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 170
     },
     {
       "id": "gh-zhangyingerjelly-4c299093da6a",
@@ -2028,10 +2122,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 28,
+      "track_rank": 29,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 180
     },
     {
       "id": "gh-yongtenglei-73ef97038c4b",
@@ -2099,10 +2195,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 29,
+      "track_rank": 30,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 190
     },
     {
       "id": "gh-cuiyuebing-b5c1bc7b2e66",
@@ -2169,10 +2267,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 30,
+      "track_rank": 31,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 200
     },
     {
       "id": "gh-zhenruzhang-51de556ee8e0",
@@ -2239,10 +2339,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 31,
+      "track_rank": 32,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 210
     },
     {
       "id": "gh-yuzhichang-dca4689822cd",
@@ -2310,10 +2412,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 32,
+      "track_rank": 33,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 220
     },
     {
       "id": "gh-cike8899-aee0fc9c9ec3",
@@ -2385,10 +2489,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 33,
+      "track_rank": 34,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 230
     },
     {
       "id": "gh-hanhandi",
@@ -2460,10 +2566,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 34,
+      "track_rank": 35,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 240
     },
     {
       "id": "gh-hugsun",
@@ -2536,10 +2644,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 35,
+      "track_rank": 36,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 250
     },
     {
       "id": "gh-idontwanttosayaword-bc5b9a312d89",
@@ -2606,10 +2716,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 36,
+      "track_rank": 37,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 260
     },
     {
       "id": "gh-qbc2016-76712ac19263",
@@ -2677,10 +2789,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 37,
+      "track_rank": 38,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 270
     },
     {
       "id": "gh-sunshinexcode-cbdd423f6a05",
@@ -2749,10 +2863,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 38,
+      "track_rank": 39,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 280
     },
     {
       "id": "gh-SunXiaoXiang-b900ab77332d",
@@ -2821,10 +2937,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 39,
+      "track_rank": 40,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 290
     },
     {
       "id": "gh-tomasliu-agora-767e1f7bd6cd",
@@ -2890,10 +3008,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 40,
+      "track_rank": 41,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 300
     },
     {
       "id": "gh-ye7love7-e8db70280d89",
@@ -2960,10 +3080,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 41,
+      "track_rank": 42,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 310
     },
     {
       "id": "gh-zhijianma-0270b37c2a3a",
@@ -3032,10 +3154,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 42,
+      "track_rank": 43,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 320
     },
     {
       "id": "gh-voidking",
@@ -3108,10 +3232,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 43,
+      "track_rank": 44,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 330
     },
     {
       "id": "gh-bbuf",
@@ -3185,10 +3311,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 44,
+      "track_rank": 45,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 340
     },
     {
       "id": "gh-ldzhangyx",
@@ -3267,10 +3395,12 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 45,
+      "track_rank": 46,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 350
     },
     {
       "id": "gh-zehuichen123",
@@ -3347,10 +3477,11 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 46,
+      "track_rank": 47,
       "custom_name": "陈泽徽",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-XiangJinyu",
@@ -3427,10 +3558,11 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 47,
+      "track_rank": 48,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-davdgao",
@@ -3477,10 +3609,11 @@
       "org_account_signal": false,
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 48,
+      "track_rank": 49,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-GoldWaterFall-2efdca89c827",
@@ -3523,57 +3656,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 49,
-      "custom_name": "",
-      "track_manual": false,
-      "manual_low_priority": false
-    },
-    {
-      "id": "gh-papayalove-3a36509afb68",
-      "name": "Kaiwen Liu",
-      "role": "Harness Eng",
-      "score": 7,
-      "tier": "B",
-      "location": "SHANGHAI",
-      "current": "SHANGHAI AI LAB",
-      "bg": "Engineer in Shanghai AI Lab,              \r\nGraduate of Columbia University | Repos: ai-search-mvp(⭐0) | ArborVista(⭐0) | web2json-agent(⭐0) | llm-webkit-mirror-new(⭐0)",
-      "skills": [
-        "LLM",
-        "Agent"
-      ],
-      "voice": false,
-      "xiaohongshu": null,
-      "github": "https://github.com/papayalove",
-      "website": "",
-      "contact": "kl3157@columbia.edu",
-      "source": "repo_contributor: opendatalab/MinerU",
-      "platform": "github",
-      "notes": "GitHub followers: 14 | repos: 14 | 加入时间: 2019-02 | source: repo_contributor: opendatalab/MinerU",
-      "is_academic": false,
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "date_found": "2026-04-30",
-      "followers": 14,
-      "email": "kl3157@columbia.edu",
-      "twitter": "",
-      "wechat": "",
-      "status": "new",
-      "note": "",
-      "priority": false,
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "harness_eng",
-      "is_fde": false,
       "track_rank": 50,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-leeroo-coder-f95377201a81",
@@ -3620,7 +3707,8 @@
       "track_rank": 51,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-1850298154",
@@ -3669,7 +3757,8 @@
       "track_rank": 52,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-didiforgithub",
@@ -3718,7 +3807,8 @@
       "track_rank": 53,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "xl-chenqian",
@@ -3768,7 +3858,8 @@
       "track_rank": 54,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-shenchucheng",
@@ -3817,7 +3908,8 @@
       "track_rank": 55,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-dmitrii-khizbullin-fa5fb06833ce",
@@ -3863,7 +3955,8 @@
       "track_rank": 56,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-alcholiclg",
@@ -3911,7 +4004,8 @@
       "track_rank": 57,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-luohh5",
@@ -3959,7 +4053,8 @@
       "track_rank": 58,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-huangweitao",
@@ -4008,7 +4103,8 @@
       "track_rank": 59,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-wangyoucao577-d3bfba4de33d",
@@ -4054,7 +4150,8 @@
       "track_rank": 60,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-KJ-Huang-sz-9303fccccb73",
@@ -4101,7 +4198,56 @@
       "track_rank": 61,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
+    },
+    {
+      "id": "gh-papayalove-3a36509afb68",
+      "name": "Kaiwen Liu",
+      "role": "Harness Eng",
+      "score": 6,
+      "tier": "B",
+      "location": "SHANGHAI",
+      "current": "SHANGHAI AI LAB",
+      "bg": "Engineer in Shanghai AI Lab,              \r\nGraduate of Columbia University | Repos: ai-search-mvp(⭐0) | ArborVista(⭐0) | web2json-agent(⭐0) | llm-webkit-mirror-new(⭐0)",
+      "skills": [
+        "LLM",
+        "Agent"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/papayalove",
+      "website": "",
+      "contact": "kl3157@columbia.edu",
+      "source": "repo_contributor: opendatalab/MinerU",
+      "platform": "github",
+      "notes": "GitHub followers: 14 | repos: 14 | 加入时间: 2019-02 | source: repo_contributor: opendatalab/MinerU",
+      "is_academic": false,
+      "is_eng": true,
+      "is_pm": false,
+      "is_algo": false,
+      "date_found": "2026-04-30",
+      "followers": 14,
+      "email": "kl3157@columbia.edu",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "note": "",
+      "priority": false,
+      "founder_signal": false,
+      "availability_risk": "",
+      "priority_reason": "core engineering/runtime/harness signal",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "org_account_signal": false,
+      "talent_track": "harness_eng",
+      "is_fde": false,
+      "track_rank": 62,
+      "custom_name": "",
+      "track_manual": false,
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-y149604146-27de33f0c190",
@@ -4144,10 +4290,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 62,
+      "track_rank": 63,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-rayrayraykk",
@@ -4194,10 +4341,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 63,
+      "track_rank": 64,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-wangxingjun778",
@@ -4244,10 +4392,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 64,
+      "track_rank": 65,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Vincentwei1021-35c6264adda3",
@@ -4291,10 +4440,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 65,
+      "track_rank": 66,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-bsbds-0fecdcade907",
@@ -4337,10 +4487,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 66,
+      "track_rank": 67,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-YingchaoX-94fa6ea1f98a",
@@ -4384,10 +4535,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 67,
+      "track_rank": 68,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-arthasking123",
@@ -4432,10 +4584,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 68,
+      "track_rank": 69,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-shczhen-13a23ab03f35",
@@ -4478,10 +4631,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 69,
+      "track_rank": 70,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-garylin2099",
@@ -4526,10 +4680,11 @@
       "org_account_signal": false,
       "talent_track": "pm",
       "is_fde": false,
-      "track_rank": 70,
+      "track_rank": 71,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-seehi-79d7b487ce79",
@@ -4573,10 +4728,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 71,
+      "track_rank": 72,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-van-gogh-619e13a8ab04",
@@ -4619,10 +4775,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 72,
+      "track_rank": 73,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-x54-729-ce3db6e7be5e",
@@ -4666,59 +4823,11 @@
       "org_account_signal": false,
       "talent_track": "harness_eng",
       "is_fde": false,
-      "track_rank": 73,
-      "custom_name": "",
-      "track_manual": false,
-      "manual_low_priority": false
-    },
-    {
-      "id": "liyupi",
-      "name": "程序员鱼皮 / liyupi",
-      "role": "Harness Eng",
-      "score": 6,
-      "location": "上海",
-      "current": "独立开发者 / 教育创作者",
-      "bg": "GitHub 21k followers；AI/编程社区影响力大；B站/公众号大V",
-      "skills": [
-        "AI应用开发",
-        "社区运营",
-        "产品感",
-        "Java",
-        "Python"
-      ],
-      "voice": false,
-      "xiaohongshu": "https://www.xiaohongshu.com/user/profile/5dc69dbe0000000001004ac0",
-      "github": "https://github.com/liyupi",
-      "website": "",
-      "contact": "GitHub: liyupi; X: @yupi996; 小红书见链接",
-      "source": "github",
-      "platform": "github",
-      "notes": "社区影响力强；适合AI产品推广角色；直接做技术PM有待验证",
-      "is_academic": false,
-      "date_found": "2026-04-04",
-      "tier": "B",
-      "is_eng": true,
-      "is_pm": true,
-      "is_algo": false,
-      "email": "",
-      "twitter": "yupi996",
-      "wechat": "",
-      "status": "new",
-      "priority": false,
-      "note": "",
-      "founder_signal": false,
-      "availability_risk": "",
-      "priority_reason": "core engineering/runtime/harness signal; PM/model-to-product/benchmark-iteration signal",
-      "research_summary": "",
-      "research_urls": [],
-      "research_updated": "",
-      "org_account_signal": false,
-      "talent_track": "harness_eng",
-      "is_fde": false,
       "track_rank": 74,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-tuhahaha",
@@ -4766,7 +4875,8 @@
       "track_rank": 75,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-dividez-47fe3dfbdd60",
@@ -4813,7 +4923,8 @@
       "track_rank": 76,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Mishuni-819fc8d0ff0f",
@@ -4859,7 +4970,8 @@
       "track_rank": 77,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Lynx-1221-2a7821de4e0e",
@@ -4906,7 +5018,8 @@
       "track_rank": 78,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Rusullhu-ae791dcff147",
@@ -4952,7 +5065,8 @@
       "track_rank": 79,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-yangapku",
@@ -5002,7 +5116,8 @@
       "track_rank": 80,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-toolazytoname-8521e6deadcf",
@@ -5049,7 +5164,8 @@
       "track_rank": 81,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Patrickill-62fb28c58941",
@@ -5096,7 +5212,8 @@
       "track_rank": 82,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-artificialzeng",
@@ -5146,7 +5263,8 @@
       "track_rank": 83,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-geekan",
@@ -5195,7 +5313,8 @@
       "track_rank": 84,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-arvinxx",
@@ -5245,7 +5364,8 @@
       "track_rank": 85,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-smilexin",
@@ -5293,7 +5413,8 @@
       "track_rank": 86,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-plutoless",
@@ -5346,7 +5467,8 @@
       "track_rank": 87,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-zshbleaker",
@@ -5395,7 +5517,8 @@
       "track_rank": 88,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-alex-xinlu",
@@ -5444,7 +5567,8 @@
       "track_rank": 89,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-jenqyang",
@@ -5493,7 +5617,8 @@
       "track_rank": 90,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-better629",
@@ -5541,7 +5666,8 @@
       "track_rank": 91,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-wenbindu",
@@ -5589,7 +5715,8 @@
       "track_rank": 92,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-qiuyanli1990",
@@ -5638,7 +5765,8 @@
       "track_rank": 93,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-sunxilin",
@@ -5687,7 +5815,8 @@
       "track_rank": 94,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "metagpt-pm",
@@ -5735,7 +5864,8 @@
       "track_rank": 95,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-liusongxiang",
@@ -5815,7 +5945,9 @@
       "track_rank": 1,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 10
     },
     {
       "id": "gh-Stardust-minus-0f5962b6d5ec",
@@ -5888,7 +6020,9 @@
       "track_rank": 2,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 20
     },
     {
       "id": "gh-yt605155624-7ec41c4dca21",
@@ -5964,7 +6098,9 @@
       "track_rank": 3,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 30
     },
     {
       "id": "gh-aluminumbox",
@@ -6036,7 +6172,9 @@
       "track_rank": 4,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 40
     },
     {
       "id": "gh-yuekaizhang",
@@ -6114,7 +6252,8 @@
       "track_rank": 5,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-shibing624",
@@ -6203,7 +6342,8 @@
       "track_rank": 6,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "zhihao-du",
@@ -6279,7 +6419,8 @@
       "track_rank": 7,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-yfyeung",
@@ -6358,7 +6499,9 @@
       "track_rank": 8,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 50
     },
     {
       "id": "gh-Zain-Jiang",
@@ -6430,7 +6573,8 @@
       "track_rank": 9,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-alanswift",
@@ -6509,7 +6653,9 @@
       "track_rank": 10,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 60
     },
     {
       "id": "chen-zhang-actuy",
@@ -6585,7 +6731,9 @@
       "track_rank": 11,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 70
     },
     {
       "id": "gh-jishengpeng",
@@ -6663,7 +6811,9 @@
       "track_rank": 12,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 80
     },
     {
       "id": "gh-starrylyn",
@@ -6739,7 +6889,9 @@
       "track_rank": 13,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 90
     },
     {
       "id": "gh-AnyaCoder-f2c953d5bdbd",
@@ -6808,7 +6960,9 @@
       "track_rank": 14,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 100
     },
     {
       "id": "gh-qq547276542",
@@ -6882,7 +7036,9 @@
       "track_rank": 15,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 110
     },
     {
       "id": "gh-jzq2000",
@@ -6955,7 +7111,9 @@
       "track_rank": 16,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 120
     },
     {
       "id": "gh-zh794390558-43ee6e6cac35",
@@ -7031,7 +7189,9 @@
       "track_rank": 17,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 10
     },
     {
       "id": "gh-breakstring-ffa98a18a104",
@@ -7105,7 +7265,9 @@
       "track_rank": 18,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 20
     },
     {
       "id": "gh-PriesiaMioShirakana-70b86a2f326d",
@@ -7179,7 +7341,9 @@
       "track_rank": 19,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 30
     },
     {
       "id": "gh-RVC-Boss-ecb088cde377",
@@ -7253,7 +7417,9 @@
       "track_rank": 20,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 40
     },
     {
       "id": "gh-tramphero-838da8f31d30",
@@ -7324,7 +7490,9 @@
       "track_rank": 21,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 50
     },
     {
       "id": "gh-SpenserCai-c05fd99739e4",
@@ -7395,7 +7563,9 @@
       "track_rank": 22,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 60
     },
     {
       "id": "gh-yiminw",
@@ -7469,7 +7639,9 @@
       "track_rank": 23,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 70
     },
     {
       "id": "gh-xieyxclack-cbb611e777cc",
@@ -7545,7 +7717,9 @@
       "track_rank": 24,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 80
     },
     {
       "id": "gh-ylzz1997-cec2a4df0bef",
@@ -7617,7 +7791,9 @@
       "track_rank": 25,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 100
     },
     {
       "id": "gh-anyvoiceai-7cbcff242aab",
@@ -7689,7 +7865,9 @@
       "track_rank": 26,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 90
     },
     {
       "id": "gh-innnky-cb5f088a5a84",
@@ -7760,7 +7938,9 @@
       "track_rank": 27,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 110
     },
     {
       "id": "gh-v3ucn-bc9b0cb61b0b",
@@ -7832,7 +8012,9 @@
       "track_rank": 28,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 120
     },
     {
       "id": "gh-weedge",
@@ -7908,7 +8090,9 @@
       "track_rank": 29,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 130
     },
     {
       "id": "gh-HarderThenHarder-900345d050af",
@@ -7983,7 +8167,9 @@
       "track_rank": 30,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 140
     },
     {
       "id": "jingcheng-pang",
@@ -8063,7 +8249,9 @@
       "track_rank": 31,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 150
     },
     {
       "id": "gh-zrzrzrzrzrzrzr",
@@ -8139,7 +8327,9 @@
       "track_rank": 32,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 160
     },
     {
       "id": "gh-limafang-78f9d03b62fb",
@@ -8209,7 +8399,9 @@
       "track_rank": 33,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 170
     },
     {
       "id": "gh-Whale-Dolphin-a12b4d80cd24",
@@ -8284,7 +8476,9 @@
       "track_rank": 34,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 180
     },
     {
       "id": "gh-wangxiongts",
@@ -8359,7 +8553,9 @@
       "track_rank": 35,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 190
     },
     {
       "id": "gh-pan-x-c",
@@ -8432,7 +8628,9 @@
       "track_rank": 36,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 200
     },
     {
       "id": "gh-Yuan-ManX-bd9874b5e731",
@@ -8504,7 +8702,9 @@
       "track_rank": 37,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 210
     },
     {
       "id": "gh-hecheng0625",
@@ -8582,7 +8782,9 @@
       "track_rank": 38,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 220
     },
     {
       "id": "gh-lauragpt",
@@ -8656,7 +8858,9 @@
       "track_rank": 39,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 230
     },
     {
       "id": "gh-ABexit-6cf0a08373af",
@@ -8732,7 +8936,9 @@
       "track_rank": 40,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 240
     },
     {
       "id": "gh-daymade-834d245af031",
@@ -8805,7 +9011,9 @@
       "track_rank": 41,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 250
     },
     {
       "id": "gh-6drf21e-a5d11a97cd0e",
@@ -8875,7 +9083,9 @@
       "track_rank": 42,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 260
     },
     {
       "id": "gh-ipfans-8de0794ae50a",
@@ -8947,7 +9157,9 @@
       "track_rank": 43,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 270
     },
     {
       "id": "gh-hjh0119",
@@ -9021,7 +9233,9 @@
       "track_rank": 44,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 280
     },
     {
       "id": "gh-lovemefan",
@@ -9096,7 +9310,9 @@
       "track_rank": 45,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 290
     },
     {
       "id": "gh-wangclnlp-49eb53b0831b",
@@ -9168,7 +9384,9 @@
       "track_rank": 46,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 300
     },
     {
       "id": "gh-xiaoxigua999",
@@ -9243,7 +9461,9 @@
       "track_rank": 47,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 310
     },
     {
       "id": "gh-xxnuo-0f0dc5565b94",
@@ -9316,7 +9536,9 @@
       "track_rank": 48,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 320
     },
     {
       "id": "gh-pengzhendong",
@@ -9394,7 +9616,9 @@
       "track_rank": 49,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 330
     },
     {
       "id": "gh-yangdongchao",
@@ -9472,7 +9696,9 @@
       "track_rank": 50,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 340
     },
     {
       "id": "gh-wangrongsheng",
@@ -9553,7 +9779,9 @@
       "track_rank": 51,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 350
     },
     {
       "id": "gh-0xCAFEBABE0-a8d7b1795fb1",
@@ -9628,7 +9856,9 @@
       "track_rank": 52,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 360
     },
     {
       "id": "gh-Ccapton-7d0e5a64e757",
@@ -9699,7 +9929,9 @@
       "track_rank": 53,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 370
     },
     {
       "id": "gh-vermouth1992",
@@ -9783,7 +10015,9 @@
       "track_rank": 54,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 380
     },
     {
       "id": "gh-Xiao-Cai185-96cc2e389c7d",
@@ -9851,7 +10085,9 @@
       "track_rank": 55,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 390
     },
     {
       "id": "gh-LinightKira-749f4a53f363",
@@ -9920,7 +10156,9 @@
       "track_rank": 56,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 400
     },
     {
       "id": "gh-JINO-ROHIT-541a3a0c2656",
@@ -9991,7 +10229,9 @@
       "track_rank": 57,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 410
     },
     {
       "id": "gh-jjjymmm",
@@ -10067,7 +10307,9 @@
       "track_rank": 58,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 420
     },
     {
       "id": "gh-JinHai-CN-2679f0d71463",
@@ -10139,7 +10381,9 @@
       "track_rank": 59,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 430
     },
     {
       "id": "gh-jintao-huang",
@@ -10212,7 +10456,9 @@
       "track_rank": 60,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 440
     },
     {
       "id": "gh-KPatr1ck-de0f8efc658f",
@@ -10281,7 +10527,9 @@
       "track_rank": 61,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 450
     },
     {
       "id": "gh-kaituoxu",
@@ -10356,7 +10604,9 @@
       "track_rank": 62,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 460
     },
     {
       "id": "gh-KakaruHayate-35d6b9b85be9",
@@ -10427,7 +10677,9 @@
       "track_rank": 63,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 470
     },
     {
       "id": "gh-KamioRinn-4d353a7ebc35",
@@ -10497,7 +10749,9 @@
       "track_rank": 64,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 480
     },
     {
       "id": "gh-gpt-dance-3473a8d47138",
@@ -10571,7 +10825,9 @@
       "track_rank": 65,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 490
     },
     {
       "id": "gh-Nioolek",
@@ -10646,7 +10902,9 @@
       "track_rank": 66,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 500
     },
     {
       "id": "gh-lmxue",
@@ -10727,7 +10985,9 @@
       "track_rank": 67,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 510
     },
     {
       "id": "gh-Lizerui9926-677a5ebdc0d6",
@@ -10798,7 +11058,9 @@
       "track_rank": 68,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 520
     },
     {
       "id": "gh-pandamq",
@@ -10870,7 +11132,9 @@
       "track_rank": 69,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 530
     },
     {
       "id": "gh-iflamed-4f96fc8c7fd0",
@@ -10945,7 +11209,9 @@
       "track_rank": 70,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 540
     },
     {
       "id": "gh-OedoSoldier-b28016adb55f",
@@ -11014,7 +11280,9 @@
       "track_rank": 71,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 550
     },
     {
       "id": "gh-PoTaTo-Mika-b790b760cada",
@@ -11087,7 +11355,9 @@
       "track_rank": 72,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 560
     },
     {
       "id": "gh-r1ckshi",
@@ -11161,7 +11431,9 @@
       "track_rank": 73,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 570
     },
     {
       "id": "gh-shuaibai623",
@@ -11233,7 +11505,9 @@
       "track_rank": 74,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 580
     },
     {
       "id": "gh-ChasonJiang-0aecf93e222e",
@@ -11302,7 +11576,9 @@
       "track_rank": 75,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 590
     },
     {
       "id": "gh-Woody-Hu-7b22c3a1b987",
@@ -11372,7 +11648,9 @@
       "track_rank": 76,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 600
     },
     {
       "id": "gh-Susieji-0e93ce7d2e83",
@@ -11442,7 +11720,9 @@
       "track_rank": 77,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 610
     },
     {
       "id": "gh-tyanz-6c283aafbaff",
@@ -11516,7 +11796,9 @@
       "track_rank": 78,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 620
     },
     {
       "id": "gh-Timtimtimchen-eedc4beaf838",
@@ -11586,7 +11868,9 @@
       "track_rank": 79,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 630
     },
     {
       "id": "gh-di-osc",
@@ -11657,7 +11941,9 @@
       "track_rank": 80,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 640
     },
     {
       "id": "gh-XXXXRT666-278435fd2ec8",
@@ -11727,7 +12013,9 @@
       "track_rank": 81,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 650
     },
     {
       "id": "gh-lyblsgo-f25deac7e42f",
@@ -11799,7 +12087,9 @@
       "track_rank": 82,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 660
     },
     {
       "id": "gh-SmileGoat-3911638a3727",
@@ -11868,7 +12158,9 @@
       "track_rank": 83,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 670
     },
     {
       "id": "gh-elissopp-de3c248fb94a",
@@ -11932,7 +12224,9 @@
       "track_rank": 84,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 680
     },
     {
       "id": "gh-aopstudio",
@@ -12006,7 +12300,9 @@
       "track_rank": 85,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 690
     },
     {
       "id": "gh-zzhangpurdue",
@@ -12082,7 +12378,9 @@
       "track_rank": 86,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 700
     },
     {
       "id": "gh-edgemoorlf-bb6b3b203d5a",
@@ -12151,7 +12449,9 @@
       "track_rank": 87,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 710
     },
     {
       "id": "gh-frozentearz-5472076b93dd",
@@ -12222,7 +12522,9 @@
       "track_rank": 88,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 720
     },
     {
       "id": "gh-hexisyztem-cd7ce14b2d80",
@@ -12292,7 +12594,9 @@
       "track_rank": 89,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 730
     },
     {
       "id": "gh-hnluo-76dc1994c228",
@@ -12362,7 +12666,9 @@
       "track_rank": 90,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 740
     },
     {
       "id": "gh-wishhyt-b54d8bebb02f",
@@ -12434,7 +12740,9 @@
       "track_rank": 91,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 750
     },
     {
       "id": "gh-kingki663-0aaecfa87920",
@@ -12506,7 +12814,9 @@
       "track_rank": 92,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 760
     },
     {
       "id": "gh-jmwang66-ff406321a92d",
@@ -12576,7 +12886,9 @@
       "track_rank": 93,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 770
     },
     {
       "id": "gh-ranchlai",
@@ -12646,7 +12958,9 @@
       "track_rank": 94,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 780
     },
     {
       "id": "gh-takatost-2ecc1c2739c0",
@@ -12717,7 +13031,9 @@
       "track_rank": 95,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 790
     },
     {
       "id": "gh-tastelikefeet",
@@ -12790,7 +13106,9 @@
       "track_rank": 96,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 800
     },
     {
       "id": "gh-vndee",
@@ -12866,7 +13184,9 @@
       "track_rank": 97,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 810
     },
     {
       "id": "gh-wildminder",
@@ -12935,7 +13255,9 @@
       "track_rank": 98,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 820
     },
     {
       "id": "gh-wuzhiping-4b29df21e8ca",
@@ -13006,7 +13328,9 @@
       "track_rank": 99,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 830
     },
     {
       "id": "gh-yiboyasss-0ce8bb645a7b",
@@ -13077,7 +13401,9 @@
       "track_rank": 100,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 840
     },
     {
       "id": "gh-yiranyyu",
@@ -13151,7 +13477,9 @@
       "track_rank": 101,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 850
     },
     {
       "id": "gh-csukuangfj",
@@ -13225,7 +13553,9 @@
       "track_rank": 102,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 860
     },
     {
       "id": "gh-cuiunbo",
@@ -13299,7 +13629,9 @@
       "track_rank": 103,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 870
     },
     {
       "id": "gh-zhc7",
@@ -13377,7 +13709,9 @@
       "track_rank": 104,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 880
     },
     {
       "id": "gh-bokesyo",
@@ -13454,7 +13788,8 @@
       "track_rank": 105,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "zhu-han-xiaomi",
@@ -13529,7 +13864,9 @@
       "track_rank": 106,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 890
     },
     {
       "id": "gh-zombieyang-7d26d3dd5a4c",
@@ -13601,7 +13938,9 @@
       "track_rank": 107,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 900
     },
     {
       "id": "kedreamix-linly",
@@ -13677,7 +14016,9 @@
       "track_rank": 108,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 910
     },
     {
       "id": "gh-lich99-dca8ded5188a",
@@ -13726,7 +14067,8 @@
       "track_rank": 109,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-qinxuye-ae2a09a9d2f4",
@@ -13773,7 +14115,8 @@
       "track_rank": 110,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-dongzhang2001",
@@ -13821,7 +14164,8 @@
       "track_rank": 111,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-lengff123-23dabac88663",
@@ -13867,7 +14211,8 @@
       "track_rank": 112,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-fuyuwei01-1284d1367909",
@@ -13917,7 +14262,8 @@
       "track_rank": 113,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-hijkzzz",
@@ -13967,7 +14313,8 @@
       "track_rank": 114,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-leng-yue-a15728089334",
@@ -14016,7 +14363,8 @@
       "track_rank": 115,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-jklj077",
@@ -14065,7 +14413,8 @@
       "track_rank": 116,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-ymcui",
@@ -14115,7 +14464,8 @@
       "track_rank": 117,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-yerfor",
@@ -14164,7 +14514,8 @@
       "track_rank": 118,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "mannaandpoem-openmanus",
@@ -14214,7 +14565,8 @@
       "track_rank": 119,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-PeterSH6",
@@ -14264,7 +14616,8 @@
       "track_rank": 120,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-makerjackie-88e8b18b1095",
@@ -14334,7 +14687,8 @@
       "track_rank": 121,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-cwx-worst-one",
@@ -14383,7 +14737,8 @@
       "track_rank": 122,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-YYZhang2025",
@@ -14428,7 +14783,8 @@
       "track_rank": 123,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-lymdlut",
@@ -14476,7 +14832,8 @@
       "track_rank": 124,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-ddlBoJack",
@@ -14525,7 +14882,8 @@
       "track_rank": 125,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-zzw922cn-155726572903",
@@ -14596,6 +14954,55 @@
       "track_rank": 126,
       "custom_name": "",
       "track_manual": false,
+      "manual_low_priority": false,
+      "is_builder": false
+    },
+    {
+      "id": "gh-shancw96-9f762f46ede2",
+      "name": "ShanCW",
+      "role": "Research Engineer",
+      "talent_track": "",
+      "is_fde": false,
+      "score": 4,
+      "tier": "C",
+      "location": "china/suzhou",
+      "current": "GitHub: shancw96",
+      "bg": "an indie hacker. \r\ndeveloping a PDF note-taking webApp powered by LLM.🚀📝💻 | Repos: APEX_AIMBOT(⭐0) | chatgpt-web-1(⭐0) | chatgpt-nextjs(⭐0) | chat-langchain(⭐0)",
+      "skills": [
+        "LLM",
+        "Langchain"
+      ],
+      "voice": false,
+      "xiaohongshu": null,
+      "github": "https://github.com/shancw96",
+      "website": "",
+      "contact": "见 GitHub 主页",
+      "source": "user_search: indie hacker llm location:china followers:>10",
+      "platform": "github",
+      "notes": "GitHub followers: 12 | repos: 24 | 加入时间: 2018-09 | source: user_search: indie hacker llm location:china followers:>10",
+      "is_academic": false,
+      "is_builder": false,
+      "is_eng": false,
+      "is_pm": true,
+      "is_algo": false,
+      "priority_reason": "PM/model-to-product/benchmark-iteration signal; research engineer / training + speech stack signal",
+      "availability_risk": "",
+      "research_summary": "",
+      "research_urls": [],
+      "research_updated": "",
+      "founder_signal": false,
+      "date_found": "2026-05-19",
+      "followers": 12,
+      "email": "",
+      "twitter": "",
+      "wechat": "",
+      "status": "new",
+      "note": "",
+      "priority": false,
+      "org_account_signal": false,
+      "track_rank": 127,
+      "custom_name": "",
+      "track_manual": false,
       "manual_low_priority": false
     },
     {
@@ -14643,10 +15050,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 127,
+      "track_rank": 128,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-sengxian",
@@ -14702,10 +15110,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 128,
+      "track_rank": 129,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-3rd-musketeer",
@@ -14753,10 +15162,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 129,
+      "track_rank": 130,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-xinshengwang",
@@ -14802,10 +15212,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 130,
+      "track_rank": 131,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "hiyouga",
@@ -14852,10 +15263,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 131,
+      "track_rank": 132,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-duzx16",
@@ -14921,10 +15333,11 @@
       "contact_research_updated": "2026-05-08",
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 132,
+      "track_rank": 133,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-liaochenliang",
@@ -14970,10 +15383,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 133,
+      "track_rank": 134,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-lengyue233",
@@ -15019,10 +15433,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 134,
+      "track_rank": 135,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-aaronz345",
@@ -15069,10 +15484,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 135,
+      "track_rank": 136,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-wangzhaode",
@@ -15119,10 +15535,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 136,
+      "track_rank": 137,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-tc-mb",
@@ -15169,10 +15586,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 137,
+      "track_rank": 138,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-tan-xu",
@@ -15220,10 +15638,11 @@
       "org_account_signal": false,
       "talent_track": "research_eng",
       "is_fde": false,
-      "track_rank": 138,
+      "track_rank": 139,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-garyzhang99",
@@ -15296,7 +15715,8 @@
       "track_rank": 1,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-libukai-b7f678ff49c8",
@@ -15369,7 +15789,8 @@
       "track_rank": 2,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-lijingbei",
@@ -15421,7 +15842,8 @@
       "track_rank": 3,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-iamjoel-f9ef4b8c46d0",
@@ -15494,7 +15916,8 @@
       "track_rank": 1,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-longcw-3f308206746b",
@@ -15570,7 +15993,9 @@
       "track_rank": 2,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 20
     },
     {
       "id": "gh-yaosenJ-da28c6c95be3",
@@ -15643,7 +16068,8 @@
       "track_rank": 3,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-Maplemx-b71b636154d6",
@@ -15689,7 +16115,8 @@
       "track_rank": 4,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false
     },
     {
       "id": "gh-jiangjiechen",
@@ -15768,7 +16195,9 @@
       "track_rank": 5,
       "custom_name": "",
       "track_manual": false,
-      "manual_low_priority": false
+      "manual_low_priority": false,
+      "is_builder": false,
+      "lane_rank": 10
     }
   ]
 }

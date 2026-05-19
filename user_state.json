@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T13:06:33.610Z",
+  "last_updated": "2026-05-19T21:17:48",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -16,14 +16,14 @@
       "status": "replied",
       "priority": true
     },
-    "gh-JohnJyong-fe7382561452": {
-      "status": "contacted"
-    },
     "gh-lishengzxc": {
       "status": "contacted"
     },
     "gh-bowenliang123-811014a44990": {
       "lane_rank": 30
+    },
+    "gh-JohnJyong-fe7382561452": {
+      "status": "contacted"
     },
     "gh-twz915": {
       "status": "contacted"
