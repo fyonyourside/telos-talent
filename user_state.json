@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T21:18:23",
+  "last_updated": "2026-05-19T13:28:18.848Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -14,16 +14,18 @@
     },
     "ten-halajohn": {
       "status": "replied",
-      "priority": true
+      "priority": true,
+      "talent_track": "harness_eng",
+      "track_manual": true
+    },
+    "gh-JohnJyong-fe7382561452": {
+      "status": "contacted"
     },
     "gh-lishengzxc": {
       "status": "contacted"
     },
     "gh-bowenliang123-811014a44990": {
       "lane_rank": 30
-    },
-    "gh-JohnJyong-fe7382561452": {
-      "status": "contacted"
     },
     "gh-twz915": {
       "status": "contacted"
@@ -296,9 +298,6 @@
       "status": "contacted",
       "lane_rank": 70
     },
-    "gh-Yuan-ManX-bd9874b5e731": {
-      "lane_rank": 210
-    },
     "gh-xieyxclack-cbb611e777cc": {
       "lane_rank": 80
     },
@@ -344,6 +343,9 @@
     },
     "gh-pan-x-c": {
       "lane_rank": 200
+    },
+    "gh-Yuan-ManX-bd9874b5e731": {
+      "lane_rank": 210
     },
     "gh-hecheng0625": {
       "status": "replied",
