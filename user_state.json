@@ -1,11 +1,14 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T19:37:22",
+  "last_updated": "2026-05-19T11:43:39.637Z",
   "user_states": {
     "gh-jaredforreal": {
       "status": "contacted",
       "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent）",
       "priority": true
+    },
+    "gh-lishengzxc": {
+      "status": "contacted"
     },
     "gh-bluemotional": {
       "status": "contacted",
