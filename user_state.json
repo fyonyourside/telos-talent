@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T13:06:11.466Z",
+  "last_updated": "2026-05-19T13:06:14.221Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -206,10 +206,10 @@
       "status": "contacted",
       "note": "Kimi-Audio主要作者；LongCat-Flash-Omni(560B-A27B)；ex Tencent/miHoYo/Meituan；语音LLM顶尖工程师；北京\n目前在美团做龙猫",
       "priority": true,
-      "lane_rank": 20
+      "lane_rank": 10
     },
     "gh-Stardust-minus-0f5962b6d5ec": {
-      "lane_rank": 10
+      "lane_rank": 20
     },
     "gh-yt605155624-7ec41c4dca21": {
       "lane_rank": 30
