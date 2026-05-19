@@ -98,7 +98,8 @@
       "is_fde": false,
       "track_rank": 1,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jaredforreal",
@@ -176,7 +177,8 @@
       "is_fde": false,
       "track_rank": 2,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "ten-halajohn",
@@ -246,7 +248,8 @@
       "is_fde": false,
       "track_rank": 3,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-JohnJyong-fe7382561452",
@@ -314,7 +317,8 @@
       "is_fde": false,
       "track_rank": 4,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lishengzxc",
@@ -389,7 +393,8 @@
       "is_fde": false,
       "track_rank": 5,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-bowenliang123-811014a44990",
@@ -458,7 +463,8 @@
       "is_fde": false,
       "track_rank": 6,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-asiroliu-65646ffb6d19",
@@ -527,7 +533,8 @@
       "is_fde": false,
       "track_rank": 7,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-twz915",
@@ -602,7 +609,8 @@
       "is_fde": false,
       "track_rank": 8,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Wendong-Fan-44db5bb8c5ab",
@@ -673,7 +681,8 @@
       "is_fde": false,
       "track_rank": 9,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-c121914yu-ce43a1d0047b",
@@ -750,7 +759,8 @@
       "is_fde": false,
       "track_rank": 10,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-orange-crow-c593ac0b5b16",
@@ -819,7 +829,8 @@
       "is_fde": false,
       "track_rank": 11,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-crazywoola-48c55e5786e6",
@@ -887,7 +898,8 @@
       "is_fde": false,
       "track_rank": 12,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lightaime-2398720cbbdd",
@@ -960,7 +972,8 @@
       "is_fde": false,
       "track_rank": 13,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-bluemotional",
@@ -1031,7 +1044,8 @@
       "is_fde": false,
       "track_rank": 14,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-KevinHuSh-d0de876ecb42",
@@ -1101,7 +1115,8 @@
       "is_fde": false,
       "track_rank": 15,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-pitt-liang",
@@ -1172,7 +1187,8 @@
       "is_fde": false,
       "track_rank": 16,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Lynnooo-ee6523c550e7",
@@ -1217,7 +1233,8 @@
       "org_account_signal": false,
       "track_rank": 17,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zjrwtx-aeb2edb0834c",
@@ -1283,7 +1300,8 @@
       "is_fde": false,
       "track_rank": 18,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-MubahsirHassan-5d21fbd06ebe",
@@ -1352,7 +1370,8 @@
       "is_fde": false,
       "track_rank": 19,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-faithfulinlove",
@@ -1426,7 +1445,8 @@
       "is_fde": false,
       "track_rank": 20,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Nikita-Etinger-d2a7368b67e5",
@@ -1493,7 +1513,8 @@
       "is_fde": false,
       "track_rank": 21,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Osier-Yi-fc97b61542ce",
@@ -1525,7 +1546,7 @@
       "email": "liuyiyao@buffalo.edu",
       "twitter": "https://x.com/agentscope_ai",
       "wechat": "",
-      "status": "new",
+      "status": "contacted",
       "note": "",
       "priority": false,
       "founder_signal": false,
@@ -1572,7 +1593,8 @@
       "is_fde": false,
       "track_rank": 22,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Leirunlin-070833b8a3a0",
@@ -1646,7 +1668,8 @@
       "is_fde": false,
       "track_rank": 23,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-xqvvu-684bb8fa7484",
@@ -1715,7 +1738,8 @@
       "is_fde": false,
       "track_rank": 24,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "xl-shichunliu",
@@ -1791,7 +1815,8 @@
       "is_fde": false,
       "track_rank": 25,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-fengju0213-0eb6b6df6570",
@@ -1860,7 +1885,8 @@
       "is_fde": false,
       "track_rank": 26,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-myhloli-a0a7b7f61568",
@@ -1931,7 +1957,8 @@
       "is_fde": false,
       "track_rank": 27,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zhangyingerjelly-4c299093da6a",
@@ -2003,7 +2030,8 @@
       "is_fde": false,
       "track_rank": 28,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yongtenglei-73ef97038c4b",
@@ -2073,7 +2101,8 @@
       "is_fde": false,
       "track_rank": 29,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-cuiyuebing-b5c1bc7b2e66",
@@ -2142,7 +2171,8 @@
       "is_fde": false,
       "track_rank": 30,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zhenruzhang-51de556ee8e0",
@@ -2211,7 +2241,8 @@
       "is_fde": false,
       "track_rank": 31,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yuzhichang-dca4689822cd",
@@ -2281,7 +2312,8 @@
       "is_fde": false,
       "track_rank": 32,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-cike8899-aee0fc9c9ec3",
@@ -2355,7 +2387,8 @@
       "is_fde": false,
       "track_rank": 33,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-hanhandi",
@@ -2429,7 +2462,8 @@
       "is_fde": false,
       "track_rank": 34,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-hugsun",
@@ -2504,7 +2538,8 @@
       "is_fde": false,
       "track_rank": 35,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-idontwanttosayaword-bc5b9a312d89",
@@ -2573,7 +2608,8 @@
       "is_fde": false,
       "track_rank": 36,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-qbc2016-76712ac19263",
@@ -2643,7 +2679,8 @@
       "is_fde": false,
       "track_rank": 37,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-sunshinexcode-cbdd423f6a05",
@@ -2714,7 +2751,8 @@
       "is_fde": false,
       "track_rank": 38,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-SunXiaoXiang-b900ab77332d",
@@ -2785,7 +2823,8 @@
       "is_fde": false,
       "track_rank": 39,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-tomasliu-agora-767e1f7bd6cd",
@@ -2853,7 +2892,8 @@
       "is_fde": false,
       "track_rank": 40,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ye7love7-e8db70280d89",
@@ -2922,7 +2962,8 @@
       "is_fde": false,
       "track_rank": 41,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zhijianma-0270b37c2a3a",
@@ -2993,7 +3034,8 @@
       "is_fde": false,
       "track_rank": 42,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-voidking",
@@ -3068,7 +3110,8 @@
       "is_fde": false,
       "track_rank": 43,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-bbuf",
@@ -3144,7 +3187,8 @@
       "is_fde": false,
       "track_rank": 44,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ldzhangyx",
@@ -3225,7 +3269,8 @@
       "is_fde": false,
       "track_rank": 45,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zehuichen123",
@@ -3303,8 +3348,9 @@
       "talent_track": "pm",
       "is_fde": false,
       "track_rank": 46,
-      "custom_name": "",
-      "track_manual": false
+      "custom_name": "陈泽徽",
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-XiangJinyu",
@@ -3383,7 +3429,8 @@
       "is_fde": false,
       "track_rank": 47,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-davdgao",
@@ -3432,7 +3479,8 @@
       "is_fde": false,
       "track_rank": 48,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-GoldWaterFall-2efdca89c827",
@@ -3477,7 +3525,8 @@
       "is_fde": false,
       "track_rank": 49,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-papayalove-3a36509afb68",
@@ -3523,7 +3572,8 @@
       "is_fde": false,
       "track_rank": 50,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-leeroo-coder-f95377201a81",
@@ -3569,7 +3619,8 @@
       "is_fde": false,
       "track_rank": 51,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-1850298154",
@@ -3617,7 +3668,8 @@
       "is_fde": false,
       "track_rank": 52,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-didiforgithub",
@@ -3665,7 +3717,8 @@
       "is_fde": false,
       "track_rank": 53,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "xl-chenqian",
@@ -3714,7 +3767,8 @@
       "is_fde": false,
       "track_rank": 54,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-shenchucheng",
@@ -3762,7 +3816,8 @@
       "is_fde": false,
       "track_rank": 55,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-dmitrii-khizbullin-fa5fb06833ce",
@@ -3807,7 +3862,8 @@
       "is_fde": false,
       "track_rank": 56,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-alcholiclg",
@@ -3854,7 +3910,8 @@
       "is_fde": false,
       "track_rank": 57,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-luohh5",
@@ -3901,7 +3958,8 @@
       "is_fde": false,
       "track_rank": 58,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-huangweitao",
@@ -3949,7 +4007,8 @@
       "is_fde": false,
       "track_rank": 59,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wangyoucao577-d3bfba4de33d",
@@ -3994,7 +4053,8 @@
       "is_fde": false,
       "track_rank": 60,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-KJ-Huang-sz-9303fccccb73",
@@ -4040,7 +4100,8 @@
       "is_fde": false,
       "track_rank": 61,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-y149604146-27de33f0c190",
@@ -4085,7 +4146,8 @@
       "is_fde": false,
       "track_rank": 62,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-rayrayraykk",
@@ -4134,7 +4196,8 @@
       "is_fde": false,
       "track_rank": 63,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wangxingjun778",
@@ -4183,7 +4246,8 @@
       "is_fde": false,
       "track_rank": 64,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Vincentwei1021-35c6264adda3",
@@ -4229,7 +4293,8 @@
       "is_fde": false,
       "track_rank": 65,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-bsbds-0fecdcade907",
@@ -4274,7 +4339,8 @@
       "is_fde": false,
       "track_rank": 66,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-YingchaoX-94fa6ea1f98a",
@@ -4320,7 +4386,8 @@
       "is_fde": false,
       "track_rank": 67,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-arthasking123",
@@ -4367,7 +4434,8 @@
       "is_fde": false,
       "track_rank": 68,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-shczhen-13a23ab03f35",
@@ -4412,7 +4480,8 @@
       "is_fde": false,
       "track_rank": 69,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-garylin2099",
@@ -4459,7 +4528,8 @@
       "is_fde": false,
       "track_rank": 70,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-seehi-79d7b487ce79",
@@ -4505,7 +4575,8 @@
       "is_fde": false,
       "track_rank": 71,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-van-gogh-619e13a8ab04",
@@ -4550,7 +4621,8 @@
       "is_fde": false,
       "track_rank": 72,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-x54-729-ce3db6e7be5e",
@@ -4596,7 +4668,8 @@
       "is_fde": false,
       "track_rank": 73,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "liyupi",
@@ -4644,7 +4717,8 @@
       "is_fde": false,
       "track_rank": 74,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-tuhahaha",
@@ -4691,7 +4765,8 @@
       "is_fde": false,
       "track_rank": 75,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-dividez-47fe3dfbdd60",
@@ -4737,7 +4812,8 @@
       "is_fde": false,
       "track_rank": 76,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Mishuni-819fc8d0ff0f",
@@ -4782,7 +4858,8 @@
       "is_fde": false,
       "track_rank": 77,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Lynx-1221-2a7821de4e0e",
@@ -4828,7 +4905,8 @@
       "org_account_signal": false,
       "track_rank": 78,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Rusullhu-ae791dcff147",
@@ -4873,7 +4951,8 @@
       "is_fde": false,
       "track_rank": 79,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yangapku",
@@ -4922,7 +5001,8 @@
       "is_fde": false,
       "track_rank": 80,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-toolazytoname-8521e6deadcf",
@@ -4968,7 +5048,8 @@
       "is_fde": false,
       "track_rank": 81,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Patrickill-62fb28c58941",
@@ -5014,7 +5095,8 @@
       "is_fde": false,
       "track_rank": 82,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-artificialzeng",
@@ -5063,7 +5145,8 @@
       "is_fde": false,
       "track_rank": 83,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-geekan",
@@ -5111,7 +5194,8 @@
       "is_fde": false,
       "track_rank": 84,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-arvinxx",
@@ -5160,7 +5244,8 @@
       "is_fde": false,
       "track_rank": 85,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-smilexin",
@@ -5207,7 +5292,8 @@
       "is_fde": false,
       "track_rank": 86,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-plutoless",
@@ -5259,7 +5345,8 @@
       "is_fde": false,
       "track_rank": 87,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zshbleaker",
@@ -5307,7 +5394,8 @@
       "is_fde": false,
       "track_rank": 88,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-alex-xinlu",
@@ -5355,7 +5443,8 @@
       "is_fde": false,
       "track_rank": 89,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jenqyang",
@@ -5403,7 +5492,8 @@
       "is_fde": false,
       "track_rank": 90,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-better629",
@@ -5450,7 +5540,8 @@
       "is_fde": false,
       "track_rank": 91,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wenbindu",
@@ -5497,7 +5588,8 @@
       "is_fde": false,
       "track_rank": 92,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-qiuyanli1990",
@@ -5545,7 +5637,8 @@
       "is_fde": false,
       "track_rank": 93,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-sunxilin",
@@ -5593,7 +5686,8 @@
       "is_fde": false,
       "track_rank": 94,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "metagpt-pm",
@@ -5640,7 +5734,8 @@
       "is_fde": false,
       "track_rank": 95,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-liusongxiang",
@@ -5719,7 +5814,8 @@
       "is_fde": false,
       "track_rank": 1,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Stardust-minus-0f5962b6d5ec",
@@ -5791,7 +5887,8 @@
       "is_fde": false,
       "track_rank": 2,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yt605155624-7ec41c4dca21",
@@ -5866,7 +5963,8 @@
       "is_fde": false,
       "track_rank": 3,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-aluminumbox",
@@ -5937,7 +6035,8 @@
       "is_fde": false,
       "track_rank": 4,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yuekaizhang",
@@ -6014,7 +6113,8 @@
       "is_fde": false,
       "track_rank": 5,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-shibing624",
@@ -6102,7 +6202,8 @@
       "is_fde": false,
       "track_rank": 6,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "zhihao-du",
@@ -6177,7 +6278,8 @@
       "is_fde": false,
       "track_rank": 7,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yfyeung",
@@ -6255,7 +6357,8 @@
       "is_fde": false,
       "track_rank": 8,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Zain-Jiang",
@@ -6326,7 +6429,8 @@
       "is_fde": false,
       "track_rank": 9,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-alanswift",
@@ -6404,7 +6508,8 @@
       "is_fde": false,
       "track_rank": 10,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "chen-zhang-actuy",
@@ -6479,7 +6584,8 @@
       "is_fde": false,
       "track_rank": 11,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jishengpeng",
@@ -6556,7 +6662,8 @@
       "is_fde": false,
       "track_rank": 12,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-starrylyn",
@@ -6631,7 +6738,8 @@
       "is_fde": false,
       "track_rank": 13,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-AnyaCoder-f2c953d5bdbd",
@@ -6699,7 +6807,8 @@
       "is_fde": false,
       "track_rank": 14,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-qq547276542",
@@ -6772,7 +6881,8 @@
       "is_fde": false,
       "track_rank": 15,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jzq2000",
@@ -6844,7 +6954,8 @@
       "is_fde": false,
       "track_rank": 16,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zh794390558-43ee6e6cac35",
@@ -6919,7 +7030,8 @@
       "is_fde": false,
       "track_rank": 17,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-breakstring-ffa98a18a104",
@@ -6992,7 +7104,8 @@
       "is_fde": false,
       "track_rank": 18,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-PriesiaMioShirakana-70b86a2f326d",
@@ -7065,7 +7178,8 @@
       "is_fde": false,
       "track_rank": 19,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-RVC-Boss-ecb088cde377",
@@ -7138,7 +7252,8 @@
       "is_fde": false,
       "track_rank": 20,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-tramphero-838da8f31d30",
@@ -7208,7 +7323,8 @@
       "is_fde": false,
       "track_rank": 21,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-SpenserCai-c05fd99739e4",
@@ -7278,7 +7394,8 @@
       "is_fde": false,
       "track_rank": 22,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yiminw",
@@ -7351,7 +7468,8 @@
       "is_fde": false,
       "track_rank": 23,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-xieyxclack-cbb611e777cc",
@@ -7426,7 +7544,8 @@
       "is_fde": false,
       "track_rank": 24,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ylzz1997-cec2a4df0bef",
@@ -7497,7 +7616,8 @@
       "is_fde": false,
       "track_rank": 25,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-anyvoiceai-7cbcff242aab",
@@ -7568,7 +7688,8 @@
       "is_fde": false,
       "track_rank": 26,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-innnky-cb5f088a5a84",
@@ -7638,7 +7759,8 @@
       "is_fde": false,
       "track_rank": 27,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-v3ucn-bc9b0cb61b0b",
@@ -7709,7 +7831,8 @@
       "is_fde": false,
       "track_rank": 28,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-weedge",
@@ -7784,7 +7907,8 @@
       "is_fde": false,
       "track_rank": 29,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-HarderThenHarder-900345d050af",
@@ -7858,7 +7982,8 @@
       "is_fde": false,
       "track_rank": 30,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "jingcheng-pang",
@@ -7937,7 +8062,8 @@
       "is_fde": false,
       "track_rank": 31,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zrzrzrzrzrzrzr",
@@ -8012,7 +8138,8 @@
       "is_fde": false,
       "track_rank": 32,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-limafang-78f9d03b62fb",
@@ -8081,7 +8208,8 @@
       "is_fde": false,
       "track_rank": 33,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Whale-Dolphin-a12b4d80cd24",
@@ -8155,7 +8283,8 @@
       "is_fde": false,
       "track_rank": 34,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wangxiongts",
@@ -8229,7 +8358,8 @@
       "is_fde": false,
       "track_rank": 35,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-pan-x-c",
@@ -8301,7 +8431,8 @@
       "is_fde": false,
       "track_rank": 36,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Yuan-ManX-bd9874b5e731",
@@ -8372,7 +8503,8 @@
       "is_fde": false,
       "track_rank": 37,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-hecheng0625",
@@ -8449,7 +8581,8 @@
       "is_fde": false,
       "track_rank": 38,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lauragpt",
@@ -8522,7 +8655,8 @@
       "is_fde": false,
       "track_rank": 39,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ABexit-6cf0a08373af",
@@ -8597,7 +8731,8 @@
       "is_fde": false,
       "track_rank": 40,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-daymade-834d245af031",
@@ -8669,7 +8804,8 @@
       "is_fde": false,
       "track_rank": 41,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-6drf21e-a5d11a97cd0e",
@@ -8738,7 +8874,8 @@
       "is_fde": false,
       "track_rank": 42,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ipfans-8de0794ae50a",
@@ -8809,7 +8946,8 @@
       "is_fde": false,
       "track_rank": 43,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-hjh0119",
@@ -8882,7 +9020,8 @@
       "is_fde": false,
       "track_rank": 44,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lovemefan",
@@ -8956,7 +9095,8 @@
       "is_fde": false,
       "track_rank": 45,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wangclnlp-49eb53b0831b",
@@ -9027,7 +9167,8 @@
       "is_fde": false,
       "track_rank": 46,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-xiaoxigua999",
@@ -9101,7 +9242,8 @@
       "is_fde": false,
       "track_rank": 47,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-xxnuo-0f0dc5565b94",
@@ -9173,7 +9315,8 @@
       "is_fde": false,
       "track_rank": 48,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-pengzhendong",
@@ -9250,7 +9393,8 @@
       "is_fde": false,
       "track_rank": 49,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yangdongchao",
@@ -9327,7 +9471,8 @@
       "is_fde": false,
       "track_rank": 50,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wangrongsheng",
@@ -9407,7 +9552,8 @@
       "is_fde": false,
       "track_rank": 51,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-0xCAFEBABE0-a8d7b1795fb1",
@@ -9481,7 +9627,8 @@
       "is_fde": false,
       "track_rank": 52,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Ccapton-7d0e5a64e757",
@@ -9551,7 +9698,8 @@
       "is_fde": false,
       "track_rank": 53,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-vermouth1992",
@@ -9634,7 +9782,8 @@
       "is_fde": false,
       "track_rank": 54,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Xiao-Cai185-96cc2e389c7d",
@@ -9701,7 +9850,8 @@
       "is_fde": false,
       "track_rank": 55,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-LinightKira-749f4a53f363",
@@ -9769,7 +9919,8 @@
       "is_fde": false,
       "track_rank": 56,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-JINO-ROHIT-541a3a0c2656",
@@ -9839,7 +9990,8 @@
       "is_fde": false,
       "track_rank": 57,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jjjymmm",
@@ -9914,7 +10066,8 @@
       "is_fde": false,
       "track_rank": 58,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-JinHai-CN-2679f0d71463",
@@ -9985,7 +10138,8 @@
       "is_fde": false,
       "track_rank": 59,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jintao-huang",
@@ -10057,7 +10211,8 @@
       "is_fde": false,
       "track_rank": 60,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-KPatr1ck-de0f8efc658f",
@@ -10125,7 +10280,8 @@
       "is_fde": false,
       "track_rank": 61,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-kaituoxu",
@@ -10199,7 +10355,8 @@
       "is_fde": false,
       "track_rank": 62,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-KakaruHayate-35d6b9b85be9",
@@ -10269,7 +10426,8 @@
       "is_fde": false,
       "track_rank": 63,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-KamioRinn-4d353a7ebc35",
@@ -10338,7 +10496,8 @@
       "is_fde": false,
       "track_rank": 64,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-gpt-dance-3473a8d47138",
@@ -10411,7 +10570,8 @@
       "is_fde": false,
       "track_rank": 65,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Nioolek",
@@ -10485,7 +10645,8 @@
       "is_fde": false,
       "track_rank": 66,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lmxue",
@@ -10565,7 +10726,8 @@
       "is_fde": false,
       "track_rank": 67,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Lizerui9926-677a5ebdc0d6",
@@ -10635,7 +10797,8 @@
       "is_fde": false,
       "track_rank": 68,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-pandamq",
@@ -10706,7 +10869,8 @@
       "is_fde": false,
       "track_rank": 69,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-iflamed-4f96fc8c7fd0",
@@ -10780,7 +10944,8 @@
       "is_fde": false,
       "track_rank": 70,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-OedoSoldier-b28016adb55f",
@@ -10848,7 +11013,8 @@
       "is_fde": false,
       "track_rank": 71,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-PoTaTo-Mika-b790b760cada",
@@ -10920,7 +11086,8 @@
       "is_fde": false,
       "track_rank": 72,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-r1ckshi",
@@ -10993,7 +11160,8 @@
       "is_fde": false,
       "track_rank": 73,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-shuaibai623",
@@ -11064,7 +11232,8 @@
       "is_fde": false,
       "track_rank": 74,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ChasonJiang-0aecf93e222e",
@@ -11132,7 +11301,8 @@
       "is_fde": false,
       "track_rank": 75,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Woody-Hu-7b22c3a1b987",
@@ -11201,7 +11371,8 @@
       "is_fde": false,
       "track_rank": 76,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Susieji-0e93ce7d2e83",
@@ -11270,7 +11441,8 @@
       "is_fde": false,
       "track_rank": 77,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-tyanz-6c283aafbaff",
@@ -11343,7 +11515,8 @@
       "is_fde": false,
       "track_rank": 78,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Timtimtimchen-eedc4beaf838",
@@ -11412,7 +11585,8 @@
       "is_fde": false,
       "track_rank": 79,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-di-osc",
@@ -11482,7 +11656,8 @@
       "is_fde": false,
       "track_rank": 80,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-XXXXRT666-278435fd2ec8",
@@ -11551,7 +11726,8 @@
       "is_fde": false,
       "track_rank": 81,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lyblsgo-f25deac7e42f",
@@ -11622,7 +11798,8 @@
       "is_fde": false,
       "track_rank": 82,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-SmileGoat-3911638a3727",
@@ -11690,7 +11867,8 @@
       "is_fde": false,
       "track_rank": 83,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-elissopp-de3c248fb94a",
@@ -11753,7 +11931,8 @@
       "is_fde": false,
       "track_rank": 84,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-aopstudio",
@@ -11826,7 +12005,8 @@
       "is_fde": false,
       "track_rank": 85,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zzhangpurdue",
@@ -11901,7 +12081,8 @@
       "is_fde": false,
       "track_rank": 86,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-edgemoorlf-bb6b3b203d5a",
@@ -11969,7 +12150,8 @@
       "is_fde": false,
       "track_rank": 87,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-frozentearz-5472076b93dd",
@@ -12039,7 +12221,8 @@
       "is_fde": false,
       "track_rank": 88,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-hexisyztem-cd7ce14b2d80",
@@ -12108,7 +12291,8 @@
       "is_fde": false,
       "track_rank": 89,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-hnluo-76dc1994c228",
@@ -12177,7 +12361,8 @@
       "is_fde": false,
       "track_rank": 90,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wishhyt-b54d8bebb02f",
@@ -12248,7 +12433,8 @@
       "is_fde": false,
       "track_rank": 91,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-kingki663-0aaecfa87920",
@@ -12319,7 +12505,8 @@
       "is_fde": false,
       "track_rank": 92,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jmwang66-ff406321a92d",
@@ -12388,7 +12575,8 @@
       "is_fde": false,
       "track_rank": 93,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ranchlai",
@@ -12457,7 +12645,8 @@
       "is_fde": false,
       "track_rank": 94,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-takatost-2ecc1c2739c0",
@@ -12527,7 +12716,8 @@
       "is_fde": false,
       "track_rank": 95,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-tastelikefeet",
@@ -12599,7 +12789,8 @@
       "is_fde": false,
       "track_rank": 96,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-vndee",
@@ -12674,7 +12865,8 @@
       "is_fde": false,
       "track_rank": 97,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wildminder",
@@ -12742,7 +12934,8 @@
       "is_fde": false,
       "track_rank": 98,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wuzhiping-4b29df21e8ca",
@@ -12812,7 +13005,8 @@
       "is_fde": false,
       "track_rank": 99,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yiboyasss-0ce8bb645a7b",
@@ -12882,7 +13076,8 @@
       "is_fde": false,
       "track_rank": 100,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yiranyyu",
@@ -12955,7 +13150,8 @@
       "is_fde": false,
       "track_rank": 101,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-csukuangfj",
@@ -13028,7 +13224,8 @@
       "is_fde": false,
       "track_rank": 102,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-cuiunbo",
@@ -13101,7 +13298,8 @@
       "is_fde": false,
       "track_rank": 103,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zhc7",
@@ -13178,7 +13376,8 @@
       "is_fde": false,
       "track_rank": 104,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-bokesyo",
@@ -13254,7 +13453,8 @@
       "is_fde": false,
       "track_rank": 105,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "zhu-han-xiaomi",
@@ -13328,7 +13528,8 @@
       "is_fde": false,
       "track_rank": 106,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zombieyang-7d26d3dd5a4c",
@@ -13399,7 +13600,8 @@
       "is_fde": false,
       "track_rank": 107,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "kedreamix-linly",
@@ -13474,7 +13676,8 @@
       "is_fde": false,
       "track_rank": 108,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lich99-dca8ded5188a",
@@ -13522,7 +13725,8 @@
       "is_fde": false,
       "track_rank": 109,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-qinxuye-ae2a09a9d2f4",
@@ -13568,7 +13772,8 @@
       "is_fde": false,
       "track_rank": 110,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-dongzhang2001",
@@ -13615,7 +13820,8 @@
       "is_fde": false,
       "track_rank": 111,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lengff123-23dabac88663",
@@ -13660,7 +13866,8 @@
       "is_fde": false,
       "track_rank": 112,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-fuyuwei01-1284d1367909",
@@ -13709,7 +13916,8 @@
       "is_fde": false,
       "track_rank": 113,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-hijkzzz",
@@ -13758,7 +13966,8 @@
       "is_fde": false,
       "track_rank": 114,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-leng-yue-a15728089334",
@@ -13806,7 +14015,8 @@
       "is_fde": false,
       "track_rank": 115,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jklj077",
@@ -13854,7 +14064,8 @@
       "is_fde": false,
       "track_rank": 116,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ymcui",
@@ -13903,7 +14114,8 @@
       "is_fde": false,
       "track_rank": 117,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yerfor",
@@ -13951,7 +14163,8 @@
       "is_fde": false,
       "track_rank": 118,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "mannaandpoem-openmanus",
@@ -14000,7 +14213,8 @@
       "is_fde": false,
       "track_rank": 119,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-PeterSH6",
@@ -14049,7 +14263,8 @@
       "is_fde": false,
       "track_rank": 120,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-makerjackie-88e8b18b1095",
@@ -14118,7 +14333,8 @@
       "is_fde": false,
       "track_rank": 121,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-cwx-worst-one",
@@ -14166,7 +14382,8 @@
       "is_fde": false,
       "track_rank": 122,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-YYZhang2025",
@@ -14210,7 +14427,8 @@
       "is_fde": false,
       "track_rank": 123,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lymdlut",
@@ -14257,7 +14475,8 @@
       "is_fde": false,
       "track_rank": 124,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-ddlBoJack",
@@ -14305,7 +14524,8 @@
       "is_fde": false,
       "track_rank": 125,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-zzw922cn-155726572903",
@@ -14375,7 +14595,8 @@
       "is_fde": false,
       "track_rank": 126,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-chujiezheng",
@@ -14424,7 +14645,8 @@
       "is_fde": false,
       "track_rank": 127,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-sengxian",
@@ -14482,7 +14704,8 @@
       "is_fde": false,
       "track_rank": 128,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-3rd-musketeer",
@@ -14532,7 +14755,8 @@
       "is_fde": false,
       "track_rank": 129,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-xinshengwang",
@@ -14580,7 +14804,8 @@
       "is_fde": false,
       "track_rank": 130,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "hiyouga",
@@ -14629,7 +14854,8 @@
       "is_fde": false,
       "track_rank": 131,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-duzx16",
@@ -14697,7 +14923,8 @@
       "is_fde": false,
       "track_rank": 132,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-liaochenliang",
@@ -14745,7 +14972,8 @@
       "is_fde": false,
       "track_rank": 133,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lengyue233",
@@ -14793,7 +15021,8 @@
       "is_fde": false,
       "track_rank": 134,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-aaronz345",
@@ -14842,7 +15071,8 @@
       "is_fde": false,
       "track_rank": 135,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-wangzhaode",
@@ -14891,7 +15121,8 @@
       "is_fde": false,
       "track_rank": 136,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-tc-mb",
@@ -14940,7 +15171,8 @@
       "is_fde": false,
       "track_rank": 137,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-tan-xu",
@@ -14990,7 +15222,8 @@
       "is_fde": false,
       "track_rank": 138,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-garyzhang99",
@@ -15062,7 +15295,8 @@
       "is_fde": true,
       "track_rank": 1,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-libukai-b7f678ff49c8",
@@ -15134,7 +15368,8 @@
       "is_fde": true,
       "track_rank": 2,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-lijingbei",
@@ -15185,7 +15420,8 @@
       "is_fde": true,
       "track_rank": 3,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-iamjoel-f9ef4b8c46d0",
@@ -15216,7 +15452,7 @@
       "email": "iamjoel007@gmail.com",
       "twitter": "",
       "wechat": "",
-      "status": "new",
+      "status": "contacted",
       "note": "",
       "priority": false,
       "founder_signal": false,
@@ -15257,7 +15493,8 @@
       "is_fde": false,
       "track_rank": 1,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-longcw-3f308206746b",
@@ -15332,7 +15569,8 @@
       "is_fde": false,
       "track_rank": 2,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-yaosenJ-da28c6c95be3",
@@ -15404,7 +15642,8 @@
       "is_fde": false,
       "track_rank": 3,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-Maplemx-b71b636154d6",
@@ -15443,13 +15682,14 @@
       "email": "Maplemx@gmail.com",
       "twitter": "Synn_Mo",
       "wechat": "",
-      "status": "new",
+      "status": "contacted",
       "note": "",
       "priority": false,
       "org_account_signal": false,
       "track_rank": 4,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     },
     {
       "id": "gh-jiangjiechen",
@@ -15527,7 +15767,8 @@
       "is_fde": false,
       "track_rank": 5,
       "custom_name": "",
-      "track_manual": false
+      "track_manual": false,
+      "manual_low_priority": false
     }
   ]
 }

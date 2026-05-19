@@ -31,8 +31,13 @@ TIER_BADGE = {"S": "🏆 S", "A": "🔵 A", "B": "⚪ B", "C": "⬜ C"}
 
 
 def pipeline_leads(leads: list) -> list:
-    """与看板主泳道一致：不含不合适(pass)、已转化(converted)，日报人数/分岗以此为准。"""
-    return [l for l in leads if (l.get("status") or "") not in ("pass", "converted")]
+    """与看板主泳道一致：不含 pass/converted，也不含人工低优池。"""
+    return [
+        l
+        for l in leads
+        if (l.get("status") or "") not in ("pass", "converted")
+        and not l.get("manual_low_priority")
+    ]
 
 
 def _display_name(lead: dict) -> str:
