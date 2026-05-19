@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T12:46:59.672Z",
+  "last_updated": "2026-05-19T12:47:45.279Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -51,7 +51,8 @@
       "status": "contacted"
     },
     "gh-zehuichen123": {
-      "status": "contacted"
+      "status": "contacted",
+      "custom_name": "陈泽徽"
     },
     "gh-XiangJinyu": {
       "status": "contacted"
