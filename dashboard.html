@@ -16225,7 +16225,60 @@ var GH_OWNER='fyonyourside', GH_REPO='telos-talent', GH_BRANCH='gh-pages';
 var GH_PATH='leads.json';                  // 只读：候选人主数据，由 daily 脚本维护
 var GH_USER_STATE_PATH='user_state.json';  // 可写：用户标记态，浏览器端的唯一 PUT 目标
 var _st=null;
-function getGHToken(){ return localStorage.getItem('telos_gh_token') || ''; }
+var LOCAL_DRAFT_KEY = 'telos_user_state_draft_v1';
+function getGHToken(){ return (localStorage.getItem('telos_gh_token') || '').trim(); }
+
+function saveLocalDraft(unsynced){
+  try{
+    localStorage.setItem(LOCAL_DRAFT_KEY, JSON.stringify({
+      saved_at: new Date().toISOString(),
+      unsynced: !!unsynced,
+      payload: buildUserStatePayload()
+    }));
+  }catch(e){ console.warn('[telos] local draft save failed', e); }
+}
+function loadLocalDraft(){
+  try{
+    var raw = localStorage.getItem(LOCAL_DRAFT_KEY);
+    if(!raw) return null;
+    return JSON.parse(raw);
+  }catch(e){ return null; }
+}
+function clearLocalDraft(){ try{ localStorage.removeItem(LOCAL_DRAFT_KEY); }catch(e){} }
+
+function applyDraftPayload(payload){
+  if(!payload) return;
+  var states = payload.user_states || {};
+  LEADS_DATA.leads.forEach(function(l){
+    var s = states[l.id];
+    if(!s) return;
+    if('status' in s) l.status = s.status;
+    if('note' in s) l.note = s.note;
+    if('priority' in s) l.priority = s.priority;
+    if('custom_name' in s) l.custom_name = s.custom_name;
+    if('track_manual' in s) l.track_manual = !!s.track_manual;
+    if('talent_track' in s && s.talent_track) l.talent_track = s.talent_track;
+  });
+  if(payload.deleted_ids && LEADS_DATA.meta){
+    LEADS_DATA.meta.deleted_ids = payload.deleted_ids.slice();
+  }
+}
+
+function applyLocalDraftIfNewer(remoteUs){
+  var draft = loadLocalDraft();
+  if(!draft || !draft.payload) return false;
+  var remoteTs = (remoteUs && remoteUs.last_updated) ? Date.parse(remoteUs.last_updated) : 0;
+  var draftTs = draft.saved_at ? Date.parse(draft.saved_at) : 0;
+  if(!draft.unsynced && !(draftTs > remoteTs)) return false;
+  applyDraftPayload(draft.payload);
+  return true;
+}
+
+function isAuthError(status, msg){
+  if(status===401 || status===403) return true;
+  var m = String(msg||'').toLowerCase();
+  return m.indexOf('401')>=0 || m.indexOf('403')>=0 || m.indexOf('bad credentials')>=0;
+}
 
 function showSaveStatus(msg,type){
   var el=document.getElementById('save-status'); if(!el)return;
@@ -16258,15 +16311,22 @@ function buildUserStatePayload(){
 
 function flushToGitHub(onDone){
   var token=getGHToken();
-  if(!token){showSaveStatus('⚙️ 请配置 Token','warn'); if(onDone) onDone(false); return;}
+  if(!token){
+    saveLocalDraft(true);
+    showSaveStatus('⚙️ 请先配置 GitHub Token（否则刷新会丢修改）','warn');
+    setTimeout(openTkm, 400);
+    if(onDone) onDone(false);
+    return;
+  }
+  saveLocalDraft(true);
   showSaveStatus('⏳ 同步中...','saving');
   var base='https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_USER_STATE_PATH;
   var hdrs={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'};
 
-  // 1) 获取 user_state.json 的最新 SHA。如果文件不存在（首次推送），SHA 留空。
   fetch(base+'?ref='+GH_BRANCH+'&_='+Date.now(), {headers:hdrs, cache:'no-store'})
     .then(function(r){
-      if(r.status===404) return {sha:null};  // 文件不存在，PUT 时不传 sha 即可创建
+      if(r.status===404) return {sha:null};
+      if(isAuthError(r.status)) throw new Error('AUTH_'+r.status);
       if(!r.ok) throw new Error('SHA fetch '+r.status);
       return r.json();
     })
@@ -16280,13 +16340,21 @@ function flushToGitHub(onDone){
     })
     .then(function(r){
       if(!r.ok){
-        return r.json().then(function(e){ throw new Error(e.message||r.status); });
+        return r.json().then(function(e){ throw new Error(e.message||String(r.status)); });
       }
+      clearLocalDraft();
       showSaveStatus('✓ 已同步','ok');
       if(onDone) onDone(true);
     })
     .catch(function(e){
-      showSaveStatus('✗ 同步失败: '+e.message,'err');
+      saveLocalDraft(true);
+      var msg = e.message || '';
+      if(isAuthError(0, msg)){
+        showSaveStatus('✗ Token 已失效，请重新保存密钥后再同步','err');
+        setTimeout(openTkm, 500);
+      }else{
+        showSaveStatus('✗ 同步失败: '+msg,'err');
+      }
       console.error('[telos]',e);
       if(onDone) onDone(false);
     });
@@ -16298,6 +16366,7 @@ function prefetchSha(){ }
 var _pendingSave = false;
 function scheduleSave(){
   _pendingSave = true;
+  saveLocalDraft(true);
   clearTimeout(_st);
   _st=setTimeout(function(){ flushToGitHub(function(){ _pendingSave=false; }); }, 1200);
 }
@@ -17045,10 +17114,17 @@ function renderStats() {
     var deletedSet = applyDeletedIds(deleted);
     // 2) 合并候选人主数据
     mergeLeadsCanonical(leadsData, deletedSet);
-    // 3) 叠加用户标记态
+    // 3) 叠加用户标记态（远端）
     applyUserState(userState);
+    // 4) 本机有未同步草稿时优先恢复（避免 401 后刷新丢修改）
+    if(applyLocalDraftIfNewer(userState)){
+      showSaveStatus('⚠️ 已恢复本机未同步的标记，请重新保存 Token 后点同步','warn');
+    }
   }).catch(function(e){
     console.warn('[telos] init load error:', e);
+    if(applyLocalDraftIfNewer(null)){
+      showSaveStatus('⚠️ 网络异常，已用本机草稿恢复标记','warn');
+    }
   }).finally(finish);
 })();
 
@@ -17072,14 +17148,17 @@ function saveTkm(){
   var s=document.getElementById('tks');
   if(!token){s.textContent='请输入 Token';return;}
   s.textContent='验证中...'; s.style.color='rgba(255,255,255,0.5)';
-  fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_PATH+'?ref='+GH_BRANCH,
+  fetch('https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/'+GH_USER_STATE_PATH+'?ref='+GH_BRANCH,
     {headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'}})
     .then(function(r){
-      if(r.status===401)throw new Error('Token 无效或无权限');
+      if(r.status===401||r.status===403)throw new Error('Token 无效、过期或无写权限');
       if(!r.ok)throw new Error('HTTP '+r.status);
       localStorage.setItem('telos_gh_token',token);
       s.textContent='✓ 验证成功，已保存！'; s.style.color='#6CD97E';
-      setTimeout(closeTkm,1500);
+      flushToGitHub(function(ok){
+        if(ok) s.textContent='✓ 已保存并已尝试同步到 GitHub';
+      });
+      setTimeout(closeTkm,1800);
     })
     .catch(function(e){s.textContent='✗ '+e.message;s.style.color='#FF7070';});
 }
