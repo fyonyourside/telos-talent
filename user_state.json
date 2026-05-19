@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T13:06:04.551Z",
+  "last_updated": "2026-05-19T13:06:11.466Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -205,11 +205,19 @@
     "gh-liusongxiang": {
       "status": "contacted",
       "note": "Kimi-Audio主要作者；LongCat-Flash-Omni(560B-A27B)；ex Tencent/miHoYo/Meituan；语音LLM顶尖工程师；北京\n目前在美团做龙猫",
-      "priority": true
+      "priority": true,
+      "lane_rank": 20
+    },
+    "gh-Stardust-minus-0f5962b6d5ec": {
+      "lane_rank": 10
+    },
+    "gh-yt605155624-7ec41c4dca21": {
+      "lane_rank": 30
     },
     "gh-aluminumbox": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 40
     },
     "gh-yuekaizhang": {
       "status": "converted",
@@ -226,7 +234,8 @@
     "gh-yfyeung": {
       "status": "replied",
       "note": "约了上海和子阳一起吃饭",
-      "priority": true
+      "priority": true,
+      "lane_rank": 50
     },
     "gh-Zain-Jiang": {
       "status": "converted",
@@ -235,26 +244,35 @@
     "gh-alanswift": {
       "status": "replied",
       "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊",
-      "priority": true
+      "priority": true,
+      "lane_rank": 60
     },
     "chen-zhang-actuy": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 70
     },
     "gh-jishengpeng": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 80
     },
     "gh-starrylyn": {
       "status": "contacted",
-      "priority": true
+      "priority": true,
+      "lane_rank": 90
+    },
+    "gh-AnyaCoder-f2c953d5bdbd": {
+      "lane_rank": 100
     },
     "gh-qq547276542": {
-      "status": "replied"
+      "status": "replied",
+      "lane_rank": 110
     },
     "gh-jzq2000": {
       "status": "replied",
-      "priority": true
+      "priority": true,
+      "lane_rank": 120
     },
     "gh-zh794390558-43ee6e6cac35": {
       "lane_rank": 10
