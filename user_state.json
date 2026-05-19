@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T11:43:39.637Z",
+  "last_updated": "2026-05-19T11:47:48.877Z",
   "user_states": {
     "gh-jaredforreal": {
       "status": "contacted",
@@ -291,6 +291,9 @@
     "ten-halajohn": {
       "status": "replied",
       "priority": true
+    },
+    "gh-JohnJyong-fe7382561452": {
+      "status": "contacted"
     },
     "xl-shichunliu": {
       "status": "converted",
