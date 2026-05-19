@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T12:38:20.172Z",
+  "last_updated": "2026-05-19T12:46:59.672Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -27,6 +27,9 @@
     "gh-bluemotional": {
       "status": "contacted",
       "priority": true
+    },
+    "gh-Osier-Yi-fc97b61542ce": {
+      "status": "contacted"
     },
     "xl-shichunliu": {
       "status": "converted",
