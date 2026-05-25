@@ -1,292 +1,82 @@
 {
   "version": 1,
-  "last_updated": "2026-05-19T21:29:07",
+  "last_updated": "2026-05-25T07:27:13.054Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
-      "priority": true,
-      "tier": "S"
+      "priority": true
     },
     "gh-jaredforreal": {
       "status": "contacted",
       "note": "Z.ai Infra 核心工程师；vllm-omni 是多模态模型推理框架（对语音 Agent 部署有直接价值）；偏工程不偏研究；北京；本周可外联\n汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent）",
-      "priority": true,
-      "tier": "S"
+      "priority": true
     },
     "ten-halajohn": {
       "status": "replied",
       "priority": true,
       "talent_track": "harness_eng",
-      "track_manual": true,
-      "tier": "S"
+      "track_manual": true
     },
     "gh-lishengzxc": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-bowenliang123-811014a44990": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-JohnJyong-fe7382561452": {
-      "status": "contacted",
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-twz915": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-Wendong-Fan-44db5bb8c5ab": {
-      "tier": "A"
-    },
-    "liyupi": {
-      "tier": "A"
-    },
-    "gh-c121914yu-ce43a1d0047b": {
-      "tier": "A"
-    },
-    "gh-orange-crow-c593ac0b5b16": {
-      "tier": "A"
-    },
-    "gh-crazywoola-48c55e5786e6": {
-      "tier": "A"
-    },
-    "gh-lightaime-2398720cbbdd": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-bluemotional": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-papayalove-3a36509afb68": {
-      "tier": "A"
-    },
-    "gh-KevinHuSh-d0de876ecb42": {
-      "tier": "A"
-    },
-    "gh-pitt-liang": {
-      "tier": "A"
-    },
-    "gh-asiroliu-65646ffb6d19": {
-      "tier": "A"
-    },
-    "gh-Lynnooo-ee6523c550e7": {
-      "tier": "A"
-    },
-    "gh-zjrwtx-aeb2edb0834c": {
-      "tier": "A"
-    },
-    "gh-MubahsirHassan-5d21fbd06ebe": {
-      "tier": "A"
-    },
-    "gh-faithfulinlove": {
-      "tier": "A"
-    },
-    "gh-Nikita-Etinger-d2a7368b67e5": {
-      "tier": "A"
+      "priority": true
     },
     "gh-Osier-Yi-fc97b61542ce": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-Leirunlin-070833b8a3a0": {
-      "tier": "A"
-    },
-    "gh-xqvvu-684bb8fa7484": {
-      "tier": "A"
+      "status": "contacted"
     },
     "xl-shichunliu": {
       "status": "converted",
       "note": "Agent Memory方向，可以做工程+效果\n今年硕士毕业，还有几个月正式招聘，已经在奇绩智峰实习1年",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-fengju0213-0eb6b6df6570": {
-      "tier": "A"
-    },
-    "gh-myhloli-a0a7b7f61568": {
-      "tier": "A"
-    },
-    "gh-zhangyingerjelly-4c299093da6a": {
-      "tier": "A"
-    },
-    "gh-yongtenglei-73ef97038c4b": {
-      "tier": "A"
-    },
-    "gh-cuiyuebing-b5c1bc7b2e66": {
-      "tier": "A"
-    },
-    "gh-zhenruzhang-51de556ee8e0": {
-      "tier": "A"
-    },
-    "gh-yuzhichang-dca4689822cd": {
-      "tier": "A"
-    },
-    "gh-cike8899-aee0fc9c9ec3": {
-      "tier": "A"
+      "priority": true
     },
     "gh-hanhandi": {
       "status": "replied",
-      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历",
-      "tier": "A"
-    },
-    "gh-hugsun": {
-      "tier": "A"
-    },
-    "gh-idontwanttosayaword-bc5b9a312d89": {
-      "tier": "A"
-    },
-    "gh-qbc2016-76712ac19263": {
-      "tier": "A"
-    },
-    "gh-sunshinexcode-cbdd423f6a05": {
-      "tier": "A"
-    },
-    "gh-SunXiaoXiang-b900ab77332d": {
-      "tier": "A"
-    },
-    "gh-tomasliu-agora-767e1f7bd6cd": {
-      "tier": "A"
-    },
-    "gh-ye7love7-e8db70280d89": {
-      "tier": "A"
-    },
-    "gh-zhijianma-0270b37c2a3a": {
-      "tier": "A"
+      "note": "上海；TEN-framework 贡献者；C++ 工程；前 Baidu RAFT 分布式贡献；公开信息有限\n狄宇奕，引擎集成+VAD，等他给简历"
     },
     "gh-voidking": {
-      "status": "contacted",
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-bbuf": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
+      "priority": true
     },
     "gh-ldzhangyx": {
-      "status": "contacted",
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-zehuichen123": {
       "status": "contacted",
-      "custom_name": "陈泽徽",
-      "tier": "A"
+      "custom_name": "陈泽徽"
     },
     "gh-XiangJinyu": {
-      "status": "contacted",
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-davdgao": {
-      "status": "contacted",
-      "tier": "B"
-    },
-    "gh-GoldWaterFall-2efdca89c827": {
-      "tier": "B"
-    },
-    "gh-leeroo-coder-f95377201a81": {
-      "tier": "B"
-    },
-    "gh-1850298154": {
-      "tier": "B"
+      "status": "contacted"
     },
     "gh-didiforgithub": {
-      "status": "contacted",
-      "tier": "B"
+      "status": "contacted"
     },
     "xl-chenqian": {
       "status": "replied",
-      "tier": "B",
       "manual_low_priority": true
     },
-    "gh-shenchucheng": {
-      "tier": "B"
-    },
-    "gh-dmitrii-khizbullin-fa5fb06833ce": {
-      "tier": "B"
-    },
-    "gh-alcholiclg": {
-      "tier": "B"
-    },
-    "gh-luohh5": {
-      "tier": "B"
-    },
-    "gh-huangweitao": {
-      "tier": "B"
-    },
-    "gh-wangyoucao577-d3bfba4de33d": {
-      "tier": "B"
-    },
-    "gh-KJ-Huang-sz-9303fccccb73": {
-      "tier": "B"
-    },
-    "gh-y149604146-27de33f0c190": {
-      "tier": "B"
-    },
-    "gh-shancw96-9f762f46ede2": {
-      "tier": "B"
-    },
     "gh-rayrayraykk": {
-      "status": "contacted",
-      "tier": "B"
-    },
-    "gh-wangxingjun778": {
-      "tier": "B"
-    },
-    "gh-Vincentwei1021-35c6264adda3": {
-      "tier": "B"
-    },
-    "gh-bsbds-0fecdcade907": {
-      "tier": "B"
-    },
-    "gh-YingchaoX-94fa6ea1f98a": {
-      "tier": "B"
+      "status": "contacted"
     },
     "gh-arthasking123": {
-      "status": "replied",
-      "tier": "B"
-    },
-    "gh-shczhen-13a23ab03f35": {
-      "tier": "B"
+      "status": "replied"
     },
     "gh-garylin2099": {
-      "status": "contacted",
-      "tier": "B"
-    },
-    "gh-seehi-79d7b487ce79": {
-      "tier": "B"
-    },
-    "gh-van-gogh-619e13a8ab04": {
-      "tier": "B"
-    },
-    "gh-x54-729-ce3db6e7be5e": {
-      "tier": "B"
-    },
-    "gh-tuhahaha": {
-      "tier": "B"
-    },
-    "gh-dividez-47fe3dfbdd60": {
-      "tier": "B"
-    },
-    "gh-Mishuni-819fc8d0ff0f": {
-      "tier": "B"
-    },
-    "gh-Lynx-1221-2a7821de4e0e": {
-      "tier": "B"
-    },
-    "gh-Rusullhu-ae791dcff147": {
-      "tier": "B"
-    },
-    "gh-yangapku": {
-      "tier": "B"
-    },
-    "gh-toolazytoname-8521e6deadcf": {
-      "tier": "B"
-    },
-    "gh-Patrickill-62fb28c58941": {
-      "tier": "B"
-    },
-    "gh-artificialzeng": {
-      "tier": "B"
+      "status": "contacted"
     },
     "gh-geekan": {
       "status": "pass"
@@ -328,458 +118,169 @@
     "gh-liusongxiang": {
       "status": "contacted",
       "note": "Kimi-Audio主要作者；LongCat-Flash-Omni(560B-A27B)；ex Tencent/miHoYo/Meituan；语音LLM顶尖工程师；北京\n目前在美团做龙猫",
-      "priority": true,
-      "tier": "S"
-    },
-    "gh-Stardust-minus-0f5962b6d5ec": {
-      "tier": "S"
-    },
-    "gh-yt605155624-7ec41c4dca21": {
-      "tier": "S"
+      "priority": true
     },
     "gh-aluminumbox": {
       "status": "contacted",
-      "priority": true,
-      "tier": "S"
+      "priority": true
     },
     "gh-yuekaizhang": {
       "status": "converted",
-      "note": "人才推荐和背调，开源方案效果测评",
-      "tier": "S"
+      "note": "人才推荐和背调，开源方案效果测评"
     },
     "gh-shibing624": {
       "status": "converted",
-      "note": "外呼应用顾问，偏落地",
-      "tier": "S"
+      "note": "外呼应用顾问，偏落地"
     },
     "zhihao-du": {
       "status": "converted",
-      "note": "FunAudio模型使用顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业",
-      "tier": "S"
+      "note": "FunAudio模型使用顾问；长期跟进（个人价值实现驱动），一两年后可能加入创业"
     },
     "gh-yfyeung": {
       "status": "replied",
       "note": "约了上海和子阳一起吃饭",
-      "priority": true,
-      "tier": "S"
+      "priority": true
     },
     "gh-Zain-Jiang": {
       "status": "converted",
-      "note": "博五，今年六月毕业，延毕一年帮导师做项目，年底正式招聘",
-      "tier": "S"
+      "note": "博五，今年六月毕业，延毕一年帮导师做项目，年底正式招聘"
     },
     "gh-alanswift": {
       "status": "replied",
       "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊",
-      "priority": true,
-      "tier": "S"
+      "priority": true
     },
     "chen-zhang-actuy": {
       "status": "contacted",
-      "priority": true,
-      "tier": "S"
+      "priority": true
     },
     "gh-jishengpeng": {
       "status": "contacted",
-      "priority": true,
-      "tier": "S"
+      "priority": true
     },
     "gh-starrylyn": {
       "status": "contacted",
-      "priority": true,
-      "tier": "S"
-    },
-    "gh-AnyaCoder-f2c953d5bdbd": {
-      "tier": "S"
+      "priority": true
     },
     "gh-qq547276542": {
-      "status": "replied",
-      "tier": "S"
+      "status": "replied"
     },
     "gh-jzq2000": {
       "status": "replied",
-      "priority": true,
-      "tier": "S"
-    },
-    "gh-zh794390558-43ee6e6cac35": {
-      "tier": "A"
-    },
-    "gh-breakstring-ffa98a18a104": {
-      "tier": "A"
-    },
-    "gh-PriesiaMioShirakana-70b86a2f326d": {
-      "tier": "A"
-    },
-    "gh-RVC-Boss-ecb088cde377": {
-      "tier": "A"
-    },
-    "gh-tramphero-838da8f31d30": {
-      "tier": "A"
-    },
-    "gh-SpenserCai-c05fd99739e4": {
-      "tier": "A"
+      "note": "NaturalSpeech 3 一作 + Kimi-Audio 作者；MoonCast (347 stars) 播客生成；USTC 在读博士 + 产业经验\n6月北京约",
+      "priority": true
     },
     "gh-yiminw": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-Yuan-ManX-bd9874b5e731": {
-      "tier": "A"
-    },
-    "gh-xieyxclack-cbb611e777cc": {
-      "tier": "A"
-    },
-    "gh-ylzz1997-cec2a4df0bef": {
-      "tier": "A"
-    },
-    "gh-anyvoiceai-7cbcff242aab": {
-      "tier": "A"
-    },
-    "gh-innnky-cb5f088a5a84": {
-      "tier": "A"
-    },
-    "gh-v3ucn-bc9b0cb61b0b": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-weedge": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-HarderThenHarder-900345d050af": {
-      "tier": "A"
+      "status": "contacted"
     },
     "jingcheng-pang": {
-      "status": "contacted",
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-zrzrzrzrzrzrzr": {
       "status": "replied",
       "note": "汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent），在勤锴手下scope挺大的\n约了5月11号之后见面聊",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-limafang-78f9d03b62fb": {
-      "tier": "A"
-    },
-    "gh-Whale-Dolphin-a12b4d80cd24": {
-      "tier": "A"
+      "priority": true
     },
     "gh-wangxiongts": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-pan-x-c": {
-      "tier": "A"
+      "priority": true
     },
     "gh-hecheng0625": {
       "status": "replied",
-      "priority": true,
-      "tier": "A"
+      "priority": true
     },
     "gh-lauragpt": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-ABexit-6cf0a08373af": {
-      "tier": "A"
-    },
-    "gh-daymade-834d245af031": {
-      "tier": "A"
-    },
-    "gh-6drf21e-a5d11a97cd0e": {
-      "tier": "A"
-    },
-    "gh-ipfans-8de0794ae50a": {
-      "tier": "A"
-    },
-    "gh-hjh0119": {
-      "tier": "A"
+      "priority": true
     },
     "gh-lovemefan": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-wangclnlp-49eb53b0831b": {
-      "tier": "A"
+      "priority": true
     },
     "gh-xiaoxigua999": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-xxnuo-0f0dc5565b94": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-pengzhendong": {
       "status": "replied",
       "note": "约了杭州见面",
-      "priority": true,
-      "tier": "A"
+      "priority": true
     },
     "gh-yangdongchao": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-wangrongsheng": {
-      "tier": "A"
-    },
-    "gh-0xCAFEBABE0-a8d7b1795fb1": {
-      "tier": "A"
-    },
-    "gh-Ccapton-7d0e5a64e757": {
-      "tier": "A"
+      "priority": true
     },
     "gh-vermouth1992": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-Xiao-Cai185-96cc2e389c7d": {
-      "tier": "A"
-    },
-    "gh-LinightKira-749f4a53f363": {
-      "tier": "A"
-    },
-    "gh-JINO-ROHIT-541a3a0c2656": {
-      "tier": "A"
-    },
-    "gh-jjjymmm": {
-      "tier": "A"
-    },
-    "gh-JinHai-CN-2679f0d71463": {
-      "tier": "A"
+      "priority": true
     },
     "gh-jintao-huang": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-KPatr1ck-de0f8efc658f": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-kaituoxu": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-KakaruHayate-35d6b9b85be9": {
-      "tier": "A"
-    },
-    "gh-KamioRinn-4d353a7ebc35": {
-      "tier": "A"
-    },
-    "gh-gpt-dance-3473a8d47138": {
-      "tier": "A"
-    },
-    "gh-Nioolek": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-lmxue": {
       "status": "replied",
       "note": "学术背景+产业合作；Amphion(9.7k stars)联合创始人(OpenMMLab工业项目)；Spark-TTS贡献者；语音生成技术深厚\n五一前后苏州见面",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-Lizerui9926-677a5ebdc0d6": {
-      "tier": "A"
+      "priority": true
     },
     "gh-pandamq": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-iflamed-4f96fc8c7fd0": {
-      "tier": "A"
-    },
-    "gh-OedoSoldier-b28016adb55f": {
-      "tier": "A"
-    },
-    "gh-PoTaTo-Mika-b790b760cada": {
-      "tier": "A"
-    },
-    "gh-r1ckshi": {
-      "tier": "A"
-    },
-    "gh-shuaibai623": {
-      "tier": "A"
-    },
-    "gh-ChasonJiang-0aecf93e222e": {
-      "tier": "A"
-    },
-    "gh-Woody-Hu-7b22c3a1b987": {
-      "tier": "A"
-    },
-    "gh-Susieji-0e93ce7d2e83": {
-      "tier": "A"
-    },
-    "gh-tyanz-6c283aafbaff": {
-      "tier": "A"
-    },
-    "gh-Timtimtimchen-eedc4beaf838": {
-      "tier": "A"
-    },
-    "gh-di-osc": {
-      "tier": "A"
-    },
-    "gh-XXXXRT666-278435fd2ec8": {
-      "tier": "A"
-    },
-    "gh-lyblsgo-f25deac7e42f": {
-      "tier": "A"
-    },
-    "gh-SmileGoat-3911638a3727": {
-      "tier": "A"
-    },
-    "gh-elissopp-de3c248fb94a": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-aopstudio": {
-      "status": "replied",
-      "tier": "A"
-    },
-    "gh-zzhangpurdue": {
-      "tier": "A"
-    },
-    "gh-edgemoorlf-bb6b3b203d5a": {
-      "tier": "A"
-    },
-    "gh-frozentearz-5472076b93dd": {
-      "tier": "A"
-    },
-    "gh-hexisyztem-cd7ce14b2d80": {
-      "tier": "A"
-    },
-    "gh-hnluo-76dc1994c228": {
-      "tier": "A"
-    },
-    "gh-wishhyt-b54d8bebb02f": {
-      "tier": "A"
-    },
-    "gh-kingki663-0aaecfa87920": {
-      "tier": "A"
-    },
-    "gh-jmwang66-ff406321a92d": {
-      "tier": "A"
-    },
-    "gh-ranchlai": {
-      "tier": "A"
-    },
-    "gh-takatost-2ecc1c2739c0": {
-      "tier": "A"
-    },
-    "gh-tastelikefeet": {
-      "tier": "A"
-    },
-    "gh-vndee": {
-      "tier": "A"
-    },
-    "gh-wildminder": {
-      "tier": "A"
-    },
-    "gh-wuzhiping-4b29df21e8ca": {
-      "tier": "A"
-    },
-    "gh-yiboyasss-0ce8bb645a7b": {
-      "tier": "A"
+      "status": "replied"
     },
     "gh-yiranyyu": {
-      "status": "contacted",
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-csukuangfj": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
+      "priority": true
     },
     "gh-cuiunbo": {
-      "status": "contacted",
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-zhc7": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
+      "priority": true
     },
     "gh-bokesyo": {
-      "status": "converted",
-      "tier": "A"
+      "status": "converted"
     },
     "zhu-han-xiaomi": {
       "status": "contacted",
-      "priority": true,
-      "tier": "A"
-    },
-    "gh-zombieyang-7d26d3dd5a4c": {
-      "tier": "A"
+      "priority": true
     },
     "kedreamix-linly": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-lich99-dca8ded5188a": {
-      "tier": "B"
-    },
-    "gh-qinxuye-ae2a09a9d2f4": {
-      "tier": "B"
-    },
-    "gh-dongzhang2001": {
-      "tier": "B"
-    },
-    "gh-lengff123-23dabac88663": {
-      "tier": "B"
-    },
-    "gh-fuyuwei01-1284d1367909": {
-      "tier": "B"
+      "status": "contacted"
     },
     "gh-hijkzzz": {
-      "status": "replied",
-      "tier": "B"
-    },
-    "gh-leng-yue-a15728089334": {
-      "tier": "B"
-    },
-    "gh-jklj077": {
-      "tier": "B"
+      "status": "replied"
     },
     "gh-ymcui": {
-      "status": "contacted",
-      "tier": "B"
+      "status": "contacted"
     },
     "gh-yerfor": {
-      "status": "contacted",
-      "tier": "B"
+      "status": "contacted"
     },
     "mannaandpoem-openmanus": {
       "status": "contacted",
-      "priority": true,
-      "tier": "B"
+      "priority": true
     },
     "gh-PeterSH6": {
       "status": "contacted",
-      "priority": true,
-      "tier": "B"
-    },
-    "gh-makerjackie-88e8b18b1095": {
-      "tier": "B"
+      "priority": true
     },
     "gh-cwx-worst-one": {
       "status": "converted",
-      "note": "豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach",
-      "tier": "B"
-    },
-    "gh-YYZhang2025": {
-      "tier": "B"
-    },
-    "gh-lymdlut": {
-      "tier": "B"
+      "note": "豆包audio顾问；推荐实验室师兄弟；方浩给元熙career coach"
     },
     "gh-ddlBoJack": {
       "status": "converted",
-      "note": "benchamark合作，qwen-audio和豆包audio顾问",
-      "tier": "B"
-    },
-    "gh-zzw922cn-155726572903": {
-      "tier": "B"
+      "note": "benchamark合作，qwen-audio和豆包audio顾问"
     },
     "gh-chujiezheng": {
       "status": "contacted"
@@ -819,33 +320,17 @@
     "gh-tan-xu": {
       "status": "pass"
     },
-    "gh-garyzhang99": {
-      "tier": "S"
-    },
     "gh-libukai-b7f678ff49c8": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-lijingbei": {
-      "tier": "B"
+      "status": "contacted"
     },
     "gh-iamjoel-f9ef4b8c46d0": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-longcw-3f308206746b": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-Maplemx-b71b636154d6": {
-      "status": "contacted",
-      "tier": "A"
-    },
-    "gh-yaosenJ-da28c6c95be3": {
-      "tier": "A"
+      "status": "contacted"
     },
     "gh-jiangjiechen": {
-      "status": "contacted",
-      "tier": "A"
+      "status": "contacted"
     }
   },
   "deleted_ids": [
