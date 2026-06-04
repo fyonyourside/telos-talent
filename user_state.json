@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-25T07:27:13.054Z",
+  "last_updated": "2026-06-04T13:21:01.229Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -12,8 +12,7 @@
       "priority": true
     },
     "ten-halajohn": {
-      "status": "replied",
-      "priority": true,
+      "status": "pass",
       "talent_track": "harness_eng",
       "track_manual": true
     },
