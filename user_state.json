@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-06-04T13:21:02.939Z",
+  "last_updated": "2026-06-04T13:21:19.306Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -146,8 +146,7 @@
     },
     "gh-alanswift": {
       "status": "replied",
-      "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊",
-      "priority": true
+      "note": "顶级语音合成作者：NaturalSpeech 2/3 + Kimi-Audio；工业+学术双修；现在字节 Seed 团队，强候选\n约了上海聊"
     },
     "chen-zhang-actuy": {
       "status": "contacted",
