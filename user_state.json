@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-06-04T13:21:35.671Z",
+  "last_updated": "2026-06-04T13:23:15.956Z",
   "user_states": {
     "gh-cyfyifanchen": {
       "status": "contacted",
@@ -178,9 +178,8 @@
       "status": "contacted"
     },
     "gh-zrzrzrzrzrzrzr": {
-      "status": "replied",
-      "note": "汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent），在勤锴手下scope挺大的\n约了5月11号之后见面聊",
-      "priority": true
+      "status": "converted",
+      "note": "汇报给原coding模型负责人郑勤锴（张鑫鹏的前领导，现负责数据，不太爽，想做agent），在勤锴手下scope挺大的\n约了5月11号之后见面聊"
     },
     "gh-wangxiongts": {
       "status": "contacted",
