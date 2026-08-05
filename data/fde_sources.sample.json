@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "name": "Example FDE Candidate",
+      "title": "Forward Deployed AI Engineer | LangGraph · RAG · Agent Evals",
+      "url": "https://linkedin.com/in/example-fde-candidate",
+      "platform": "linkedin",
+      "location": "北京",
+      "current": "Example AI Startup",
+      "snippet": "Built production customer support and sales agents for enterprise clients. Designed tool calling workflows, FastAPI backends, LangSmith tracing, eval harness, guardrails, and CRM integrations with Salesforce and Zendesk.",
+      "source": "sample_public_search"
+    },
+    {
+      "name": "Example Agent Platform Builder",
+      "title": "LLM Application Engineer @ Agent Platform",
+      "url": "https://github.com/example-agent-builder",
+      "platform": "github",
+      "location": "上海",
+      "current": "Agent Platform Co",
+      "snippet": "Maintains LangGraph multi-agent workflow runtime with MCP tools, RAG pipelines, Docker deployment, and regression tests. Verify client communication separately.",
+      "source": "sample_public_search"
+    },
+    {
+      "name": "Example Prompt Creator",
+      "title": "Prompt Engineer and AI content creator",
+      "url": "https://example.com/prompt-creator",
+      "platform": "web",
+      "location": "",
+      "current": "",
+      "snippet": "Publishes beginner courses on ten-minute AI agent demos and no-code prompt templates for creators.",
+      "source": "sample_public_search"
+    }
+  ]
+}
