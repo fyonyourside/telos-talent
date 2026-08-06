@@ -77,6 +77,25 @@ class FdeSourcingAgentTests(unittest.TestCase):
         self.assertNotIn("bi", scored["group_hits"]["business_domain"])
         self.assertIn("rag", scored["group_hits"]["agent_building"])
 
+    def test_deployed_engineer_customer_delivery_signal_scores_high(self):
+        hit = SourceHit(
+            name="Deployed Engineer",
+            title="Deployed Engineer at LangChain",
+            snippet=(
+                "Helping customers design, build, evaluate, and deploy production AI agents "
+                "with LangGraph, LangSmith, evals, observability, reliability, production "
+                "readiness, Python, FastAPI, and enterprise delivery."
+            ),
+            platform="linkedin",
+            url="https://linkedin.com/in/deployed-engineer",
+        )
+
+        scored = score_hit(hit)
+
+        self.assertGreaterEqual(scored["score"], 9)
+        self.assertEqual(scored["tier"], "S")
+        self.assertIn("customers", scored["group_hits"]["customer_facing"])
+
     def test_merge_preserves_manual_state_on_update(self):
         existing = {
             "meta": {"version": 1, "total": 1},

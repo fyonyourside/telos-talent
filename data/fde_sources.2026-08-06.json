@@ -1,0 +1,224 @@
+{
+  "results": [
+    {
+      "name": "Dariel Dato-on",
+      "title": "Deployed Engineer at LangChain | Production AI agents with LangGraph, LangSmith, and Deep Agents",
+      "url": "https://linkedin.com/in/oddrationale",
+      "platform": "linkedin",
+      "location": "",
+      "current": "LangChain",
+      "snippet": "Helps customer teams move AI agents from prototype to production with LangGraph, LangSmith, Deep Agents, evals, observability, reliability, deployment, and production readiness. Previously led enterprise AI and automation systems across consulting, sales enablement, telecom, and internal operations; built Python/LangGraph/FastAPI/Next.js AI platform and contact center AI.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Vivek Dhandapani",
+      "title": "Applied AI / Forward-Deployed / Solutions Architect | Enterprise-grade agentic AI systems",
+      "url": "https://linkedin.com/in/vivekdhandapani",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "Built agentic equity research assistant with LangGraph + FAISS RAG, AI compliance engine, and enterprise contract-management system. Founder/operator background and enterprise GenAI delivery in consulting. Focus: LangGraph, LangChain, LangSmith, ReAct, MCP, multi-agent orchestration, tool calling, RAG, FastAPI, CI/CD, business outcomes.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Aditi Mishra",
+      "title": "AI Engineer & Forward Deployed Engineer | GenAI, RAG, Agentic Systems in Production",
+      "url": "https://www.linkedin.com/in/aditimishra-im",
+      "platform": "linkedin",
+      "location": "",
+      "current": "ScaleUp Labs",
+      "snippet": "Customer-facing AI deployments; lives the Forward Deployed Builder role. Built and fine-tuned AI agents using SLMs/LLMs, worked across AWS/GCP/Azure, and collaborates cross-functionally to deploy cloud-based AI solutions.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Sayed Mah P.",
+      "title": "Production agentic AI systems lead | Federal and enterprise clients",
+      "url": "https://linkedin.com/in/sayed-mah-p-827539174",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "Leads design and delivery of production agentic AI systems and LLM applications for federal and enterprise clients. Owns full-stack architecture from model selection through deployment, observability, and continuous improvement. Built multi-agent systems with dynamic tool use/API orchestration, CRM/scheduling/communication workflow automation, LangGraph/n8n/Python, LangSmith and AgentOps observability, Ragas/DeepEval LLM-as-judge evaluation.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Khang Nguyen",
+      "title": "Forward Deployed Engineering | Enterprise AI | LangGraph | LangSmith",
+      "url": "https://linkedin.com/in/khang-h-nguyen",
+      "platform": "linkedin",
+      "location": "Canada / Remote",
+      "current": "",
+      "snippet": "Full-stack software engineer focused on Forward Deployed Engineering, enterprise AI, LangGraph, AI Agents, Python, TypeScript, React, system architecture, and LLM observability. Builds custom agent tooling, business user workflows, guardrails, AST validators, and LangSmith tracing. Architected production LangGraph state machine and 0-to-1 LangSmith observability layer.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Alok Singh",
+      "title": "Engineering Manager | Solution Architect | Enterprise AI Agent Platform",
+      "url": "https://linkedin.com/in/alok-singh-32b2272bb",
+      "platform": "linkedin",
+      "location": "",
+      "current": "Global Solutions LLC / enterprise clients",
+      "snippet": "10+ years leading engineering and solution architecture. Built production-grade AI agent platform at Goldman Sachs to automate research workflows and knowledge retrieval: LangChain + LangGraph multi-agent orchestration, tool calling, memory, guardrails, RAG over financial docs, Pinecone/pgvector, eval pipelines, hallucination detection, OpenTelemetry, FastAPI, AWS. Also built enterprise chatbot/data reconciliation for Walmart retail operations.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Ambuj Tripathi",
+      "title": "GenAI Engineer & RAG Specialist | LangGraph · FastAPI · MCP",
+      "url": "https://in.linkedin.com/in/ambuj-tripathi-042b4a118",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "Architected production-grade Agentic AI workspace with multi-step LangGraph ReAct reasoning, dynamic tool orchestration via MCP, HITL automation, Gmail agent, live APIs, Yahoo Finance, GitHub REST, FastAPI, SSE streaming, MongoDB memory, Next.js frontend, RAG and hallucination shielding.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Milutin Roglic",
+      "title": "AI Engineer building production LLM systems | Enterprise agentic platforms",
+      "url": "https://linkedin.com/in/mroglic",
+      "platform": "linkedin",
+      "location": "",
+      "current": "OsirisAI",
+      "snippet": "Builds multi-tenant agentic platforms with LangGraph orchestration, MCP integrations with HubSpot, Jira, Slack, Google Workspace, SQL databases, SSE streaming, Qdrant RAG, circuit breakers, fallback chains, RBAC, PostgreSQL, Redis, AWS, Docker, Kubernetes. Builds business automation workflows and enterprise integrations.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Naveen Uniyal",
+      "title": "Agentic AI Engineer & Software Developer | Enterprise-grade distributed systems",
+      "url": "https://linkedin.com/in/naveenuniyal",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "13+ years building enterprise-grade systems. Designs autonomous workflows, multi-agent systems, RAG pipelines, incident analysis, operational automation. Hands-on with LangChain, LangGraph, MCP, FastMCP, FastAPI, Tool Calling, Weaviate, Neo4j, Python, evaluation pipelines and observability. Experienced stakeholder collaboration and AI solution design.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Aastha Joshi",
+      "title": "Applied AI Engineer | Multi-Agent Systems & Enterprise RAG Infra",
+      "url": "https://linkedin.com/in/aasthajoshi14",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "Builds enterprise RAG infrastructure and Ragas evals. Built benchmarking/stress-testing platform across healthcare, finance, legal domains with 10 chunking strategies, BM25/dense/hybrid retrieval, 5-node LangGraph agent, NDCG/MRR/MAP/Ragas/BEIR metrics, adversarial robustness, PostgreSQL/pgvector, Redis, FAISS, ChromaDB, Elasticsearch, MLflow, Prometheus, OpenTelemetry, React/TypeScript. Explicitly positions as harness a forward-deployed/applied AI team needs before shipping regulated RAG products.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Hamza A.",
+      "title": "AI Engineer @ Toptal | Agentic AI, RAG, GraphRAG & LLM Systems",
+      "url": "https://linkedin.com/in/hamzaabbasai",
+      "platform": "linkedin",
+      "location": "",
+      "current": "Toptal",
+      "snippet": "Designed multi-agent systems using LangChain, LangGraph, MCP, tool calling, memory, dynamic routing. Built RAG pipelines with Qdrant/pgvector and 50K+ records. Created LangGraph agents for supplier risk, procurement policy, inventory, purchase orders, recommendations; FastAPI APIs, MCP-style tools, Airflow workflows, DeepEval evaluation, Docker, AWS.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Usharani Choudhury",
+      "title": "Production-grade Agentic AI and GenAI systems engineer",
+      "url": "https://linkedin.com/in/usharani-choudhury",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "Builds production-grade agentic systems that handle real-world failures: agent loops, hallucinations, tool misuse. Built/scaled GenAI platforms serving 500+ enterprise users, 99.5% uptime, LangGraph multi-agent workflows, HITL, evaluation pipelines, real-time tool integrations, document intelligence, decision automation, observability and monitoring.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Sazzad Kamal",
+      "title": "Generative AI / LLM Engineer | Agentic AI, RAG, GraphRAG, Evaluation",
+      "url": "https://linkedin.com/in/sazzad-kamal",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "15+ years enterprise B2B SaaS. Built production agentic AI and RAG systems: LangGraph multi-agent ReAct tool-use agent, standalone MCP server, hybrid SQL/docs/graph retrieval, LoRA fine-tuning, Reflexion-style Validate gate, LangSmith tracing, RAGAS quality gates and SLOs, CRM MCP server with JSON-schema tools.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Tingbo WANG",
+      "title": "AI / 大模型智能系统设计与落地 | Agent 工作流与企业 RAG",
+      "url": "https://linkedin.com/in/tingbo-wang",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "负责 AI/大模型智能系统设计与落地，关注可上线、可维护的工程级解决方案。设计并实现基于 Agent 的系统与工作流编排，支持多步骤任务执行、工具调用与系统级自动化。构建企业级 RAG 知识系统，支持私有化部署和持续知识更新。与产品、工程及业务团队协作，覆盖金融 AI 助理、贷款推荐、业务咨询、页面级上下文问答、审批预审、自然语言指标解读。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "陈德超 / Charles Chen",
+      "title": "大模型解决方案与交付 | 华为云昇腾/ModelArts/盘古/RAG/Agent",
+      "url": "https://linkedin.com/in/%E5%BE%B7%E8%B6%85-charles-chen-%E9%99%88-30b530a5",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "深度访谈50+企业CXO层，提炼AI大模型核心场景需求。基于华为云昇腾、ModelArts、盘古大模型、RAG解决方案完成客户场景化解决方案和架构设计。主导L1/L2模型微调、RAG知识库构建、盘古行业模型场景落地、Agent智能体开发，完成20+ POC验证。主导售前支撑、技术述标、商务谈判和千万级项目招投标；中国知网项目中设计RAG知识库+Agent方案。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "贺仕豪",
+      "title": "企业智能体开发 / 智能体中台 / 银行智能体解决方案",
+      "url": "https://linkedin.com/in/%E4%BB%95%E8%B1%AA-%E8%B4%BA-390b7b125",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "主导银行智能体解决方案，通过 AutoGen 完成多 Agent 协同和 LangChain 工具链，集成LLM微调与RAG，构建自动化信贷审批工作流，减少人工审核80%。设计多模态智能体框架和供应链自动化库存预测，迁移到华为昇腾910B，满足GDPR与等保2.0。另有ToB SaaS智能体系统、客服对话系统、K8s/GPU资源调度等经验。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Na Gao",
+      "title": "Enterprise AI Agent Specialist | AI Solutions Architect",
+      "url": "https://linkedin.com/in/%E5%A8%9C-%E9%AB%98-9311ba31b",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "Designs and delivers production-ready AI Agent solutions for traditional enterprises. Led end-to-end development of 5+ enterprise-grade AI Agents including RFP-writing assistant, intelligent customer service, data Q&A bot for state-owned retailers, metro groups, property management giants and State Grid. Stack: Coze, JoyAgent, Dify, Multi-Agent Workflows, RAG, fine-tuning. 主导需求分析、架构设计到技术实现全流程和企业级方案落地。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Alex Zhu",
+      "title": "AI / LLM / LangGraph / RAG / Agent / Dify engineer",
+      "url": "https://linkedin.com/in/alex-zhu-75069a91",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "Developed multiple AI large model agent projects with fine-tuning, API integration, LangChain, LangGraph. Participated in full software lifecycle from function planning, GUI design, technical selection, development and deployment to vendor coordination. Built Agent Door Lock Recommendation Assistant with LangGraph loops/conditional transitions, RAG over ElasticSearch product data, conversation history and Docker deployment.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Warren Wong",
+      "title": "Global Head of Solution Architecture - Dify",
+      "url": "https://hk.linkedin.com/in/warren-wong",
+      "platform": "linkedin",
+      "location": "Hong Kong",
+      "current": "Dify / LangGenius",
+      "snippet": "Established and scaled Dify global Solution Architecture from zero, defining recruitment standards, technical benchmarks, and delivery workflows. Led technical engagement for global key accounts from POC to MVP customization and production-grade deployment. Architected complex AI workflows and RAG pipelines for enterprise security, scalability and performance. Hiring Field Engineers to guide customers through AI app lifecycles on open-source AI platform with Kubernetes/RAG/agents/Python tooling.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Kelvin Cheah",
+      "title": "AI Engineer | Dify, LangGraph, RAG, enterprise modules",
+      "url": "https://linkedin.com/in/kelvin-cheah-630000208",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "Tech stack: Python, FastAPI, LangChain, LangGraph, LlamaIndex, Dify, Pinecone, Kafka, React, PostgreSQL, Docker. Designed and deployed AI Agents using Dify to automate workflows across enterprise modules. Integrated RAG pipelines, developed custom tools/connectors for internal data retrieval across property and finance systems, built ASR with FastAPI/Whisper, implemented LangGraph multi-agent orchestration, aligned AI solutions with business logic.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Usman Jadoon",
+      "title": "AI Engineer | Enterprise AI Agents, RAG & Multi-Agent Systems",
+      "url": "https://linkedin.com/in/usmanjadoon",
+      "platform": "linkedin",
+      "location": "",
+      "current": "",
+      "snippet": "Built enterprise AI agents and workflow automation with Python, FastAPI, LangGraph, n8n. Contributed to AI automation platform enabling employees to automate business workflows using ERNIE-based LLM agents, Baidu AI Cloud Qianfan, enterprise APIs, and n8n. Built multi-agent backend using ERNIE, Qwen, GLM for employee Q&A, agent-assist workflows and automated query resolution; RAG pipeline over 7,000+ internal documents.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Jerzy Szocik",
+      "title": "Senior Data Scientist / Applied AI Engineer | Enterprise Dify agent workflows",
+      "url": "https://linkedin.com/in/jerzy-szocik-a016531ba",
+      "platform": "linkedin",
+      "location": "",
+      "current": "GlobalLogic / Hitachi project",
+      "snippet": "Building hands-on Dify-based enterprise AI agent workflows for Hitachi using Gemini, knowledge bases, hybrid search, internal API/database integrations and Python support scripts. Turns messy business documentation and process logic into AI-assisted workflows. Collaborates with Japanese, Indian and EU teams on requirements, workflow logic and delivery constraints. Areas: Dify, RAG, hybrid search, API/tool integrations, database-facing workflows, Python, SQL.",
+      "source": "web_search_linkedin"
+    }
+  ]
+}
