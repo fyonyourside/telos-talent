@@ -118,6 +118,10 @@ def write_json(path: Path, payload: Any) -> None:
         f.write("\n")
 
 
+def strip_trailing_whitespace(text: str) -> str:
+    return "\n".join(line.rstrip() for line in text.splitlines()) + "\n"
+
+
 def render_html(candidates: list[dict[str, Any]], source_path: Path) -> str:
     updated = _dt.datetime.now().strftime("%Y-%m-%d %H:%M")
     cards = "\n".join(render_card(c) for c in candidates)
@@ -131,7 +135,7 @@ def render_html(candidates: list[dict[str, Any]], source_path: Path) -> str:
         tier: sum(1 for c in candidates if c.get("tier") == tier)
         for tier in ["S", "A", "B", "C"]
     }
-    return f"""<!doctype html>
+    return strip_trailing_whitespace(f"""<!doctype html>
 <html lang="zh">
 <head>
   <meta charset="utf-8">
@@ -229,7 +233,7 @@ def render_html(candidates: list[dict[str, Any]], source_path: Path) -> str:
   </script>
 </body>
 </html>
-"""
+""")
 
 
 def render_card(candidate: dict[str, Any]) -> str:
