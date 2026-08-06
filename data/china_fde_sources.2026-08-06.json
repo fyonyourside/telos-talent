@@ -1,0 +1,134 @@
+{
+  "results": [
+    {
+      "name": "Tingbo WANG",
+      "title": "AI / 大模型智能系统设计与落地 | Agent 工作流与企业 RAG",
+      "url": "https://linkedin.com/in/tingbo-wang",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "负责 AI/大模型智能系统设计与落地，关注可上线、可维护的工程级解决方案。设计并实现基于 Agent 的系统与工作流编排，支持多步骤任务执行、工具调用与系统级自动化。构建企业级 RAG 知识系统，支持私有化部署和持续知识更新。与产品、工程及业务团队协作，覆盖金融 AI 助理、贷款推荐、业务咨询、页面级上下文问答、审批预审、自然语言指标解读。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "陈德超 / Charles Chen",
+      "title": "大模型解决方案与交付 | 华为云昇腾/ModelArts/盘古/RAG/Agent",
+      "url": "https://linkedin.com/in/%E5%BE%B7%E8%B6%85-charles-chen-%E9%99%88-30b530a5",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "深度访谈50+企业CXO层，提炼AI大模型核心场景需求。基于华为云昇腾、ModelArts、盘古大模型、RAG解决方案完成客户场景化解决方案和架构设计。主导L1/L2模型微调、RAG知识库构建、盘古行业模型场景落地、Agent智能体开发，完成20+ POC验证。主导售前支撑、技术述标、商务谈判和千万级项目招投标；中国知网项目中设计RAG知识库+Agent方案。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "贺仕豪",
+      "title": "企业智能体开发 / 智能体中台 / 银行智能体解决方案",
+      "url": "https://linkedin.com/in/%E4%BB%95%E8%B1%AA-%E8%B4%BA-390b7b125",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "主导银行智能体解决方案，通过 AutoGen 完成多 Agent 协同和 LangChain 工具链，集成LLM微调与RAG，构建自动化信贷审批工作流，减少人工审核80%。设计多模态智能体框架和供应链自动化库存预测，迁移到华为昇腾910B，满足GDPR与等保2.0。另有ToB SaaS智能体系统、客服对话系统、K8s/GPU资源调度等经验。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Na Gao",
+      "title": "Enterprise AI Agent Specialist | AI Solutions Architect",
+      "url": "https://linkedin.com/in/%E5%A8%9C-%E9%AB%98-9311ba31b",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "Designs and delivers production-ready AI Agent solutions for traditional enterprises. Led end-to-end development of 5+ enterprise-grade AI Agents including RFP-writing assistant, intelligent customer service, data Q&A bot for state-owned retailers, metro groups, property management giants and State Grid. Stack: Coze, JoyAgent, Dify, Multi-Agent Workflows, RAG, fine-tuning. 主导需求分析、架构设计到技术实现全流程和企业级方案落地。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Alex Zhu",
+      "title": "AI / LLM / LangGraph / RAG / Agent / Dify engineer",
+      "url": "https://linkedin.com/in/alex-zhu-75069a91",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "Developed multiple AI large model agent projects with fine-tuning, API integration, LangChain, LangGraph. Participated in full software lifecycle from function planning, GUI design, technical selection, development and deployment to vendor coordination. Built Agent Door Lock Recommendation Assistant with LangGraph loops/conditional transitions, RAG over ElasticSearch product data, conversation history and Docker deployment.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "William Li",
+      "title": "B端企业 AI 交互场景 / RAG / Power Agent 流程编排平台",
+      "url": "https://linkedin.com/in/%E5%AE%81-%E6%9D%8E-608940a4",
+      "platform": "linkedin",
+      "location": "中国",
+      "current": "",
+      "snippet": "主导设计大模型在B端企业的交互场景，构建完整用户体验框架和交互流程。深度研究并实践RAG技术，解决垂直领域知识有限问题。设计并落地大模型fine-tuning闭环方案，已在多个客户生产环境成功应用。主导优化Power Agent流程编排平台，针对电商、教育、跨国金融等客户设计差异化解决方案，深入一线进行方案交流、POC验证及签单后的客户成功管理。",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Warren Wong",
+      "title": "Global Head of Solution Architecture - Dify",
+      "url": "https://hk.linkedin.com/in/warren-wong",
+      "platform": "linkedin",
+      "location": "Hong Kong",
+      "current": "Dify / LangGenius",
+      "snippet": "Established and scaled Dify global Solution Architecture from zero, defining recruitment standards, technical benchmarks, and delivery workflows. Led technical engagement for global key accounts from POC to MVP customization and production-grade deployment. Architected complex AI workflows and RAG pipelines for enterprise security, scalability and performance. Hiring Field Engineers to guide customers through AI app lifecycles on open-source AI platform with Kubernetes/RAG/agents/Python tooling.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Kelvin Cheah",
+      "title": "AI Engineer | Dify, LangGraph, RAG, enterprise modules",
+      "url": "https://linkedin.com/in/kelvin-cheah-630000208",
+      "platform": "linkedin",
+      "location": "Hong Kong / China ecosystem",
+      "current": "",
+      "snippet": "Tech stack: Python, FastAPI, LangChain, LangGraph, LlamaIndex, Dify, Pinecone, Kafka, React, PostgreSQL, Docker. Designed and deployed AI Agents using Dify to automate workflows across enterprise modules. Integrated RAG pipelines, developed custom tools/connectors for internal data retrieval across property and finance systems, built ASR with FastAPI/Whisper, implemented LangGraph multi-agent orchestration, aligned AI solutions with business logic.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "Xingjiang Lin",
+      "title": "Software Engineer | LLM-powered agent systems | RAG pipelines",
+      "url": "https://linkedin.com/in/xingjianglin",
+      "platform": "linkedin",
+      "location": "China / US",
+      "current": "",
+      "snippet": "Specializes in LLM-powered agent systems, RAG pipelines, ReAct-based tool-calling workflows, Skill-Agent architectures, Agent Swarm collaboration, memory and guardrails. Previously developed production LLM services with Python, FastAPI, LangGraph, Neo4j, Redis, Docker, Kubernetes, including an airline customer-service agent handling 2k-6k daily inquiries, intent classification 0.93 F1, 88% Cypher execution accuracy, latency reduced from 5.2s to 2.0s.",
+      "source": "web_search_linkedin"
+    },
+    {
+      "name": "James Lee / muzinan123",
+      "title": "Senior LLM Engineer | RAG · AI Agents · LLMOps",
+      "url": "https://github.com/muzinan123",
+      "platform": "github",
+      "location": "杭州, China",
+      "current": "",
+      "snippet": "GitHub profile lists Hangzhou, China. Senior LLM Engineer focused on RAG, AI Agents and LLMOps. Public repositories include production-grade LLM-powered AI customer service system, llmops, k8s-paas and GitOps related engineering.",
+      "source": "web_search_github"
+    },
+    {
+      "name": "Haibo Zhang / leos-code",
+      "title": "AI Agent & LLM Toolchain builder",
+      "url": "https://github.com/leos-code",
+      "platform": "github",
+      "location": "China",
+      "current": "",
+      "snippet": "China-based developer exploring AI Agent and LLM toolchain. Builds tools around multi-agent systems, LangChain/LangGraph/LlamaIndex, orchestration patterns such as ReAct/Reflexion/ToT, GraphRAG, BM25, semantic retrieval, vLLM/Triton serving, MCP/tools and context engineering.",
+      "source": "web_search_github"
+    },
+    {
+      "name": "iuyup",
+      "title": "LangGraph multi-agent systems builder",
+      "url": "https://github.com/iuyup",
+      "platform": "github",
+      "location": "China / Remote",
+      "current": "Shantou University",
+      "snippet": "China-based junior builder maintaining AgentFlow, a LangGraph multi-agent design pattern library with bilingual docs. Projects include Auto-Tweet Agent, LangGraph 7-node multi-agent system, and RAG 2.0 with hybrid FAISS+BM25 retrieval, RRF fusion, BGE reranker and dynamic threshold truncation. Likely junior/intern level, useful as lower-priority builder lead.",
+      "source": "web_search_github"
+    },
+    {
+      "name": "Usman Jadoon",
+      "title": "AI Engineer | Enterprise AI Agents, RAG & Multi-Agent Systems",
+      "url": "https://linkedin.com/in/usmanjadoon",
+      "platform": "linkedin",
+      "location": "China market project signal",
+      "current": "",
+      "snippet": "Built enterprise AI agents and workflow automation with Python, FastAPI, LangGraph, n8n. Contributed to AI automation platform enabling employees to automate business workflows using ERNIE-based LLM agents, Baidu AI Cloud Qianfan, enterprise APIs, and n8n. Built multi-agent backend using ERNIE, Qwen, GLM for employee Q&A, agent-assist workflows and automated query resolution; RAG pipeline over 7,000+ internal documents. China market/project signal, verify location and language fit.",
+      "source": "web_search_linkedin"
+    }
+  ]
+}

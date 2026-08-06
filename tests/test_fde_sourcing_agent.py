@@ -49,6 +49,19 @@ class FdeSourcingAgentTests(unittest.TestCase):
         self.assertTrue(lead["is_fde"])
         self.assertEqual(lead["linkedin"], "https://www.linkedin.com/in/jane-doe/")
 
+    def test_build_lead_decodes_non_ascii_linkedin_id(self):
+        hit = SourceHit(
+            name="贺仕豪",
+            title="企业智能体开发",
+            snippet="银行智能体解决方案，RAG，LangChain，K8s，客户交付。",
+            platform="linkedin",
+            url="https://linkedin.com/in/%E4%BB%95%E8%B1%AA-%E8%B4%BA-390b7b125",
+        )
+
+        lead = build_lead(hit, today="2026-08-06")
+
+        self.assertEqual(lead["id"], "li-仕豪-贺-390b7b125")
+
     def test_negative_demo_only_profile_is_low_priority(self):
         hit = SourceHit(
             name="Demo Creator",

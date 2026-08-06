@@ -391,10 +391,10 @@ def stable_id(hit: SourceHit) -> str:
     parsed = urllib.parse.urlparse(url)
     platform = hit.platform or infer_platform(url) or "web"
     if platform == "github" and parsed.path.strip("/"):
-        handle = parsed.path.strip("/").split("/")[0]
+        handle = urllib.parse.unquote(parsed.path.strip("/").split("/")[0])
         return f"gh-{slugify(handle)}"
     if platform == "linkedin" and parsed.path.strip("/"):
-        handle = parsed.path.strip("/").split("/")[-1]
+        handle = urllib.parse.unquote(parsed.path.strip("/").split("/")[-1])
         return f"li-{slugify(handle)}"
 
     base = url or f"{hit.name} {hit.current} {hit.title}"
